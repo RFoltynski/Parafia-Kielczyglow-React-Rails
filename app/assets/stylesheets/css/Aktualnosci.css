@@ -1,0 +1,30 @@
+.aktualnosci-comp {
+  background-image: url("./img/akutalnosci.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 0;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.news-boxes {
+  display: flex;
+  justify-content: space-around;
+}
+.searchButton:focus {
+  outline: 0;
+}
+.searchButton-img {
+  width: 25px;
+  height: 25px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.7;
+}
+
+.searchButton-img:hover {
+  transform: scale(1.1);
+}
+
+.hideFormGroup {
+  display: none;
+}

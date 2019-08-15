@@ -1,0 +1,30 @@
+.inne {
+  background-image: url("./img/inne.jpg");
+  min-height: 100vh;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+.inne-h2 {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.inne-row {
+  height: 100%;
+  margin: 0;
+}
+
+.inne-img {
+  min-height: 100%;
+}
+
+.inne-box-text {
+  min-height: 100%;
+}
+
+.inne-text {
+  color: rgb(255, 255, 255);
+}

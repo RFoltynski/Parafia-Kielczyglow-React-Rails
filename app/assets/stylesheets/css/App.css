@@ -1,0 +1,85 @@
+.box {
+  width: 100%;
+  height: 50vh;
+  padding: 0;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.box-overlay {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  height: 50vh;
+}
+
+.box-overlay-h2 {
+  position: relative;
+  color: rgb(255, 255, 255, 0.9);
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2em;
+  width: 60%;
+}
+
+.box-overlay-h2:after,
+.box-overlay-h2:before {
+  display: block;
+  content: "";
+  border-bottom: solid 3px rgb(255, 255, 255, 0.9);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.box-overlay-h2:before {
+  position: absolute;
+  bottom: 1.2em;
+  left: 0;
+  width: 100%;
+}
+
+.box-overlay:hover .box-overlay-h2:after {
+  transform: scaleX(1);
+}
+
+.box-overlay .box-overlay-p {
+  position: absolute;
+  display: block;
+  height: 120px;
+  width: 100%;
+  background: linear-gradient(transparent, 35%, #111);
+  left: 0px;
+  bottom: 0px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: rgb(255, 255, 255, 0.9);
+  padding-top: 45px;
+}
+
+.box-overlay:hover .box-overlay-p {
+  opacity: 0.8;
+  color: rgb(255, 255, 255, 0.9);
+  padding-top: 45px;
+}
+
+.box-overlay-link {
+  position: relative;
+}
+
+.box-overlay-link img {
+  width: 100%;
+  height: 100%;
+}
+
+.box-overlay-link h2 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  top: -45px;
+  right: 0;
+  color: rgb(255, 255, 255, 0.9);
+}

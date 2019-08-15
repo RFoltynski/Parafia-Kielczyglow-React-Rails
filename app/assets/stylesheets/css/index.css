@@ -1,0 +1,112 @@
+* {
+  font-family: "Cormorant Infant", serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-shadow: 1px 2px black;
+  padding-top: 75px;
+}
+h2 {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 25px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.buttonWhite {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  cursor: default;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+.buttonWhite:hover {
+  transform: none;
+}
+.button:focus,
+.buttonWhite:focus {
+  outline: 0;
+}
+
+.overlay {
+  background-color: rgb(0, 0, 0); /* fallback for IE 8 and below */
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* content w sekcji parafia i inne */
+
+.buttons-box {
+  width: 75%;
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  border: 3px solid black;
+  margin-top: 15px;
+}
+.buttons-content {
+  display: flex;
+}
+.buttons-box-text {
+  padding-bottom: 5px;
+  color: black;
+  padding: 0 15px 0 15px;
+}
+.buttons-img {
+  width: 100px;
+}
+.buttons-box > h2 {
+  color: black;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  opacity: 0.9;
+  padding-top: 5px 0 5px 0;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}

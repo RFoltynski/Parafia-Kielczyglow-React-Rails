@@ -1,0 +1,26 @@
+.kaplani {
+  background-image: url("./img/kontakt.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.kaplani-row {
+  height: 100%;
+  margin: 0;
+}
+
+.kaplani-img {
+  min-height: 300px;
+}
+
+.kaplani-box-text {
+  min-height: 300px;
+}
+
+.kaplani-text {
+  color: rgb(255, 255, 255);
+}

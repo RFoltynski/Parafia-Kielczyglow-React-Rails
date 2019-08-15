@@ -1,0 +1,16 @@
+.parafia {
+  background-image: url("./img/parafia.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+.parafia-buttons {
+  min-height: 1000px;
+}
+
+.parafia-row {
+  height: 100%;
+  margin: 0;
+}
