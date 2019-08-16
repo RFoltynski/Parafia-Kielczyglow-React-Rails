@@ -17,7 +17,7 @@
           <%= f.text_area :description, class: "form-control", placeholder: "Wprowadź opis postu.." %>
         </div>
       </div>
-        <%= f.submit 'Dodaj Post', class: "col-md-4 btn btn-info" %> <br>
+        <%= f.submit(@post.new_record? ? "Dodaj post" : "Edytuj post", class: "col-md-4 btn btn-info")%> <br>
     <% end %>
   </div> 
 </div> 
