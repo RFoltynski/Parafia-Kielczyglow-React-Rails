@@ -1,1 +1,12 @@
- <%= javascript_pack_tag 'index' %> 
+<h1>Lista Twoich postów: </h1>
+<%= link_to 'Dodaj nowy post', new_post_path %> <br>
+<% @posts.each do |post| %>
+  Tytyuł:
+  <h3><%= post.title %></h3>
+  Opis:
+  <p><%= post.description %></p>
+  <span><%=time_ago_in_words(post.created_at)%> temu</span>
+  <%= link_to 'Edit', edit_post_path(post) %>
+  <%= link_to 'Usuń', post_path(post), method: :delete, data: {confirm: "Are you sure?"} %>
+  <br>
+<% end %>
