@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for @post do |f| %>
+      <div class="form-group">
+        <div class="control-label offset-md-1 col-md-10">
+          <%= f.label :title, "Tytuł:" %>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <%= f.text_field :title, class: "form-control", placeholder: "Wprowadź tytuł postu..", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label offset-md-1 col-md-10">
+          <%= f.label :description, "Opis:" %>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <%= f.text_area :description, class: "form-control", placeholder: "Wprowadź opis postu.." %>
+        </div>
+      </div>
+        <%= f.submit 'Dodaj Post', class: "col-md-4 btn btn-info" %> <br>
+    <% end %>
+  </div> 
+</div> 
+ <div class="row">
+    <%= link_to 'Lista postów', posts_path, class: "btn-edit-post btn btn-secondary" %>
+</div>
