@@ -1,6 +1,8 @@
+<% if logged_in? %>
 <div class="container">
   <div class="offset-md-2 col-md-8 text-center">
     <h1 class="jumbotron" >Lista Twoich postów </h1>
+      <%= link_to 'Log_out', logout_path, method: :delete %>
       <%= link_to 'Dodaj nowy post', new_post_path, :class=>"btn btn-info"   %> 
     <br>
     <% @posts.each do |post| %>
@@ -14,3 +16,6 @@
     <% end %>
   </div>
 </div>
+ <% else %>
+  PAGE NOT FOUND
+<% end %>
