@@ -5,6 +5,9 @@
       <%= link_to 'Log_out', logout_path, method: :delete %>
       <%= link_to 'Dodaj nowy post', new_post_path, :class=>"btn btn-info"   %> 
     <br>
+    <div class="d-flex justify-content-center paginate-all">
+    <%= will_paginate %>
+    </div> 
     <% @posts.each do |post| %>
       <br>
       <h3 ><%= post.title %></h3>
@@ -12,9 +15,12 @@
       <span ><%=time_ago_in_words(post.created_at)%> ago </span><br>
       <%= link_to 'Edytuj', edit_post_path(post), :class=>"btn btn-success" %>
       <%= link_to 'Usuń', post_path(post), method: :delete, data: {confirm: "Are you sure?"}, :class=>"btn btn-danger" %>
-      <%= link_to 'Wyświetl', post_path(post), class: "btn btn-info" %>
+      <%= link_to 'Wyświetl', post_path(post), class: "btn btn-info " %>
       <br>
     <% end %>
+        <div class="d-flex justify-content-center paginate-all">
+    <%= will_paginate %>
+    </div> 
   </div>
 </div>
  <% else %>
