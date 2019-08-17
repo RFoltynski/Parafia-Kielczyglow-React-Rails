@@ -45,7 +45,7 @@ export default class NewsView extends React.Component {
                 {this.props.post.description}
               </div>
             ) : (
-              "czosnek"
+              this.props.post.description.slice(0, 10)
             )}
           </div>
         </div>
@@ -59,7 +59,7 @@ export default class NewsView extends React.Component {
           {this.state.buttonDescriptionText}
         </button>{" "}
         <div className="newsView-box-date">
-          data dodania: {this.props.post.created_at}
+          data dodania: {this.props.post.post_date}
         </div>{" "}
       </div>
     );
