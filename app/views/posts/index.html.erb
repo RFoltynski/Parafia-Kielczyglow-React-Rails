@@ -12,6 +12,7 @@
       <span ><%=time_ago_in_words(post.created_at)%> ago </span><br>
       <%= link_to 'Edytuj', edit_post_path(post), :class=>"btn btn-success" %>
       <%= link_to 'Usuń', post_path(post), method: :delete, data: {confirm: "Are you sure?"}, :class=>"btn btn-danger" %>
+      <%= link_to 'Wyświetl', post_path(post), class: "btn btn-info" %>
       <br>
     <% end %>
   </div>

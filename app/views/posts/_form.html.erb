@@ -18,10 +18,16 @@
             <%= f.text_area :description, class: "form-control", placeholder: "Wprowadź opis postu.." %>
           </div>
         </div>
-          <%= f.submit(@post.new_record? ? "Dodaj post" : "Edytuj post", class: "col-md-4 btn btn-info")%> <br>
-      <% end %>
+         <div class="form-group">
+           <%= f.label :photos %>
+           <%= f.file_field :photos, multiple: true %>
+        </div>
     </div> 
-  </div> 
+    
+  </div>
+   <%= f.submit(@post.new_record? ? "Dodaj post" : "Edytuj post", class: "col-md-4 btn btn-info")%> <br>
+      <% end %>
+ 
   <div class="row">
       <%= link_to 'Lista postów', posts_path, class: "btn-edit-post btn btn-secondary" %>
   </div>
