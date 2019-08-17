@@ -1,27 +1,39 @@
 import React from "react";
 import NewsView from "./NewsView";
 import Navbar from "./Navbar";
-
 import search from "./img/search.png";
+import axios from "axios";
 
 function isSearched(searchTerm) {
   return function(item) {
     return (
       !searchTerm ||
-      item.content.toLowerCase().includes(searchTerm) ||
+      item.title.toLowerCase().includes(searchTerm) ||
       item.description.toLowerCase().includes(searchTerm)
     );
   };
 }
 
 class Aktualnosci extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       newses: [],
       searchTerm: "",
-      showSearch: false
+      showSearch: false,
+      isLoading: false
     };
+  }
+
+  componentWillMount() {
+    axios
+      .get("posts.json", {}, { "Content-Type": "application/json" })
+      .then(res => {
+        this.setState({
+          posts: res.data.data,
+          isLoading: true
+        });
+      });
   }
 
   showSearch = () => {
@@ -37,15 +49,11 @@ class Aktualnosci extends React.Component {
   };
 
   render() {
-    let searchList = this.state.newses;
-    console.log(searchList);
-
-    let newsList = this.state.newses
-      .filter(isSearched(this.state.searchTerm))
-      .map(news => {
-        return <NewsView news={news} />;
-      })
-      .reverse();
+    let newsList = this.state.isLoading
+      ? this.state.posts.filter(isSearched(this.state.searchTerm)).map(post => {
+          return <NewsView post={post} />;
+        })
+      : "loading";
 
     return (
       <div className="aktualnosci-comp ">
@@ -53,7 +61,6 @@ class Aktualnosci extends React.Component {
           <Navbar />
           <center>
             <h1> AKTUALNOŚCI </h1>
-
             <button onClick={this.showSearch} className="searchButton">
               <img className="searchButton-img" src={search} />
             </button>

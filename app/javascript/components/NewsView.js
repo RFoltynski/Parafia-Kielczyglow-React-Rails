@@ -37,36 +37,15 @@ export default class NewsView extends React.Component {
 
     return (
       <div className="newsView-box">
-        <h2>{this.props.news.content}</h2>
+        <h2>{this.props.post.title}</h2>
         <div className="newsView-box-text">
           <div className={boxClass.join(" ")}>
             {this.state.showMe ? (
               <div className="newsView-box-text-show">
-                {renderHTML(this.props.news.description)}
-
-                <ReactBnbGallery
-                  show={this.state.galleryOpened}
-                  photos={this.photos}
-                  onClose={this.toggleGallery}
-                  activePhotoIndex={this.state.numberOfPhoto}
-                />
-                <div className="newsView-box-img">
-                  {(this.props.news.downloadURLs || []).map(
-                    (downloadURL, i) => {
-                      return (
-                        <img
-                          className="newsView-img"
-                          onClick={() => this.toggleGallery(i)}
-                          src={downloadURL}
-                          key={i}
-                        />
-                      );
-                    }
-                  )}
-                </div>
+                {this.props.post.description}
               </div>
             ) : (
-              renderHTML(this.shortText())
+              "czosnek"
             )}
           </div>
         </div>
@@ -80,7 +59,7 @@ export default class NewsView extends React.Component {
           {this.state.buttonDescriptionText}
         </button>{" "}
         <div className="newsView-box-date">
-          data dodania: {this.props.news.date}
+          data dodania: {this.props.post.created_at}
         </div>{" "}
       </div>
     );
