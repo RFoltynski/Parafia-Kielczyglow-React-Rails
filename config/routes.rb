@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
+  resources :intentions
   root "pages#index"
   get 'kaplani', to: 'pages#index'
   get 'aktualnosci', to: 'pages#index'

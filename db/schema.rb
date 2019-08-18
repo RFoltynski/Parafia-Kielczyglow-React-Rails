@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_17_114413) do
+ActiveRecord::Schema.define(version: 2019_08_18_123130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,39 @@ ActiveRecord::Schema.define(version: 2019_08_17_114413) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "intentions", force: :cascade do |t|
+    t.string "K1monday"
+    t.string "K2monday"
+    t.string "K1tuesday"
+    t.string "K2tuesday"
+    t.string "K1wednesday"
+    t.string "K2wednesday"
+    t.string "K1thursday"
+    t.string "K2thursday"
+    t.string "K1friday"
+    t.string "K2friday"
+    t.string "K1saturday"
+    t.string "K2saturday"
+    t.string "K1sunday"
+    t.string "K2sunday"
+    t.string "P1monday"
+    t.string "P2monday"
+    t.string "P1tuesday"
+    t.string "P2tuesday"
+    t.string "P1wednesday"
+    t.string "P2wednesday"
+    t.string "P1thursday"
+    t.string "P2thursday"
+    t.string "P1friday"
+    t.string "P2friday"
+    t.string "P1saturday"
+    t.string "P2saturday"
+    t.string "P1sunday"
+    t.string "P2sunday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|

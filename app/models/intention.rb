@@ -1,0 +1,3 @@
+class Intention < ApplicationRecord 
+  
+end
