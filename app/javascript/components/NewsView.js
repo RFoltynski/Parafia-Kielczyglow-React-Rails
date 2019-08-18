@@ -3,8 +3,6 @@ import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
 
 export default class NewsView extends React.Component {
-  photos = [];
-
   constructor() {
     super();
     this.state = {
@@ -14,6 +12,7 @@ export default class NewsView extends React.Component {
       buttonDescriptionText: "Więcej...",
       numberOfPhoto: 0
     };
+    this.toggleGallery = this.toggleGallery.bind(this);
   }
 
   showText = () => {
@@ -29,6 +28,13 @@ export default class NewsView extends React.Component {
     }
   };
 
+  toggleGallery(numberOfPhoto) {
+    this.setState({
+      galleryOpened: !this.state.galleryOpened,
+      numberOfPhoto: numberOfPhoto
+    });
+  }
+
   render() {
     let boxClass = ["col-md-12 newsView-box-collaps-off"];
     if (this.state.addClass) {
@@ -43,6 +49,24 @@ export default class NewsView extends React.Component {
             {this.state.showMe ? (
               <div className="newsView-box-text-show">
                 {this.props.post.description}
+                <ReactBnbGallery
+                  show={this.state.galleryOpened}
+                  photos={this.props.post.pictures}
+                  onClose={this.toggleGallery}
+                  activePhotoIndex={this.state.numberOfPhoto}
+                />
+                <div className="newsView-box-img">
+                  {(this.props.post.pictures || []).map((downloadURL, i) => {
+                    return (
+                      <img
+                        className="newsView-img"
+                        onClick={() => this.toggleGallery(i)}
+                        src={downloadURL.photo}
+                        key={i}
+                      />
+                    );
+                  })}
+                </div>
               </div>
             ) : (
               this.props.post.description.slice(0, 10)

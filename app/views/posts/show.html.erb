@@ -2,10 +2,13 @@
 <div class="container">
   <div class="offset-md-2 col-md-8 text-center">
     <h1 class="jumbotron">Twój post</h1>
-
     <h3><%= @post.title %></h3> 
-    <p><%= @post.description %></p>  
-
+    <p><%= @post.description %></p>
+      <br>
+      <% @post.photos.each do |photo| %>
+      <%= image_tag(photo, class: "col-md-4") %>
+    <% end %>
+   <br>
     <%= link_to 'Lista postów', posts_path, class: "btn btn-secondary" %>
     <%= link_to 'Dodaj', new_post_path, class: "btn btn-primary" %>
     <%= link_to 'Edytuj', edit_post_path(@post), class: "btn btn-success" %>

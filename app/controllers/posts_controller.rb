@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   before_action :find_post, only: %i[show edit update destroy]
 
   def index
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.paginate(page: params[:page], per_page: 5).order("created_at DESC")
+    @posts_json = Post.all.order("created_at DESC")
   end
 
   def show; end
@@ -23,6 +24,12 @@ class PostsController < ApplicationController
 
   def edit; end
 
+  def delete_image_attachment
+    @post_photo = ActiveStorage::Attachment.find(params[:id])
+    @post_photo.purge
+    redirect_back(fallback_location: request.referer)
+  end
+              
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
@@ -44,6 +51,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:id, :title, :description)
+    params.require(:post).permit(:id, :title, :description, photos: [])
   end
 end

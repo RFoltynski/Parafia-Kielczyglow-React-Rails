@@ -1,4 +1,13 @@
-
+<% if @post.errors.any? %>
+<h2>You have to corret some fields</h2>
+<ul>
+  <% @post.errors.full_messages.each do |msg| %>
+    <li>
+      <%= msg %>
+    </li>
+  <% end %>
+</ul>
+<% end %>
   <div class="row">
     <div class="col-md-12">
       <%= form_for @post do |f| %>
@@ -17,11 +26,25 @@
           <div class="offset-md-1 col-md-10">
             <%= f.text_area :description, class: "form-control", placeholder: "Wprowadź opis postu.." %>
           </div>
+ 
+          <% @post.photos.each do |photo| %>
+            <%= image_tag(photo, class: "col-md-4") %>
+            <%= link_to 'Remove', delete_image_attachment_post_path(photo.id), method: :delete,
+                  data: { confirm: 'Are you sure?' }%>
+         <% end %>
+         
+          <br>
         </div>
-          <%= f.submit(@post.new_record? ? "Dodaj post" : "Edytuj post", class: "col-md-4 btn btn-info")%> <br>
-      <% end %>
+         <div class="form-group">
+           <%= f.label :photos %>
+           <%= f.file_field :photos, multiple: true %>
+        </div>
     </div> 
-  </div> 
+
+  </div>
+   
+     <%= f.submit(@post.new_record? ? "Dodaj post" : "Edytuj post", class: "col-md-4 btn btn-info")%> <br>
+      <% end %>
   <div class="row">
       <%= link_to 'Lista postów', posts_path, class: "btn-edit-post btn btn-secondary" %>
   </div>
