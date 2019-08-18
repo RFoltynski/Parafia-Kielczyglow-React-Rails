@@ -36,6 +36,6 @@ class IntentionsController < ApplicationController
   end
 
   def intention_params
-    params.requaire(:intention).permit!
+    params.require(:intention).permit(Intention.column_names)
   end
 end

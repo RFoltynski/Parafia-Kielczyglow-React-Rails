@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row">
   <div class= "col-md-12">
     <%= form_for @intention do |f| %>
@@ -139,9 +140,11 @@
               <%= f.text_field :P2sunday, class: "form-control", placeholder: "7.30", autofocus: true %>
             </div>
           </div>
-
+          <br>
+           <%= f.submit @intention, class: "col-md-4 btn btn-info"%> 
         </div>
       </div>
     <% end %>  
   </div>
+</div>
 </div>
