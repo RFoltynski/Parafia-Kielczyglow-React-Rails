@@ -23,6 +23,12 @@ class PostsController < ApplicationController
 
   def edit; end
 
+  def delete_image_attachment
+    @post_photo = ActiveStorage::Attachment.find(params[:id])
+    @post_photo.purge
+    redirect_back(fallback_location: request.referer)
+  end
+              
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)

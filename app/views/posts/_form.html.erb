@@ -26,9 +26,13 @@
           <div class="offset-md-1 col-md-10">
             <%= f.text_area :description, class: "form-control", placeholder: "Wprowadź opis postu.." %>
           </div>
+ 
           <% @post.photos.each do |photo| %>
             <%= image_tag(photo, class: "col-md-4") %>
+            <%= link_to 'Remove', delete_image_attachment_post_path(photo.id), method: :delete,
+                  data: { confirm: 'Are you sure?' }%>
          <% end %>
+         
           <br>
         </div>
          <div class="form-group">
