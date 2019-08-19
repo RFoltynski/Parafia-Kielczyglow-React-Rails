@@ -4,7 +4,7 @@
     <%= form_for @intention do |f| %>
       <div class="row">
         <div class="col-md-5">
-          <h2 class="text-center">Kielczygłów</h2>
+          <h2 class="text-center intentions-h2 ">Kielczygłów</h2>
           <div class="form-group">
             <div class="control-label offset-md-1 col-md-10">
               <%= f.label "Poniedziałek" %>
@@ -72,7 +72,7 @@
         </div>
 
         <div class="col-md-5">
-          <h2 class="text-center">Kielczygłów</h2>
+          <h2 class="text-center intentions-h2 ">Pierzyny</h2>
           <div class="form-group">
             <div class="control-label offset-md-1 col-md-10">
               <%= f.label "Poniedziałek" %>
@@ -140,9 +140,8 @@
               <%= f.text_field :P2sunday, class: "form-control", placeholder: "7.30", autofocus: true %>
             </div>
           </div>
-          <br>
-           <%= f.submit @intention, class: "col-md-4 btn btn-info"%> 
         </div>
+          <%= f.submit 'Wprowadź zmiany', class: "col-md-4 btn btn-info"%> 
       </div>
     <% end %>  
   </div>

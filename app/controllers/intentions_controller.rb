@@ -1,13 +1,7 @@
 class IntentionsController < ApplicationController
-  before_action :find_intention, only: %i[show update edit]
+  before_action :find_intention, only: %i[update edit]
   def index
-    @intentions = Intention.all
-  end
-
-  def show; end
-
-  def new
-    @intention = Intention.new
+    @intention = Intention.first
   end
 
   def create
@@ -22,8 +16,8 @@ class IntentionsController < ApplicationController
   def edit; end
 
   def update
-    if @intention.update
-      redirect_to @intention
+    if @intention.update(intention_params)
+      redirect_to intentions_path
     else
       render 'edit'
     end
