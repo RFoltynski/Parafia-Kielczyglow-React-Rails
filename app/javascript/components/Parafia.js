@@ -87,7 +87,7 @@ class Parafia extends React.Component {
         <div className="overlay">
           <Navbar />
           <center>
-            <h1> Parafia </h1>
+            <h1 class="h1-header"> Parafia </h1>
             <div className="parafia-buttons">
               <Button
                 onClick={this.onClick}

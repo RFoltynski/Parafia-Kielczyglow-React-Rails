@@ -48,7 +48,7 @@ export default class NewsView extends React.Component {
           <div className={boxClass.join(" ")}>
             {this.state.showMe ? (
               <div className="newsView-box-text-show">
-                {this.props.post.description}
+                {renderHTML(this.props.post.description)}
                 <ReactBnbGallery
                   show={this.state.galleryOpened}
                   photos={this.props.post.pictures}

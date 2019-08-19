@@ -1,0 +1,29 @@
+strong {
+  font-weight: bold !important;
+}
+
+blockquote {
+  background: #ededed !important;
+  border-left: 8px solid #717479 !important;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15) !important;
+  color: #666 !important;
+  font-size: 1.1em !important;
+  font-style: italic !important;
+  font-weight: 300 !important;
+  line-height: 1.6 !important;
+  margin: 50px auto !important;
+  padding: 1.2em 30px 1.2em 75px !important;
+  position: relative !important;
+  vertical-align: super !important;
+  width: 60% !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+}
+blockquote::before {
+  color: #717479;
+  content: "\201C";
+  font-size: 6em;
+  left: 0;
+  position: absolute;
+  top: -35px;
+}
