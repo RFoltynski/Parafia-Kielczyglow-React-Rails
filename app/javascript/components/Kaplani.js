@@ -51,7 +51,7 @@ class Kaplani extends React.Component {
         <div className="overlay">
           <Navbar />
           <center>
-            <h1> Kapłani </h1>
+            <h1 class="h1-header"> Kapłani </h1>
             <div className="inne-buttons">
               <Button
                 onClick={this.onClick}

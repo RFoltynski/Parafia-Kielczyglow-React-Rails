@@ -36,7 +36,7 @@ class Intencje extends React.Component {
         <div className="overlay">
           <Navbar />{" "}
           <center>
-            <h1 className="intencje-h1">Intencje</h1>
+            <h1 className="h1-header">Intencje</h1>
           </center>
           <div className="row" style={pStyle}>
             <div className="intencje-column">

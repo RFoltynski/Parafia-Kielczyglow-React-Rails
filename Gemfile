@@ -35,7 +35,7 @@ gem 'bootstrap-will_paginate'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'trix-rails', '~> 2.0.0', require: 'trix'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

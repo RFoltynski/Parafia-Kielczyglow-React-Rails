@@ -60,7 +60,7 @@ class Aktualnosci extends React.Component {
         <div className="overlay">
           <Navbar />
           <center>
-            <h1> AKTUALNOŚCI </h1>
+            <h1 class="h1-header"> AKTUALNOŚCI </h1>
             <button onClick={this.showSearch} className="searchButton">
               <img className="searchButton-img" src={search} />
             </button>

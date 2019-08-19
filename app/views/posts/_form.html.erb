@@ -24,7 +24,7 @@
             <%= f.label :description, "Opis:" %>
           </div>
           <div class="offset-md-1 col-md-10">
-            <%= f.text_area :description, class: "form-control", placeholder: "Wprowadź opis postu.." %>
+            <%= f.trix_editor :description %>
           </div>
  
           <% @post.photos.each do |photo| %>

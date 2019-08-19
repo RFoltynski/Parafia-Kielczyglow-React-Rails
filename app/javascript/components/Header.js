@@ -6,7 +6,7 @@ class Header extends React.Component {
       <div className="header">
         {" "}
         <center>
-          <h1>Parafia-Kielczyglow.info.pl</h1>
+          <h1 class="h1-header">Parafia-Kielczyglow.info.pl</h1>
 
           <button
             type="button"
