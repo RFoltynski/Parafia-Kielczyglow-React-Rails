@@ -1,8 +1,8 @@
 <h1 class="text-center">Intencje</h1>
 <div class="container-fluid">
 <div class="row">
- <%= link_to 'Edytuj', edit_intention_path(@intention), class: "btn btn-success" %>
-</div>
+<% @intentions.each do |intention| %>
+  <%= link_to 'edytuj', edit_intention_path(intention) %>
   <div class="col-md-12">
     <div class="row">
       <div class="col-md-6 text-center">
@@ -12,10 +12,10 @@
               Poniedziałek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.K1monday %>
+              7.00 <%= intention.K1monday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.K2monday %>
+              7.30 <%= intention.K2monday %>
             </div>
           </div>
           <div class="intention-day">
@@ -23,10 +23,10 @@
               Wtorek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.K1tuesday %>
+              7.00 <%= intention.K1tuesday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.K2tuesday %>
+              7.30 <%= intention.K2tuesday %>
             </div>
           </div>
           <div class="intention-day">
@@ -34,10 +34,10 @@
               Środa
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.K1wednesday %>
+              7.00 <%= intention.K1wednesday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.K2wednesday %>
+              7.30 <%= intention.K2wednesday %>
             </div>
           </div>
           <div class="intention-day">
@@ -45,10 +45,10 @@
               Czwartek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.K1thursday %>
+              7.00 <%= intention.K1thursday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.K2thursday %>
+              7.30 <%= intention.K2thursday %>
             </div>
           </div>
           <div class="intention-day">
@@ -56,10 +56,10 @@
               Piątek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.K1friday %>
+              7.00 <%= intention.K1friday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.K2friday %>
+              7.30 <%= intention.K2friday %>
             </div>
           </div>
           <div class="intention-day">
@@ -67,10 +67,10 @@
               Sobota
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.K1saturday %>
+              7.00 <%= intention.K1saturday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.K2saturday %>
+              7.30 <%= intention.K2saturday %>
             </div>
           </div>
           <div class="intention-day">
@@ -78,10 +78,10 @@
               Niedziela
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.K1sunday %>
+              7.00 <%= intention.K1sunday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.K2sunday %>
+              7.30 <%= intention.K2sunday %>
             </div>
           </div>
       </div>
@@ -93,10 +93,10 @@
               Poniedziałek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.P1monday %>
+              7.00 <%= intention.P1monday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.P2monday %>
+              7.30 <%= intention.P2monday %>
             </div>
           </div>
           <div class="intention-day">
@@ -104,10 +104,10 @@
               Wtorek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.P1tuesday %>
+              7.00 <%= intention.P1tuesday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.P2tuesday %>
+              7.30 <%= intention.P2tuesday %>
             </div>
           </div>
           <div class="intention-day">
@@ -115,10 +115,10 @@
               Środa
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.P1wednesday %>
+              7.00 <%= intention.P1wednesday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.P2wednesday %>
+              7.30 <%= intention.P2wednesday %>
             </div>
           </div>
           <div class="intention-day">
@@ -126,10 +126,10 @@
               Czwartek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.P1thursday %>
+              7.00 <%= intention.P1thursday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.P2thursday %>
+              7.30 <%= intention.P2thursday %>
             </div>
           </div>
           <div class="intention-day">
@@ -137,10 +137,10 @@
               Piątek
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.P1friday %>
+              7.00 <%= intention.P1friday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.P2friday %>
+              7.30 <%= intention.P2friday %>
             </div>
           </div>
           <div class="intention-day">
@@ -148,10 +148,10 @@
               Sobota
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.P1saturday %>
+              7.00 <%= intention.P1saturday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.P2saturday %>
+              7.30 <%= intention.P2saturday %>
             </div>
           </div>
           <div class="intention-day">
@@ -159,13 +159,14 @@
               Niedziela
             </div>
             <div class="col-md-10 offset-md-1">
-              7.00 <%= @intention.P1sunday %>
+              7.00 <%= intention.P1sunday %>
             </div>
             <div class="col-md-10 offset-md-1">
-              7.30 <%= @intention.P2sunday %>
+              7.30 <%= intention.P2sunday %>
             </div>
           </div>
       </div>
     </div>
+    <% end %>
   </div>
 </div>

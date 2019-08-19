@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import axios from "axios";
 
 class Intencje extends React.Component {
   constructor() {
@@ -8,6 +9,17 @@ class Intencje extends React.Component {
       intencions: [],
       error: null
     };
+  }
+
+  componentWillMount() {
+    axios
+      .get("intentions.json", {}, { "Content-Type": "application/json" })
+      .then(res => {
+        this.setState({
+          intentions: res.data.data,
+          isLoading: true
+        });
+      });
   }
 
   render() {
@@ -29,45 +41,45 @@ class Intencje extends React.Component {
           <div className="row" style={pStyle}>
             <div className="intencje-column">
               <h2>Kiełczygłów</h2>
-              {Array.isArray(this.state.intencions) ? (
-                this.state.intencions.map(item => {
+              {this.state.isLoading ? (
+                this.state.intentions.kielczyglow.map(item => {
                   return (
                     <ul>
                       <h3>Poniedziałek: </h3>
                       7:00
-                      <li>{item.intencjaKeil1}</li>
+                      <li>{item.K1monday}</li>
                       7:30
-                      <li>{item.intencjaKeil11}</li>
+                      <li>{item.K2monday}</li>
                       <h3>Wtorek: </h3>
                       7:00
-                      <li>{item.intencjaKeil2}</li>
+                      <li>{item.K1tuesday}</li>
                       7:30
-                      <li>{item.intencjaKeil22}</li>
+                      <li>{item.K2tuesday}</li>
                       <h3>Środa: </h3>
                       7:00
-                      <li>{item.intencjaKeil3}</li>
+                      <li>{item.K1wednesday}</li>
                       7:30
-                      <li>{item.intencjaKeil33}</li>
+                      <li>{item.K2wednesday}</li>
                       <h3>Czwartek: </h3>
                       7:00
-                      <li>{item.intencjaKeil4}</li>
+                      <li>{item.K1thursday}</li>
                       7:30
-                      <li>{item.intencjaKeil44}</li>
+                      <li>{item.K2thursday}</li>
                       <h3>Piątek: </h3>
                       7:00
-                      <li>{item.intencjaKeil5}</li>
+                      <li>{item.K1friday}</li>
                       7:30
-                      <li>{item.intencjaKeil55}</li>
+                      <li>{item.K2friday}</li>
                       <h3>Sobota: </h3>
                       7:00
-                      <li>{item.intencjaKeil6}</li>
+                      <li>{item.K1saturday}</li>
                       7:30
-                      <li>{item.intencjaKeil66}</li>
+                      <li>{item.K2saturday}</li>
                       <h3>Niedziela: </h3>
                       7:00
-                      <li>{item.intencjaKeil7}</li>
+                      <li>{item.K1sunday}</li>
                       7:30
-                      <li>{item.intencjaKeil77}</li>
+                      <li>{item.K2sunday}</li>
                     </ul>
                   );
                 })
@@ -78,47 +90,51 @@ class Intencje extends React.Component {
 
             <div className="intencje-column">
               <h2>Pierzyny</h2>
-              {this.state.intencions.map(item => {
-                return (
-                  <ul>
-                    <h3>Poniedziałek: </h3>
-                    16:00
-                    <li>{item.intencjaPie1}</li>
-                    16:30
-                    <li>{item.intencjaPie11}</li>
-                    <h3>Wtorek: </h3>
-                    16:00
-                    <li>{item.intencjaPie2}</li>
-                    16:30
-                    <li>{item.intencjaPie22}</li>
-                    <h3>Środa: </h3>
-                    16:00
-                    <li>{item.intencjaPie3}</li>
-                    16:30
-                    <li>{item.intencjaPie33}</li>
-                    <h3>Czwartek: </h3>
-                    16:00
-                    <li>{item.intencjaPie4}</li>
-                    16:30
-                    <li>{item.intencjaPie44}</li>
-                    <h3>Piątek: </h3>
-                    16:00
-                    <li>{item.intencjaPie5}</li>
-                    16:30
-                    <li>{item.intencjaPie55}</li>
-                    <h3>Sobota: </h3>
-                    16:00
-                    <li>{item.intencjaPie6}</li>
-                    16:30
-                    <li>{item.intencjaPie66}</li>
-                    <h3>Niedziela: </h3>
-                    16:00
-                    <li>{item.intencjaPie7}</li>
-                    16:30
-                    <li>{item.intencjaPie77}</li>
-                  </ul>
-                );
-              })}
+              {this.state.isLoading ? (
+                this.state.intentions.pierzyny.map(item => {
+                  return (
+                    <ul>
+                      <h3>Poniedziałek: </h3>
+                      16:00
+                      <li>{item.P1monday}</li>
+                      16:30
+                      <li>{item.P2monday}</li>
+                      <h3>Wtorek: </h3>
+                      16:00
+                      <li>{item.P1tuesday}</li>
+                      16:30
+                      <li>{item.P2tuesday}</li>
+                      <h3>Środa: </h3>
+                      16:00
+                      <li>{item.P1wednesday}</li>
+                      16:30
+                      <li>{item.P2wednesday}</li>
+                      <h3>Czwartek: </h3>
+                      16:00
+                      <li>{item.P1thursday}</li>
+                      16:30
+                      <li>{item.P2thursday}</li>
+                      <h3>Piątek: </h3>
+                      16:00
+                      <li>{item.P1firday}</li>
+                      16:30
+                      <li>{item.P2friday}</li>
+                      <h3>Sobota: </h3>
+                      16:00
+                      <li>{item.P1saturday}</li>
+                      16:30
+                      <li>{item.P2saturday}</li>
+                      <h3>Niedziela: </h3>
+                      16:00
+                      <li>{item.P1sunday}</li>
+                      16:30
+                      <li>{item.P2sunday}</li>
+                    </ul>
+                  );
+                })
+              ) : (
+                <p>Nie ma intencji na ten tydzien..</p>
+              )}
             </div>
           </div>
         </div>

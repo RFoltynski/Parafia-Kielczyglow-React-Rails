@@ -1,7 +1,7 @@
 class IntentionsController < ApplicationController
   before_action :find_intention, only: %i[update edit]
   def index
-    @intention = Intention.first
+    @intentions = Intention.all
   end
 
   def create
