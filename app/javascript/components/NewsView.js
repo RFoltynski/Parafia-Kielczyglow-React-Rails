@@ -1,6 +1,7 @@
 import React from "react";
 import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
+import pdf from "./img/pdf.png";
 
 export default class NewsView extends React.Component {
   constructor() {
@@ -67,7 +68,17 @@ export default class NewsView extends React.Component {
                     );
                   })}
                 </div>
-                {this.props.post.file}
+                {this.props.post.file ? (
+                  <a
+                    href={this.props.post.file}
+                    class="newsView-box-a"
+                    target="blank"
+                  >
+                    <img className="newsView-box-pdf" src={pdf} />
+                  </a>
+                ) : (
+                  <div />
+                )}
               </div>
             ) : (
               <div />
