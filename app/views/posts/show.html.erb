@@ -7,7 +7,11 @@
       <br>
       <% @post.photos.each do |photo| %>
       <%= image_tag(photo, class: "col-md-4") %>
-    <% end %>
+      <% end %>
+        <% if @post.file.attached? %>
+        <%= link_to @post.file, url_for(@post.file), target: '_blank' %>
+        <% end %>
+                          
    <br>
     <%= link_to 'Lista postów', posts_path, class: "btn btn-secondary" %>
     <%= link_to 'Dodaj', new_post_path, class: "btn btn-primary" %>
