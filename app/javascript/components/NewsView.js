@@ -69,7 +69,7 @@ export default class NewsView extends React.Component {
                 </div>
               </div>
             ) : (
-              this.props.post.description.slice(0, 10)
+              <div />
             )}
           </div>
         </div>
