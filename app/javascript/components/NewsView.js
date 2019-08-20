@@ -67,6 +67,7 @@ export default class NewsView extends React.Component {
                     );
                   })}
                 </div>
+                {this.props.post.file}
               </div>
             ) : (
               <div />
