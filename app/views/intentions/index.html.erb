@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <h1 class="text-center">Intencje</h1>
 <div class="container-fluid">
 <div class="row">
@@ -170,3 +171,6 @@
     <% end %>
   </div>
 </div>
+ <% else %>
+  PAGE NOT FOUND
+<% end %>

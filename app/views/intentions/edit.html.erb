@@ -1,3 +1,7 @@
+<% if logged_in? %>
 <h1 class="text-center">Wprowadz nowe intencje</h1>
 
 <%= render "form" %>
+ <% else %>
+  PAGE NOT FOUND
+<% end %>

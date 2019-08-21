@@ -48,6 +48,11 @@ class Aktualnosci extends React.Component {
     });
   };
 
+  handlePageChange(pageNumber) {
+    console.log(`active page is ${pageNumber}`);
+    this.setState({ activePage: pageNumber });
+  }
+
   render() {
     let newsList = this.state.isLoading
       ? this.state.posts.filter(isSearched(this.state.searchTerm)).map(post => {
@@ -79,7 +84,9 @@ class Aktualnosci extends React.Component {
             </form>
           </center>
           <div className="news-boxes">
-            <div className="col-md-10">{newsList}</div>
+            <div className="col-md-10">
+              <div>{newsList}</div>
+            </div>
           </div>
         </div>
       </div>
