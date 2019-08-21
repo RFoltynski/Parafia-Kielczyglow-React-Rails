@@ -6,11 +6,15 @@ class Header extends React.Component {
       <div className="header">
         {" "}
         <center>
-          <h1 class="h1-header">Parafia-Kielczyglow.info.pl</h1>
-
+          <div className="header-box">
+            <h1 class="h1-header header-parafia">
+              Parafia-Kielczyglow.info.pl
+            </h1>
+          </div>
+          <div className={"arrow bounce"} />
           <button
             type="button"
-            class="btn btn-outline-light"
+            class="btn btn-light button-header"
             onClick={this.props.scroll}
           >
             {" "}
