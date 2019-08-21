@@ -13,7 +13,6 @@
 .newsView-box {
   background-color: white;
   border-radius: 15px;
-  opacity: 0.9;
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
@@ -52,10 +51,15 @@ h2 {
 }
 
 .newsView-img {
-  margin-bottom: 15px;
-  max-width: 150px;
-  max-height: 150px;
+  width: 135px;
+  height: 100px;
 }
+.newsView-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
 .newsView-box-a {
   margin-bottom: 20px;
 }
@@ -68,4 +72,5 @@ h2 {
 .newsView-box-pdf {
   width: 50px;
   height: 50px;
+  margin-top: 25px;
 }

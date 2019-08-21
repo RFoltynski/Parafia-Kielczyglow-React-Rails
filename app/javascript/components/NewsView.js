@@ -44,7 +44,7 @@ export default class NewsView extends React.Component {
     }
 
     return (
-      <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
+      <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
         {props => (
           <div className="newsView-box" style={props}>
             <h2>{this.props.post.title}</h2>
@@ -59,7 +59,7 @@ export default class NewsView extends React.Component {
                       onClose={this.toggleGallery}
                       activePhotoIndex={this.state.numberOfPhoto}
                     />
-                    <div className="newsView-box-img">
+                    <div className="newsView-box-img col-md-12 text-center">
                       {(this.props.post.pictures || []).map(
                         (downloadURL, i) => {
                           return (
