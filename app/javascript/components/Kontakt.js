@@ -1,16 +1,22 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { useSpring, animated } from "react-spring";
 
-class Kontakt extends React.Component {
-  render() {
-    return (
-      <div className="kontakt">
-        <div className="overlay">
-          <Navbar />
-          <center>
-            <h1 class="h1-header"> Kontakt </h1>
+function Kontakt() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="kontakt">
+      <div className="overlay">
+        <Navbar />
+        <center>
+          <h1 class="h1-header"> Kontakt </h1>
 
-            <div className="kontakt-row">
+          <div className="kontakt-row">
+            <animated.div style={props}>
               <div className="buttons-box">
                 <h2 name="scroll-to-historia">Dane Kontaktowe</h2>
                 <div className="buttons-content row">
@@ -34,12 +40,12 @@ class Kontakt extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
-          </center>
-        </div>
+            </animated.div>
+          </div>
+        </center>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Kontakt;

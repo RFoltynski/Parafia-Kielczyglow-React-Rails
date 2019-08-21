@@ -2,6 +2,7 @@ import React from "react";
 import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
 import pdf from "./img/pdf.png";
+import { Spring } from "react-spring/renderprops.cjs";
 
 export default class NewsView extends React.Component {
   constructor() {
@@ -43,61 +44,67 @@ export default class NewsView extends React.Component {
     }
 
     return (
-      <div className="newsView-box">
-        <h2>{this.props.post.title}</h2>
-        <div className="newsView-box-text">
-          <div className={boxClass.join(" ")}>
-            {this.state.showMe ? (
-              <div className="newsView-box-text-show">
-                {renderHTML(this.props.post.description)}
-                <ReactBnbGallery
-                  show={this.state.galleryOpened}
-                  photos={this.props.post.pictures}
-                  onClose={this.toggleGallery}
-                  activePhotoIndex={this.state.numberOfPhoto}
-                />
-                <div className="newsView-box-img">
-                  {(this.props.post.pictures || []).map((downloadURL, i) => {
-                    return (
-                      <img
-                        className="newsView-img"
-                        onClick={() => this.toggleGallery(i)}
-                        src={downloadURL.photo}
-                        key={i}
-                      />
-                    );
-                  })}
-                </div>
-                {this.props.post.file ? (
-                  <a
-                    href={this.props.post.file}
-                    class="newsView-box-a"
-                    target="blank"
-                  >
-                    <img className="newsView-box-pdf" src={pdf} />
-                  </a>
+      <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
+        {props => (
+          <div className="newsView-box" style={props}>
+            <h2>{this.props.post.title}</h2>
+            <div className="newsView-box-text">
+              <div className={boxClass.join(" ")}>
+                {this.state.showMe ? (
+                  <div className="newsView-box-text-show">
+                    {renderHTML(this.props.post.description)}
+                    <ReactBnbGallery
+                      show={this.state.galleryOpened}
+                      photos={this.props.post.pictures}
+                      onClose={this.toggleGallery}
+                      activePhotoIndex={this.state.numberOfPhoto}
+                    />
+                    <div className="newsView-box-img">
+                      {(this.props.post.pictures || []).map(
+                        (downloadURL, i) => {
+                          return (
+                            <img
+                              className="newsView-img"
+                              onClick={() => this.toggleGallery(i)}
+                              src={downloadURL.photo}
+                              key={i}
+                            />
+                          );
+                        }
+                      )}
+                    </div>
+                    {this.props.post.file ? (
+                      <a
+                        href={this.props.post.file}
+                        class="newsView-box-a"
+                        target="blank"
+                      >
+                        <img className="newsView-box-pdf" src={pdf} />
+                      </a>
+                    ) : (
+                      <div />
+                    )}
+                  </div>
                 ) : (
                   <div />
                 )}
               </div>
-            ) : (
-              <div />
-            )}
+            </div>
+            <button
+              type="button"
+              className="btn btn-sm btn-outline-secondary newsView-box-button"
+              onClick={() => {
+                this.showText();
+              }}
+            >
+              {this.state.buttonDescriptionText}
+            </button>{" "}
+            <div className="newsView-box-date">
+              data dodania: {this.props.post.post_date}
+            </div>{" "}
           </div>
-        </div>
-        <button
-          type="button"
-          className="btn btn-sm btn-outline-secondary newsView-box-button"
-          onClick={() => {
-            this.showText();
-          }}
-        >
-          {this.state.buttonDescriptionText}
-        </button>{" "}
-        <div className="newsView-box-date">
-          data dodania: {this.props.post.post_date}
-        </div>{" "}
-      </div>
+        )}
+      </Spring>
     );
   }
 }

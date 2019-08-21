@@ -1,6 +1,6 @@
 import React from "react";
-import { animateScroll as scroll, scroller } from "react-scroll";
 import Navbar from "./Navbar";
+import { useSpring, animated } from "react-spring";
 
 class Parafia extends React.Component {
   constructor() {
@@ -127,10 +127,15 @@ class Button extends React.Component {
   }
 }
 
-class Pytania extends React.Component {
-  render() {
-    return (
-      <div className="inne-row">
+function Pytania() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="inne-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">Często zadawane pytania</h2>
           <div className="buttons-content row">
@@ -159,15 +164,20 @@ class Pytania extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
-class Ksiazki extends React.Component {
-  render() {
-    return (
-      <div className="inne-row">
+function Ksiazki() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="inne-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">Książki, które warto przeczytać</h2>
           <div className="buttons-content row">
@@ -196,15 +206,20 @@ class Ksiazki extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
-class MiejscaWSieci extends React.Component {
-  render() {
-    return (
-      <div className="inne-row">
+function MiejscaWSieci() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="inne-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">
             Miejsca w sieci, które warto odwiedzić
@@ -235,9 +250,9 @@ class MiejscaWSieci extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
 export default Parafia;
