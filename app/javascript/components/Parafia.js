@@ -1,6 +1,6 @@
 import React from "react";
-import { animateScroll as scroll, scroller } from "react-scroll";
 import Navbar from "./Navbar";
+import { useSpring, animated } from "react-spring";
 
 class Parafia extends React.Component {
   constructor() {
@@ -149,11 +149,16 @@ class Button extends React.Component {
     );
   }
 }
-
-class OPatronie extends React.Component {
-  render() {
-    return (
-      <div className="parafia-row">
+function OPatronie() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    leave: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="parafia-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">O Patronie</h2>
           <div className="buttons-content row">
@@ -182,15 +187,20 @@ class OPatronie extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
-class ParafiaObecnie extends React.Component {
-  render() {
-    return (
-      <div className="parafia-row">
+function ParafiaObecnie() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="parafia-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">Parafia Obecnie</h2>
           <div className="buttons-content row">
@@ -216,15 +226,20 @@ class ParafiaObecnie extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
-class HistoriaParafi extends React.Component {
-  render() {
-    return (
-      <div className="parafia-row">
+function HistoriaParafi() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="parafia-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">Historia Parafi</h2>
           <div className="buttons-content row">
@@ -250,15 +265,20 @@ class HistoriaParafi extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
-class Miejscowosci extends React.Component {
-  render() {
-    return (
-      <div className="parafia-row">
+function Miejscowosci() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="parafia-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">Parafia Obecnie</h2>
           <div className="buttons-content row">
@@ -287,9 +307,9 @@ class Miejscowosci extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
 export default Parafia;

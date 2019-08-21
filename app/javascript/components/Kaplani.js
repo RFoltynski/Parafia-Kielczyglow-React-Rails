@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { useSpring, animated } from "react-spring";
 
 class Kaplani extends React.Component {
   constructor() {
@@ -20,9 +21,9 @@ class Kaplani extends React.Component {
   _renderSubComp() {
     switch (this.state.render) {
       case "proboszcz":
-        return <Pytania />;
+        return <Proboszcz />;
       case "wikary":
-        return <Ksiazki />;
+        return <Wikary />;
     }
   }
 
@@ -66,7 +67,7 @@ class Kaplani extends React.Component {
                 Wikary
               </Button>
 
-              {this.state.render === "" ? <Pytania /> : this._renderSubComp()}
+              {this.state.render === "" ? <Proboszcz /> : this._renderSubComp()}
             </div>
           </center>
         </div>
@@ -99,88 +100,47 @@ class Button extends React.Component {
   }
 }
 
-class Pytania extends React.Component {
-  render() {
-    return (
-      <div className="inne-row">
+function Proboszcz() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="inne-row">
+      <animated.div style={props}>
         <div className="buttons-box">
-          <h2 name="scroll-to-historia">Często zadawane pytania</h2>
-          <div className="buttons-content row">
+          <h2 name="scroll-to-historia">Często zadawane Proboszcz</h2>
+
+          <div className="button">
             <div className="buttons-box-text col-md-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               lacinia hendrerit massa lobortis imperdiet. Duis at nibh tempor,
               congue eros dapibus, tristique ante. Vestibulum ante ipsum primis
               in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
               suscipit, lorem vitae iaculis scelerisque, orci nulla fermentum
-              nulla, in sollicitudin velit nisl iaculis sem. Etiam ullamcorper
-              urna eu lectus efficitur, vehicula faucibus nibh blandit. Ut
-              mattis ac nisi in convallis. Mauris malesuada mauris nisi, eu
-              aliquet leo dapibus et. Sed augue ligula, dictum nec condimentum
-              eu, consequat in ligula. Integer aliquam elementum nisl, ut
-              bibendum tortor porttitor id. Donec dapibus feugiat ornare.
-              Integer blandit elementum eros, nec dictum sem hendrerit id.
-              Phasellus lacus nulla, aliquet a purus quis, porttitor posuere
-              leo. Nunc a pharetra tortor. Nam tempor iaculis arcu, et bibendum
-              enim facilisis quis
-            </div>
-            <div className="col-md-4">
-              <img
-                className="buttons-img"
-                src="..\img\parafia\franciszek.jpg"
-              />
+              nulla, in sollicitudin velit nisl iaculis s leo. Nunc a pharetra
+              tortor. Nam tempor iaculis arcu, et bibendum enim facilisis quis
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
-class Ksiazki extends React.Component {
-  render() {
-    return (
-      <div className="inne-row">
+function Wikary() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
+  return (
+    <div className="inne-row">
+      <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia">Książki, które warto przeczytać</h2>
-          <div className="buttons-content row">
-            <div className="buttons-box-text col-md-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              lacinia hendrerit massa lobortis imperdiet. Duis at nibh tempor,
-              congue eros dapibus, tristique ante. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              suscipit, lorem vitae iaculis scelerisque, orci nulla fermentum
-              nulla, in sollicitudin velit nisl iaculis sem. Etiam ullamcorper
-              urna eu lectus efficitur, vehicula faucibus nibh blandit. Ut
-              mattis ac nisi in convallis. Mauris malesuada mauris nisi, eu
-              aliquet leo dapibus et. Sed augue ligula, dictum nec condimentum
-              eu, consequat in ligula. Integer aliquam elementum nisl, ut
-              bibendum tortor porttitor id. Donec dapibus feugiat ornare.
-              Integer blandit elementum eros, nec dictum sem hendrerit id.
-              Phasellus lacus nulla, aliquet a purus quis, porttitor posuere
-              leo. Nunc a pharetra tortor. Nam tempor iaculis arcu, et bibendum
-              enim facilisis quis
-            </div>
-            <div className="col-md-4">
-              <img
-                className="buttons-img"
-                src="..\img\parafia\franciszek.jpg"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
 
-class MiejscaWSieci extends React.Component {
-  render() {
-    return (
-      <div className="inne-row">
-        <div className="buttons-box">
-          <h2 name="scroll-to-historia">
-            Miejsca w sieci, które warto odwiedzić
-          </h2>
           <div className="buttons-content row">
             <div className="buttons-box-text col-md-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -207,9 +167,9 @@ class MiejscaWSieci extends React.Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      </animated.div>
+    </div>
+  );
 }
 
 export default Kaplani;

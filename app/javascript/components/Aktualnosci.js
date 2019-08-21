@@ -3,6 +3,7 @@ import NewsView from "./NewsView";
 import Navbar from "./Navbar";
 import search from "./img/search.png";
 import axios from "axios";
+import { Transition, animated } from "react-spring/renderprops";
 
 function isSearched(searchTerm) {
   return function(item) {
@@ -65,24 +66,37 @@ class Aktualnosci extends React.Component {
         <div className="overlay">
           <Navbar />
           <center>
-            <h1 class="h1-header"> AKTUALNOŚCI </h1>
-            <button onClick={this.showSearch} className="searchButton">
-              <img className="searchButton-img" src={search} />
-            </button>
-            <form
-              className={
-                this.state.showSearch
-                  ? "form-group showFormGroup"
-                  : "hideFormGroup"
-              }
-            >
-              <input
-                type="text"
-                onChange={this.searchValue}
-                placeholder=" Szukaj..."
-              />
-            </form>
+            <h1 className="h1-header"> AKTUALNOŚCI </h1>
+            <div className="aktualnosci-search">
+              <button onClick={this.showSearch} className="searchButton">
+                <img className="searchButton-img" src={search} />
+              </button>
+
+              <Transition
+                items={this.state.showSearch}
+                from={{ opacity: 0 }}
+                enter={{ opacity: 1 }}
+                leave={{ opacity: 0 }}
+                config={{ duration: 500 }}
+              >
+                {show =>
+                  show &&
+                  (props => (
+                    <animated.div style={props}>
+                      <form className={"form-group showFormGroup"}>
+                        <input
+                          type="text"
+                          onChange={this.searchValue}
+                          placeholder=" Szukaj..."
+                        />
+                      </form>
+                    </animated.div>
+                  ))
+                }
+              </Transition>
+            </div>
           </center>
+
           <div className="news-boxes">
             <div className="col-md-10">
               <div>{newsList}</div>
