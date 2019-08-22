@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/kylefox/trix
+  revision: b7d814914ee2e9d42fc8069e4fbf4d5dd9b744c6
+  specs:
+    trix-rails (2.0.0)
+      rails (> 4.1, < 6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -190,8 +197,6 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    trix-rails (2.0.0)
-      rails (> 4.1, < 6.0)
     turbolinks (5.2.0)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -236,7 +241,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  trix-rails (= 2.0.0)
+  trix-rails (= 2.0.0)!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
