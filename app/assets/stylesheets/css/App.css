@@ -16,7 +16,7 @@
 
 .box-overlay-h2 {
   position: relative;
-  color: rgb(255, 255, 255, 0.9);
+  color: #ffffffe6;
   display: inline-block;
   margin: 0;
   text-transform: uppercase;
@@ -29,7 +29,7 @@
 .box-overlay-h2:before {
   display: block;
   content: "";
-  border-bottom: solid 3px rgb(255, 255, 255, 0.9);
+  border-bottom: solid 3px #ffffffe6;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -55,13 +55,13 @@
   margin: 0;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  color: rgb(255, 255, 255, 0.9);
+  color: #ffffffe6;
   padding-top: 45px;
 }
 
 .box-overlay:hover .box-overlay-p {
   opacity: 0.8;
-  color: rgb(255, 255, 255, 0.9);
+  color: #ffffffe6;
   padding-top: 45px;
 }
 
@@ -81,5 +81,5 @@
   left: 0;
   top: -45px;
   right: 0;
-  color: rgb(255, 255, 255, 0.9);
+  color: #ffffffe6;
 }

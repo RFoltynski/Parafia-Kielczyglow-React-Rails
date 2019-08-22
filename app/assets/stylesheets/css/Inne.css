@@ -4,7 +4,7 @@
   height: 100%;
   background-attachment: fixed;
   background-size: cover;
-  color: white;
+  color: #ffffff;
 }
 
 .inne-h2 {
@@ -26,5 +26,5 @@
 }
 
 .inne-text {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
