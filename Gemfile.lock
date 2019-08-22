@@ -1,9 +1,9 @@
 GIT
-  remote: https://github.com/bcoia/trix
-  revision: 2289b94c60fc50bb193a035543c2db7016ecabd9
+  remote: https://github.com/kylefox/trix
+  revision: b7d814914ee2e9d42fc8069e4fbf4d5dd9b744c6
   specs:
-    trix-rails (2.1.0)
-      rails (> 4.1, < 6.1)
+    trix-rails (2.0.0)
+      rails (> 4.1, < 6.0)
 
 GEM
   remote: https://rubygems.org/
