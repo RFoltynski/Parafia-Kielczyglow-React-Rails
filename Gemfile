@@ -15,7 +15,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
-gem 'trix-rails', '~> 2.0.0', require: 'trix', git: 'https://github.com/bcoia/trix.git'
+gem 'trix-rails', '~> 2.0.0'
 gem 'webpacker'
 gem 'will_paginate', '3.1.7'
 
