@@ -33,12 +33,12 @@ class Navbar extends Component {
 
   render() {
     let location = [
-      "aktualnosci",
-      "intencje",
-      "parafia",
-      "kaplani",
-      "kontakt",
-      "inne"
+      "com/aktualnosci",
+      "com/intencje",
+      "com/parafia",
+      "com/kaplani",
+      "com/kontakt",
+      "com/inne"
     ];
     return (
       <div>
