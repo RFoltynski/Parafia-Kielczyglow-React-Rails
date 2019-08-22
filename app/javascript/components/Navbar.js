@@ -33,12 +33,12 @@ class Navbar extends Component {
 
   render() {
     let location = [
-      "http://localhost:3000/aktualnosci",
-      "http://localhost:3000/intencje",
-      "http://localhost:3000/parafia",
-      "http://localhost:3000/kaplani",
-      "http://localhost:3000/kontakt",
-      "http://localhost:3000/inne"
+      "aktualnosci",
+      "intencje",
+      "parafia",
+      "kaplani",
+      "kontakt",
+      "inne"
     ];
     return (
       <div>
@@ -67,7 +67,7 @@ class Navbar extends Component {
           >
             <Link
               className={
-                this.state.currentLocation === location[0]
+                this.state.currentLocation.includes(location[0])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
@@ -77,7 +77,7 @@ class Navbar extends Component {
             </Link>
             <Link
               className={
-                this.state.currentLocation === location[1]
+                this.state.currentLocation.includes(location[1])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
@@ -87,7 +87,7 @@ class Navbar extends Component {
             </Link>
             <Link
               className={
-                this.state.currentLocation === location[2]
+                this.state.currentLocation.includes(location[2])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
@@ -98,7 +98,7 @@ class Navbar extends Component {
             </Link>
             <Link
               className={
-                this.state.currentLocation === location[3]
+                this.state.currentLocation.includes(location[3])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
@@ -108,7 +108,7 @@ class Navbar extends Component {
             </Link>
             <Link
               className={
-                this.state.currentLocation === location[4]
+                this.state.currentLocation.includes(location[4])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
@@ -118,7 +118,7 @@ class Navbar extends Component {
             </Link>
             <Link
               className={
-                this.state.currentLocation === location[5]
+                this.state.currentLocation.includes(location[5])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
