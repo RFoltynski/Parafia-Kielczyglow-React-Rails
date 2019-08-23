@@ -9,8 +9,8 @@ function isSearched(searchTerm) {
   return function(item) {
     return (
       !searchTerm ||
-      item.title.toLowerCase().includes(searchTerm) ||
-      item.description.toLowerCase().includes(searchTerm)
+      item.title.toLowerCase().indexOf(searchTerm) !== -1 ||
+      item.description.toLowerCase().indexOf(searchTerm) !== -1
     );
   };
 }
