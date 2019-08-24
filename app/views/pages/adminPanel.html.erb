@@ -1,0 +1,8 @@
+<% if logged_in? %>
+<%= render 'navbar' %>
+<h1>Admin Panel</h1>
+
+<%= link_to "Daj Post", new_post_path %>
+ <% else %>
+  PAGE NOT FOUND
+<% end %>
