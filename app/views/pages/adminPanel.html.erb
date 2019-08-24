@@ -1,8 +1,11 @@
 <% if logged_in? %>
 <%= render 'navbar' %>
-<h1>Admin Panel</h1>
+<div class="adminPage">
+<h1 class="adminPage-header">Admin Panel</h1>
 
-<%= link_to "Daj Post", new_post_path %>
+<%= link_to "Dodaj Post", new_post_path, class: "admin-panel-button-post" %>
+<%= link_to "Dodaj intencje", intentions_path(@intention), class: "admin-panel-button-intencje" %>
+<div>
  <% else %>
   PAGE NOT FOUND
 <% end %>
