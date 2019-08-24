@@ -1,5 +1,6 @@
 .adminPage {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background-image: url(asset-path("335818.jpg"));
   background-position: center;
   background-size: cover;
@@ -14,8 +15,7 @@
   color: white;
   font-size: 48px;
 }
-.admin-panel-button-post,
-.admin-panel-button-intencje {
+.admin-panel-button {
   font-size: 48px;
   width: 350px;
   height: 60px;
@@ -25,8 +25,9 @@
   background-color: white;
   border-radius: 15px;
   opacity: 0.9;
-  margin-bottom: 45px;
+
   color: black;
+  margin: 25px auto;
 }
 .admin-panel-button-post:hover,
 .admin-panel-button-intencje:hover {

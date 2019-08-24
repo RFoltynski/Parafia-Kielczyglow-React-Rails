@@ -1,10 +1,13 @@
 <% if logged_in? %>
 <%= render 'pages/navbar' %>
+<div class="adminPage">
 <div class="container">
+
   <div class="offset-md-2 col-md-8 text-center">
-    <h1 class="jumbotron">Edycja postu</h1>
+    <h1 class="h1-header">Edycja postu</h1>
     <%= render 'form' %>
   </div>
+</div>
 </div>
  <% else %>
   PAGE NOT FOUND
