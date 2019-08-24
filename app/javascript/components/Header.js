@@ -14,11 +14,10 @@ class Header extends React.Component {
           <div className={"arrow bounce"} />
           <button
             type="button"
-            class="btn btn-light button-header"
+            class="admin-panel-button-header"
             onClick={this.props.scroll}
           >
-            {" "}
-            MENU{" "}
+            MENU
           </button>
         </center>{" "}
       </div>
