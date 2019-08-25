@@ -36,11 +36,33 @@
   text-decoration: none;
 }
 .form-background {
-  padding: 25px;
   background-color: white;
   opacity: 0.9;
   border-radius: 15px;
   -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
   -moz-box-shadow: 0px 0px 10px 1px #000000bf;
   box-shadow: 0px 0px 10px 1px #000000bf;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.box-title-h2 {
+  widows: 100%;
+  color: black;
+  text-align: center;
+  box-shadow: 0px 0px 10px 1px #000000e6;
+  opacity: 0.9;
+  border-radius: 15px 15px 0 0;
+}
+
+.title-post {
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid #abaaa8;
+  border-radius: 3px;
+}
+.title-post:focus {
+  outline: none;
+}
+.intentions-edit-button {
+  margin-bottom: 15px;
 }

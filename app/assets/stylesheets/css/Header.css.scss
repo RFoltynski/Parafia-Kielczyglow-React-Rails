@@ -74,3 +74,20 @@
 .admin-panel-button-header:focus {
   outline: none;
 }
+@media (max-width: 660px) {
+  .header {
+    padding-top: 30px;
+  }
+  .header-parafia {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 315px) {
+  .header {
+    padding-top: 30px;
+  }
+  .header-parafia {
+    font-size: 24px;
+  }
+}

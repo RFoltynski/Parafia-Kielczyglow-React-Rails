@@ -7,9 +7,7 @@ class Header extends React.Component {
         {" "}
         <center>
           <div className="header-box">
-            <h1 class="h1-header header-parafia">
-              Parafia-Kielczyglow.info.pl
-            </h1>
+            <h1 class="h1-header header-parafia">Parafia Kiełczygłów</h1>
           </div>
           <div className={"arrow bounce"} />
           <button

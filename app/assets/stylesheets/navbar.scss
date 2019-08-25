@@ -5,3 +5,18 @@
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 660px) {
+  .navbar-admin-menu {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-logo-text {
+    font-size: 12px;
+  }
+  .navbar-row-admin {
+    height: 80px;
+  }
+}
