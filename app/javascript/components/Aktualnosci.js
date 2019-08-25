@@ -26,7 +26,7 @@ class Aktualnosci extends React.Component {
 
   componentWillMount() {
     axios
-      .get("posts.json", {}, { "Content-Type": "application/json" })
+      .get("api/v1/posts", {}, { "Content-Type": "application/json" })
       .then(res => {
         this.setState({
           posts: res.data.data,

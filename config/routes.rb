@@ -19,4 +19,11 @@ Rails.application.routes.draw do
       delete :delete_image_attachment
     end
   end
+
+  namespace :api, defaults: { format: 'json' } do
+    namespace :v1 do
+      resources :posts, only: [:index]
+      resources :intentions, only: [:index]
+    end
+  end
 end
