@@ -3,8 +3,8 @@
   <%= link_to "Parafia-Kielczyglow-info.pl", root_path, class: 'navbar-logo-link' %>
 </div>
  <div class="navbar-admin-menu">
-  <%= link_to "Posty", posts_path, class: "navbar-link" %>
-  <%= link_to "Intencje", intentions_path, class: "navbar-link" %>
+  <%= link_to "Posty", posts_path, class: cp(posts_path) %>
+  <%= link_to "Intencje", intentions_path, class: cp(intentions_path) %>
   <%= link_to "Wyloguj", logout_path, method: :delete, class: "navbar-link"   %>
   </div>
 </div>
