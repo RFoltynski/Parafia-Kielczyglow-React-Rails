@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: %i[show edit update destroy]
-
+  before_action :require_user, expect: %i[]
   def index
     @posts = Post.paginate(page: params[:page], per_page: 5).order("created_at DESC")
     @posts_json = Post.all.order("created_at DESC")

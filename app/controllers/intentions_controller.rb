@@ -1,5 +1,6 @@
 class IntentionsController < ApplicationController
   before_action :find_intention, only: %i[update edit]
+  before_action :require_user, expect: %i[]
   def index
     @intentions = Intention.all
   end
