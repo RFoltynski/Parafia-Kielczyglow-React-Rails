@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   before_action :require_user, expect: %i[]
   def index
     @posts = Post.paginate(page: params[:page], per_page: 5).order("created_at DESC")
-    @posts_json = Post.all.order("created_at DESC")
   end
 
   def show; end

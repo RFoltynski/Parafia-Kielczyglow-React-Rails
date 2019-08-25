@@ -14,7 +14,7 @@ class Intencje extends React.Component {
 
   componentWillMount() {
     axios
-      .get("intentions.json", {}, { "Content-Type": "application/json" })
+      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
       .then(res => {
         this.setState({
           intentions: res.data.data,
