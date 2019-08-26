@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import axios from "axios";
 
 class Kontakt extends React.Component {
   constructor() {
@@ -10,6 +11,26 @@ class Kontakt extends React.Component {
       message: ""
     };
   }
+
+  handleSubmit = event => {
+    const message = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    };
+
+    axios
+      .post("/contacts", message, {
+        headers: {
+          "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]')
+            .content
+        }
+      })
+      .then(response => {
+        console.log(response);
+        console.log(response.data);
+      });
+  };
 
   handleChange = event => {
     this.setState({
@@ -29,7 +50,10 @@ class Kontakt extends React.Component {
               <div className="buttons-box">
                 <h2 className="scroll-to-historia">Formularz kontaktowy</h2>
 
-                <form className="offset-md-1 col-md-10 contact-form">
+                <form
+                  className="offset-md-1 col-md-10 contact-form"
+                  onSubmit={e => this.handleSubmit(e)}
+                >
                   <div className="form-group">
                     <input
                       type="text"
