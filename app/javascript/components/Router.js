@@ -18,8 +18,8 @@ export default class Router extends React.Component {
           <Route path="/aktualnosci" component={Aktualnosci} />
           <Route path="/intencje" component={Intencje} />
           <Route path="/kaplani" component={Kaplani} />
-          <Route path="/kontakt" component={Kontakt} />
           <Route path="/parafia" component={Parafia} />
+          <Route path="/kontakt" component={Kontakt} />
           <Route path="/inne" component={Inne} />
           <Route component={PageNotFound} />
         </Switch>

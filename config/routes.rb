@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
   resources :intentions, only: [:index, :show, :edit, :update]
+  resources :contacts, only: [:index, :new, :create]
   root "pages#index"
   get 'kaplani', to: 'pages#index'
   get 'aktualnosci', to: 'pages#index'
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :posts, only: [:index]
       resources :intentions, only: [:index]
+      resources :contacts, only: [:index, :create]
     end
   end
 end

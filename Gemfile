@@ -18,6 +18,9 @@ gem 'turbolinks', '~> 5'
 gem 'trix-rails', '2.0.0', git: 'https://github.com/kylefox/trix', require: 'trix'
 gem 'webpacker'
 gem 'will_paginate', '3.1.7'
+gem 'mail_form'
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
