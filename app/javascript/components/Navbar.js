@@ -46,7 +46,7 @@ class Navbar extends Component {
           <div className="navbar-logo">
             {" "}
             <Link className="navbar-logo-link" to="/">
-              Parafia-Kiełczygłow.info.pl
+              Parafia Kiełczygłów
             </Link>
           </div>
           <div className="navbar-menu">
