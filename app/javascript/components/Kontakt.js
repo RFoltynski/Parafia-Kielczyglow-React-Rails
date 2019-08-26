@@ -1,22 +1,31 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { useSpring, animated } from "react-spring";
 
-function Kontakt() {
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    config: { duration: 500 }
-  });
-  return (
-    <div className="kontakt">
-      <div className="overlay">
-        <Navbar />
-        <center>
-          <h1 className="h1-header"> Kontakt </h1>
+class Kontakt extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      message: ""
+    };
+  }
 
-          <div className="kontakt-row">
-            <animated.div style={props}>
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  render() {
+    return (
+      <div className="kontakt">
+        <div className="overlay">
+          <Navbar />
+          <center>
+            <h1 className="h1-header"> Kontakt </h1>
+
+            <div className="kontakt-row">
               <div className="buttons-box">
                 <h2 className="scroll-to-historia">Formularz kontaktowy</h2>
 
@@ -27,6 +36,9 @@ function Kontakt() {
                       className="form-control"
                       id="formGroupExampleInput"
                       placeholder="Imię i Nazwisko.."
+                      name="name"
+                      onChange={this.handleChange}
+                      value={this.state.name}
                     />
                   </div>
                   <div className="form-group">
@@ -36,6 +48,9 @@ function Kontakt() {
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       placeholder="Twój adres email.."
+                      name="email"
+                      onChange={this.handleChange}
+                      value={this.state.email}
                     />
                   </div>
                   <div className="form-group">
@@ -44,6 +59,9 @@ function Kontakt() {
                       id="exampleFormControlTextarea1"
                       rows="3"
                       placeholder="Twoja wiadomość"
+                      name="message"
+                      onChange={this.handleChange}
+                      value={this.state.message}
                     />
                   </div>
 
@@ -52,12 +70,12 @@ function Kontakt() {
                   </button>
                 </form>
               </div>
-            </animated.div>
-          </div>
-        </center>
+            </div>
+          </center>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Kontakt;
