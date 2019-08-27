@@ -15,7 +15,7 @@ RSpec.describe Post, type: :model do
     it { is_expected.to validate_length_of(:title).is_at_least(3)}
   end
 
-  describe "relations" do
+  describe 'relations' do
     it { is_expected.to belong_to(:user) }
   end
 end

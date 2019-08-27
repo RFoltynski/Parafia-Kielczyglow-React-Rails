@@ -89,6 +89,7 @@
         null,
         null,
         null,
+        1,
         null
       ],
       "/home/rafal/Pulpit/react/parafia-kielczyglow/config/initializers/application_controller_renderer.rb": [
@@ -206,6 +207,13 @@
         null,
         null
       ],
+      "/home/rafal/Pulpit/react/parafia-kielczyglow/spec/factories/contacts.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/home/rafal/Pulpit/react/parafia-kielczyglow/spec/factories/posts.rb": [
         1,
         1,
@@ -268,6 +276,44 @@
         1,
         null
       ],
+      "/home/rafal/Pulpit/react/parafia-kielczyglow/app/models/contact.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/rafal/Pulpit/react/parafia-kielczyglow/spec/models/post_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
       "/home/rafal/Pulpit/react/parafia-kielczyglow/app/models/post.rb": [
         1,
         1,
@@ -275,7 +321,6 @@
         1,
         null,
         1,
-        null,
         null,
         null,
         null,
@@ -341,6 +386,6 @@
         null
       ]
     },
-    "timestamp": 1566896589
+    "timestamp": 1566903004
   }
 }
