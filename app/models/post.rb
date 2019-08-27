@@ -15,9 +15,9 @@ class Post < ApplicationRecord
   private
 
   def photos_amount_ng_than_five
-    return unless photos.attachments.size > 5
+    return unless photos.attachments.size > 6
 
     photos.purge
-    errors.add(:photots, 'can not be more than 5.')
+    errors.add(:photots, 'can not be more than 6.')
   end
 end

@@ -5,7 +5,6 @@ ruby '2.6.3'
 gem 'rails', '~> 5.2.3'
 
 gem 'bootstrap', '~> 4.3.1'
-gem 'bootstrap-will_paginate'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt', '~> 3.1.7'
 gem 'coffee-rails', '~> 4.2'
@@ -18,6 +17,7 @@ gem 'turbolinks', '~> 5'
 gem 'trix-rails', '2.0.0', git: 'https://github.com/kylefox/trix', require: 'trix'
 gem 'webpacker'
 gem 'will_paginate', '3.1.7'
+gem 'will_paginate-bootstrap4'
 gem 'mail_form'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'dotenv-rails', groups: [:development, :test]
