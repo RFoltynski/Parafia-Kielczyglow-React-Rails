@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Contact, type: :model do
+
   describe 'attributes' do
     it { expect(subject.mail_attributes).to include(:name, :email, :message) }
   end

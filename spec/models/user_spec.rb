@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'attributes' do
-    it { expect(subject.attributes).to include('email', 'username') }
+    it { expect(subject.attributes).to include('email', 'username', 'password_digest') }
   end
-
+  let(:user) {build(:user)}
   describe 'validation' do
     it { is_expected.to validate_presence_of(:username) }
     it { is_expected.to validate_uniqueness_of(:username).case_insensitive }
@@ -16,5 +16,8 @@ RSpec.describe User, type: :model do
     it { is_expected.to allow_value('email@addresse.foo').for(:email) }
     it { is_expected.to validate_presence_of(:password) }
     it { is_expected.to validate_length_of(:password).is_at_least(8) }
+    it 'should save successfully' do 
+      expect(user.save).to eq(true)
+    end
   end
 end
