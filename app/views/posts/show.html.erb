@@ -1,31 +1,28 @@
 <% if logged_in? %>
-<%= render 'pages/navbar' %>
-<div class="adminPage">
-<div class="container">
-
-  <div class="offset-md-2 col-md-8 text-center">
- 
-    <h1 class="h1-header">Twój post</h1>
-     <div class="form-background">
-    <h3 class="box-title-h2"><%= @post.title %></h3> 
-    <p><%= @post.description.html_safe %></p>
-      <br>
-      <% @post.photos.each do |photo| %>
-      <%= image_tag(photo, class: "col-md-4") %>
-      <% end %>
-        <% if @post.file.attached? %>
-        <%= link_to @post.file, url_for(@post.file), target: '_blank' %>
-        <% end %>
-                          
-   <br>
-    <%= link_to 'Lista postów', posts_path, class: "btn btn-secondary" %>
-    <%= link_to 'Dodaj', new_post_path, class: "btn btn-primary" %>
-    <%= link_to 'Edytuj', edit_post_path(@post), class: "btn btn-success" %>
-      <%= link_to 'Usuń', post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
-</div>
+  <%= render 'pages/navbar' %>
+  <div class="adminPage">
+    <div class="container">
+      <div class="offset-md-2 col-md-8 text-center">
+        <h1 class="h1-header">Twój post</h1>
+        <div class="form-background">
+          <h3 class="box-title-h2"><%= @post.title %></h3> 
+          <p><%= @post.description.html_safe %></p>
+          <br>
+          <% @post.photos.each do |photo| %>
+            <%= image_tag(photo, class: "col-md-4") %>
+          <% end %>
+          <% if @post.file.attached? %>
+            <%= link_to @post.file, url_for(@post.file), target: '_blank' %>
+          <% end %>
+          <br>
+          <%= link_to 'Lista postów', posts_path, class: "btn btn-secondary" %>
+          <%= link_to 'Dodaj', new_post_path, class: "btn btn-primary" %>
+          <%= link_to 'Edytuj', edit_post_path(@post), class: "btn btn-success" %>
+          <%= link_to 'Usuń', post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
- <% else %>
-  PAGE NOT FOUND
+<% else %>
+PAGE NOT FOUND
 <% end %>

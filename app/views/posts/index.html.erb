@@ -5,10 +5,12 @@
 
   <div class="offset-md-2 col-md-8 text-center">
     <h1 class="h1-header">Lista Twoich postów </h1>
-      <%= link_to 'Dodaj nowy post', new_post_path, class:"admin-panel-button"  %> 
+      <%= link_to 'Dodaj post', new_post_path, class:"admin-panel-button"  %> 
     
     <div class="d-flex justify-content-center paginate-all">
+    <div class="form-background-paginate">
     <%= will_paginate %>
+    </div> 
     </div> 
     <% @posts.each do |post| %>
       <br>
@@ -23,7 +25,9 @@
       <br>
     <% end %>
         <div class="d-flex justify-content-center paginate-all">
-    <%= will_paginate %>
+    <div class="form-background-paginate">
+      <%= will_paginate @clients, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+    </div> 
     </div> 
   </div>
 
