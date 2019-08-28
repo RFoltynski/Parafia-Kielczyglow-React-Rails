@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import axios from "axios";
+import { Spring } from "react-spring/renderprops.cjs";
 
 class Kontakt extends React.Component {
   constructor() {
@@ -96,62 +97,66 @@ class Kontakt extends React.Component {
             <h1 className="h1-header"> Kontakt </h1>
 
             <div className="kontakt-row">
-              <div className="buttons-box">
-                <h2 className="scroll-to-historia">Formularz kontaktowy</h2>
+              <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
+                {props => (
+                  <div className="buttons-box" style={props}>
+                    <h2 className="scroll-to-historia">Formularz kontaktowy</h2>
 
-                <form
-                  className="offset-md-1 col-md-10 contact-form"
-                  onSubmit={e => this.handleSubmit(e)}
-                >
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="formGroupExampleInput"
-                      placeholder="Imię i Nazwisko.."
-                      name="name"
-                      onChange={this.handleChange}
-                      value={this.state.name}
-                    />
-                    <div style={{ color: "red", padding: 10 }}>
-                      {this.state.nameError}
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
-                      placeholder="Twój adres email.."
-                      name="email"
-                      onChange={this.handleChange}
-                      value={this.state.email}
-                    />
-                    <div style={{ color: "red", padding: 10 }}>
-                      {this.state.emailError}
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <textarea
-                      className="form-control"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                      placeholder="Twoja wiadomość"
-                      name="message"
-                      onChange={this.handleChange}
-                      value={this.state.message}
-                    />
-                    <div style={{ color: "red", padding: 10 }}>
-                      {this.state.messageError}
-                    </div>
-                  </div>
+                    <form
+                      className="offset-md-1 col-md-10 contact-form"
+                      onSubmit={e => this.handleSubmit(e)}
+                    >
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="formGroupExampleInput"
+                          placeholder="Imię i Nazwisko.."
+                          name="name"
+                          onChange={this.handleChange}
+                          value={this.state.name}
+                        />
+                        <div style={{ color: "red", padding: 10 }}>
+                          {this.state.nameError}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="email"
+                          className="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                          placeholder="Twój adres email.."
+                          name="email"
+                          onChange={this.handleChange}
+                          value={this.state.email}
+                        />
+                        <div style={{ color: "red", padding: 10 }}>
+                          {this.state.emailError}
+                        </div>
+                      </div>
+                      <div className="form-group">
+                        <textarea
+                          className="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                          placeholder="Twoja wiadomość"
+                          name="message"
+                          onChange={this.handleChange}
+                          value={this.state.message}
+                        />
+                        <div style={{ color: "red", padding: 10 }}>
+                          {this.state.messageError}
+                        </div>
+                      </div>
 
-                  <button type="submit" className="btn btn-primary">
-                    Wyślij
-                  </button>
-                </form>
-              </div>
+                      <button type="submit" className="btn btn-primary">
+                        Wyślij
+                      </button>
+                    </form>
+                  </div>
+                )}
+              </Spring>
             </div>
           </center>
         </div>

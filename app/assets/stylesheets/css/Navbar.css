@@ -65,10 +65,6 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .navbar-links {
-    display: none;
-  }
-
   .navbar-menu {
     display: block;
   }
@@ -82,9 +78,10 @@
     opacity: 0.9;
   }
   .navbar-links {
+    font-size: 22px;
     padding-top: 25px;
-    height: 175px;
-    width: 150px;
+    height: 255px;
+    width: 100%;
     position: absolute;
     top: 50px;
     text-align: right;
@@ -93,11 +90,12 @@
     flex-direction: column;
     background-color: #000000e6;
     transition: 0.3s transform ease-in-out;
-    transform: translateX(100%);
+    transform: translateY(-150%);
     z-index: 0;
+    text-align: center;
   }
   .navbar-links-drop-show {
-    transform: translateX(0%);
+    transform: translateY(10px);
   }
 }
 

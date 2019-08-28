@@ -15,7 +15,7 @@ blockquote {
   padding: 1.2em 30px 1.2em 75px !important;
   position: relative !important;
   vertical-align: super !important;
-  width: 60% !important;
+  max-width: 90% !important;
   z-index: 0 !important;
   overflow: hidden !important;
 }
