@@ -8,28 +8,77 @@ class Kontakt extends React.Component {
     this.state = {
       name: "",
       email: "",
-      message: ""
+      message: "",
+      nameError: "",
+      emailError: "",
+      messageError: ""
     };
   }
 
-  handleSubmit = event => {
-    const message = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
-    };
+  validation = () => {
+    let nameError = "";
+    let emailError = "";
+    let messageError = "";
 
-    axios
-      .post("/contacts", message, {
-        headers: {
-          "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]')
-            .content
-        }
-      })
-      .then(response => {
-        console.log(response);
-        console.log(response.data);
+    if (!this.state.name) {
+      this.setState({
+        nameError: "To pole nie może być puste"
       });
+    } else {
+      this.setState({
+        nameError: ""
+      });
+    }
+    if (!this.state.email) {
+      this.setState({
+        emailError: "To pole nie może być puste"
+      });
+    } else {
+      this.setState({
+        emailError: ""
+      });
+    }
+    if (!this.state.message) {
+      this.setState({
+        messageError: "To pole nie może być puste"
+      });
+    } else {
+      this.setState({
+        messageError: ""
+      });
+    }
+
+    if (!this.state.message || !this.state.email || !this.state.name) {
+      return false;
+    }
+
+    return true;
+  };
+
+  handleSubmit = event => {
+    let isValid = this.validation();
+
+    if (!isValid) {
+      event.preventDefault();
+    } else {
+      const message = {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
+      };
+
+      axios
+        .post("/contacts", message, {
+          headers: {
+            "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]')
+              .content
+          }
+        })
+        .then(response => {
+          console.log(response);
+          console.log(response.data);
+        });
+    }
   };
 
   handleChange = event => {
@@ -64,6 +113,9 @@ class Kontakt extends React.Component {
                       onChange={this.handleChange}
                       value={this.state.name}
                     />
+                    <div style={{ color: "red", padding: 10 }}>
+                      {this.state.nameError}
+                    </div>
                   </div>
                   <div className="form-group">
                     <input
@@ -76,6 +128,9 @@ class Kontakt extends React.Component {
                       onChange={this.handleChange}
                       value={this.state.email}
                     />
+                    <div style={{ color: "red", padding: 10 }}>
+                      {this.state.emailError}
+                    </div>
                   </div>
                   <div className="form-group">
                     <textarea
@@ -87,6 +142,9 @@ class Kontakt extends React.Component {
                       onChange={this.handleChange}
                       value={this.state.message}
                     />
+                    <div style={{ color: "red", padding: 10 }}>
+                      {this.state.messageError}
+                    </div>
                   </div>
 
                   <button type="submit" className="btn btn-primary">
