@@ -55,9 +55,12 @@ h2 {
   height: 100px;
 }
 .newsView-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: transform 0.3s;
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
+  -moz-box-shadow: 0px 0px 10px 1px #000000bf;
+  box-shadow: 0px 0px 10px 1px #000000bf;
 }
 
 .newsView-box-a {
