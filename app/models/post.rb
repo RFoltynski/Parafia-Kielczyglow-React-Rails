@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   validates :title,
             presence: true,
             uniqueness: { case_sensitive: false },
-            length: { minimum: 3, maximum: 25 }
+            length: { minimum: 3, maximum:  100}
   validates :description,
             presence: true
   validate :photos_amount_ng_than_five
