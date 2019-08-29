@@ -106,6 +106,7 @@ button {
 .buttons-img {
   width: 80%;
   height: 90%;
+  padding: 15px;
 }
 .buttons-box > h2 {
   color: black;
