@@ -19,6 +19,11 @@
   letter-spacing: 2px;
 }
 
+.h3-header {
+  padding: 0;
+  margin: 0;
+}
+
 input {
   background-color: #ffffffe6;
   border: none;
@@ -79,20 +84,28 @@ button {
   -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
   -moz-box-shadow: 0px 0px 10px 1px #000000bf;
   box-shadow: 0px 0px 10px 1px #000000bf;
-  text-align: center;
+  text-align: justify;
   border: 3px solid black;
   margin-top: 15px;
 }
-.buttons-content {
-  display: flex;
-}
+
 .buttons-box-text {
   padding-bottom: 5px;
   color: black;
-  padding: 0 15px 0 15px;
+  margin: 15p 15px 15px 15px;
 }
+.buttons-box-text::first-letter {
+  -webkit-initial-letter: 2;
+  initial-letter: 2;
+  color: orange;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0;
+}
+
 .buttons-img {
-  width: 100px;
+  width: 80%;
+  height: 90%;
 }
 .buttons-box > h2 {
   color: black;
@@ -101,4 +114,7 @@ button {
   opacity: 0.9;
   padding-top: 5px 0 5px 0;
   box-shadow: 0px 0px 10px 1px #000000bf;
+}
+.button-img-box {
+  padding: 15px;
 }

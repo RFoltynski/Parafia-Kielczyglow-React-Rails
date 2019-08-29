@@ -13,4 +13,23 @@
 .parafia-row {
   height: 100%;
   margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.parafia-row-column {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+@media (max-width: 660px) {
+  .parafia-row {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
