@@ -7,10 +7,42 @@
 }
 
 .parafia-buttons {
-  min-height: 1000px;
+  padding-bottom: 15px;
 }
 
 .parafia-row {
   height: 100%;
   margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.parafia-row-column {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.parafia-row > ul {
+  color: black;
+  list-style: none;
+}
+.parafia-obecenie li::before {
+  content: "\2022";
+  color: orange;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+@media (max-width: 660px) {
+  .parafia-row {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
