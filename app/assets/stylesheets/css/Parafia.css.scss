@@ -7,7 +7,7 @@
 }
 
 .parafia-buttons {
-  min-height: 1000px;
+  padding-bottom: 15px;
 }
 
 .parafia-row {
@@ -29,7 +29,7 @@
   color: black;
   list-style: none;
 }
-ul li::before {
+.parafia-obecenie li::before {
   content: "\2022";
   color: orange;
   font-weight: bold;

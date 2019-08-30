@@ -22,6 +22,7 @@
 .h3-header {
   padding: 0;
   margin: 0;
+  color: orange;
 }
 
 input {
@@ -104,8 +105,7 @@ button {
 }
 
 .buttons-img {
-  width: 80%;
-  height: 90%;
+  height: 300px;
   padding: 15px;
 }
 .buttons-box > h2 {
