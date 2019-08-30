@@ -116,7 +116,7 @@ class Kontakt extends React.Component {
                           onChange={this.handleChange}
                           value={this.state.name}
                         />
-                        <div style={{ color: "red", padding: 10 }}>
+                        <div style={{ color: "orange", padding: 10 }}>
                           {this.state.nameError}
                         </div>
                       </div>
@@ -131,7 +131,7 @@ class Kontakt extends React.Component {
                           onChange={this.handleChange}
                           value={this.state.email}
                         />
-                        <div style={{ color: "red", padding: 10 }}>
+                        <div style={{ color: "orange", padding: 10 }}>
                           {this.state.emailError}
                         </div>
                       </div>
@@ -145,7 +145,7 @@ class Kontakt extends React.Component {
                           onChange={this.handleChange}
                           value={this.state.message}
                         />
-                        <div style={{ color: "red", padding: 10 }}>
+                        <div style={{ color: "orange", padding: 10 }}>
                           {this.state.messageError}
                         </div>
                       </div>
