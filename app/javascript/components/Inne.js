@@ -7,6 +7,9 @@ import listy from "./img/ksiazki/listy.jpg";
 import pismoswiete from "./img/ksiazki/pismoswiete.jpg";
 import urzekajaca from "./img/ksiazki/urzekajaca.jpg";
 import o from "./img/ksiazki/o.jpg";
+import stacja7 from "./img/webs/Stacja7.png";
+import deon from "./img/webs/deon.jpg";
+import pomnik from "./img/miejsca/pomnik.jpg";
 
 class Parafia extends React.Component {
   constructor() {
@@ -145,7 +148,10 @@ function Miejsca() {
         <div className="buttons-box">
           <h2 name="scroll-to-historia"> Miesjca w parafii </h2>
           <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={pismoswiete} />
+            <img
+              className="buttons-img buttons-img-miejsca col-md-5"
+              src={pomnik}
+            />
             <div className="buttons-box-text col-md-7 text-center">
               <h3 className="h3-header">Kaplica w Pierzynach</h3>
               Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
@@ -157,46 +163,34 @@ function Miejsca() {
           </div>
           <br />
           <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={o} />
+            <img
+              className="buttons-img buttons-img-miejsca col-md-5"
+              src={pomnik}
+            />
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header "> Cmentarz </h3>
-              <p>Tomasz z Kempis</p>
               Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
               Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
               podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
               a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
               którzy mieli swój klasztor na przedmieściu Lizbony.
               <br />
-              <br />
-              <a
-                href="http://lubimyczytac.pl/ksiazka/241356/o-nasladowaniu-chrystusa"
-                target="_blank"
-              >
-                {" "}
-                Lubimy Czytać
-              </a>
             </div>
           </div>
           <br />
           <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={dzikie} />
+            <img
+              className="buttons-img buttons-img-miejsca col-md-5"
+              src={pomnik}
+            />
             <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header "> Pomnik</h3>
-              <p>John Eldredge</p>
+              <h3 className="h3-header "> Pomnik ofiar II wojny światowej </h3>
               Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
               Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
               podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
               a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
               którzy mieli swój klasztor na przedmieściu Lizbony.
               <br />
-              <br />
-              <a
-                href="http://lubimyczytac.pl/ksiazka/195154/dzikie-serce-tesknoty-meskiej-duszy"
-                target="_blank"
-              >
-                {" "}
-                Lubimy Czytać
-              </a>
             </div>
           </div>
           <br />
@@ -254,8 +248,11 @@ function Ksiazki() {
           </div>
           <br />
           <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={dzikie} />
-            <div className="buttons-box-text col-md-7  text-center">
+            <img
+              className="buttons-img buttons-img-miejsca col-md-3"
+              src={dzikie}
+            />
+            <div className="buttons-box-text  col-md-7  text-center">
               <h3 className="h3-header ">
                 {" "}
                 Dzikie serce. Tęsknoty męskiej duszy
@@ -359,125 +356,26 @@ function MiejscaWSieci() {
             Miejsca w sieci, które warto odwiedzić
           </h2>
           <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={pismoswiete} />
             <div className="buttons-box-text col-md-7 text-center">
-              <h3 className="h3-header">Pismo Święte</h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
+              <h3 className="h3-header">
+                <a href="https://www.deon.pl/">
+                  <img className="buttons-img-a col-md-3" src={deon} />
+                </a>
+              </h3>
             </div>
           </div>
           <br />
           <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={o} />
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header "> O naśladowaniu Chrystusa </h3>
-              <p>Tomasz z Kempis</p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
-              <br />
-              <br />
-              <a
-                href="http://lubimyczytac.pl/ksiazka/241356/o-nasladowaniu-chrystusa"
-                target="_blank"
-              >
-                {" "}
-                Lubimy Czytać
-              </a>
-            </div>
-          </div>
-          <br />
-          <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={dzikie} />
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header ">
                 {" "}
-                Dzikie serce. Tęsknoty męskiej duszy
+                <a href="https://stacja7.pl/">
+                  <img className="buttons-img-a col-md-3" src={stacja7} />
+                </a>
               </h3>
-              <p>John Eldredge</p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
-              <br />
-              <br />
-              <a
-                href="http://lubimyczytac.pl/ksiazka/195154/dzikie-serce-tesknoty-meskiej-duszy"
-                target="_blank"
-              >
-                {" "}
-                Lubimy Czytać
-              </a>
             </div>
           </div>
           <br />
-          <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={urzekajaca} />
-            <div className="buttons-box-text col-md-7 text-center">
-              <h3 className="h3-header ">
-                Urzekająca. Odkrywanie tajemnicy kobiecej duszy
-              </h3>
-              <p> John Eldredge, Stasi Eldredge </p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni.
-              <br />
-              <br />
-              <a
-                href="http://lubimyczytac.pl/ksiazka/49966/urzekajaca-odkrywanie-tajemnicy-kobiecej-duszy"
-                target="_blank"
-              >
-                {" "}
-                Lubimy Czytać
-              </a>
-            </div>
-          </div>
-          <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={listy} />
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header">Listy starego diabła do młodego</h3>
-              <p> Clive Staples Lewis </p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
-              <br />
-              <br />
-              <a
-                href="http://lubimyczytac.pl/ksiazka/151625/listy-starego-diabla-do-mlodego"
-                target="_blank"
-              >
-                {" "}
-                Lubimy Czytać
-              </a>
-            </div>
-          </div>
-          <div className="parafia-row">
-            <img className="buttons-img col-md-3" src={dzieci} />
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header">Dorosłe dzieci alkoholików</h3>
-              <p> Janet G. Woititz </p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni.
-              <br />
-              <br />
-              <a
-                href="http://lubimyczytac.pl/ksiazka/127028/dorosle-dzieci-alkoholikow"
-                target="_blank"
-              >
-                {" "}
-                Lubimy Czytać
-              </a>
-            </div>
-          </div>
         </div>
       </animated.div>
     </div>

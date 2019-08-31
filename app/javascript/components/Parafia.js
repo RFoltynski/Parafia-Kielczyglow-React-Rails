@@ -151,6 +151,7 @@ function OPatronie() {
           <br />
           <div className="parafia-row">
             <div className="buttons-box-text col-md-8">
+              <h3 className="h3-header">Podstawowe informacje o św. Antonim</h3>
               Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
               Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
               podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
@@ -166,6 +167,7 @@ function OPatronie() {
           <div className="parafia-row">
             <img className="buttons-img col-md-4" src={franciszekM} />
             <div className="buttons-box-text col-md-8">
+              <h3 className="h3-header">Życie św. Antoniego</h3>
               Św. Antoni, zapalony duchem męczeńskiej ofiary, postanowił udać
               się do Afryki, by w Maroku oddać swoje życie za Chrystusa. Jednak
               plany Boże były inne. Święty ciężko zachorował i musiał wracać do
@@ -375,7 +377,7 @@ function HistoriaParafi() {
           <br />
           <div className="parafia-row-column text-center">
             <div className="buttons-box-text">
-              <h3 className="h3-header">Modlitwa Świętego Franciszka:</h3>
+              <h3 className="h3-header">Modlitwa Świętego Antoniego:</h3>
             </div>
             <div className="parafia-row">
               <blockquote>
