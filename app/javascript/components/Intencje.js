@@ -114,7 +114,7 @@ class Intencje extends React.Component {
                           <li>{item.P2thursday}</li>
                           <h3>Piątek: </h3>
                           16:00
-                          <li>{item.P1firday}</li>
+                          <li>{item.P1friday}</li>
                           16:30
                           <li>{item.P2friday}</li>
                           <h3>Sobota: </h3>

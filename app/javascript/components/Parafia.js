@@ -379,7 +379,7 @@ function HistoriaParafi() {
           <br />
           <div className="parafia-row-column text-center">
             <div className="buttons-box-text">
-              <h3 className="h3-header">Modlitwa Świętego Antoniego:</h3>
+              <h3 className="h3-header">Inne istotne wydarzenia</h3>
             </div>
             <div className="parafia-row">
               <blockquote>
