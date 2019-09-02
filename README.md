@@ -1,24 +1,18 @@
-# README
+https://parafia-kielczyglow.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Wymagania względem projektu:
 
-Things you may want to cover:
+- Użytkownik na stronie może uzyskać informacje odnośnie: aktualności, intencji mszy świętych, parafii, księży oraz innych spraw,
+- Użytkownik ma do dyspozycji formularz kontktowy,
+- Użytkownik ma możliwość skorzystania ze strony na telefonie komórkowym,
+- Administrator ma możliwość zalogowania się do panelu administratora,
+- Administrator może dodawać, edytować oraz usuwać posty,
+- Posty mogą zawierać załączniki (zdjęcia oraz plik pdf), któte można usunąć podczas edycji postu,
+- Administrator podczas tworzenia postów ma do dyspozycji prosty edytor tekstu,
+- Administrator może dodawać intencje.
 
-* Ruby version
+Do wykonania pozostało:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Wstawić właściwy kontent (zdjęcia oraz treść),
+- Poprawić wersję mobilną strony,
+- Deployment.
