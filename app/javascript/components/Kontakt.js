@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import axios from "axios";
 import { Spring } from "react-spring/renderprops.cjs";
+import Recaptcha from "react-recaptcha";
 
 class Kontakt extends React.Component {
   constructor() {
@@ -12,9 +13,23 @@ class Kontakt extends React.Component {
       message: "",
       nameError: "",
       emailError: "",
-      messageError: ""
+      messageError: "",
+      messageSand: "",
+      recpatureRespons: false
     };
   }
+
+  verifyRecapture = response => {
+    if (response) {
+      this.setState({
+        recpatureRespons: true
+      });
+    }
+  };
+
+  reecaptureLoaded = () => {
+    console.log("recapture loaded");
+  };
 
   validation = () => {
     let nameError = "";
@@ -43,9 +58,14 @@ class Kontakt extends React.Component {
       this.setState({
         messageError: "To pole nie może być puste"
       });
+    }
+    if (!this.state.recpatureRespons) {
+      this.setState({
+        recaptureError: "Potwierdź, że nie jesteś robotem"
+      });
     } else {
       this.setState({
-        messageError: ""
+        recaptureError: ""
       });
     }
 
@@ -68,6 +88,7 @@ class Kontakt extends React.Component {
         message: this.state.message
       };
 
+      event.preventDefault();
       axios
         .post("/contacts", message, {
           headers: {
@@ -79,6 +100,17 @@ class Kontakt extends React.Component {
           console.log(response);
           console.log(response.data);
         });
+
+      this.setState({
+        name: "",
+        email: "",
+        message: "",
+        nameError: "",
+        emailError: "",
+        messageError: "",
+        messageSand: "Twoja wiadomość została wysłana.",
+        recaptureError: ""
+      });
     }
   };
 
@@ -149,10 +181,22 @@ class Kontakt extends React.Component {
                           {this.state.messageError}
                         </div>
                       </div>
+                      <Recaptcha
+                        sitekey="6Le7I7YUAAAAAD2jf3pGEjKfLNi01ggPZoznvx1N"
+                        render="explicit"
+                        onloadCallback={this.reecaptureLoaded}
+                        verifyCallback={this.verifyRecapture}
+                      />
+                      <div style={{ color: "orange", padding: 10 }}>
+                        {this.state.recaptureError}
+                      </div>
 
                       <button type="submit" className="btn btn-primary">
                         Wyślij
                       </button>
+                      <div style={{ color: "green", padding: 10 }}>
+                        {this.state.messageSand}
+                      </div>
                     </form>
                   </div>
                 )}
