@@ -32,10 +32,6 @@ class Kontakt extends React.Component {
   };
 
   validation = () => {
-    let nameError = "";
-    let emailError = "";
-    let messageError = "";
-
     if (!this.state.name) {
       this.setState({
         nameError: "To pole nie może być puste"
@@ -182,11 +178,14 @@ class Kontakt extends React.Component {
                         </div>
                       </div>
                       <Recaptcha
+                        hl={"pl"}
                         sitekey="6Le7I7YUAAAAAD2jf3pGEjKfLNi01ggPZoznvx1N"
                         render="explicit"
                         onloadCallback={this.reecaptureLoaded}
                         verifyCallback={this.verifyRecapture}
-                      />
+                      >
+                        df
+                      </Recaptcha>
                       <div style={{ color: "orange", padding: 10 }}>
                         {this.state.recaptureError}
                       </div>
