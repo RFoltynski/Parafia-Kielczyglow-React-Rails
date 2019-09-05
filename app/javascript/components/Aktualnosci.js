@@ -61,7 +61,7 @@ class Aktualnosci extends React.Component {
 
     return (
       <div className="aktualnosci-comp ">
-        <div className="overlay">
+        <div className="aktualnosci-overlay">
           <Navbar />
           <center>
             <h1 className="h1-header"> AKTUALNOŚCI </h1>
