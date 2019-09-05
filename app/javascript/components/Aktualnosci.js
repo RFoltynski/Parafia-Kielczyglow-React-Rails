@@ -60,25 +60,23 @@ class Aktualnosci extends React.Component {
       : "loading";
 
     return (
-      <div className="aktualnosci-comp ">
-        <div className="aktualnosci-overlay">
-          <Navbar />
-          <center>
-            <h1 className="h1-header"> AKTUALNOŚCI </h1>
-            <div className="aktualnosci-search">
-              <form className={"form-group"}>
-                <input
-                  type="text"
-                  onChange={this.searchValue}
-                  placeholder=" Szukaj..."
-                />
-              </form>
-            </div>
-          </center>
-          <div className="news-boxes">
-            <div className="col-md-10">
-              <div>{newsList}</div>
-            </div>
+      <div>
+        <Navbar />
+        <center>
+          <h1 className="h1-header"> AKTUALNOŚCI </h1>
+          <div className="aktualnosci-search">
+            <form className={"form-group"}>
+              <input
+                type="text"
+                onChange={this.searchValue}
+                placeholder=" Szukaj..."
+              />
+            </form>
+          </div>
+        </center>
+        <div className="news-boxes">
+          <div className="col-md-10">
+            <div>{newsList}</div>
           </div>
         </div>
       </div>
