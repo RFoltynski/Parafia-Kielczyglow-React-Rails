@@ -91,6 +91,9 @@ export default class NewsView extends React.Component {
                 </div>
               )}
             </button>
+            <div className={"newsView-box-date"}>
+              {this.props.post.post_date}
+            </div>
           </div>
         )}
       </Spring>
