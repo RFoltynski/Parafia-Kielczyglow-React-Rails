@@ -352,30 +352,28 @@ function MiejscaWSieci() {
     <div className="inne-row">
       <animated.div style={props}>
         <div className="buttons-box">
-          <h2 name="scroll-to-historia">
-            Miejsca w sieci, które warto odwiedzić
-          </h2>
-          <div className="parafia-row">
-            <div className="buttons-box-text col-md-7 text-center">
-              <h3 className="h3-header">
-                <a href="https://www.deon.pl/">
-                  <img className="buttons-img-a col-md-3" src={deon} />
-                </a>
-              </h3>
-            </div>
-          </div>
+          <h2 name="scroll-to-historia">Mijsca w sieci</h2>
           <br />
           <div className="parafia-row">
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header ">
-                {" "}
-                <a href="https://stacja7.pl/">
-                  <img className="buttons-img-a col-md-3" src={stacja7} />
-                </a>
-              </h3>
+            <img className="buttons-img col-md-3 offset-md-1" src={deon} />
+            <div className="buttons-box-text col-md-5 offset-md-1 text-center">
+              <h3 className="h3-header">Deon</h3>
+              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
+              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Święty Antoni
+              urodził się w roku 1195 w Lizbonie, stolicy Portugalii. Na chrzcie
+              św. otrzymał imię Ferdynand.
             </div>
           </div>
-          <br />
+          <div className="parafia-row">
+            <img className="buttons-img col-md-3 offset-md-1" src={stacja7} />
+            <div className="buttons-box-text col-md-5 offset-md-1 text-center">
+              <h3 className="h3-header">Stacja7</h3>
+              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
+              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Święty Antoni
+              urodził się w roku 1195 w Lizbonie, stolicy Portugalii. Na chrzcie
+              św. otrzymał imię Ferdynand.
+            </div>
+          </div>
         </div>
       </animated.div>
     </div>
