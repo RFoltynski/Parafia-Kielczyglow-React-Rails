@@ -144,9 +144,13 @@ class Kontakt extends React.Component {
                           onChange={this.handleChange}
                           value={this.state.name}
                         />
-                        <div style={{ color: "orange", padding: 10 }}>
-                          {this.state.nameError}
-                        </div>
+                        {this.state.nameError ? (
+                          <div className={"contact-error"}>
+                            {this.state.nameError}
+                          </div>
+                        ) : (
+                          <div />
+                        )}
                       </div>
                       <div className="form-group">
                         <input
@@ -159,9 +163,13 @@ class Kontakt extends React.Component {
                           onChange={this.handleChange}
                           value={this.state.email}
                         />
-                        <div style={{ color: "orange", padding: 10 }}>
-                          {this.state.emailError}
-                        </div>
+                        {this.state.emailError ? (
+                          <div className={"contact-error"}>
+                            {this.state.emailError}
+                          </div>
+                        ) : (
+                          <div />
+                        )}
                       </div>
                       <div className="form-group">
                         <textarea
@@ -173,9 +181,13 @@ class Kontakt extends React.Component {
                           onChange={this.handleChange}
                           value={this.state.message}
                         />
-                        <div style={{ color: "orange", padding: 10 }}>
-                          {this.state.messageError}
-                        </div>
+                        {this.state.messageError ? (
+                          <div className={"contact-error"}>
+                            {this.state.messageError}
+                          </div>
+                        ) : (
+                          <div />
+                        )}
                       </div>
                       <Recaptcha
                         hl={"pl"}
@@ -183,19 +195,34 @@ class Kontakt extends React.Component {
                         render="explicit"
                         onloadCallback={this.reecaptureLoaded}
                         verifyCallback={this.verifyRecapture}
-                      >
-                        df
-                      </Recaptcha>
-                      <div style={{ color: "orange", padding: 10 }}>
-                        {this.state.recaptureError}
-                      </div>
+                        size={"compact"}
+                        badge={"inline"}
+                      />
+                      {this.state.recaptureError ? (
+                        <div className={"contact-error"}>
+                          {this.state.recaptureError}
+                        </div>
+                      ) : (
+                        <div />
+                      )}
 
-                      <button type="submit" className="btn btn-primary">
+                      <button
+                        type="submit"
+                        className="btn btn-primary"
+                        style={{ margin: "5px 0" }}
+                      >
                         Wyślij
                       </button>
-                      <div style={{ color: "green", padding: 10 }}>
-                        {this.state.messageSand}
-                      </div>
+                      {this.state.messageSand ? (
+                        <div
+                          className={"contact-error"}
+                          style={{ color: "white", backgroundColor: "green" }}
+                        >
+                          {this.state.messageSand}
+                        </div>
+                      ) : (
+                        <div />
+                      )}
                     </form>
                   </div>
                 )}
