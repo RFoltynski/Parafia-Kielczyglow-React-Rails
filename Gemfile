@@ -7,6 +7,10 @@ gem 'rails', '~> 5.2.3'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 gem 'coffee-rails', '~> 4.2'
 gem 'dotenv-rails', groups: %i[development test]
 gem 'jbuilder', '~> 2.5'
