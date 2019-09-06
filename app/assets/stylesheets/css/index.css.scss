@@ -86,7 +86,8 @@ button {
 /* content w sekcji parafia i inne */
 
 .buttons-box {
-  width: 75%;
+  max-width: 75%;
+  min-width: 95%;
   background-color: white;
   border-radius: 15px;
   opacity: 0.9;
