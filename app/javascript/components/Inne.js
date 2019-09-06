@@ -147,7 +147,7 @@ function Miejsca() {
       <animated.div style={props}>
         <div className="buttons-box">
           <h2 name="scroll-to-historia"> Miesjca w parafii </h2>
-          <div className="parafia-row">
+          <div className="inne-row">
             <img
               className="buttons-img buttons-img-miejsca col-md-5"
               src={pomnik}
@@ -162,7 +162,7 @@ function Miejsca() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="inne-row">
             <img
               className="buttons-img buttons-img-miejsca col-md-5"
               src={pomnik}
@@ -178,7 +178,7 @@ function Miejsca() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="inne-row">
             <img
               className="buttons-img buttons-img-miejsca col-md-5"
               src={pomnik}

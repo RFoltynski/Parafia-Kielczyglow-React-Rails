@@ -19,6 +19,7 @@
 .inne-row {
   height: 100%;
   margin: 0;
+  display: flex;
 }
 
 .inne-img {
@@ -31,4 +32,10 @@
 
 .inne-text {
   color: #ffffff;
+}
+
+@media (max-width: 764px) {
+  .inne-row {
+    flex-direction: column;
+  }
 }

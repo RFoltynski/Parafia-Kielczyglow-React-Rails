@@ -87,7 +87,6 @@ button {
 
 .buttons-box {
   max-width: 75%;
-  min-width: 95%;
   background-color: white;
   border-radius: 15px;
   opacity: 0.9;
@@ -136,4 +135,9 @@ button {
 .buttons-img-miejsca {
   width: 80%;
   height: 250px;
+}
+@media (max-width: 764px) {
+  .buttons-box {
+    max-width: 95%;
+  }
 }
