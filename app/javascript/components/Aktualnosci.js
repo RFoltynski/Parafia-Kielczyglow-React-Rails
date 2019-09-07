@@ -60,7 +60,7 @@ class Aktualnosci extends React.Component {
       : "loading";
 
     return (
-      <div>
+      <div className="aktualnosci-comp">
         <Navbar />
         <center>
           <h1 className="h1-header"> AKTUALNOŚCI </h1>

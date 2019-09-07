@@ -1,5 +1,10 @@
 .aktualnosci-comp {
-  height: 110%;
+  height: auto;
+  max-height: 121332px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: black;
+  background-image: url(asset-path("kaplani.jpg"));
 }
 
 .aktualnosci-search {

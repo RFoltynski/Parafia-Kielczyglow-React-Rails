@@ -36,3 +36,13 @@
   width: 100%;
   padding-bottom: 10px;
 }
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 660px) {
+  .intencje-column {
+    min-width: 95%;
+  }
+}
