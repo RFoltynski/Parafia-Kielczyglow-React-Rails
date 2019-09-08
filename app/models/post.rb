@@ -11,6 +11,7 @@ class Post < ApplicationRecord
             presence: true
   validate :photos_amount_ng_than_five
 
+  self.per_page = 5
 
   private
 

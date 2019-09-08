@@ -12,3 +12,5 @@ json.data do
     end
   end
 end
+json.page @posts_json.current_page
+json.pages @posts_json.total_pages
