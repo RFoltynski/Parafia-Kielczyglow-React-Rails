@@ -11,7 +11,6 @@ class Post < ApplicationRecord
             presence: true
   validate :photos_amount_ng_than_five
 
-
   private
 
   def photos_amount_ng_than_five

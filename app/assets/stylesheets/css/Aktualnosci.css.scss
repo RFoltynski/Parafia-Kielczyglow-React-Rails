@@ -7,13 +7,8 @@
   background-image: url(asset-path("kaplani.jpg"));
 }
 
-.aktualnosci-search {
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .news-boxes {
+  margin-top: 15px;
   display: flex;
   justify-content: space-around;
 }
