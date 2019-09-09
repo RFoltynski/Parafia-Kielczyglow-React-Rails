@@ -3,23 +3,11 @@ import NewsView from "./NewsView";
 import Navbar from "./Navbar";
 import axios from "axios";
 
-function isSearched(searchTerm) {
-  return function(item) {
-    return (
-      !searchTerm ||
-      item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1 ||
-      item.description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1
-    );
-  };
-}
-
 class Aktualnosci extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       posts: [],
-      searchTerm: "",
-      showSearch: false,
       isLoading: false,
       per: 2,
       totalPages: null,
@@ -29,7 +17,7 @@ class Aktualnosci extends React.Component {
   }
 
   componentWillMount() {
-    const { per, totalPages, page } = this.state;
+    const { per, page } = this.state;
     const url = `api/v1/posts?per_page=${per}&page=${page}`;
 
     axios.get(url, {}, { "Content-Type": "application/json" }).then(res => {
@@ -40,18 +28,6 @@ class Aktualnosci extends React.Component {
       });
     });
   }
-
-  showSearch = () => {
-    this.setState({
-      showSearch: !this.state.showSearch
-    });
-  };
-
-  searchValue = event => {
-    this.setState({
-      searchTerm: event.target.value
-    });
-  };
 
   handlePageClick = data => {
     const { per, totalPages, page, posts } = this.state;
@@ -95,15 +71,6 @@ class Aktualnosci extends React.Component {
         <Navbar />
         <center>
           <h1 className="h1-header"> AKTUALNOŚCI </h1>
-          <div className="aktualnosci-search">
-            <form className={"form-group"}>
-              <input
-                type="text"
-                onChange={this.searchValue}
-                placeholder=" Szukaj..."
-              />
-            </form>
-          </div>
         </center>
         <div className="news-boxes">
           <div className="col-md-10">{newsList}</div>
