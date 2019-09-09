@@ -17,22 +17,28 @@ class Aktualnosci extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      newses: [],
+      posts: [],
       searchTerm: "",
       showSearch: false,
-      isLoading: false
+      isLoading: false,
+      per: 2,
+      totalPages: null,
+      page: 1,
+      pageLoadError: null
     };
   }
 
   componentWillMount() {
-    axios
-      .get("api/v1/posts", {}, { "Content-Type": "application/json" })
-      .then(res => {
-        this.setState({
-          posts: res.data.data,
-          isLoading: true
-        });
+    const { per, totalPages, page } = this.state;
+    const url = `api/v1/posts?per_page=${per}&page=${page}`;
+
+    axios.get(url, {}, { "Content-Type": "application/json" }).then(res => {
+      this.setState({
+        posts: res.data.data,
+        totalPages: res.data.pages,
+        isLoading: true
       });
+    });
   }
 
   showSearch = () => {
@@ -47,14 +53,39 @@ class Aktualnosci extends React.Component {
     });
   };
 
-  handlePageChange(pageNumber) {
-    console.log(`active page is ${pageNumber}`);
-    this.setState({ activePage: pageNumber });
-  }
+  handlePageClick = data => {
+    const { per, totalPages, page, posts } = this.state;
+    const url = `api/v1/posts?per_page=${per}&page=${page}`;
+
+    axios.get(url, {}, { "Content-Type": "application/json" }).then(res => {
+      this.setState({
+        posts: [...posts, ...res.data.data],
+        totalPages: res.data.pages,
+        isLoading: true
+      });
+    });
+  };
+
+  loadMore = () => {
+    const { page, totalPages } = this.state;
+
+    if (page < totalPages) {
+      this.setState(
+        prevState => ({
+          page: prevState.page + 1
+        }),
+        this.handlePageClick
+      );
+    } else {
+      this.setState({
+        pageLoadError: "Nie ma więcej postów."
+      });
+    }
+  };
 
   render() {
     let newsList = this.state.isLoading
-      ? this.state.posts.filter(isSearched(this.state.searchTerm)).map(post => {
+      ? this.state.posts.map(post => {
           return <NewsView post={post} />;
         })
       : "loading";
@@ -75,10 +106,29 @@ class Aktualnosci extends React.Component {
           </div>
         </center>
         <div className="news-boxes">
-          <div className="col-md-10">
-            <div>{newsList}</div>
-          </div>
+          <div className="col-md-10">{newsList}</div>
         </div>
+        <center>
+          {this.state.pageLoadError ? (
+            <div className={"contact-error"} style={{ width: "80%" }}>
+              {" "}
+              {this.state.pageLoadError}{" "}
+            </div>
+          ) : (
+            <div />
+          )}
+          {this.state.totalPages > 1 ? (
+            <button
+              className={"buttonWhite"}
+              style={{ margin: "15px 0" }}
+              onClick={this.loadMore}
+            >
+              Więcej postów
+            </button>
+          ) : (
+            <div />
+          )}
+        </center>
       </div>
     );
   }

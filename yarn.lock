@@ -1776,7 +1776,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.6.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -6594,6 +6594,13 @@ react-bnb-gallery@^1.1.6:
     prop-types "^15.6.1"
     react-portal "^4.2.0"
 
+react-bootstrap-pagination@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-pagination/-/react-bootstrap-pagination-1.0.7.tgz#8214beedcc1742bcf446f67f3f31a301c51cb6a6"
+  integrity sha512-H1WT3LHUYB6HXwdFZWcpV/P6Ki1a9ml7VM0RJyxKJxjpJ8lJQ+fA0sW6ISwbdji8oE/p/M7hubV+Jo5M81wUUg==
+  dependencies:
+    babel-runtime "^6.6.1"
+
 react-dom@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
@@ -6608,6 +6615,13 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
+
+react-paginate@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/react-paginate/-/react-paginate-6.3.0.tgz#29cbb5d1645227f4e4f959b9d7f43cfae603f801"
+  integrity sha512-lT/ne7hZzctGDli4QzUAou0JjfZgxKmtl9/r30B5UVonICZIy1u0SrAkdlEZ5ubgzrOykBeCmxkTWi5IyPg4AQ==
+  dependencies:
+    prop-types "^15.6.1"
 
 react-portal@^4.2.0:
   version "4.2.0"
