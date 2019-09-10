@@ -22,7 +22,7 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  config.secret_key_base = ENV['b382ee48442777b8a6c33b91596118194d882e4a4607a29610515c912e89ce7b73fae246ca5b702f334a6a0a44d092261c93398ba7c753ec951339d20a95c978']
+  config.secret_key_base = ENV['SECRET_KEY_BASE']
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass

@@ -77,4 +77,4 @@ production:
   <<: *default
   database: parafia-kielczyglow
   username: deploy
-  password: miasto12
+  password: ENV['DB_PASSWORD']
