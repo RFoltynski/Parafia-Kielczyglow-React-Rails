@@ -259,15 +259,62 @@ function ParafiaObecnie() {
           <div className="parafia-row">
             <img className="buttons-img col-md-8" src={kosciol} />
             <div className="buttons-box-text col-md-4">
-              Przyszedł na świat w rodzinie zamożnego kupca, sukiennika
-              umbryjskiego Pietro di Bernardo di Moricone. Jego matka, Pika,
-              pochodząca z Pikardii, nadała mu na chrzcie imię Jana (Chrzciciela
-              albo Ewangelisty), które ojciec zmienił na Francesco,
-              prawdopodobnie będąc pod ogromnym wrażeniem Francji, w której
-              zawarł korzystne umowy handlowe. Niektóre źródła podają, że
-              Franciszek miał brata o imieniu Anioł. Pierwsze lata swojego życia
-              spędził w Asyżu, uczęszczał tam do parafialnej szkoły przy
-              kościele św. Jerzego, gdzie zdobył podstawowe wykształcenie[4].
+              <h3>Adres:</h3>
+              <p> 98-358 Kiełczygłów, ul. Świerczewskiego 9</p>
+              <h3>Probosz:</h3>
+              <p> Ks. Bogdan Ignasiak</p>
+              <h3>Msze swięte:</h3>
+              <p>
+                {" "}
+                niedziela i święta: 9.00, 12.00, 15.30; Święta zniesione: 8:00,
+                10:00, 16:00; dni powszednie: 7:00, 7:30
+              </p>
+              <h3>Odpust:</h3>
+              <p>
+                {" "}
+                1. św. Antioniego - 13 czerwca, 2. Niepokalanego Serca NMP -
+                niedziela ok. 22 sierpnia
+              </p>
+              <h3>Doba Eucharystyczna:</h3>
+              <p> 30/31 października </p>
+              <h3>Kaplica</h3>
+              <p>
+                {" "}
+                Pierzyny Małe - kościół p.w. NMP Królowej Polski; Msze św.:
+                niedziela i święta - 10:30, święta zniesione: 12:00, dni
+                powszednie: 18:00, Doba Eucharystyczna: 18 stycznia
+              </p>
+              <h3>Mieszkańcy:</h3>
+              <p> 2500</p>
+              <h3>Dotychczasowi proboszczowie:</h3>
+              <p>
+                {" "}
+                Antonii Wróbel (1925-1938),
+                <br /> Stanisław Dąbrowski (1938-1939),
+                <br /> Franciszek Figura (1939-1940),
+                <br /> Wincenty Kruk (1940-1941),
+                <br /> Józef Janson (1945-1949),
+                <br /> Antoni Turbański (1949-1953),
+                <br /> Józef Janson (1953-1959),
+                <br /> Edward Polak (1959-1990),
+                <br />
+                Bogdan Ignasiak (1990- do teraz)
+              </p>
+
+              <h3>Z parafii pochodzą księża:</h3>
+              <p> Józef Wiśńiewski, Stanisław Lechowski</p>
+              <h3>Rys Historyczny</h3>
+              <p>
+                {" "}
+                Parafię erygował bp włocławski Stanisław Zdzitkowiecki
+                21.08.1924 r. Obecny kosciół został wybudowany staraniem ks.
+                Józefa Jansona w latach 1948-1957. Konsekrował go bp Zdzisław
+                Goliński 13.06.1957 roku. Na terenie parafii istnieje w
+                Pierzynach mały kościół filialny zbudowany w latach 1985-1988.
+                Jego budowę rozpoczął miejscowy wikariusz ks. Adam Sołtysiak,
+                dokończył wikariusz, a nastęþnie proboszcz - ks. Bogdan
+                Ignasiak. Uroczyście posœięcił bp Stanisław Nowak 29.05.1988r.
+              </p>
             </div>
           </div>
           <br />
