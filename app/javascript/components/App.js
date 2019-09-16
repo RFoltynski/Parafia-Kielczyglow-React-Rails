@@ -3,12 +3,12 @@ import Header from "./Header";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 
-import aktualnosci from "./img/akutalnosciBox.jpg";
+import aktualnosci from "./img/resize_300/IMG_1446.JPG";
 import intencje from "./img/intencje.jpg";
 import parafia from "./img/parafia.jpg";
-import kaplani from "./img/kaplani.jpg";
-import kontakt from "./img/kontakt.jpg";
-import inne from "./img/inne.jpg";
+import kaplani from "./img/resize_300/kaplani.JPG";
+import kontakt from "./img/resize_300/kontakt.JPG";
+import inne from "./img/resize_300/inne.JPG";
 
 class App extends React.Component {
   scrollTo() {
@@ -29,7 +29,7 @@ class App extends React.Component {
         <div name="scroll-to-element" className=" row">
           <div className="box col-md-4 nopadding">
             <div className="box-overlay">
-              <Link className="box-overlay-link" to="/aktualnosci">
+              <Link className="box-overlay-link image-fix" to="/aktualnosci">
                 <h2 className="box-overlay-h2">Aktualności</h2>
                 <img src={aktualnosci} />
               </Link>

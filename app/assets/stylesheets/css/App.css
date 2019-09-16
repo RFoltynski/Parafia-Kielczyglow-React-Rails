@@ -23,6 +23,8 @@
   text-align: center;
   line-height: 1.2em;
   width: 60%;
+  z-index: 100;
+  font-weight: 700;
 }
 
 .box-overlay-h2:after,
@@ -47,22 +49,20 @@
 .box-overlay .box-overlay-p {
   position: absolute;
   display: block;
-  height: 120px;
+  height: 100%;
   width: 100%;
-  background: linear-gradient(transparent, 35%, #111);
-  left: 0px;
-  bottom: 0px;
+  background: linear-gradient(transparent, 0%, #111);
+  top: 0;
   margin: 0;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   color: #ffffffe6;
-  padding-top: 45px;
+  padding-top: 185px;
 }
 
 .box-overlay:hover .box-overlay-p {
   opacity: 0.8;
   color: #ffffffe6;
-  padding-top: 45px;
 }
 
 .box-overlay-link {
@@ -79,7 +79,12 @@
   margin-left: auto;
   margin-right: auto;
   left: 0;
-  top: -45px;
+  top: -65px;
   right: 0;
   color: #ffffffe6;
+}
+
+.image-fix {
+  background-position: center;
+  background-size: cover;
 }
