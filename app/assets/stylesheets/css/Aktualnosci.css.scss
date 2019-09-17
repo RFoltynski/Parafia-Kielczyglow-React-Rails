@@ -6,6 +6,8 @@
   background-color: black;
   background-image: url(asset-path("aktualnosci_background.JPG"));
   min-height: 100vh;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .news-boxes {

@@ -77,7 +77,10 @@ class Aktualnosci extends React.Component {
         </div>
         <center>
           {this.state.pageLoadError ? (
-            <div className={"contact-error"} style={{ width: "80%" }}>
+            <div
+              className={"contact-error"}
+              style={{ width: "80%", height: "120px", fontSize: "26px" }}
+            >
               {" "}
               {this.state.pageLoadError}{" "}
             </div>
