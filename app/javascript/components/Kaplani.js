@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { useSpring, animated } from "react-spring";
+import Proboszcz from "./kaplani/proboszcz.jsx";
+import Wikary from "./kaplani/proboszczowie";
+import Proboszczowie from "./kaplani/wikary.jsx";
 
 class Kaplani extends React.Component {
   constructor() {
@@ -8,7 +10,8 @@ class Kaplani extends React.Component {
     this.state = {
       render: "",
       buttonPressed: true,
-      buttonPressed1: false
+      buttonPressed1: false,
+      buttonPressed2: false
     };
   }
 
@@ -24,6 +27,8 @@ class Kaplani extends React.Component {
         return <Proboszcz />;
       case "wikary":
         return <Wikary />;
+      case "proboszczowie":
+        return <Proboszczowie />;
     }
   }
 
@@ -32,7 +37,8 @@ class Kaplani extends React.Component {
     (this.buttonPress = () => {
       this.setState({
         buttonPressed: true,
-        buttonPressed1: false
+        buttonPressed1: false,
+        buttonPressed2: false
       });
     })();
   };
@@ -41,7 +47,18 @@ class Kaplani extends React.Component {
     (this.buttonPress1 = () => {
       this.setState({
         buttonPressed: false,
-        buttonPressed1: true
+        buttonPressed1: true,
+        buttonPressed2: false
+      });
+    })();
+  };
+  onClick2 = event => {
+    this.handleClick("proboszczowie");
+    (this.buttonPress2 = () => {
+      this.setState({
+        buttonPressed: false,
+        buttonPressed1: false,
+        buttonPressed2: true
       });
     })();
   };
@@ -52,20 +69,26 @@ class Kaplani extends React.Component {
         <div className="overlay">
           <Navbar />
           <center>
-            <h1 class="h1-header"> Kapłani </h1>
+            <h1 className="h1-header"> Kapłani </h1>
             <div className="inne-buttons">
-              <Button
+              <button
                 onClick={this.onClick}
                 className={this.state.buttonPressed ? "buttonWhite" : "button"}
               >
                 Proboszcz
-              </Button>
-              <Button
+              </button>
+              <button
                 onClick={this.onClick1}
                 className={this.state.buttonPressed1 ? "buttonWhite" : "button"}
               >
                 Wikary
-              </Button>
+              </button>
+              <button
+                onClick={this.onClick2}
+                className={this.state.buttonPressed2 ? "buttonWhite" : "button"}
+              >
+                Poprzedni Proboszczowie
+              </button>
 
               {this.state.render === "" ? <Proboszcz /> : this._renderSubComp()}
             </div>
@@ -74,102 +97,6 @@ class Kaplani extends React.Component {
       </div>
     );
   }
-}
-
-class Button extends React.Component {
-  render() {
-    const { children, onClick, className } = this.props;
-    return (
-      <button
-        type="button"
-        onClick={
-          onClick
-          // (this.scrollTo = () => {
-          //   scroller.scrollTo("scroll-to-patron", {
-          //     duration: 500,
-          //     delay: 0,
-          //     smooth: "easeInQuad"
-          //   });
-          // })
-        }
-        className={className}
-      >
-        {children}
-      </button>
-    );
-  }
-}
-
-function Proboszcz() {
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    config: { duration: 500 }
-  });
-  return (
-    <div className="inne-row">
-      <animated.div style={props}>
-        <div className="buttons-box">
-          <h2 name="scroll-to-historia">Często zadawane Proboszcz</h2>
-
-          <div className="button">
-            <div className="buttons-box-text col-md-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              lacinia hendrerit massa lobortis imperdiet. Duis at nibh tempor,
-              congue eros dapibus, tristique ante. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              suscipit, lorem vitae iaculis scelerisque, orci nulla fermentum
-              nulla, in sollicitudin velit nisl iaculis s leo. Nunc a pharetra
-              tortor. Nam tempor iaculis arcu, et bibendum enim facilisis quis
-            </div>
-          </div>
-        </div>
-      </animated.div>
-    </div>
-  );
-}
-
-function Wikary() {
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    config: { duration: 500 }
-  });
-  return (
-    <div className="inne-row">
-      <animated.div style={props}>
-        <div className="buttons-box">
-          <h2 name="scroll-to-historia">Książki, które warto przeczytać</h2>
-
-          <div className="buttons-content row">
-            <div className="buttons-box-text col-md-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              lacinia hendrerit massa lobortis imperdiet. Duis at nibh tempor,
-              congue eros dapibus, tristique ante. Vestibulum ante ipsum primis
-              in faucibus orci luctus et ultrices posuere cubilia Curae; Donec
-              suscipit, lorem vitae iaculis scelerisque, orci nulla fermentum
-              nulla, in sollicitudin velit nisl iaculis sem. Etiam ullamcorper
-              urna eu lectus efficitur, vehicula faucibus nibh blandit. Ut
-              mattis ac nisi in convallis. Mauris malesuada mauris nisi, eu
-              aliquet leo dapibus et. Sed augue ligula, dictum nec condimentum
-              eu, consequat in ligula. Integer aliquam elementum nisl, ut
-              bibendum tortor porttitor id. Donec dapibus feugiat ornare.
-              Integer blandit elementum eros, nec dictum sem hendrerit id.
-              Phasellus lacus nulla, aliquet a purus quis, porttitor posuere
-              leo. Nunc a pharetra tortor. Nam tempor iaculis arcu, et bibendum
-              enim facilisis quis
-            </div>
-            <div className="col-md-4">
-              <img
-                className="buttons-img"
-                src="..\img\parafia\franciszek.jpg"
-              />
-            </div>
-          </div>
-        </div>
-      </animated.div>
-    </div>
-  );
 }
 
 export default Kaplani;
