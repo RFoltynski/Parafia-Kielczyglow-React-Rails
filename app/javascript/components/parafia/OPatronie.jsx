@@ -1,8 +1,8 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import franciszek from "./../img/franciszek.jpg";
-import franciszekM from "./../img/franciszek-mlody.jpg";
-import franciszekP from "./../img/franciszek-prosto.jpg";
+import franciszek from "./../img/parafia/Opatronie/franciszek.jpg";
+import franciszekM from "./../img/parafia/Opatronie/franciszek-mlody.jpg";
+import franciszekP from "./../img/parafia/Opatronie/franciszek-prosto.jpg";
 
 function OPatronie() {
   const props = useSpring({

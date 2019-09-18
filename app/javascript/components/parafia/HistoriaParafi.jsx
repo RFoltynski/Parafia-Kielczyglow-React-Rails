@@ -1,9 +1,9 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
-import pamiatka from "./../img/pamiatka.jpg";
-import stary from "./../img/stary.jpg";
-import gazeta from "./../img/gazeta.jpg";
+import pamiatka from "./../img/parafia/HistoriaParafi/pamiatka.jpg";
+import stary from "./../img/parafia/HistoriaParafi/stary.jpg";
+import gazeta from "./../img/parafia/HistoriaParafi/gazeta.jpg";
 
 function HistoriaParafi() {
   const props = useSpring({

@@ -7,12 +7,12 @@ class Header extends React.Component {
         {" "}
         <center>
           <div className="header-box">
-            <h1 class="h1-header header-parafia">Parafia Kiełczygłów</h1>
+            <h1 className="h1-header header-parafia">Parafia Kiełczygłów</h1>
           </div>
           <div className={"arrow bounce"} />
           <button
             type="button"
-            class="admin-panel-button-header"
+            className="admin-panel-button-header"
             onClick={this.props.scroll}
           >
             MENU

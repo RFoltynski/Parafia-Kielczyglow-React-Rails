@@ -1,7 +1,7 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
-import oltarz from "./../img/335819.jpg";
+import oltarz from "./../img/parafia/ParafiaObecnie/oltarz.jpg";
 
 function ParafiaObecnie() {
   const props = useSpring({

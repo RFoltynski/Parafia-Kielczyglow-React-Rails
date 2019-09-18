@@ -3,12 +3,12 @@ import Header from "./Header";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 
-import aktualnosci from "./img/resize_300/IMG_1446.JPG";
-import intencje from "./img/intencje.jpg";
-import parafia from "./img/parafia.jpg";
-import kaplani from "./img/resize_300/kaplani.JPG";
-import kontakt from "./img/resize_300/kontakt.JPG";
-import inne from "./img/resize_300/inne.JPG";
+import aktualnosci from "./img/kafelki/aktualnosci.JPG";
+import intencje from "./img/kafelki/intencje.JPG";
+import parafia from "./img/kafelki/parafia.JPG";
+import kaplani from "./img/kafelki/kaplani.JPG";
+import kontakt from "./img/kafelki/kontakt.JPG";
+import inne from "./img/kafelki/inne.JPG";
 
 class App extends React.Component {
   scrollTo() {
