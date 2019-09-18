@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Proboszcz from "./kaplani/proboszcz.jsx";
-import Wikary from "./kaplani/proboszczowie";
-import Proboszczowie from "./kaplani/wikary.jsx";
+import Proboszczowie from "./kaplani/proboszczowie";
+import Wikary from "./kaplani/wikary.jsx";
 
 class Kaplani extends React.Component {
   constructor() {
