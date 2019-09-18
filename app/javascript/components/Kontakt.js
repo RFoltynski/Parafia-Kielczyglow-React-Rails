@@ -127,103 +127,120 @@ class Kontakt extends React.Component {
             <div className="kontakt-row">
               <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
                 {props => (
-                  <div className="buttons-box" style={props}>
-                    <h2 className="scroll-to-historia">Formularz kontaktowy</h2>
+                  <div style={props}>
+                    <div className="buttons-box">
+                      <h2>Dane Kontaktowe</h2>
+                      <div className="offset-md-1 col-md-10 contact-form ">
+                        <h4>Adres plebanii:</h4>
+                        <p> 98-358 Kiełczygłów, ul. Świerczewskiego 9</p>
+                        <h4>Nr telefonu do plebanii:</h4>
+                        <p> 43 842-50-97</p>
+                        <h4>Adres Email:</h4>
+                        <p> Parafia-Kielczyglow@gmail.com </p>
+                      </div>
+                    </div>
+                    <div className="buttons-box">
+                      <h2>Formularz kontaktowy</h2>
 
-                    <form
-                      className="offset-md-1 col-md-10 contact-form"
-                      onSubmit={e => this.handleSubmit(e)}
-                    >
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="formGroupExampleInput"
-                          placeholder="Imię i Nazwisko.."
-                          name="name"
-                          onChange={this.handleChange}
-                          value={this.state.name}
-                        />
-                        {this.state.nameError ? (
-                          <div className={"contact-error"}>
-                            {this.state.nameError}
-                          </div>
-                        ) : (
-                          <div />
-                        )}
-                      </div>
-                      <div className="form-group">
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="exampleInputEmail1"
-                          aria-describedby="emailHelp"
-                          placeholder="Twój adres email.."
-                          name="email"
-                          onChange={this.handleChange}
-                          value={this.state.email}
-                        />
-                        {this.state.emailError ? (
-                          <div className={"contact-error"}>
-                            {this.state.emailError}
-                          </div>
-                        ) : (
-                          <div />
-                        )}
-                      </div>
-                      <div className="form-group">
-                        <textarea
-                          className="form-control"
-                          id="exampleFormControlTextarea1"
-                          rows="3"
-                          placeholder="Twoja wiadomość"
-                          name="message"
-                          onChange={this.handleChange}
-                          value={this.state.message}
-                        />
-                        {this.state.messageError ? (
-                          <div className={"contact-error"}>
-                            {this.state.messageError}
-                          </div>
-                        ) : (
-                          <div />
-                        )}
-                      </div>
-                      <Recaptcha
-                        hl={"pl"}
-                        sitekey="6Le7I7YUAAAAAD2jf3pGEjKfLNi01ggPZoznvx1N"
-                        render="explicit"
-                        onloadCallback={this.reecaptureLoaded}
-                        verifyCallback={this.verifyRecapture}
-                        size={"compact"}
-                        badge={"inline"}
-                      />
-                      {this.state.recaptureError ? (
-                        <div className={"contact-error"}>
-                          {this.state.recaptureError}
-                        </div>
-                      ) : (
-                        <div />
-                      )}
-
-                      <button
-                        type="submit"
-                        className="btn btn-primary"
-                        style={{ margin: "5px 0" }}
+                      <form
+                        className="offset-md-1 col-md-10 contact-form"
+                        onSubmit={e => this.handleSubmit(e)}
                       >
-                        Wyślij
-                      </button>
-                      {this.state.messageSand ? (
-                        <div
-                          className={"contact-error"}
-                          style={{ color: "white", backgroundColor: "green" }}
-                        >
-                          {this.state.messageSand}
+                        <center>
+                          <p>Wyślij maila bezpośrednio ze strony.</p>
+                        </center>
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="formGroupExampleInput"
+                            placeholder="Imię i Nazwisko.."
+                            name="name"
+                            onChange={this.handleChange}
+                            value={this.state.name}
+                          />
+                          {this.state.nameError ? (
+                            <div className={"contact-error"}>
+                              {this.state.nameError}
+                            </div>
+                          ) : (
+                            <div />
+                          )}
                         </div>
-                      ) : (
-                        <div />
-                      )}
-                    </form>
+                        <div className="form-group">
+                          <input
+                            type="email"
+                            className="form-control"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            placeholder="Twój adres email.."
+                            name="email"
+                            onChange={this.handleChange}
+                            value={this.state.email}
+                          />
+                          {this.state.emailError ? (
+                            <div className={"contact-error"}>
+                              {this.state.emailError}
+                            </div>
+                          ) : (
+                            <div />
+                          )}
+                        </div>
+                        <div className="form-group">
+                          <textarea
+                            className="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="3"
+                            placeholder="Twoja wiadomość"
+                            name="message"
+                            onChange={this.handleChange}
+                            value={this.state.message}
+                          />
+                          {this.state.messageError ? (
+                            <div className={"contact-error"}>
+                              {this.state.messageError}
+                            </div>
+                          ) : (
+                            <div />
+                          )}
+                        </div>
+                        <Recaptcha
+                          hl={"pl"}
+                          sitekey="6Le7I7YUAAAAAD2jf3pGEjKfLNi01ggPZoznvx1N"
+                          render="explicit"
+                          onloadCallback={this.reecaptureLoaded}
+                          verifyCallback={this.verifyRecapture}
+                          size={"compact"}
+                          badge={"inline"}
+                        />
+                        {this.state.recaptureError ? (
+                          <div className={"contact-error"}>
+                            {this.state.recaptureError}
+                          </div>
+                        ) : (
+                          <div />
+                        )}
+
+                        <button
+                          type="submit"
+                          className="btn btn-primary"
+                          style={{ margin: "5px 0" }}
+                        >
+                          Wyślij
+                        </button>
+                        {this.state.messageSand ? (
+                          <div
+                            className={"contact-error"}
+                            style={{ color: "white", backgroundColor: "green" }}
+                          >
+                            {this.state.messageSand}
+                          </div>
+                        ) : (
+                          <div />
+                        )}
+                      </form>
+                      <br />
+                    </div>
                   </div>
                 )}
               </Spring>
