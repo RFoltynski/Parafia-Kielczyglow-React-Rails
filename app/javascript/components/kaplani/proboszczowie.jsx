@@ -14,7 +14,11 @@ function Proboszczowie() {
           <h2> Dotychczasowi proboszczowie</h2>
           <div className="row">
             <div className="col-md-8">
-              <p> Antonii Wróbel (1925-1938)</p>
+              <p> Antonii Wróbel (1925-1938)</p>, Stanisław Dąbrowski
+              (1938-1939), Franciszek Figura (1939-1940), Wincenty Kruk
+              (1940-1941), Józef Janson (1945-1949), Antoni Turbański
+              (1949-1953), Józef Janson (1953-1959), Edward Polak (1959-1990),
+              Bogdan Ignasiak (1990- do teraz)
             </div>
             <div className="col-md-4" />
           </div>

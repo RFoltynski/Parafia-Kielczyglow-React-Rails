@@ -7,7 +7,7 @@ import gazeta from "./../img/gazeta.jpg";
 
 function HistoriaParafi() {
   const props = useSpring({
-    to: { opacity: 1 },
+    to: { opacity: 1, width: "100%" },
     from: { opacity: 0 },
     config: { duration: 500 }
   });

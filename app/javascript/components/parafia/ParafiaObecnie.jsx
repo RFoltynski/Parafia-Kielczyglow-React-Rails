@@ -5,7 +5,7 @@ import oltarz from "./../img/335819.jpg";
 
 function ParafiaObecnie() {
   const props = useSpring({
-    to: { opacity: 1 },
+    to: { opacity: 1, width: "100%" },
     from: { opacity: 0 },
     config: { duration: 500 }
   });
