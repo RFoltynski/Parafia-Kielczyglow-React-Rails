@@ -24,3 +24,20 @@
 .kaplani-text {
   color: #ffffff;
 }
+
+.probszczowie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.proboszczowie-img {
+  max-width: 300px;
+  width: 100%;
+  height: 300px;
+  margin: 10px auto;
+  border: 5px solid #220d0b;
+  border-radius: 3px;
+}

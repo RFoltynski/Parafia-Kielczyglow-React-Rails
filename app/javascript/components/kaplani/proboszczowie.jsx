@@ -1,6 +1,12 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
+import Wrobel from "./../img/ksieza/Antoni_Wrobel.JPG";
+import Polak from "./../img/ksieza/Edward_Polak.JPG";
+import Janson from "./../img/ksieza/Józef_Janson.JPG";
+import Kruk from "./../img/ksieza/Wincenty_Kruk.JPG";
+import Turbanski from "./../img/ksieza/Antonii_Turbanski.JPG";
+
 function Proboszczowie() {
   const props = useSpring({
     to: { opacity: 1, width: "100%" },
@@ -12,15 +18,42 @@ function Proboszczowie() {
       <animated.div style={props}>
         <div className="buttons-box">
           <h2> Dotychczasowi proboszczowie</h2>
-          <div className="row">
-            <div className="col-md-8">
-              <p> Antonii Wróbel (1925-1938)</p>, Stanisław Dąbrowski
-              (1938-1939), Franciszek Figura (1939-1940), Wincenty Kruk
-              (1940-1941), Józef Janson (1945-1949), Antoni Turbański
-              (1949-1953), Józef Janson (1953-1959), Edward Polak (1959-1990),
-              Bogdan Ignasiak (1990- do teraz)
+
+          <div className=" col-md-12 probszczowie text-center">
+            <div>
+              <img src={Wrobel} className="proboszczowie-img" />
+              <div>Antonii Wróbel (1925-1938)</div>
             </div>
-            <div className="col-md-4" />
+            <hr />
+            <div>
+              <img className="proboszczowie-img" />
+              <div>Stanisław Dąbrowski (1938-1939)</div>
+            </div>
+            <hr />
+            <div>
+              <img className="proboszczowie-img" />
+              <div>Franciszek Figura (1939-1940)</div>
+            </div>
+            <hr />
+            <div>
+              <img src={Kruk} className="proboszczowie-img" />
+              <div> Wincenty Kruk (1940-1941) </div>
+            </div>
+            <hr />
+            <div>
+              <img src={Janson} className="proboszczowie-img" />
+              <div> Józef Janson (1945-1949) (1953-1959) </div>
+            </div>
+            <hr />
+            <div>
+              <img src={Turbanski} className="proboszczowie-img" />
+              <div> Antoni Turbański (1949-1953) </div>
+            </div>
+            <hr />
+            <div>
+              <img src={Polak} className="proboszczowie-img" />
+              <div>Edward Polak (1959-1990) </div>
+            </div>
           </div>
         </div>
       </animated.div>
