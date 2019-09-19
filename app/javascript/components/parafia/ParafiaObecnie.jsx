@@ -55,18 +55,6 @@ function ParafiaObecnie() {
 
               <h3>Z parafii pochodzą księża:</h3>
               <p> Józef Wiśńiewski, Stanisław Lechowski</p>
-              <h3>Rys Historyczny</h3>
-              <p>
-                {" "}
-                Parafię erygował bp włocławski Stanisław Zdzitkowiecki
-                21.08.1924 r. Obecny kosciół został wybudowany staraniem ks.
-                Józefa Jansona w latach 1948-1957. Konsekrował go bp Zdzisław
-                Goliński 13.06.1957 roku. Na terenie parafii istnieje w
-                Pierzynach mały kościół filialny zbudowany w latach 1985-1988.
-                Jego budowę rozpoczął miejscowy wikariusz ks. Adam Sołtysiak,
-                dokończył wikariusz, a nastęþnie proboszcz - ks. Bogdan
-                Ignasiak. Uroczyście posœięcił bp Stanisław Nowak 29.05.1988r.
-              </p>
             </div>
           </div>
           <br />
