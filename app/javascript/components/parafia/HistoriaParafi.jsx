@@ -36,7 +36,7 @@ function HistoriaParafi() {
           <br />
 
           <div className="text-center offset-md-1 col-md-10">
-            <h2>Powstanie Parafii</h2>
+            <h3 className="h3-header">Powstanie Parafii</h3>
             <p>
               {" "}
               Parafię erygował bp włocławski Stanisław Zdzitkowiecki 21.08.1924
@@ -47,7 +47,7 @@ function HistoriaParafi() {
             </div>
           </div>
           <div className="text-center offset-md-1 col-md-10">
-            <h2>Budowa Kościoła</h2>
+            <h3 className="h3-header">Budowa Kościoła</h3>
             Obecny kosciół został wybudowany staraniem ks. Józefa Jansona w
             latach 1948-1957.
             <div className="col-md-12">
@@ -75,7 +75,7 @@ function HistoriaParafi() {
             </div>
           </div>
           <div className="text-center offset-md-1 col-md-10">
-            <h2>Konsekracja Kościoła</h2>
+            <h3 className="h3-header">Konsekracja Kościoła</h3>
             Konsekrował go bp Zdzisław Goliński 13.06.1957 roku.
             <div className="budowa-images">
               <img src={konsekracja} className="budowa-image" />
@@ -84,7 +84,7 @@ function HistoriaParafi() {
             </div>
           </div>
           <div className="text-center offset-md-1 col-md-10">
-            <h2>Budowa Kościoła w Pierzynach Małych</h2>
+            <h3 className="h3-header">Budowa Kościoła w Pierzynach Małych</h3>
             Kościół filialny zbudowany został w latach 1985-1988. Jego budowę
             rozpoczął miejscowy wikariusz ks. Adam Sołtysiak, dokończył
             wikariusz, a nastęþnie proboszcz - ks. Bogdan Ignasiak. Uroczyście

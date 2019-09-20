@@ -80,7 +80,7 @@ function ParafiaObecnie() {
               </h3>
             </div>
             <div className="parafia-row">
-              <ul className="parafia-obecenie">
+              <ul>
                 <li>Dryganek Duży</li>
                 <li>Dryganek Mały</li>
                 <li>Glina Duża</li>
@@ -88,7 +88,7 @@ function ParafiaObecnie() {
                 <li>Kule</li>
                 <li>Gumnisko</li>
               </ul>
-              <ul className="parafia-obecenie">
+              <ul>
                 <li>Dąbrowa</li>
                 <li>Pierzyny Duże</li>
                 <li>Pierzyny Małe</li>
@@ -97,7 +97,7 @@ function ParafiaObecnie() {
                 <li>Huta</li>
                 <li>Lipie</li>
               </ul>
-              <ul className="parafia-obecenie">
+              <ul>
                 <li>Kiełczygłówek</li>
                 <li>Osina Mała</li>
                 <li>Osina Duża</li>
