@@ -13,7 +13,7 @@ function ParafiaObecnie() {
     <div className="parafia-row">
       <animated.div style={props}>
         <div className="buttons-box">
-          <h2>Parafia Obecnie</h2>
+          <h2>Informacje Ogólne</h2>
           <br />
           <div className="parafia-row">
             <div className="buttons-box-text col-md-12">
@@ -27,56 +27,52 @@ function ParafiaObecnie() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="parafia-row text-center">
             <div className="buttons-box-text col-md-12">
-              <h3>Msze swięte:</h3>
-              <p>
-                {" "}
-                niedziela i święta: 9.00, 12.00, 15.30; Święta zniesione: 8:00,
-                10:00, 16:00; dni powszednie: 7:00, 7:30
-              </p>
-              <h3>Odpust:</h3>
-              <p>
-                {" "}
-                1. św. Antioniego - 13 czerwca, 2. Niepokalanego Serca NMP -
-                niedziela ok. 22 sierpnia
-              </p>
-              <h3>Doba Eucharystyczna:</h3>
-              <p> 30/31 października </p>
-              <h3>Kaplica</h3>
-              <p>
-                {" "}
-                Pierzyny Małe - kościół p.w. NMP Królowej Polski; Msze św.:
-                niedziela i święta - 10:30, święta zniesione: 12:00, dni
-                powszednie: 18:00, Doba Eucharystyczna: 18 stycznia
-              </p>
-              <h3>Mieszkańcy:</h3>
-              <p> 2500</p>
-
-              <h3>Z parafii pochodzą księża:</h3>
-              <p> Józef Wiśńiewski, Stanisław Lechowski</p>
-            </div>
-          </div>
-          <br />
-          <div className="parafia-row">
-            <div className="buttons-box-text col-md-8">
-              Św. Franciszek był zamożnym rycerzem, niestroniącym od dobrej
-              zabawy. Po nawróceniu zamienił swoje bogate ubranie z żebrakiem,
-              modlił się i pokutował. Pewnego dnia usłyszał słowa:{" "}
-              <blockquote> Franciszku napraw mój kościół </blockquote> Zapragnął
-              radykalnie żyć Ewangelią, zachowując ubóstwo i głosząc nawrócenie.
-              Zgromadzili się wokół niego naśladowcy, dla których spisał regułę
-              życia ewangelicznego, dając początek Zakonowi Braci Mniejszych,
-              nazywanych dzisiaj od jego imienia franciszkanami. Franciszek
-              zrozumiał, że celem ubóstwa jest większa miłość, zaś owocem –
-              radość.
+              <h3 className="h3-header">Msze swięte:</h3>
               <br />
-              <br />W jego wspomnienie dziękujemy Panu za dar zbawienia,
-              prosząc, byśmy przyjęli Go tak żarliwie jak Franciszek.
+              <p>
+                {" "}
+                <b>Kielczygłów:</b> <br />
+                Niedziela i święta: 9.00, 12.00, 15.30 <br />
+                Święta zniesione: 8:00, 10:00, 16:00 <br />
+                Dni powszednie: 7:00, 7:30 <br />
+                <br />
+                <b>Pierzyny Małe:</b> <br />
+                Msze św.: niedziela i święta - 10:30 <br />
+                Święta zniesione: 12:00 <br />
+                Dni powszednie: 18:00 <br />
+                Doba Eucharystyczna: 18 stycznia
+              </p>
+              <h3 className="h3-header">Odpust:</h3>
+              <br />
+              <p>
+                <b>Kielczygłów:</b> <br />
+                1. św. Antioniego - 13 czerwca <br />
+                2. Niepokalanego Serca NMP - niedziela ok. 22 sierpnia
+              </p>
+              <p>
+                <b>Pierzyny Małe:</b> <br />
+                1. NMP Królowej Polski - 3 maja
+              </p>
+              <h3 className="h3-header">Doba Eucharystyczna:</h3>
+              <br />
+              <p>
+                {" "}
+                <b>Kielczygłów:</b> <br />
+                30/31 października{" "}
+              </p>
+              <p>
+                {" "}
+                <b>Pierzyny Małe:</b> <br />
+                18 stycznia
+              </p>
+              <h3 className="h3-header">Mieszkańcy:</h3>
+              <br />
+              <p> 2500</p>
             </div>
-            <img className="buttons-img col-md-4" src={oltarz} />
           </div>
-          <br />
+
           <div className="parafia-row-column text-center">
             <div className="buttons-box-text">
               <h3 className="h3-header">
@@ -107,7 +103,7 @@ function ParafiaObecnie() {
                 <li>Osina Duża</li>
                 <li>Beresie Małe</li>
                 <li>Obrów</li>
-                <li>Kiełczygłów Kolonia (nr od 1 do 19)</li>
+                <li>Kiełczygłów Kolonia (nr 1 - 19)</li>
               </ul>
             </div>
           </div>

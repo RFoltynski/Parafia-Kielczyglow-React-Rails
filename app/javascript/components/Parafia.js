@@ -76,7 +76,7 @@ class Parafia extends React.Component {
                 onClick={this.onClick}
                 className={this.state.buttonPressed ? "buttonWhite" : "button"}
               >
-                Parafia
+                Informacje Ogólne
               </button>
               <button
                 onClick={this.onClick1}
