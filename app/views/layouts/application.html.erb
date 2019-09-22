@@ -4,9 +4,10 @@
     <title>ParafiaKielczyglow</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <meta async name="viewport" content="width=device-width, initial-scale=1.0">
     <%= javascript_include_tag 'application', :async => true %>
+    <%= stylesheet_link_tag    'application', media: 'all', :async => true %>
+ 
   </head>
   <body>
     <%= yield %>
