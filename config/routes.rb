@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'kontakt', to: 'pages#index'
   get 'inne', to: 'pages#index'
   get 'adminPanel', to: 'pages#adminPanel'
+
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

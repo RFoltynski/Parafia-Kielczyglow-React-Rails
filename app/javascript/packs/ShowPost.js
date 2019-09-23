@@ -1,16 +1,32 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
-import pdf from "./img/pdf.png";
+import pdf from "./../components/img/pdf.png";
 import { Spring, Transition, animated } from "react-spring/renderprops.cjs";
-import Link from "react-router-dom";
+import axios from "axios";
 
-export default class NewsView extends React.Component {
+export default class ShowPost extends React.Component {
   state = {
     showPost: false,
     galleryOpened: false,
     numberOfPhoto: 0
   };
+
+  componentWillMount() {
+    axios
+      .get(
+        `http://localhost:3000/api/v1/posts/60`,
+        {},
+        { "Content-Type": "application/json" }
+      )
+      .then(res => {
+        this.setState({
+          post: res.data.data,
+          isLoading: true
+        });
+      });
+  }
 
   toggleGallery = numberOfPhoto => {
     this.setState({
@@ -20,12 +36,12 @@ export default class NewsView extends React.Component {
   };
 
   render() {
-    let link = `http://localhost:3000/posts/${this.props.post.id}`;
+    const { isLoading, post } = this.state;
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
         {props => (
           <div className="newsView-box" style={props}>
-            <h2>{this.props.post.title}</h2>
+            <h2>{isLoading ? post.title : ""}</h2>
             <Transition
               native
               items={this.state.showPost}
@@ -38,30 +54,28 @@ export default class NewsView extends React.Component {
                 (props => (
                   <animated.div style={props}>
                     <div className="newsView-box-text-show">
-                      {renderHTML(this.props.post.description)}
+                      {renderHTML(isLoading ? post.description : "")}
                       <ReactBnbGallery
                         show={this.state.galleryOpened}
-                        photos={this.props.post.pictures}
+                        photos={post.pictures}
                         onClose={this.toggleGallery}
                         activePhotoIndex={this.state.numberOfPhoto}
                       />
                       <div className="newsView-box-img col-md-12 text-center">
-                        {(this.props.post.pictures || []).map(
-                          (downloadURL, i) => {
-                            return (
-                              <img
-                                className="newsView-img"
-                                onClick={() => this.toggleGallery(i)}
-                                src={downloadURL.photo}
-                                key={i}
-                              />
-                            );
-                          }
-                        )}
+                        {(post.pictures || []).map((downloadURL, i) => {
+                          return (
+                            <img
+                              className="newsView-img"
+                              onClick={() => this.toggleGallery(i)}
+                              src={downloadURL.photo}
+                              key={i}
+                            />
+                          );
+                        })}
                       </div>
-                      {this.props.post.file ? (
+                      {post.file ? (
                         <a
-                          href={this.props.post.file}
+                          href={post.file}
                           class="newsView-box-a"
                           target="blank"
                         >
@@ -93,9 +107,8 @@ export default class NewsView extends React.Component {
                 </div>
               )}
             </button>
-            <a href={link}> Otwórz w nowej karcie</a>
             <div className={"newsView-box-date"}>
-              {this.props.post.post_date}
+              {isLoading ? post.post_date : ""}
             </div>
           </div>
         )}
@@ -103,3 +116,8 @@ export default class NewsView extends React.Component {
     );
   }
 }
+
+ReactDOM.render(
+  <ShowPost />,
+  document.body.appendChild(document.createElement("div"))
+);
