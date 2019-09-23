@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: %i[show edit update destroy]
-  before_action :require_user, expect: %i[]
+  before_action :require_user, except: [:show]
   def index
     @posts = Post.paginate(page: params[:page]).order("created_at DESC")
   end
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = User.first
     if @post.save
-      redirect_to @post
+      redirect_to posts_path
     else
       render 'new'
     end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to posts_path
     else
       render 'new'
     end

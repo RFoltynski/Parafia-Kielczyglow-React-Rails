@@ -19,11 +19,18 @@ export default class NewsView extends React.Component {
   };
 
   render() {
+    let link = `http://localhost:3000/posts/${this.props.post.id}`;
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
         {props => (
           <div className="newsView-box" style={props}>
-            <h2>{this.props.post.title}</h2>
+            {" "}
+            <h2>
+              {" "}
+              <a href={link} target={"_blank"} style={{ color: "black" }}>
+                {this.props.post.title}{" "}
+              </a>
+            </h2>
             <Transition
               native
               items={this.state.showPost}
