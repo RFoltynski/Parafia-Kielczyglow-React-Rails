@@ -19,11 +19,7 @@ export default class ShowPost extends React.Component {
     const id = currentHref[currentHref.length - 1];
     console.log(id);
     axios
-      .get(
-        `parafia-kielczyglow.pl/api/v1/posts/${id}`,
-        {},
-        { "Content-Type": "application/json" }
-      )
+      .get("/api/v1/posts/" + id, {}, { "Content-Type": "application/json" })
       .then(res => {
         this.setState({
           post: res.data.data,
