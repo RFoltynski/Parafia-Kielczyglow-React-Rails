@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Button from "./img/menu";
 
 class Navbar extends Component {
@@ -45,9 +45,9 @@ class Navbar extends Component {
         <div className="navbar-row">
           <div className="navbar-logo">
             {" "}
-            <Link className="navbar-logo-link" to="/">
+            <a className="navbar-logo-link" href="/">
               Parafia Kiełczygłów
-            </Link>
+            </a>
           </div>
           <div className="navbar-menu">
             <button
@@ -65,67 +65,67 @@ class Navbar extends Component {
                 : "navbar-links"
             }
           >
-            <Link
+            <a
               className={
                 this.state.currentLocation.includes(location[0])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              to="/aktualnosci"
+              href="/aktualnosci"
             >
               Aktualnośći
-            </Link>
-            <Link
+            </a>
+            <a
               className={
                 this.state.currentLocation.includes(location[1])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              to="/intencje"
+              href="/intencje"
             >
               Intencje
-            </Link>
-            <Link
+            </a>
+            <a
               className={
                 this.state.currentLocation.includes(location[2])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              to="/parafia"
+              href="/parafia"
             >
               {" "}
               Parafia
-            </Link>
-            <Link
+            </a>
+            <a
               className={
                 this.state.currentLocation.includes(location[3])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              to="/kaplani"
+              href="/kaplani"
             >
               Kapłani
-            </Link>
-            <Link
+            </a>
+            <a
               className={
                 this.state.currentLocation.includes(location[4])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              to="/kontakt"
+              href="/kontakt"
             >
               Kontakt
-            </Link>
-            <Link
+            </a>
+            <a
               className={
                 this.state.currentLocation.includes(location[5])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              to="/inne"
+              href="/inne"
             >
               Inne
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import renderHTML from "react-render-html";
 import pdf from "./../components/img/pdf.png";
 import { Spring, Transition, animated } from "react-spring/renderprops.cjs";
 import axios from "axios";
+import Navbar from "./../components/Navbar";
 
 export default class ShowPost extends React.Component {
   state = {
@@ -41,50 +42,53 @@ export default class ShowPost extends React.Component {
   render() {
     const { isLoading, post } = this.state;
     return (
-      <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
-        {props => (
-          <div className="newsView-box" style={props}>
-            <h2>{isLoading ? post.title : ""}</h2>
-            <div className="newsView-box-text-show">
-              {renderHTML(isLoading ? post.description : "")}
-              <ReactBnbGallery
-                show={this.state.galleryOpened}
-                photos={isLoading ? post.pictures : []}
-                onClose={this.toggleGallery}
-                activePhotoIndex={this.state.numberOfPhoto}
-              />
-              <div className="newsView-box-img col-md-12 text-center">
-                {((isLoading ? post.pictures : []) || []).map(
-                  (downloadURL, i) => {
-                    return (
-                      <img
-                        className="newsView-img"
-                        onClick={() => this.toggleGallery(i)}
-                        src={downloadURL.photo}
-                        key={i}
-                      />
-                    );
-                  }
+      <>
+        <Navbar />
+        <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
+          {props => (
+            <div className="newsView-box" style={props}>
+              <h2>{isLoading ? post.title : ""}</h2>
+              <div className="newsView-box-text-show">
+                {renderHTML(isLoading ? post.description : "")}
+                <ReactBnbGallery
+                  show={this.state.galleryOpened}
+                  photos={isLoading ? post.pictures : []}
+                  onClose={this.toggleGallery}
+                  activePhotoIndex={this.state.numberOfPhoto}
+                />
+                <div className="newsView-box-img col-md-12 text-center">
+                  {((isLoading ? post.pictures : []) || []).map(
+                    (downloadURL, i) => {
+                      return (
+                        <img
+                          className="newsView-img"
+                          onClick={() => this.toggleGallery(i)}
+                          src={downloadURL.photo}
+                          key={i}
+                        />
+                      );
+                    }
+                  )}
+                </div>
+                {(isLoading ? (
+                  post.file
+                ) : (
+                  ""
+                )) ? (
+                  <a href={post.file} class="newsView-box-a" target="blank">
+                    <img className="newsView-box-pdf" src={pdf} />
+                  </a>
+                ) : (
+                  <div />
                 )}
               </div>
-              {(isLoading ? (
-                post.file
-              ) : (
-                ""
-              )) ? (
-                <a href={post.file} class="newsView-box-a" target="blank">
-                  <img className="newsView-box-pdf" src={pdf} />
-                </a>
-              ) : (
-                <div />
-              )}
+              <div className={"newsView-box-date"}>
+                {isLoading ? post.post_date : ""}
+              </div>
             </div>
-            <div className={"newsView-box-date"}>
-              {isLoading ? post.post_date : ""}
-            </div>
-          </div>
-        )}
-      </Spring>
+          )}
+        </Spring>
+      </>
     );
   }
 }
