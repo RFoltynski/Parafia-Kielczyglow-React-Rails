@@ -3,7 +3,6 @@ import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
 import pdf from "./img/pdf.png";
 import { Spring, Transition, animated } from "react-spring/renderprops.cjs";
-import Link from "react-router-dom";
 
 export default class NewsView extends React.Component {
   state = {

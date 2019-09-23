@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
 import pdf from "./../components/img/pdf.png";
-import { Spring, Transition, animated } from "react-spring/renderprops.cjs";
+import { Spring } from "react-spring/renderprops.cjs";
 import axios from "axios";
 import Navbar from "./../components/Navbar";
 
@@ -43,51 +43,64 @@ export default class ShowPost extends React.Component {
     const { isLoading, post } = this.state;
     return (
       <>
-        <Navbar />
-        <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
-          {props => (
-            <div className="newsView-box" style={props}>
-              <h2>{isLoading ? post.title : ""}</h2>
-              <div className="newsView-box-text-show">
-                {renderHTML(isLoading ? post.description : "")}
-                <ReactBnbGallery
-                  show={this.state.galleryOpened}
-                  photos={isLoading ? post.pictures : []}
-                  onClose={this.toggleGallery}
-                  activePhotoIndex={this.state.numberOfPhoto}
-                />
-                <div className="newsView-box-img col-md-12 text-center">
-                  {((isLoading ? post.pictures : []) || []).map(
-                    (downloadURL, i) => {
-                      return (
-                        <img
-                          className="newsView-img"
-                          onClick={() => this.toggleGallery(i)}
-                          src={downloadURL.photo}
-                          key={i}
-                        />
-                      );
-                    }
-                  )}
+        <div className="ShowPost">
+          <div className="overlay">
+            <Navbar />
+            <h1 style={{ paddingTop: 80, color: "transparent" }}>1</h1>
+            <Spring
+              from={{ opacity: 0, color: "transparent" }}
+              to={{ opacity: 0.9, padding: 0, color: "black" }}
+            >
+              {props => (
+                <div
+                  className="showPost-box col-md-10 offset-md-1 text-center"
+                  style={props}
+                >
+                  <h2 className={"h2-showPost"}>
+                    {isLoading ? post.title : ""}
+                  </h2>
+                  <div className="newsView-box-text-show">
+                    {renderHTML(isLoading ? post.description : "")}
+                    <ReactBnbGallery
+                      show={this.state.galleryOpened}
+                      photos={isLoading ? post.pictures : []}
+                      onClose={this.toggleGallery}
+                      activePhotoIndex={this.state.numberOfPhoto}
+                    />
+                    <div className="newsView-box-img col-md-12 text-center">
+                      {((isLoading ? post.pictures : []) || []).map(
+                        (downloadURL, i) => {
+                          return (
+                            <img
+                              className="newsView-img"
+                              onClick={() => this.toggleGallery(i)}
+                              src={downloadURL.photo}
+                              key={i}
+                            />
+                          );
+                        }
+                      )}
+                    </div>
+                    {(isLoading ? (
+                      post.file
+                    ) : (
+                      ""
+                    )) ? (
+                      <a href={post.file} class="newsView-box-a" target="blank">
+                        <img className="newsView-box-pdf" src={pdf} />
+                      </a>
+                    ) : (
+                      <div />
+                    )}
+                  </div>
+                  <div className={"newsView-box-date"}>
+                    {isLoading ? post.post_date : ""}
+                  </div>
                 </div>
-                {(isLoading ? (
-                  post.file
-                ) : (
-                  ""
-                )) ? (
-                  <a href={post.file} class="newsView-box-a" target="blank">
-                    <img className="newsView-box-pdf" src={pdf} />
-                  </a>
-                ) : (
-                  <div />
-                )}
-              </div>
-              <div className={"newsView-box-date"}>
-                {isLoading ? post.post_date : ""}
-              </div>
-            </div>
-          )}
-        </Spring>
+              )}
+            </Spring>
+          </div>
+        </div>
       </>
     );
   }
