@@ -20,7 +20,7 @@ export default class ShowPost extends React.Component {
     console.log(id);
     axios
       .get(
-        `http://localhost:3000/api/v1/posts/${id}`,
+        `parafia-kielczyglow.pl/api/v1/posts/${id}`,
         {},
         { "Content-Type": "application/json" }
       )
