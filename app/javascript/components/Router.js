@@ -16,7 +16,6 @@ export default class Router extends React.Component {
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/aktualnosci" component={Aktualnosci} />
-
           <Route path="/intencje" component={Intencje} />
           <Route path="/kaplani" component={Kaplani} />
           <Route path="/parafia" component={Parafia} />

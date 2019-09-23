@@ -25,7 +25,13 @@ export default class NewsView extends React.Component {
       <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
         {props => (
           <div className="newsView-box" style={props}>
-            <h2>{this.props.post.title}</h2>
+            {" "}
+            <h2>
+              {" "}
+              <a href={link} target={"_blank"} style={{ color: "black" }}>
+                {this.props.post.title}{" "}
+              </a>
+            </h2>
             <Transition
               native
               items={this.state.showPost}
@@ -93,7 +99,6 @@ export default class NewsView extends React.Component {
                 </div>
               )}
             </button>
-            <a href={link}> Otwórz w nowej karcie</a>
             <div className={"newsView-box-date"}>
               {this.props.post.post_date}
             </div>

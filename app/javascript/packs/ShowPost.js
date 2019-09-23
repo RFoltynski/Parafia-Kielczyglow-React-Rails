@@ -14,9 +14,12 @@ export default class ShowPost extends React.Component {
   };
 
   componentWillMount() {
+    const currentHref = window.location.href.split("/");
+    const id = currentHref[currentHref.length - 1];
+    console.log(id);
     axios
       .get(
-        `http://localhost:3000/api/v1/posts/60`,
+        `http://localhost:3000/api/v1/posts/${id}`,
         {},
         { "Content-Type": "application/json" }
       )
@@ -42,71 +45,40 @@ export default class ShowPost extends React.Component {
         {props => (
           <div className="newsView-box" style={props}>
             <h2>{isLoading ? post.title : ""}</h2>
-            <Transition
-              native
-              items={this.state.showPost}
-              from={{ opacity: 0, maxHeight: 0 }}
-              enter={{ opacity: 1, maxHeight: 12310 }}
-              leave={{ opacity: 0, maxHeight: 0 }}
-            >
-              {show =>
-                show &&
-                (props => (
-                  <animated.div style={props}>
-                    <div className="newsView-box-text-show">
-                      {renderHTML(isLoading ? post.description : "")}
-                      <ReactBnbGallery
-                        show={this.state.galleryOpened}
-                        photos={post.pictures}
-                        onClose={this.toggleGallery}
-                        activePhotoIndex={this.state.numberOfPhoto}
+            <div className="newsView-box-text-show">
+              {renderHTML(isLoading ? post.description : "")}
+              <ReactBnbGallery
+                show={this.state.galleryOpened}
+                photos={isLoading ? post.pictures : []}
+                onClose={this.toggleGallery}
+                activePhotoIndex={this.state.numberOfPhoto}
+              />
+              <div className="newsView-box-img col-md-12 text-center">
+                {((isLoading ? post.pictures : []) || []).map(
+                  (downloadURL, i) => {
+                    return (
+                      <img
+                        className="newsView-img"
+                        onClick={() => this.toggleGallery(i)}
+                        src={downloadURL.photo}
+                        key={i}
                       />
-                      <div className="newsView-box-img col-md-12 text-center">
-                        {(post.pictures || []).map((downloadURL, i) => {
-                          return (
-                            <img
-                              className="newsView-img"
-                              onClick={() => this.toggleGallery(i)}
-                              src={downloadURL.photo}
-                              key={i}
-                            />
-                          );
-                        })}
-                      </div>
-                      {post.file ? (
-                        <a
-                          href={post.file}
-                          class="newsView-box-a"
-                          target="blank"
-                        >
-                          <img className="newsView-box-pdf" src={pdf} />
-                        </a>
-                      ) : (
-                        <div />
-                      )}
-                    </div>
-                  </animated.div>
-                ))
-              }
-            </Transition>
-            <button
-              className={"newsView-box-button"}
-              onClick={() =>
-                this.setState({
-                  showPost: !this.state.showPost
-                })
-              }
-            >
-              {!this.state.showPost ? (
-                <div className={"arrowOverlayDown"}>
-                  <div className={"arrow"} />
-                </div>
+                    );
+                  }
+                )}
+              </div>
+              {(isLoading ? (
+                post.file
               ) : (
-                <div className={"arrowOverlayUp"}>
-                  <div className={"arrow"} />
-                </div>
+                ""
+              )) ? (
+                <a href={post.file} class="newsView-box-a" target="blank">
+                  <img className="newsView-box-pdf" src={pdf} />
+                </a>
+              ) : (
+                <div />
               )}
-            </button>
+            </div>
             <div className={"newsView-box-date"}>
               {isLoading ? post.post_date : ""}
             </div>
