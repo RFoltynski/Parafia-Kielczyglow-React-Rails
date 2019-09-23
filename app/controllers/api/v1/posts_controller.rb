@@ -3,4 +3,7 @@ class Api::V1::PostsController < ApiController
     @per_page = params[:per_page] || 100 || Post.per_page 
     @posts_json = Post.paginate( :per_page => @per_page, :page => params[:page]).order('created_at DESC')
   end
+  def show
+    @post = Post.find(params[:id])
+  end
 end
