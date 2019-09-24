@@ -21,6 +21,8 @@ class Intencje extends React.Component {
           isLoading: true
         });
       });
+
+    window.scrollTo(0, 0);
   }
 
   render() {

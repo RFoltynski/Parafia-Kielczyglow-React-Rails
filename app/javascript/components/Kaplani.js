@@ -15,6 +15,10 @@ class Kaplani extends React.Component {
     };
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleClick = (compName, e) => {
     this.setState({
       render: compName
