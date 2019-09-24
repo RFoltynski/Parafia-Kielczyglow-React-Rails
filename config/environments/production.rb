@@ -100,7 +100,7 @@ Rails.application.configure do
   config.action_mailer.default :charset => "utf-8"  
   config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
-  port:                 465,
+  port:                 587,
   domain:               'parafia-kielczyglow.pl',
   user_name:            'siw886@gmail.com',
   password:             '886401',
