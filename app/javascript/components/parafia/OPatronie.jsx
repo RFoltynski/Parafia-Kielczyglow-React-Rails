@@ -60,35 +60,13 @@ function OPatronie() {
 
             <div className="parafia-row">
               <blockquote>
-                O Panie, uczyń z nas narzędzia Twojego pokoju,
-                <br />
-                Abyśmy siali miłość tam, gdzie panuje nienawiść;
-                <br />
-                Wybaczenie tam, gdzie panuje krzywda;
-                <br />
-                Jedność tam, gdzie panuje zwątpienie;
-                <br />
-                Nadzieję tam, gdzie panuje rozpacz;
-                <br />
-                Światło tam, gdzie panuje mrok;
-                <br />
-                Radość tam, gdzie panuje smutek.
-                <br />
-                Spraw abyśmy mogli,
-                <br />
-                Nie tyle szukać pociechy, co pociechę dawać;
-                <br />
-                Nie tyle szukać zrozumienia, co rozumieć;
-                <br />
-                Nie tyle szukać miłości, co kochać;
-                <br />
-                Albowiem dając, otrzymujemy;
-                <br />
-                Wybaczając, zyskujemy przebaczenie,
-                <br />
-                A umierając, rodzimy się do wiecznego życia.
-                <br />
-                Przez Chrystusa Pana naszego. Amen.
+                Ufny w Twoją świętą przyczynę i przemożne zasługi polecam się
+                Tobie, św. Antoni, i proszę Cię, wejrzyj na moją wierną i
+                szczerą miłość i silną ufność, jaką serce moje względem Ciebie
+                jest przepełnione. Zapisz sobie moje imię głęboko w Twym sercu i
+                pozwól mi należeć do liczby tych, których Ty szczególnie
+                miłujesz i ochraniasz, iżbym mógł we wszystkich moich potrzebach
+                znajdować w Tobie ucieczkę. Amen.
               </blockquote>
               <img
                 className="buttons-img col-md-4"
