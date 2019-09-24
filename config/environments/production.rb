@@ -101,7 +101,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address:              'smtp.gmail.com',
   port:                 465,
-  domain:               'gamil.com',
+  domain:               'parafia-kielczyglow.pl',
   user_name:            'siw886@gmail.com',
   password:             '886401',
   authentication:       'plain',
