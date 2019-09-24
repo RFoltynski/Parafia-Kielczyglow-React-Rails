@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
 import Button from "./img/menu";
 
 class Navbar extends Component {
