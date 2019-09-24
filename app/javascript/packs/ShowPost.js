@@ -15,6 +15,8 @@ export default class ShowPost extends React.Component {
   };
 
   componentWillMount() {
+    window.scrollTo(0, 0);
+
     const currentHref = window.location.href.split("/");
     const id = currentHref[currentHref.length - 1];
     console.log(id);

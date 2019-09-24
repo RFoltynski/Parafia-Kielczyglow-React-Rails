@@ -19,6 +19,10 @@ class Kontakt extends React.Component {
     };
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   verifyRecapture = response => {
     if (response) {
       this.setState({
