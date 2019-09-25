@@ -1,4 +1,4 @@
-https://parafia-kielczyglow.herokuapp.com/
+http://parafia-kielczyglow.pl/
 
 Wymagania względem projektu:
 
@@ -13,6 +13,5 @@ Wymagania względem projektu:
 
 Do wykonania pozostało:
 
-- Wstawić właściwy kontent (zdjęcia oraz treść),
-- Poprawić wersję mobilną strony,
-- Deployment.
+- Uzupełnić brakujący kontent,
+- Poprawić wersję mobilną strony.
