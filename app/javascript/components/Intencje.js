@@ -50,36 +50,50 @@ class Intencje extends React.Component {
                           <li>{item.K1monday}</li>
                           7:30
                           <li>{item.K2monday}</li>
+                          K.Michał
+                          <li>{item.P2monday}</li>
                           <h3>Wtorek: </h3>
                           7:00
                           <li>{item.K1tuesday}</li>
                           7:30
                           <li>{item.K2tuesday}</li>
+                          K.Michał
+                          <li>{item.P2tuesday}</li>
                           <h3>Środa: </h3>
                           7:00
                           <li>{item.K1wednesday}</li>
                           7:30
                           <li>{item.K2wednesday}</li>
+                          K.Michał
+                          <li>{item.P2wednesday}</li>
                           <h3>Czwartek: </h3>
                           7:00
                           <li>{item.K1thursday}</li>
                           7:30
                           <li>{item.K2thursday}</li>
+                          K.Michał
+                          <li>{item.P2thursday}</li>
                           <h3>Piątek: </h3>
                           7:00
                           <li>{item.K1friday}</li>
                           7:30
                           <li>{item.K2friday}</li>
+                          K.Michał
+                          <li>{item.P2friday}</li>
                           <h3>Sobota: </h3>
                           7:00
                           <li>{item.K1saturday}</li>
                           7:30
                           <li>{item.K2saturday}</li>
+                          K.Michał
+                          <li>{item.P2saturday}</li>
                           <h3>Niedziela: </h3>
                           7:00
                           <li>{item.K1sunday}</li>
                           7:30
                           <li>{item.K2sunday}</li>
+                          K.Michał
+                          <li>{item.P2sunday}</li>
                         </ul>
                       );
                     })
@@ -95,40 +109,26 @@ class Intencje extends React.Component {
                       return (
                         <ul>
                           <h3>Poniedziałek: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1monday}</li>
-                          16:30
-                          <li>{item.P2monday}</li>
                           <h3>Wtorek: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1tuesday}</li>
-                          16:30
-                          <li>{item.P2tuesday}</li>
                           <h3>Środa: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1wednesday}</li>
-                          16:30
-                          <li>{item.P2wednesday}</li>
                           <h3>Czwartek: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1thursday}</li>
-                          16:30
-                          <li>{item.P2thursday}</li>
                           <h3>Piątek: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1friday}</li>
-                          16:30
-                          <li>{item.P2friday}</li>
                           <h3>Sobota: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1saturday}</li>
-                          16:30
-                          <li>{item.P2saturday}</li>
                           <h3>Niedziela: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1sunday}</li>
-                          16:30
-                          <li>{item.P2sunday}</li>
                         </ul>
                       );
                     })
