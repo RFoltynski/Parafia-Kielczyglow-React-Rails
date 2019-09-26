@@ -50,49 +50,37 @@ class Intencje extends React.Component {
                           <li>{item.K1monday}</li>
                           7:30
                           <li>{item.K2monday}</li>
-                          K.Michał
-                          <li>{item.P2monday}</li>
                           <h3>Wtorek: </h3>
                           7:00
                           <li>{item.K1tuesday}</li>
                           7:30
                           <li>{item.K2tuesday}</li>
-                          K.Michał
-                          <li>{item.P2tuesday}</li>
                           <h3>Środa: </h3>
                           7:00
                           <li>{item.K1wednesday}</li>
                           7:30
                           <li>{item.K2wednesday}</li>
-                          K.Michał
-                          <li>{item.P2wednesday}</li>
                           <h3>Czwartek: </h3>
                           7:00
                           <li>{item.K1thursday}</li>
                           7:30
                           <li>{item.K2thursday}</li>
-                          K.Michał
-                          <li>{item.P2thursday}</li>
                           <h3>Piątek: </h3>
                           7:00
                           <li>{item.K1friday}</li>
                           7:30
                           <li>{item.K2friday}</li>
-                          K.Michał
-                          <li>{item.P2friday}</li>
                           <h3>Sobota: </h3>
                           7:00
                           <li>{item.K1saturday}</li>
                           7:30
                           <li>{item.K2saturday}</li>
-                          K.Michał
-                          <li>{item.P2saturday}</li>
                           <h3>Niedziela: </h3>
-                          7:00
+                          9:00
                           <li>{item.K1sunday}</li>
-                          7:30
+                          12:00
                           <li>{item.K2sunday}</li>
-                          K.Michał
+                          15:30
                           <li>{item.P2sunday}</li>
                         </ul>
                       );
@@ -127,8 +115,39 @@ class Intencje extends React.Component {
                           17:00
                           <li>{item.P1saturday}</li>
                           <h3>Niedziela: </h3>
-                          17:00
+                          10:30
                           <li>{item.P1sunday}</li>
+                        </ul>
+                      );
+                    })
+                  ) : (
+                    <p>Nie ma intencji na ten tydzien..</p>
+                  )}
+                </div>
+                <div className="intencje-column">
+                  <h2>K.Michał</h2>
+                  {this.state.isLoading ? (
+                    this.state.intentions.pierzyny.map(item => {
+                      return (
+                        <ul>
+                          <h3>Poniedziałek: </h3>
+                          17:00
+                          <li>{item.P2monday}</li>
+                          <h3>Wtorek: </h3>
+                          17:00
+                          <li>{item.P2tuesday}</li>
+                          <h3>Środa: </h3>
+                          17:00
+                          <li>{item.P2wednesday}</li>
+                          <h3>Czwartek: </h3>
+                          17:00
+                          <li>{item.P2thursday}</li>
+                          <h3>Piątek: </h3>
+                          17:00
+                          <li>{item.P2friday}</li>
+                          <h3>Sobota: </h3>
+                          17:00
+                          <li>{item.P2saturday}</li>
                         </ul>
                       );
                     })
