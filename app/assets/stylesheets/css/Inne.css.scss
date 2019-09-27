@@ -34,6 +34,15 @@
 .inne-text {
   color: #ffffff;
 }
+.buttons-img-places {
+  height: 100px;
+}
+
+.buttons-box-text {
+  a:hover {
+    text-decoration-color: orange;
+  }
+}
 
 @media (max-width: 764px) {
   .inne-row {
