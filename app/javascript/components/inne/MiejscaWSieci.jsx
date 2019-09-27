@@ -17,23 +17,24 @@ function MiejscaWSieci() {
           <h2 name="scroll-to-historia">Mijsca w sieci</h2>
           <br />
           <div className="parafia-row">
-            <img className="buttons-img col-md-3 offset-md-1" src={deon} />
+            <img className="col-md-3 offset-md-1" src={deon} />
             <div className="buttons-box-text col-md-5 offset-md-1 text-center">
-              <h3 className="h3-header">Deon</h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Święty Antoni
-              urodził się w roku 1195 w Lizbonie, stolicy Portugalii. Na chrzcie
-              św. otrzymał imię Ferdynand.
+              <a href={"https://www.deon.pl/"}>
+                {" "}
+                <h3 className="h3-header">Deon</h3>{" "}
+              </a>
+              Wiele ciekawych artykułów, poświęconych wielu dziedziną życia
             </div>
           </div>
           <div className="parafia-row">
-            <img className="buttons-img col-md-3 offset-md-1" src={stacja7} />
+            <img className=" col-md-3 offset-md-1" src={stacja7} />
             <div className="buttons-box-text col-md-5 offset-md-1 text-center">
-              <h3 className="h3-header">Stacja7</h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Święty Antoni
-              urodził się w roku 1195 w Lizbonie, stolicy Portugalii. Na chrzcie
-              św. otrzymał imię Ferdynand.
+              <a href={"https://stacja7.pl/"}>
+                <h3 className="h3-header">Stacja7</h3>
+              </a>
+              Podobnie jak na portalu Deon.pl, znajduje się tutaj wiele
+              ciekawych artykułów poświęconych rozwojowi duchowemu, ale nie
+              tylko.
             </div>
           </div>
         </div>

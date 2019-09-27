@@ -76,10 +76,12 @@ class Intencje extends React.Component {
                           7:30
                           <li>{item.K2saturday}</li>
                           <h3>Niedziela: </h3>
-                          7:00
+                          9:00
                           <li>{item.K1sunday}</li>
-                          7:30
+                          12:00
                           <li>{item.K2sunday}</li>
+                          15:30
+                          <li>{item.P2sunday}</li>
                         </ul>
                       );
                     })
@@ -95,40 +97,57 @@ class Intencje extends React.Component {
                       return (
                         <ul>
                           <h3>Poniedziałek: </h3>
-                          16:00
+                          17:00
                           <li>{item.P1monday}</li>
-                          16:30
+                          <h3>Wtorek: </h3>
+                          17:00
+                          <li>{item.P1tuesday}</li>
+                          <h3>Środa: </h3>
+                          17:00
+                          <li>{item.P1wednesday}</li>
+                          <h3>Czwartek: </h3>
+                          17:00
+                          <li>{item.P1thursday}</li>
+                          <h3>Piątek: </h3>
+                          17:00
+                          <li>{item.P1friday}</li>
+                          <h3>Sobota: </h3>
+                          17:00
+                          <li>{item.P1saturday}</li>
+                          <h3>Niedziela: </h3>
+                          10:30
+                          <li>{item.P1sunday}</li>
+                        </ul>
+                      );
+                    })
+                  ) : (
+                    <p>Nie ma intencji na ten tydzien..</p>
+                  )}
+                </div>
+                <div className="intencje-column">
+                  <h2>K.Michał</h2>
+                  {this.state.isLoading ? (
+                    this.state.intentions.pierzyny.map(item => {
+                      return (
+                        <ul>
+                          <h3>Poniedziałek: </h3>
+                          17:00
                           <li>{item.P2monday}</li>
                           <h3>Wtorek: </h3>
-                          16:00
-                          <li>{item.P1tuesday}</li>
-                          16:30
+                          17:00
                           <li>{item.P2tuesday}</li>
                           <h3>Środa: </h3>
-                          16:00
-                          <li>{item.P1wednesday}</li>
-                          16:30
+                          17:00
                           <li>{item.P2wednesday}</li>
                           <h3>Czwartek: </h3>
-                          16:00
-                          <li>{item.P1thursday}</li>
-                          16:30
+                          17:00
                           <li>{item.P2thursday}</li>
                           <h3>Piątek: </h3>
-                          16:00
-                          <li>{item.P1friday}</li>
-                          16:30
+                          17:00
                           <li>{item.P2friday}</li>
                           <h3>Sobota: </h3>
-                          16:00
-                          <li>{item.P1saturday}</li>
-                          16:30
+                          17:00
                           <li>{item.P2saturday}</li>
-                          <h3>Niedziela: </h3>
-                          16:00
-                          <li>{item.P1sunday}</li>
-                          16:30
-                          <li>{item.P2sunday}</li>
                         </ul>
                       );
                     })
