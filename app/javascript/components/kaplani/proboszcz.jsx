@@ -12,6 +12,8 @@ function Proboszcz() {
       <animated.div style={props}>
         <div className="buttons-box">
           <h2>Obecny Proboszcz</h2>
+          <h3>Bogdan Ignasiak</h3>
+          <p> Obecny proboszcz parafii kielczyglow pochodzi.</p>
         </div>
       </animated.div>
     </div>
