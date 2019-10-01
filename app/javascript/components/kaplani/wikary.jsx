@@ -1,5 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
+import proboszcz from "./../img/ksieza/bogdan_ignasiak.jpg";
 
 function Wikary() {
   const props = useSpring({
@@ -10,12 +11,11 @@ function Wikary() {
   return (
     <div className="inne-row">
       <animated.div style={props}>
-        <div className="buttons-box">
-          <h2>Obecny Wikary</h2>
-          <div className="buttons-content row">
-            <div className="buttons-box-text col-md-8" />
-            <div className="col-md-4" />
-          </div>
+        <div className="buttons-box text-center">
+          <h2>Obecny Proboszcz</h2>
+          <h3>Bogdan Ignasiak</h3>
+          <img src={proboszcz} className="proboszczowie-img" />
+          <p> Obecny proboszcz parafii kielczyglow pochodzi.</p>
         </div>
       </animated.div>
     </div>
