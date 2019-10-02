@@ -2,6 +2,8 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 
 import pomnik from "./../img/miejsca/pomnik.jpg";
+import kaplica from "./../img/miejsca/kaplica.JPG";
+import cmentarz from "./../img/miejsca/cmentarz.JPG";
 
 function Miejsca() {
   const props = useSpring({
@@ -17,7 +19,7 @@ function Miejsca() {
           <div className="inne-row">
             <img
               className="buttons-img buttons-img-miejsca col-md-5"
-              src={pomnik}
+              src={kaplica}
             />
             <div className="buttons-box-text col-md-7 text-center">
               <h3 className="h3-header">Kaplica w Pierzynach</h3>
@@ -32,7 +34,7 @@ function Miejsca() {
           <div className="inne-row">
             <img
               className="buttons-img buttons-img-miejsca col-md-5"
-              src={pomnik}
+              src={cmentarz}
             />
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header "> Cmentarz </h3>
