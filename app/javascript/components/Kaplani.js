@@ -85,13 +85,13 @@ class Kaplani extends React.Component {
                 onClick={this.onClick1}
                 className={this.state.buttonPressed1 ? "buttonWhite" : "button"}
               >
-                Wikary
+                Wikariusz
               </button>
               <button
                 onClick={this.onClick2}
                 className={this.state.buttonPressed2 ? "buttonWhite" : "button"}
               >
-                Poprzedni Proboszczowie
+                POPRZEDNI PROBOSZCZOWIE
               </button>
 
               {this.state.render === "" ? <Proboszcz /> : this._renderSubComp()}
