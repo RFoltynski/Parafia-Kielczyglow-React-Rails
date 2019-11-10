@@ -75,7 +75,7 @@ class App extends React.Component {
               </Link>
               <Link to="/kaplani">
                 <p className="box-overlay-p">
-                  Informacje dotyczące kapłanów sprawójących posługę w parafi
+                  Informacje dotyczące kapłanów pracujących w parafii
                 </p>
               </Link>
             </div>

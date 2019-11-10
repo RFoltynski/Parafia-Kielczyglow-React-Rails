@@ -22,7 +22,7 @@ function Miejsca() {
               src={kaplica}
             />
             <div className="buttons-box-text col-md-7 text-center">
-              <h3 className="h3-header">Kaplica w Pierzynach</h3>
+              <h3 className="h3-header">Kościół filialny w Pierzynach</h3>
               Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
               Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
               podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.

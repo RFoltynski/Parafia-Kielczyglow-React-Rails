@@ -36,13 +36,12 @@ function ParafiaObecnie() {
                 <b>Kielczygłów:</b> <br />
                 Niedziela i święta: 9.00, 12.00, 15.30 <br />
                 Święta zniesione: 8:00, 10:00, 16:00 <br />
-                Dni powszednie: 7:00, 7:30 <br />
+                Dni powszednie: 7:00 (msza koncelebrowana) <br />
                 <br />
                 <b>Pierzyny Małe:</b> <br />
                 Msze św.: niedziela i święta - 10:30 <br />
-                Święta zniesione: 12:00 <br />
-                Dni powszednie: 18:00 <br />
-                Doba Eucharystyczna: 18 stycznia
+                Dni powszednie: <br />- czas letni: 18.00 <br /> - czas zimowy:
+                16.00 <br />
               </p>
               <h3 className="h3-header">Odpust:</h3>
               <br />

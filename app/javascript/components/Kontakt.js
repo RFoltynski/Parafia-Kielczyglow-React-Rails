@@ -136,7 +136,7 @@ class Kontakt extends React.Component {
                       <h2>Dane Kontaktowe</h2>
                       <div className="offset-md-1 col-md-10 contact-form ">
                         <h4>Adres plebanii:</h4>
-                        <p> 98-358 Kiełczygłów, ul. Świerczewskiego 9</p>
+                        <p> 98-358 Kiełczygłów, ul. Ks. Józefa Jansona</p>
                         <h4>Nr telefonu do plebanii:</h4>
                         <p> 43 842-50-97</p>
                         <h4>Adres Email:</h4>
