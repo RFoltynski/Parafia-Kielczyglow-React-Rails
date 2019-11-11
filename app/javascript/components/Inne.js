@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Miejsca from "./inne/Miejsca.jsx";
+
 import Ksiazki from "./inne/Ksiazki.jsx";
 import MiejscaWSieci from "./inne/MiejscaWSieci.jsx";
 
@@ -9,8 +9,7 @@ class Parafia extends React.Component {
     super();
     this.state = {
       render: "",
-      buttonPressed: true,
-      buttonPressed1: false,
+      buttonPressed1: true,
       buttonPressed2: false
     };
   }
@@ -26,8 +25,6 @@ class Parafia extends React.Component {
 
   _renderSubComp() {
     switch (this.state.render) {
-      case "Miejsca":
-        return <Miejsca />;
       case "ksiazki":
         return <Ksiazki />;
       case "miejscawsieci":
@@ -35,22 +32,10 @@ class Parafia extends React.Component {
     }
   }
 
-  onClick = event => {
-    this.handleClick("Miejsca");
-    (this.buttonPress = () => {
-      this.setState({
-        buttonPressed: true,
-        buttonPressed1: false,
-        buttonPressed2: false,
-        buttonPressed3: false
-      });
-    })();
-  };
   onClick1 = event => {
     this.handleClick("ksiazki");
     (this.buttonPress1 = () => {
       this.setState({
-        buttonPressed: false,
         buttonPressed1: true,
         buttonPressed2: false,
         buttonPressed3: false
@@ -61,7 +46,6 @@ class Parafia extends React.Component {
     this.handleClick("miejscawsieci");
     (this.buttonPress2 = () => {
       this.setState({
-        buttonPressed: false,
         buttonPressed1: false,
         buttonPressed2: true,
         buttonPressed3: false
@@ -78,12 +62,6 @@ class Parafia extends React.Component {
             <h1 className="h1-header"> Inne </h1>
             <div className="inne-buttons">
               <button
-                onClick={this.onClick}
-                className={this.state.buttonPressed ? "buttonWhite" : "button"}
-              >
-                Miejsca w parafii
-              </button>
-              <button
                 onClick={this.onClick1}
                 className={this.state.buttonPressed1 ? "buttonWhite" : "button"}
               >
@@ -93,10 +71,10 @@ class Parafia extends React.Component {
                 onClick={this.onClick2}
                 className={this.state.buttonPressed2 ? "buttonWhite" : "button"}
               >
-                Miejsca w sieci
+                Stony internetowe
               </button>
 
-              {this.state.render === "" ? <Miejsca /> : this._renderSubComp()}
+              {this.state.render === "" ? <Ksiazki /> : this._renderSubComp()}
             </div>
           </center>
         </div>

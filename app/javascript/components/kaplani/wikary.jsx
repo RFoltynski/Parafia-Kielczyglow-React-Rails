@@ -8,8 +8,7 @@ function Wikary() {
     from: { opacity: 0 },
     config: { duration: 500 }
   });
-  let year = new Date();
-  let age = year.getFullYear() - 1984;
+
   return (
     <div className="inne-row">
       <animated.div style={props}>
@@ -19,8 +18,8 @@ function Wikary() {
           <img src={proboszcz} className="ob-proboszczowie-img" />
           <p>
             {" "}
-            Urodzony 26 października 1984 roku ({age} lat) w Rudzie Śląskiej
-            Goduli w rodzinie górniczej. <br />
+            Urodzony 26 października 1984 roku w Rudzie Śląskiej Goduli w
+            rodzinie górniczej. <br />
             Po ukończeniu szkoły podstawowej w 1999 rok wstąpił do Niższego
             Seminarium Duchownego Archidiecezji Częstochowskiej, które ukończył
             egzaminem maturalnym w 2002 roku. <br />
