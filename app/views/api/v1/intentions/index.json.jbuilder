@@ -9,4 +9,7 @@ json.data do
         json.extract! intention, :P1monday, :P2monday, :P1tuesday, :P2tuesday, :P1wednesday, :P2wednesday, :P1thursday, :P2thursday, :P1friday, :P2friday, :P1saturday,:P2saturday, :P1sunday, :P2sunday
       end
   end
+  if @intention.intentionPhoto.attached?
+    json.file Rails.application.routes.url_helpers.rails_blob_path(intention.intentionPhoto, only_path: true)
+  end
 end
