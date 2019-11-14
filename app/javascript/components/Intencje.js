@@ -45,6 +45,7 @@ class Intencje extends React.Component {
                     this.state.intentions.kielczyglow.map(item => {
                       return (
                         <ul>
+                          <a href={item.file}>Photo</a>
                           <h3>Poniedziałek: </h3>
                           7:00
                           <li>{item.K1monday}</li>
