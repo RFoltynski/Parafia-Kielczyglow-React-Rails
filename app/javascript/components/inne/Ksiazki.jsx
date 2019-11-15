@@ -24,11 +24,22 @@ function Ksiazki() {
             <img className="buttons-img col-md-3" src={pismoswiete} />
             <div className="buttons-box-text col-md-7 text-center">
               <h3 className="h3-header">Pismo Święte</h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
+              "Biblia Tysiąclecia to najpopularniejsze narodowe wydanie Pisma
+              Świętego. Zawiera jedyny polski tekst Pisma Świętego, zatwierdzony
+              do stosowania w liturgii przez Konferencję Episkopatu Polski,
+              przystępne komentarze - przypisy, mapy oraz podręczny słownik
+              biblijny. Biblia - "Księga Życia" - Verba Sacra - jest bez
+              wątpienia najwspanialszym z dzieł w historii świata, bestsellerem
+              wszechczasów."
+              <br />
+              <br />
+              <a
+                href="https://lubimyczytac.pl/ksiazka/4803408/pismo-swiete-starego-i-nowego-testamentu-biblia-tysiaclecia"
+                target="_blank"
+              >
+                {" "}
+                Źródło: Lubimy Czytać
+              </a>
             </div>
           </div>
           <br />
@@ -37,11 +48,15 @@ function Ksiazki() {
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header "> O naśladowaniu Chrystusa </h3>
               <p>Tomasz z Kempis</p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
+              "O naśladowaniu... stało się jednym z najbardziej
+              rozpowszechnionych (po Biblii) ksiąg chrześcijańskich. Popularność
+              zdobyła nie tylko wśród katolików, ale również wśród protestantów,
+              a nawet niechrześcijan. Forma dialogu ucznia z niewidzialnym
+              Mistrzem, która często pojawia się na kartach książki nadaje
+              niezwykłego charakteru tej książce. O naśladowaniu... to książka
+              szczególna, mówi wprost jak godnie i prawdziwie żyć. Wśród jej
+              czytelników można znaleźć wielu świętych, błogosławionych,
+              mistyków, znanych pisarzy i poetów. "
               <br />
               <br />
               <a
@@ -49,7 +64,7 @@ function Ksiazki() {
                 target="_blank"
               >
                 {" "}
-                Lubimy Czytać
+                Źródło: Lubimy Czytać
               </a>
             </div>
           </div>
@@ -65,11 +80,12 @@ function Ksiazki() {
                 Dzikie serce. Tęsknoty męskiej duszy
               </h3>
               <p>John Eldredge</p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
+              "John Eldredge twierdzi, iż to, co naprawdę definiuje istotę
+              męskości, zostało całkowicie stracone dla naszego myślenia.
+              Tymczasem warunkiem uchwycenia tego, co konstytuuje mężczyznę,
+              jest zrozumienie trzech fundamentalnych pragnień, kryjących się
+              głęboko w jego sercu: pragnienia stoczenia bitwy, przeżycia
+              przygody i uratowania damy w nieszczęściu."
               <br />
               <br />
               <a
@@ -77,7 +93,7 @@ function Ksiazki() {
                 target="_blank"
               >
                 {" "}
-                Lubimy Czytać
+                Źródło: Lubimy Czytać
               </a>
             </div>
           </div>
@@ -89,9 +105,12 @@ function Ksiazki() {
                 Urzekająca. Odkrywanie tajemnicy kobiecej duszy
               </h3>
               <p> John Eldredge, Stasi Eldredge </p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni.
+              "Każda kobieta tęskni, by być kochaną, by odegrać niezastąpioną
+              rolę w wielkiej przygodzie, oraz by posiadać własne piękno do
+              odsłonięcia. Przypatrz się swoim ulubionym filmom. Przypomnij
+              sobie zabawy z czasów, gdy byłaś małą dziewczynką. Te pragnienia
+              tkwiące w twoim sercu pochodzą od Boga i stanowią część Jego
+              zamysłu wobec Ewy."
               <br />
               <br />
               <a
@@ -99,7 +118,7 @@ function Ksiazki() {
                 target="_blank"
               >
                 {" "}
-                Lubimy Czytać
+                Źródło: Lubimy Czytać
               </a>
             </div>
           </div>
@@ -108,11 +127,12 @@ function Ksiazki() {
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header">Listy starego diabła do młodego</h3>
               <p> Clive Staples Lewis </p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
+              "Na kartkach tej błyskotliwej, przewrotnej książki poznajemy
+              zagrożenia, na jakie może być narażony człowiek, który chce żyć
+              dobrze i sprawiedliwie. Mimo że mija właśnie siedemdziesiąt lat od
+              pierwszego angielskiego wydania Listów starego diabła do młodego,
+              książka nie zestarzała się ani trochę. Temat niestety jest ciągle
+              aktualny…"
               <br />
               <br />
               <a
@@ -120,7 +140,7 @@ function Ksiazki() {
                 target="_blank"
               >
                 {" "}
-                Lubimy Czytać
+                Źródło: Lubimy Czytać
               </a>
             </div>
           </div>
@@ -129,9 +149,11 @@ function Ksiazki() {
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header">Dorosłe dzieci alkoholików</h3>
               <p> Janet G. Woititz </p>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni.
+              "Jeśli jesteś dzieckiem alkoholika, książka ta powinna pomóc
+              lepiej zrozumieć co się z tobą obecnie dzieje i jak do tego
+              doszło. Zrozumienie tego faktu może pomóc zmniejszyć poczucie
+              izolacji u osób, które uważają się za 'inne' z powodu swego
+              życiowego doświadczenia."
               <br />
               <br />
               <a
@@ -139,7 +161,7 @@ function Ksiazki() {
                 target="_blank"
               >
                 {" "}
-                Lubimy Czytać
+                Źródło: Lubimy Czytać
               </a>
             </div>
           </div>
