@@ -6,6 +6,7 @@ import listy from "./../img/ksiazki/listy.jpg";
 import pismoswiete from "./../img/ksiazki/pismoswiete.jpg";
 import urzekajaca from "./../img/ksiazki/urzekajaca.jpg";
 import o from "./../img/ksiazki/o.jpg";
+import oskar from "./../img/ksiazki/oskar.jpg";
 
 function Ksiazki() {
   const props = useSpring({
@@ -59,6 +60,13 @@ function Ksiazki() {
               mistyków, znanych pisarzy i poetów. "
               <br />
               <br />
+              Cytat z książki:
+              <blockquote>
+                Lepiej jest odczuwać skruchę, aniżeli poznać jej definicję.
+                Nawet gdybyś się nauczył na pamięć całej Biblii i wszystkiego,
+                co powiedzieli filozofowie, cóż ci to pomoże, jeśli ci zabraknie
+                miłości i łaski?
+              </blockquote>
               <a
                 href="http://lubimyczytac.pl/ksiazka/241356/o-nasladowaniu-chrystusa"
                 target="_blank"
@@ -88,6 +96,16 @@ function Ksiazki() {
               przygody i uratowania damy w nieszczęściu."
               <br />
               <br />
+              Cytat z książki:
+              <blockquote>
+                Wolność jest bezużyteczna, jeśli nie ćwiczymy jej jako postacie
+                podejmujące decyzje... Jesteśmy wolni, żeby zmieniać opowieści,
+                które przeżywamy. Ponieważ jesteśmy postaciami autentycznymi, a
+                nie zwykłymi marionetkami, możemy wybrać określające nas
+                historie. Jesteśmy jednocześnie współautorami i postaciami.
+                Niewiele rzeczy tak dodaje otuchy jak świadomość, że wszystko
+                może wyglądać inaczej i że my mamy w tym swój udział.
+              </blockquote>
               <a
                 href="http://lubimyczytac.pl/ksiazka/195154/dzikie-serce-tesknoty-meskiej-duszy"
                 target="_blank"
@@ -113,6 +131,11 @@ function Ksiazki() {
               zamysłu wobec Ewy."
               <br />
               <br />
+              Cytat z książki:
+              <blockquote>
+                Odnajdę Cię. Bez względu na to, jak długo to potrwa, bez względu
+                na to jak daleko będziesz - odnajdę Cię.
+              </blockquote>
               <a
                 href="http://lubimyczytac.pl/ksiazka/49966/urzekajaca-odkrywanie-tajemnicy-kobiecej-duszy"
                 target="_blank"
@@ -122,6 +145,7 @@ function Ksiazki() {
               </a>
             </div>
           </div>
+          <br />
           <div className="parafia-row">
             <img className="buttons-img col-md-3" src={listy} />
             <div className="buttons-box-text col-md-7  text-center">
@@ -135,6 +159,11 @@ function Ksiazki() {
               aktualny…"
               <br />
               <br />
+              Cytat z książki:
+              <blockquote>
+                Wielcy (i apetyczni) grzesznicy są ulepieni z tego samego
+                tworzywa, co te straszne kurioza - wielcy Święci.
+              </blockquote>
               <a
                 href="http://lubimyczytac.pl/ksiazka/151625/listy-starego-diabla-do-mlodego"
                 target="_blank"
@@ -144,6 +173,7 @@ function Ksiazki() {
               </a>
             </div>
           </div>
+          <br />
           <div className="parafia-row">
             <img className="buttons-img col-md-3" src={dzieci} />
             <div className="buttons-box-text col-md-7  text-center">
@@ -156,8 +186,41 @@ function Ksiazki() {
               życiowego doświadczenia."
               <br />
               <br />
+              Cytat z książki:
+              <blockquote>
+                Zrobiłem ten błąd, jednak JA błędem nie jestem.
+              </blockquote>
               <a
                 href="http://lubimyczytac.pl/ksiazka/127028/dorosle-dzieci-alkoholikow"
+                target="_blank"
+              >
+                {" "}
+                Źródło: Lubimy Czytać
+              </a>
+            </div>
+          </div>
+          <br />
+          <div className="parafia-row">
+            <img className="buttons-img col-md-3" src={oskar} />
+            <div className="buttons-box-text col-md-7  text-center">
+              <h3 className="h3-header">Oskar i Pani Róża</h3>
+              <p> Janet G. Woititz </p>
+              "Czy w ciągu dwunastu dni można poznać smak życia i odkryć jego
+              najgłębszy sens? Dziesięcioletni Oskar leży w szpitalu i nie
+              wierzy już w żadne bajki. Na jego drodze staje tajemnicza pani
+              Róża, która ma za sobą karierę zapaśniczki i potrafi znaleźć
+              wyjście z każdej sytuacji…"
+              <br />
+              <br />
+              Cytat z książki:
+              <blockquote>
+                Myśli, których się nie zdradza, ciążą nam, zagnieżdżają się,
+                paraliżują nas, nie dopuszczają nowych i w końcu zaczynają gnić.
+                Staniesz się składem starych śmierdzących myśli, jeśli ich nie
+                wypowiesz.
+              </blockquote>
+              <a
+                href="https://lubimyczytac.pl/ksiazka/4805264/oskar-i-pani-roza"
                 target="_blank"
               >
                 {" "}
