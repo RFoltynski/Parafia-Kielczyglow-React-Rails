@@ -49,15 +49,9 @@ function Ksiazki() {
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header "> O naśladowaniu Chrystusa </h3>
               <p>Tomasz z Kempis</p>
-              "O naśladowaniu... stało się jednym z najbardziej
-              rozpowszechnionych (po Biblii) ksiąg chrześcijańskich. Popularność
-              zdobyła nie tylko wśród katolików, ale również wśród protestantów,
-              a nawet niechrześcijan. Forma dialogu ucznia z niewidzialnym
-              Mistrzem, która często pojawia się na kartach książki nadaje
-              niezwykłego charakteru tej książce. O naśladowaniu... to książka
-              szczególna, mówi wprost jak godnie i prawdziwie żyć. Wśród jej
-              czytelników można znaleźć wielu świętych, błogosławionych,
-              mistyków, znanych pisarzy i poetów. "
+              "O naśladowaniu Chrystusa to książka szczególna, mówi wprost jak
+              godnie i prawdziwie żyć. Wśród jej czytelników można znaleźć wielu
+              świętych, błogosławionych, mistyków, znanych pisarzy i poetów. "
               <br />
               <br />
               Cytat z książki:
@@ -88,12 +82,10 @@ function Ksiazki() {
                 Dzikie serce. Tęsknoty męskiej duszy
               </h3>
               <p>John Eldredge</p>
-              "John Eldredge twierdzi, iż to, co naprawdę definiuje istotę
-              męskości, zostało całkowicie stracone dla naszego myślenia.
-              Tymczasem warunkiem uchwycenia tego, co konstytuuje mężczyznę,
-              jest zrozumienie trzech fundamentalnych pragnień, kryjących się
-              głęboko w jego sercu: pragnienia stoczenia bitwy, przeżycia
-              przygody i uratowania damy w nieszczęściu."
+              "Warunkiem uchwycenia tego, co konstytuuje mężczyznę, jest
+              zrozumienie trzech fundamentalnych pragnień, kryjących się głęboko
+              w jego sercu: pragnienia stoczenia bitwy, przeżycia przygody i
+              uratowania damy w nieszczęściu."
               <br />
               <br />
               Cytat z książki:
@@ -153,10 +145,9 @@ function Ksiazki() {
               <p> Clive Staples Lewis </p>
               "Na kartkach tej błyskotliwej, przewrotnej książki poznajemy
               zagrożenia, na jakie może być narażony człowiek, który chce żyć
-              dobrze i sprawiedliwie. Mimo że mija właśnie siedemdziesiąt lat od
-              pierwszego angielskiego wydania Listów starego diabła do młodego,
-              książka nie zestarzała się ani trochę. Temat niestety jest ciągle
-              aktualny…"
+              dobrze i sprawiedliwie. Mimo że mija wiele lat od pierwszego
+              angielskiego wydania Listów starego diabła do młodego, książka nie
+              zestarzała się ani trochę. Temat niestety jest ciągle aktualny…"
               <br />
               <br />
               Cytat z książki:
