@@ -20,6 +20,7 @@ function Miejsca() {
               src={kaplica}
             />
             <div className="buttons-box-text col-md-7 text-center">
+              <h3 className="h3-header">Pierzyny Małe 12A,</h3>
               Kościół filialny zbudowany został w latach 1985-1988. Jego budowę
               rozpoczął miejscowy wikariusz ks. Adam Sołtysiak, dokończył
               wikariusz, a nastęþnie proboszcz - ks. Bogdan Ignasiak. Uroczyście
