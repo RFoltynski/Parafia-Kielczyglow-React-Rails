@@ -1,30 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
-import axios from "axios";
+
 import { Spring } from "react-spring/renderprops.cjs";
 
 class Intencje extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      intencions: [],
-      error: null
-    };
-  }
-
-  componentWillMount() {
-    axios
-      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
-      .then(res => {
-        this.setState({
-          intentions: res.data.data,
-          isLoading: true
-        });
-      });
-
-    window.scrollTo(0, 0);
-  }
-
   render() {
     return (
       <div className="intencje">
