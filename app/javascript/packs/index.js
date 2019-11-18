@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from "./../components/App";
 import Aktualnosci from "./../components/Aktualnosci";
-import Intencje from "./../components/Intencje";
 import Kaplani from "./../components/Kaplani";
 import Kontakt from "./../components/Kontakt";
 import Parafia from "./../components/Parafia";
@@ -17,7 +16,7 @@ export default class Router extends React.Component {
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/aktualnosci" component={Aktualnosci} />
-          <Route path="/intencje" component={Intencje} />
+          <Route path="/intencje" />
           <Route path="/kaplani" component={Kaplani} />
           <Route path="/parafia" component={Parafia} />
           <Route path="/kontakt" component={Kontakt} />

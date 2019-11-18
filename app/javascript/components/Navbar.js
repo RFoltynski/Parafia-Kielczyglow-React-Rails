@@ -1,13 +1,29 @@
 import React, { Component } from "react";
 import Button from "./img/menu";
+import axios from "axios";
 
 class Navbar extends Component {
   constructor() {
     super();
     this.state = {
       currentLocation: window.location.href,
-      dropMenu: false
+      dropMenu: false,
+      intencions: [],
+      isLoading: false
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
+      .then(res => {
+        this.setState({
+          intentions: res.data.data,
+          isLoading: true
+        });
+      });
+
+    window.scrollTo(0, 0);
   }
 
   dropMenu = () => {
@@ -75,12 +91,14 @@ class Navbar extends Component {
               Aktualnośći
             </a>
             <a
-              className={
-                this.state.currentLocation.includes(location[1])
-                  ? "navbar-link-active"
-                  : "navbar-link"
+              className={"navbar-link"}
+              href={
+                this.state.isLoading
+                  ? this.state.intentions.kielczyglow.map(item => {
+                      return item.file;
+                    })
+                  : ""
               }
-              href="/intencje"
             >
               Intencje
             </a>

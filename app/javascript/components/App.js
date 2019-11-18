@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
-
+import axios from "axios";
 import aktualnosci from "./img/kafelki/aktualnosci.JPG";
 import intencje from "./img/kafelki/intencje.JPG";
 import parafia from "./img/kafelki/parafia.JPG";
@@ -11,6 +11,27 @@ import kontakt from "./img/kafelki/kontakt.JPG";
 import inne from "./img/kafelki/inne.JPG";
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      intencions: [],
+      error: null
+    };
+  }
+
+  componentWillMount() {
+    axios
+      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
+      .then(res => {
+        this.setState({
+          intentions: res.data.data,
+          isLoading: true
+        });
+      });
+
+    window.scrollTo(0, 0);
+  }
+
   scrollTo() {
     scroller.scrollTo("scroll-to-element", {
       duration: 1000,
@@ -40,15 +61,32 @@ class App extends React.Component {
           </div>
           <div className="box col-md-4 nopadding">
             <div className="box-overlay">
-              <Link className="box-overlay-link" to="/intencje">
+              <a
+                className="box-overlay-link"
+                href={
+                  this.state.isLoading
+                    ? this.state.intentions.kielczyglow.map(item => {
+                        return item.file;
+                      })
+                    : ""
+                }
+              >
                 <h2 className="box-overlay-h2">Intencje</h2>
                 <img src={intencje} />
-              </Link>
-              <Link to="/intencje">
+              </a>
+              <a
+                href={
+                  this.state.isLoading
+                    ? this.state.intentions.kielczyglow.map(item => {
+                        return item.file;
+                      })
+                    : ""
+                }
+              >
                 <p className="box-overlay-p">
                   Intencje mszy świętych na nadchodzący tydzień
                 </p>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="box col-md-4 nopadding">

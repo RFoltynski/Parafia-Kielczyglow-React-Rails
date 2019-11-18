@@ -31,6 +31,6 @@ class IntentionsController < ApplicationController
   end
 
   def intention_params
-    params.require(:intention).permit(Intention.column_names)
+    params.require(:intention).permit(Intention.column_names, :intentionPhoto)
   end
 end

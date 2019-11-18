@@ -22,7 +22,7 @@ function Miejsca() {
               src={cmentarz}
             />
             <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header "> Cmentarz </h3>
+              <h3 className="h3-header ">Kiełczygłów ul. Piotrkowska 40 </h3>
               Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
               Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
               podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.

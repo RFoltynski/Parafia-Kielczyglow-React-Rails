@@ -13,14 +13,14 @@ function Miejsca() {
     <div className="inne-row">
       <animated.div style={props}>
         <div className="buttons-box">
-          <h2> Miesjca w parafii </h2>
+          <h2> Kościół filialny w Pierzynach </h2>
           <div className="inne-row">
             <img
               className="buttons-img buttons-img-miejsca col-md-5"
               src={kaplica}
             />
             <div className="buttons-box-text col-md-7 text-center">
-              <h3 className="h3-header">Kościół filialny w Pierzynach</h3>
+              <h3 className="h3-header">Pierzyny Małe 12A,</h3>
               Kościół filialny zbudowany został w latach 1985-1988. Jego budowę
               rozpoczął miejscowy wikariusz ks. Adam Sołtysiak, dokończył
               wikariusz, a nastęþnie proboszcz - ks. Bogdan Ignasiak. Uroczyście
