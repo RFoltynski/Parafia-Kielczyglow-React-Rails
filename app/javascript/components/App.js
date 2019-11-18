@@ -74,11 +74,19 @@ class App extends React.Component {
                 <h2 className="box-overlay-h2">Intencje</h2>
                 <img src={intencje} />
               </a>
-              <Link to="/intencje">
+              <a
+                href={
+                  this.state.isLoading
+                    ? this.state.intentions.kielczyglow.map(item => {
+                        return item.file;
+                      })
+                    : ""
+                }
+              >
                 <p className="box-overlay-p">
                   Intencje mszy świętych na nadchodzący tydzień
                 </p>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="box col-md-4 nopadding">

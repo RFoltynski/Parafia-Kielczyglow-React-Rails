@@ -2,9 +2,8 @@
 <%= render 'navbar' %>
 <div class="adminPage">
 <h1 class="h1-header">Admin Panel</h1>
-
 <%= link_to "Dodaj Post", new_post_path, class: "admin-panel-button" %>
-<%= link_to "Dodaj intencje", intentions_path(@intention), class: "admin-panel-button" %>
+<%= link_to "Dodaj intencje", edit_intention_path(@intention), class: "admin-panel-button" %>
 <div>
  <% else %>
   PAGE NOT FOUND
