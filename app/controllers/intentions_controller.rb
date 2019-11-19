@@ -18,7 +18,8 @@ class IntentionsController < ApplicationController
 
   def update
     if @intention.update(intention_params)
-      redirect_to intentions_path
+      redirect_to edit_intention_path(@intention)
+      flash[:success] = "Intencje zostały dodane"
     else
       render 'edit'
     end

@@ -12,6 +12,9 @@
           <%= f.label :intentionPhoto, "Dodaj PDF" %>
           <%= f.file_field :intentionPhoto %>
           <%= f.submit 'Wprowadź zmiany', class: "col-md-4 btn btn-info intentions-edit-button"%> 
+            <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
           <cneter>
           </div>
         </div>
