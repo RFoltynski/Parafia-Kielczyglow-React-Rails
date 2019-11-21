@@ -40,11 +40,25 @@
   border: 5px solid #220d0b;
   border-radius: 3px;
 }
-
+.ob-proboszczowie-overlay {
+  display: flex;
+  margin: 15px;
+  align-items: center;
+}
 .ob-proboszczowie-img {
   max-width: 200px;
   height: 300px;
-  margin: 10px auto;
+  margin: 10px 10px 10px 0;
   border: 5px solid #220d0b;
   border-radius: 3px;
+}
+
+.ob-proboszczowie-text {
+  width: 80%;
+}
+@media screen and (max-width: 605px) {
+  .ob-proboszczowie-overlay {
+    display: flex;
+    flex-direction: column;
+  }
 }
