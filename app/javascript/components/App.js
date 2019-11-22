@@ -19,7 +19,7 @@ class App extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios
       .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
       .then(res => {
@@ -55,7 +55,7 @@ class App extends React.Component {
                 <img src={aktualnosci} />
               </Link>
               <Link to="/aktualnosci">
-                <p className="box-overlay-p">Aktualności o parafi</p>
+                <p className="box-overlay-p" />
               </Link>
             </div>
           </div>
@@ -83,9 +83,7 @@ class App extends React.Component {
                     : ""
                 }
               >
-                <p className="box-overlay-p">
-                  Intencje mszy świętych na nadchodzący tydzień
-                </p>
+                <p className="box-overlay-p" />
               </a>
             </div>
           </div>
@@ -97,9 +95,7 @@ class App extends React.Component {
               </Link>
 
               <Link to="/parafia">
-                <p className="box-overlay-p">
-                  Najistotniejsze informacje o parafi
-                </p>
+                <p className="box-overlay-p" />
               </Link>
             </div>
           </div>
@@ -112,9 +108,7 @@ class App extends React.Component {
                 <img src={kaplani} />
               </Link>
               <Link to="/kaplani">
-                <p className="box-overlay-p">
-                  Informacje dotyczące kapłanów pracujących w parafii
-                </p>
+                <p className="box-overlay-p" />
               </Link>
             </div>
           </div>
@@ -125,7 +119,7 @@ class App extends React.Component {
                 <img src={kontakt} />
               </Link>
               <Link to="/kontakt">
-                <p className="box-overlay-p">Dane kontaktowe</p>
+                <p className="box-overlay-p" />
               </Link>
             </div>
           </div>
@@ -136,9 +130,7 @@ class App extends React.Component {
                 <img src={inne} />
               </Link>
               <Link to="/inne">
-                <p className="box-overlay-p">
-                  Najistotniejsze informacje o parafi
-                </p>
+                <p className="box-overlay-p" />
               </Link>
             </div>
           </div>

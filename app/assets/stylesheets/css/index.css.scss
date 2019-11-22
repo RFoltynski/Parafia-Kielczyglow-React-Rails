@@ -32,6 +32,19 @@ body {
   color: orange;
 }
 
+.h3-header {
+  padding: 0;
+  margin: 0;
+  color: orange;
+
+  a {
+    color: orange;
+  }
+  a:hover {
+    color: orange;
+  }
+}
+
 input {
   background-color: #ffffffe6;
   border: none;

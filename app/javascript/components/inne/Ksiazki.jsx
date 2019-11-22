@@ -217,8 +217,9 @@ function Ksiazki() {
                 {" "}
                 Źródło: Lubimy Czytać
               </a>
-            </div>
+            </div>{" "}
           </div>
+          <br />
         </div>
       </animated.div>
     </div>
