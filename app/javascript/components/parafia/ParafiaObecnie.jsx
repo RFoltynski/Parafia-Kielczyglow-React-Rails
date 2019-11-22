@@ -1,8 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
-import oltarz from "./../img/parafia/ParafiaObecnie/oltarz.jpg";
-
 function ParafiaObecnie() {
   const props = useSpring({
     to: { opacity: 1, width: "100%" },

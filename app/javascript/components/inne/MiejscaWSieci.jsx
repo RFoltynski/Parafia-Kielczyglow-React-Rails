@@ -1,11 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
-import stacja7 from "./../img/webs/Stacja7.png";
-import deon from "./../img/webs/deon.jpg";
-import dominikanie from "./../img/webs/dominikanie.jpg";
-import niedziela from "./../img/webs/niedziela.jpg";
-
 function MiejscaWSieci() {
   const props = useSpring({
     to: { opacity: 1, width: "100%" },
