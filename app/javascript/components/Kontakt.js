@@ -150,7 +150,7 @@ class Kontakt extends React.Component {
                         onSubmit={e => this.handleSubmit(e)}
                       >
                         <center>
-                          <p>Wyślij maila bezpośrednio ze strony.</p>
+                          <p>Wyślij e-mail bezpośrednio ze strony.</p>
                         </center>
                         <div className="form-group">
                           <input
@@ -176,7 +176,7 @@ class Kontakt extends React.Component {
                             className="form-control"
                             id="exampleInputEmail1"
                             aria-describedby="emailHelp"
-                            placeholder="Twój adres email.."
+                            placeholder="Twój adres e-mail.."
                             name="email"
                             onChange={this.handleChange}
                             value={this.state.email}

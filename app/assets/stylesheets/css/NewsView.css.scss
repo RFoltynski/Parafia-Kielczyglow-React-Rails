@@ -8,11 +8,9 @@
 .newsView-box {
   max-height: 123123px;
   background-color: #ffffff;
-  border-radius: 15px;
+
   margin-bottom: 20px;
-  -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
-  -moz-box-shadow: 0px 0px 10px 1px #000000bf;
-  box-shadow: 0px 0px 10px 1px #000000bf;
+
   border: 3px solid black;
   display: flex;
   flex-direction: column;
@@ -39,6 +37,9 @@ h2 {
 
 .newsView-box-button {
   max-width: 150px;
+}
+.newsView-box-button:hover {
+  border: 2px solid transparent;
 }
 
 .newsView-box-button:focus {
