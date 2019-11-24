@@ -70,6 +70,7 @@ class App extends React.Component {
                       })
                     : ""
                 }
+                target="_blank"
               >
                 <h2 className="box-overlay-h2">Intencje</h2>
                 <img src={intencje} />
