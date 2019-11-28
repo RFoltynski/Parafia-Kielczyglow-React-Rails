@@ -37,8 +37,6 @@ class HistoriaParafi extends React.Component {
 
   photos = [
     { photo: stary },
-    { photo: gazeta },
-    { photo: pamiatka },
     { photo: ulotka },
     { photo: fundamenty },
     { photo: caly },
@@ -55,7 +53,9 @@ class HistoriaParafi extends React.Component {
     { photo: stolarka },
     { photo: konsekracja },
     { photo: konsekracja2 },
-    { photo: swieto }
+    { photo: swieto },
+    { photo: pamiatka },
+    { photo: gazeta }
   ];
 
   render() {
@@ -79,7 +79,7 @@ class HistoriaParafi extends React.Component {
               activePhotoIndex={this.state.numberOfPhoto}
             />
             {(this.photos || []).map((downloadURL, i) => {
-              if (i < 4) {
+              if (i < 2) {
                 return (
                   <img
                     className="newsView-img"
@@ -98,7 +98,7 @@ class HistoriaParafi extends React.Component {
             <div className="row">
               <div className="col-md-12">
                 {(this.photos || []).map((downloadURL, i) => {
-                  if (i > 4 && i <= 10) {
+                  if (i > 2 && i <= 8) {
                     return (
                       <img
                         className="newsView-img"
@@ -115,7 +115,7 @@ class HistoriaParafi extends React.Component {
             <div className="row">
               <div className="col-md-12">
                 {(this.photos || []).map((downloadURL, i) => {
-                  if (i > 10 && i <= 16) {
+                  if (i > 8 && i <= 14) {
                     return (
                       <img
                         className="newsView-img"
@@ -131,11 +131,11 @@ class HistoriaParafi extends React.Component {
           </div>
           <div className="text-center offset-md-1 col-md-10">
             <h3 className="h3-header">Konsekracja Kościoła</h3>
-            Konsekrował go bp Zdzisław Goliński 13.06.1957 roku.
+            Kościół konsekrował bp Zdzisław Goliński 13.06.1957 roku.
             <div className="row">
               <div className="col-md-12">
                 {(this.photos || []).map((downloadURL, i) => {
-                  if (i > 16 && i <= 20) {
+                  if (i > 14 && i <= 18) {
                     return (
                       <img
                         className="newsView-img"
@@ -150,11 +150,30 @@ class HistoriaParafi extends React.Component {
             </div>
           </div>
           <div className="text-center offset-md-1 col-md-10">
-            <h3 className="h3-header">Budowa Kościoła w Pierzynach Małych</h3>
-            Kościół filialny zbudowany został w latach 1985-1988. Jego budowę
-            rozpoczął miejscowy wikariusz ks. Adam Sołtysiak, dokończył
-            wikariusz, a nastęþnie proboszcz - ks. Bogdan Ignasiak. Uroczyście
-            posœięcił bp Stanisław Nowak 29.05.1988r.
+            <h3 className="h3-header">
+              Artykuł z zatrzymania Ks. Józefa Jansona
+            </h3>
+
+            <div className="row">
+              <div className="col-md-12">
+                {(this.photos || []).map((downloadURL, i) => {
+                  if (i > 18 && i <= 20) {
+                    return (
+                      <img
+                        className="newsView-img"
+                        onClick={() => this.toggleGallery(i)}
+                        src={downloadURL.photo}
+                        key={i}
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+            <blockquote>
+              Ksiądz Józef Janson skazany za szerzenie wrogiej propagandy
+              przeciwko Państwu
+            </blockquote>
           </div>
         </div>
       </div>
