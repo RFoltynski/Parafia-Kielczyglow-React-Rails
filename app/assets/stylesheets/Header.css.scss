@@ -7,13 +7,37 @@
   background-attachment: fixed;
   background-position: bottom;
   background-size: cover;
-  padding-top: 100px;
 }
 
+.header-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  .arrow {
+    margin-top: auto;
+    margin-bottom: 15px;
+  }
+}
 .header-parafia {
-  margin-bottom: 155px;
+  margin-top: 35px;
+  font-family: "Allura", cursive;
+  text-transform: none !important;
+  color: white !important;
+  font-size: 92px;
 }
-
+.header-parafia-p {
+  color: orange;
+  a {
+    color: white;
+    font-size: 22px;
+  }
+  a:hover {
+    color: orange;
+  }
+}
 .arrow {
   width: 40px;
   height: 40px;
