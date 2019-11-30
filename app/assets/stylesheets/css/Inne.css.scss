@@ -1,9 +1,7 @@
 .inne {
-  background-image: url(asset-path("inne_beckground.JPG"));
+  background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
   min-height: 100vh;
   height: 100%;
-  background-attachment: fixed;
-  background-size: cover;
   color: #ffffff;
 }
 

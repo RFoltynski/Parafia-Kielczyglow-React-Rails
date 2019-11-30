@@ -7,6 +7,6 @@ json.data do
     end
   end
   if @post.file.attached?
-    json.file Rails.application.routes.url_helpers.rails_blob_path(post.file, only_path: true)
+    json.file Rails.application.routes.url_helpers.rails_blob_path(@post.file, only_path: true)
   end
 end

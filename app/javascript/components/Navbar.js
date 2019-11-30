@@ -99,6 +99,7 @@ class Navbar extends Component {
                     })
                   : ""
               }
+              target="_blank"
             >
               Intencje
             </a>

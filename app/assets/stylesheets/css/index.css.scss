@@ -4,19 +4,21 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: black;
+  background: cover fixed black;
 }
 
 .h1-header {
   text-transform: uppercase;
-  color: #ffffffe6;
+  color: white;
+  text-shadow: 1px 1px white;
   font-weight: 700;
   letter-spacing: 4px;
-  text-shadow: 1px 2px black;
   padding-top: 75px;
 }
 .h2-header {
@@ -32,10 +34,22 @@ body {
   color: orange;
 }
 
+.h3-header {
+  padding: 0;
+  margin: 0;
+  color: orange;
+
+  a {
+    color: orange;
+  }
+  a:hover {
+    color: orange;
+  }
+}
+
 input {
   background-color: #ffffffe6;
   border: none;
-  border-radius: 5px;
 }
 
 button {
@@ -54,15 +68,16 @@ button {
   border: 2px solid transparent;
   box-sizing: border-box;
 }
+button:hover {
+  background-color: #ffffffe6;
+  color: black;
+  border: 2px solid black;
+}
 
 .buttonWhite {
   background-color: #ffffffe6;
   color: black;
   cursor: default;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
-  -moz-box-shadow: 0px 0px 10px 1px #000000bf;
-  box-shadow: 0px 0px 10px 1px #000000bf;
   border: 2px solid black;
   box-sizing: border-box;
 }
@@ -72,6 +87,13 @@ button {
 .button:focus,
 .buttonWhite:focus {
   outline: 0;
+}
+
+.bold-orange-word {
+  color: orange;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .overlay {
@@ -86,13 +108,9 @@ button {
 
 .buttons-box {
   max-width: 75%;
-  min-width: 50%;
+  min-width: 75%;
   background-color: white;
-  border-radius: 15px;
   opacity: 0.9;
-  -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
-  -moz-box-shadow: 0px 0px 10px 1px #000000bf;
-  box-shadow: 0px 0px 10px 1px #000000bf;
   text-align: justify;
   border: 3px solid black;
   margin-top: 15px;
@@ -110,7 +128,7 @@ button {
 }
 .buttons-box > h2 {
   color: black;
-  border-radius: 15px 15px 0 0;
+
   text-align: center;
   opacity: 0.9;
   padding-top: 5px 0 5px 0;
