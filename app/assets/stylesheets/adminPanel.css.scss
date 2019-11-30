@@ -1,9 +1,7 @@
 .adminPage {
   height: 100%;
   min-height: 100vh;
-  background-image: url(asset-path("335818.jpg"));
-  background-position: center;
-  background-size: cover;
+  background: url(asset-path("335818.jpg")) center cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,9 +23,7 @@
   background-color: white;
   border-radius: 15px;
   opacity: 0.9;
-  -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
-  -moz-box-shadow: 0px 0px 10px 1px #000000bf;
-  box-shadow: 0px 0px 10px 1px #000000bf;
+
   color: black;
   margin: 25px auto;
 }
@@ -39,9 +35,6 @@
   background-color: white;
   opacity: 0.9;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 10px 1px #000000bf;
-  -moz-box-shadow: 0px 0px 10px 1px #000000bf;
-  box-shadow: 0px 0px 10px 1px #000000bf;
   padding-bottom: 15px;
   margin-bottom: 15px;
 }

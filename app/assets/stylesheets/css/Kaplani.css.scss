@@ -1,8 +1,6 @@
 .kaplani {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-image: url(asset-path("kaplani_background.JPG"));
+  background: url(asset-path("kaplani_background.JPG")) center top / cover
+    no-repeat fixed;
   width: 100%;
   min-height: 100vh;
   height: 100%;

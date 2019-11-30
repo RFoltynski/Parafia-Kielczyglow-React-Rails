@@ -1,8 +1,6 @@
 .kontakt {
-  background-image: url(asset-path("kontakt_background.JPG"));
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url(asset-path("kontakt_background.JPG")) center top / cover
+    no-repeat fixed;
   width: 100%;
   min-height: 100vh;
   height: 100%;
