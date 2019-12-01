@@ -44,7 +44,16 @@ class App extends React.Component {
     return (
       <div className="app container-fluid">
         <div className="row menu">
-          <Header scroll={this.scrollTo} />
+          <Header
+            scroll={this.scrollTo}
+            link={
+              this.state.isLoading
+                ? this.state.intentions.kielczyglow.map(item => {
+                    return item.file;
+                  })
+                : ""
+            }
+          />
         </div>
 
         <div name="scroll-to-element" className=" row">
