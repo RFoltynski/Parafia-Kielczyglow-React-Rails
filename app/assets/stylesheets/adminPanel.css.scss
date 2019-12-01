@@ -1,4 +1,5 @@
 @import "./mixis";
+@import "./variables";
 
 .adminPage {
   height: 100%;
@@ -9,7 +10,7 @@
 .adminPage-header {
   margin-bottom: auto;
   margin-top: 100px;
-  color: white;
+  color: $main-color;
   font-size: 48px;
 }
 .admin-panel-button {
@@ -17,7 +18,7 @@
   width: 350px;
   height: 60px;
   @include flexCenter(row);
-  background-color: white;
+  background-color: $main-color;
   border-radius: 15px;
   opacity: 0.9;
   color: black;
@@ -28,7 +29,7 @@
   text-decoration: none;
 }
 .form-background {
-  background-color: white;
+  background-color: $main-color;
   opacity: 0.9;
   border-radius: 15px;
   padding-bottom: 15px;

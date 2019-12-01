@@ -1,7 +1,9 @@
+@import "../variables";
+
 .parafia {
   background: url(asset-path("parafia_background.JPG")) center top / cover fixed;
   height: 100%;
-  color: white;
+  color: $main-color;
 }
 
 .parafia-buttons {
@@ -29,7 +31,7 @@
 }
 .parafia-obecenie li::before {
   content: "\2022";
-  color: orange;
+  color: $second-color;
   font-weight: bold;
   display: inline-block;
   width: 1em;

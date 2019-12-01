@@ -1,3 +1,4 @@
+@import "../variables";
 .kontakt {
   background: url(asset-path("kontakt_background.JPG")) center top / cover
     no-repeat fixed;
@@ -20,7 +21,7 @@
 }
 
 .kaplani-text {
-  color: #ffffff;
+  color: $main-color;
 }
 .contact-form {
   margin: 15px 0;
@@ -29,8 +30,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
-  color: white;
+  background-color: $second-color;
+  color: $main-color;
   padding: 5px;
   margin: 10px 0;
   border-radius: 5px;

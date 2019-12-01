@@ -1,8 +1,10 @@
+@import "../variables";
+
 .inne {
   background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
   min-height: 100vh;
   height: 100%;
-  color: #ffffff;
+  color: $main-color;
 }
 
 .inne-h2 {
@@ -30,7 +32,7 @@
 }
 
 .inne-text {
-  color: #ffffff;
+  color: $main-color;
 }
 .buttons-img-places {
   height: 100px;
@@ -38,7 +40,7 @@
 
 .buttons-box-text {
   a:hover {
-    text-decoration-color: orange;
+    text-decoration-color: $second-color;
   }
 }
 

@@ -1,3 +1,5 @@
+@import "../variables";
+
 .kaplani {
   background: url(asset-path("kaplani_background.JPG")) center top / cover
     no-repeat fixed;
@@ -20,7 +22,7 @@
 }
 
 .kaplani-text {
-  color: #ffffff;
+  color: $main-color;
 }
 
 .probszczowie {

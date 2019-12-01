@@ -1,13 +1,15 @@
+@import "../variables";
+
 .ShowPost {
   background: url(asset-path("aktualnosci_background.JPG")) center top / cover
     fixed;
   min-height: 100vh;
   height: 100%;
-  color: #ffffff;
+  color: $main-color;
 }
 .showPost-box {
   padding: 0;
-  background-color: #ffffff;
+  background-color: $main-color;
   margin-bottom: 20px;
   border: 3px solid black;
   display: flex;
