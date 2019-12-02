@@ -92,6 +92,7 @@ class App extends React.Component {
                       })
                     : ""
                 }
+                target="_blank"
               >
                 <p className="box-overlay-p" />
               </a>
