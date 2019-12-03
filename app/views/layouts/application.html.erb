@@ -6,12 +6,12 @@
 	  <meta name="description" content="Strona poświęcona Parafii Kiełczygłów." />
 	  <meta name="keywords" content="Parafia-Kielczyglow, Parafia-Kielczygłów, Kiełczygłów, parafia, intencje, cmentarz, msze święte, godziny mszy swiętych" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet"> 
+      
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= javascript_include_tag 'application', async: Rails.env.production? %>
     <%= stylesheet_link_tag    'application', media: 'all'  %>
- 
+    <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <%= yield %>
