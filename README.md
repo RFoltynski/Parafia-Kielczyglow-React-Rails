@@ -1,4 +1,4 @@
-http://parafia-kielczyglow.pl/
+http://64.225.106.231/
 
 Wymagania względem projektu:
 
