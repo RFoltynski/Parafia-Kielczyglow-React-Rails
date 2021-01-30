@@ -53,125 +53,97 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-        <div className="app container-fluid">
-          <div className="row menu" />
-          <div className="boxes-container">
-            <div name="scroll-to-element" className=" row">
-              <div className="box col-4 nopadding">
-                <div className="box-overlay">
-                  <Link
-                    className="box-overlay-link image-fix"
-                    to="/aktualnosci"
-                  >
-                    <h2 className="box-overlay-h2">Aktualności</h2>
-                    <img src={aktualnosci} />
-                  </Link>
-                  <Link to="/aktualnosci">
-                    <p className="box-overlay-p" />
-                  </Link>
-                </div>
-              </div>
-              <div className="box col-4 nopadding">
-                <div className="box-overlay">
-                  <a
-                    className="box-overlay-link"
-                    href={
-                      this.state.isLoading
-                        ? this.state.intentions.kielczyglow.map((item) => {
-                            return item.file;
-                          })
-                        : ""
-                    }
-                    target="_blank"
-                  >
-                    <h2 className="box-overlay-h2">Intencje</h2>
-                    <img src={intencje} />
-                  </a>
-                  <a
-                    href={
-                      this.state.isLoading
-                        ? this.state.intentions.kielczyglow.map((item) => {
-                            return item.file;
-                          })
-                        : ""
-                    }
-                    target="_blank"
-                  >
-                    <p className="box-overlay-p" />
-                  </a>
-                </div>
-              </div>
-              <div className="box col-4 nopadding">
-                <div className="box-overlay">
-                  <Link className="box-overlay-link" to="/parafia">
-                    <h2 className="box-overlay-h2">Parafia</h2>
-                    <img src={parafia} />
-                  </Link>
-
-                  <Link to="/parafia">
-                    <p className="box-overlay-p" />
-                  </Link>
-                </div>
+        <div className="boxes-container">
+          <div className="boxes-row">
+            <div className="row-item">
+              <div className="box-overlay">
+                <Link className="box-overlay-link image-fix" to="/aktualnosci">
+                  <h2 className="box-overlay-h2">Aktualności</h2>
+                  <img src={aktualnosci} />
+                </Link>
+                <Link to="/aktualnosci">
+                  <p className="box-overlay-p" />
+                </Link>
               </div>
             </div>
-            <div className="row">
-              <div className="box col-4 nopadding">
-                <div className="box-overlay">
-                  <Link className="box-overlay-link" to="/kaplani">
-                    <h2 className="box-overlay-h2">Kapłani</h2>
-                    <img src={kaplani} />
-                  </Link>
-                  <Link to="/kaplani">
-                    <p className="box-overlay-p" />
-                  </Link>
-                </div>
+            <div className="row-item">
+              <div className="box-overlay">
+                <a
+                  className="box-overlay-link"
+                  href={
+                    this.state.isLoading
+                      ? this.state.intentions.kielczyglow.map((item) => {
+                          return item.file;
+                        })
+                      : ""
+                  }
+                  target="_blank"
+                >
+                  <h2 className="box-overlay-h2">Intencje</h2>
+                  <img src={intencje} />
+                </a>
+                <a
+                  href={
+                    this.state.isLoading
+                      ? this.state.intentions.kielczyglow.map((item) => {
+                          return item.file;
+                        })
+                      : ""
+                  }
+                  target="_blank"
+                >
+                  <p className="box-overlay-p" />
+                </a>
               </div>
-              <div className="box col-4 nopadding">
-                <div className="box-overlay">
-                  <Link className="box-overlay-link" to="/kontakt">
-                    <h2 className="box-overlay-h2">Kontakt</h2>
-                    <img src={kontakt} />
-                  </Link>
-                  <Link to="/kontakt">
-                    <p className="box-overlay-p" />
-                  </Link>
-                </div>
-              </div>
-              <div className="box col-4 nopadding">
-                <div className="box-overlay">
-                  <Link className="box-overlay-link" to="/inne">
-                    <h2 className="box-overlay-h2">Inne</h2>
-                    <img src={inne} />
-                  </Link>
-                  <Link to="/inne">
-                    <p className="box-overlay-p" />
-                  </Link>
-                </div>
+            </div>
+            <div className="row-item">
+              <div className="box-overlay">
+                <Link className="box-overlay-link" to="/parafia">
+                  <h2 className="box-overlay-h2">Parafia</h2>
+                  <img src={parafia} />
+                </Link>
+
+                <Link to="/parafia">
+                  <p className="box-overlay-p" />
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-class Header extends React.Component {
-  render() {
-    let link = this.props.link;
-    return (
-      <div className="header" onClick={this.props.scroll}>
-        {" "}
-        <div className="header-box">
-          <h1 className="header-parafia">Parafia Kiełczygłów</h1>
-          <p className="header-parafia-p">
-            <a href="/aktualnosci">Aktualności</a> *{" "}
-            <a href={link.toString()} target="_blank">
-              Intencje
-            </a>{" "}
-            * <a href="/kontakt">Kontakt</a>
-          </p>
-          <div className={"arrow bounce"} />
+          <div className="boxes-row">
+            <div className="row-item">
+              <div className="box-overlay">
+                <Link className="box-overlay-link" to="/kaplani">
+                  <h2 className="box-overlay-h2">Kapłani</h2>
+                  <img src={kaplani} />
+                </Link>
+                <Link to="/kaplani">
+                  <p className="box-overlay-p" />
+                </Link>
+              </div>
+            </div>
+            <div className="row-item">
+              <div className="box-overlay">
+                <Link className="box-overlay-link" to="/kontakt">
+                  <h2 className="box-overlay-h2">Kontakt</h2>
+                  <img src={kontakt} />
+                </Link>
+                <Link to="/kontakt">
+                  <p className="box-overlay-p" />
+                </Link>
+              </div>
+            </div>
+            <div className="row-item">
+              <div className="box-overlay">
+                <Link className="box-overlay-link" to="/inne">
+                  <h2 className="box-overlay-h2">Inne</h2>
+                  <img src={inne} />
+                </Link>
+                <Link to="/inne">
+                  <p className="box-overlay-p" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
