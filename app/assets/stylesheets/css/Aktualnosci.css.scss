@@ -13,3 +13,10 @@
   display: flex;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 605px) {
+  .aktualnosci-comp {
+    background: none;
+    background-color: black;
+  }
+}

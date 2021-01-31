@@ -39,6 +39,13 @@
   animation: fadeIn 1s;
 }
 
+@media screen and (max-width: 605px) {
+  .kontakt {
+    background: none;
+    background-color: black;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
