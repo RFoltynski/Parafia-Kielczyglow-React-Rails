@@ -102,8 +102,8 @@ Rails.application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'parafia-kielczyglow.pl',
-  user_name:            'siw886@gmail.com',
-  password:             '886401',
+  user_name:            'ENV['CONTACT_EMAIL']',
+  password:             'ENV['PASSWORD_EMAIL']',
   authentication:       'plain',
   enable_starttls_auto: true  }
 end
