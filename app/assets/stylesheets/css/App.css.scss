@@ -2,15 +2,25 @@
 
 @media (max-width: 600px) {
   .boxes-container {
-    padding-top: 6vh;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    max-height: 100%;
-    flex-wrap: wrap;
+    min-height: 100%;
+    flex-wrap: nowrap;
     background-color: black;
-    justify-content: center;
+    justify-content: space-around;
+  }
+  .boxes-rows {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    font-family: "Allura", cursive;
+    font-size: 52px;
+    color: white;
+    text-align: center;
   }
 
   .boxes-row {
@@ -25,10 +35,10 @@
     background-color: black;
     flex: 1;
     width: 100%;
-    max-height: 200px;
+    min-height: 200px;
     border: 1px solid black;
     box-sizing: border-box;
-    padding: 5px; 
+    padding: 5px;
   }
 
   .box-overlay {
@@ -37,7 +47,7 @@
     position: relative;
     height: 100%;
   }
-  
+
   .box-overlay-h2 {
     position: relative;
     color: $main-color;
@@ -50,7 +60,7 @@
     font-weight: 700;
     font-size: 20px;
   }
-  
+
   .box-overlay-h2:after,
   .box-overlay-h2:before {
     display: block;
@@ -65,11 +75,11 @@
     left: 0;
     width: 100%;
   }
-  
+
   .box-overlay:hover .box-overlay-h2:after {
     transform: scaleX(0.7);
   }
-  
+
   .box-overlay .box-overlay-p {
     position: absolute;
     display: block;
@@ -82,23 +92,22 @@
     color: $main-color;
     padding-top: 185px;
   }
-  
+
   .box-overlay:hover .box-overlay-p {
     opacity: 0.8;
     color: $main-color;
   }
-  
+
   .box-overlay-link {
     position: relative;
     height: 100%;
   }
-  
+
   .box-overlay-link img {
     width: 100%;
     height: 100%;
-   
   }
-  
+
   .box-overlay-link h2 {
     position: absolute;
     margin-left: auto;
@@ -108,22 +117,33 @@
     right: 0;
     color: $main-color;
   }
-  
+
   .image-fix {
     background: center / cover;
   }
-
-
 }
 @media (min-width: 601px) {
   .boxes-container {
-    padding-top: 6vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 100vh;
     max-height: 100%;
     flex-wrap: wrap;
+    background-color: black;
+  }
+
+  .logo {
+    font-family: "Allura", cursive;
+    font-size: 32px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .boxes-rows {
+    display: flex;
+    flex-direction: column;
   }
 
   .boxes-row {
@@ -144,7 +164,7 @@
     position: relative;
     height: 47vh;
   }
-  
+
   .box-overlay-h2 {
     position: relative;
     color: $main-color;
@@ -157,7 +177,7 @@
     z-index: 100;
     font-weight: 700;
   }
-  
+
   .box-overlay-h2:after,
   .box-overlay-h2:before {
     display: block;
@@ -172,11 +192,11 @@
     left: 0;
     width: 100%;
   }
-  
+
   .box-overlay:hover .box-overlay-h2:after {
     transform: scaleX(1);
   }
-  
+
   .box-overlay .box-overlay-p {
     position: absolute;
     display: block;
@@ -190,21 +210,21 @@
     color: $main-color;
     padding-top: 185px;
   }
-  
+
   .box-overlay:hover .box-overlay-p {
     opacity: 0.8;
     color: $main-color;
   }
-  
+
   .box-overlay-link {
     position: relative;
   }
-  
+
   .box-overlay-link img {
     width: 100%;
     height: 100%;
   }
-  
+
   .box-overlay-link h2 {
     position: absolute;
     margin-left: auto;
@@ -214,11 +234,8 @@
     right: 0;
     color: $main-color;
   }
-  
+
   .image-fix {
     background: center / cover;
   }
 }
-
-
-
