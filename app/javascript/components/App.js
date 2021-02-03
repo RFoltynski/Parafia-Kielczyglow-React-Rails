@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
-import Navbar from "./Navbar";
 import axios from "axios";
 import aktualnosci from "./img/kafelki/aktualnosci.JPG";
 import intencje from "./img/kafelki/intencje.JPG";
