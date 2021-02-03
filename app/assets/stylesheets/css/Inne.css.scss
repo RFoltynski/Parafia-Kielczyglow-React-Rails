@@ -1,49 +1,5 @@
 @import "../variables";
 
-.inne {
-  background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
-  min-height: 100vh;
-  height: 100%;
-  color: $main-color;
-}
-
-.inne-h2 {
-  margin-top: 15px;
-  text-align: center;
-}
-
-.inne-buttons {
-  padding-bottom: 35px;
-}
-
-.inne-row {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  display: flex;
-}
-
-.inne-img {
-  min-height: 100%;
-}
-
-.inne-box-text {
-  min-height: 100%;
-}
-
-.inne-text {
-  color: $main-color;
-}
-.buttons-img-places {
-  height: 100px;
-}
-
-.buttons-box-text {
-  a:hover {
-    text-decoration-color: $second-color;
-  }
-}
-
 @media (max-width: 764px) {
   .inne-row {
     flex-direction: column;
@@ -51,5 +7,54 @@
   .inne {
     background: none;
     background-color: black;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+}
+
+@media (min-width: 765px) {
+  .inne {
+    background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+
+  .inne-h2 {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .inne-buttons {
+    padding-bottom: 35px;
+  }
+
+  .inne-row {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+  }
+
+  .inne-img {
+    min-height: 100%;
+  }
+
+  .inne-box-text {
+    min-height: 100%;
+  }
+
+  .inne-text {
+    color: $main-color;
+  }
+  .buttons-img-places {
+    height: 100px;
+  }
+
+  .buttons-box-text {
+    a:hover {
+      text-decoration-color: $second-color;
+    }
   }
 }
