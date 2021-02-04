@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import axios from "axios";
-import aktualnosci from "./img/kafelki/aktualnosci.JPG";
+import Ogloszenia from "./img/kafelki/Ogloszenia.JPG";
 import intencje from "./img/kafelki/intencje.JPG";
 import parafia from "./img/kafelki/parafia.JPG";
 import kaplani from "./img/kafelki/kaplani.JPG";
@@ -47,11 +47,11 @@ class App extends React.Component {
           <div className="boxes-row">
             <div className="row-item">
               <div className="box-overlay">
-                <Link className="box-overlay-link image-fix" to="/aktualnosci">
-                  <h2 className="box-overlay-h2">Aktualności</h2>
-                  <img src={aktualnosci} />
+                <Link className="box-overlay-link image-fix" to="/Ogloszenia">
+                  <h2 className="box-overlay-h2">Ogłoszenia</h2>
+                  <img src={Ogloszenia} />
                 </Link>
-                <Link to="/aktualnosci">
+                <Link to="/Ogloszenia">
                   <p className="box-overlay-p" />
                 </Link>
               </div>

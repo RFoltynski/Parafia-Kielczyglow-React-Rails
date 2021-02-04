@@ -1,7 +1,7 @@
-.aktualnosci-comp {
+.Ogloszenia-comp {
   height: auto;
   max-height: 121332px;
-  background: url(asset-path("aktualnosci_background.JPG")) center top / cover
+  background: url(asset-path("ogloszenia_background.JPG")) center top / cover
     fixed black;
   min-height: 100vh;
   overflow-y: hidden !important;
@@ -15,7 +15,7 @@
 }
 
 @media screen and (max-width: 605px) {
-  .aktualnosci-comp {
+  .Ogloszenia-comp {
     background: none;
     background-color: black;
   }

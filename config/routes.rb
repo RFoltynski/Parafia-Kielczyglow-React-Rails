@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:create]
   root "pages#index"
   get 'kaplani', to: 'pages#index'
-  get 'aktualnosci', to: 'pages#index'
+  get 'Ogloszenia', to: 'pages#index'
   get 'intencje', to: 'pages#index'
   get 'parafia', to: 'pages#index'
   get 'kontakt', to: 'pages#index'
