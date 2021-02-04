@@ -2,7 +2,7 @@ http://parafia-kielczyglow.pl/
 
 Wymagania względem projektu:
 
-- Użytkownik na stronie może uzyskać informacje odnośnie: aktualności, intencji mszy świętych, parafii, księży oraz innych spraw,
+- Użytkownik na stronie może uzyskać informacje odnośnie: Ogłoszenia, intencji mszy świętych, parafii, księży oraz innych spraw,
 - Użytkownik ma do dyspozycji formularz kontktowy,
 - Użytkownik ma możliwość skorzystania ze strony na telefonie komórkowym,
 - Administrator ma możliwość zalogowania się do panelu administratora,

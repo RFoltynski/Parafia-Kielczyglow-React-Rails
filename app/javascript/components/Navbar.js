@@ -9,17 +9,17 @@ class Navbar extends Component {
       currentLocation: window.location.href,
       dropMenu: false,
       intencions: [],
-      isLoading: false
+      isLoading: false,
     };
   }
 
   componentDidMount() {
     axios
       .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
-      .then(res => {
+      .then((res) => {
         this.setState({
           intentions: res.data.data,
-          isLoading: true
+          isLoading: true,
         });
       });
 
@@ -28,10 +28,10 @@ class Navbar extends Component {
 
   dropMenu = () => {
     this.setState({
-      dropMenu: !this.state.dropMenu
+      dropMenu: !this.state.dropMenu,
     });
   };
-  hide = e => {
+  hide = (e) => {
     if (e && e.relatedTarget) {
       e.relatedTarget.click();
     }
@@ -48,12 +48,12 @@ class Navbar extends Component {
 
   render() {
     let location = [
-      "pl/aktualnosci",
+      "pl/Ogloszenia",
       "pl/intencje",
       "pl/parafia",
       "pl/kaplani",
       "pl/kontakt",
-      "pl/inne"
+      "pl/inne",
     ];
     return (
       <div>
@@ -86,15 +86,15 @@ class Navbar extends Component {
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              href="/aktualnosci"
+              href="/Ogloszenia"
             >
-              Aktualnośći
+              Ogłoszenia
             </a>
             <a
               className={"navbar-link"}
               href={
                 this.state.isLoading
-                  ? this.state.intentions.kielczyglow.map(item => {
+                  ? this.state.intentions.kielczyglow.map((item) => {
                       return item.file;
                     })
                   : ""
