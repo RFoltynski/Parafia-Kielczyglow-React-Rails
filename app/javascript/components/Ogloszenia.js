@@ -1,104 +1,110 @@
 import React from "react";
-import NewsView from "./NewsView";
 import Navbar from "./Navbar";
+import OgloszeniaIntencje from "./OgloszeniaIntencje";
+import OgloszeniaAktualnosci from "./OgloszeniaAktualnosci";
 import axios from "axios";
 
 class Ogloszenia extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
-      posts: [],
-      isLoading: false,
-      per: 2,
-      totalPages: null,
-      page: 1,
-      pageLoadError: null,
+      render: "",
+      buttonPressed1: true,
+      buttonPressed2: false,
+      intencions: [],
+      error: null,
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
+      .then((res) => {
+        this.setState({
+          intentions: res.data.data,
+          isLoading: true,
+        });
+      });
+
+    window.scrollTo(0, 0);
   }
 
   componentWillMount() {
     window.scrollTo(0, 0);
-    const { per, page } = this.state;
-    const url = `api/v1/posts?per_page=${per}&page=${page}`;
-
-    axios.get(url, {}, { "Content-Type": "application/json" }).then((res) => {
-      this.setState({
-        posts: res.data.data,
-        totalPages: res.data.pages,
-        isLoading: true,
-      });
-    });
   }
 
-  handlePageClick = (data) => {
-    const { per, totalPages, page, posts } = this.state;
-    const url = `api/v1/posts?per_page=${per}&page=${page}`;
-
-    axios.get(url, {}, { "Content-Type": "application/json" }).then((res) => {
-      this.setState({
-        posts: [...posts, ...res.data.data],
-        totalPages: res.data.pages,
-        isLoading: true,
-      });
+  handleClick = (compName, e) => {
+    this.setState({
+      render: compName,
     });
   };
 
-  loadMore = () => {
-    const { page, totalPages } = this.state;
-
-    if (page < totalPages) {
-      this.setState(
-        (prevState) => ({
-          page: prevState.page + 1,
-        }),
-        this.handlePageClick
-      );
-    } else {
-      this.setState({
-        pageLoadError: "Nie ma więcej postów.",
-      });
+  _renderSubComp() {
+    switch (this.state.render) {
+      case "OgloszeniaAktualnosci":
+        return <OgloszeniaAktualnosci />;
+      case "OgloszeniaIntencje":
+        return (
+          <OgloszeniaIntencje
+            intentionlink={
+              this.state.isLoading
+                ? this.state.intentions.kielczyglow.map((item) => {
+                    return item.file;
+                  })
+                : ""
+            }
+          />
+        );
     }
+  }
+
+  onClick1 = (event) => {
+    this.handleClick("OgloszeniaAktualnosci");
+    (this.buttonPress1 = () => {
+      this.setState({
+        buttonPressed1: true,
+        buttonPressed2: false,
+        buttonPressed3: false,
+      });
+    })();
+  };
+  onClick2 = (event) => {
+    this.handleClick("OgloszeniaIntencje");
+    (this.buttonPress2 = () => {
+      this.setState({
+        buttonPressed1: false,
+        buttonPressed2: true,
+        buttonPressed3: false,
+      });
+    })();
   };
 
   render() {
-    let newsList = this.state.isLoading
-      ? this.state.posts.map((post) => {
-          return <NewsView post={post} />;
-        })
-      : "loading";
-
     return (
       <div className="Ogloszenia-comp">
         <Navbar />
         <center>
           <h1 className="h1-header"> Ogłoszenia </h1>
-        </center>
-        <div className="news-boxes">
-          <div className="col-md-10">{newsList}</div>
-        </div>
-        <center>
-          {this.state.pageLoadError ? (
-            <div
-              className={"contact-error"}
-              style={{ width: "80%", height: "80px", fontSize: "20px" }}
-            >
-              {" "}
-              {this.state.pageLoadError}{" "}
-            </div>
-          ) : (
-            <div />
-          )}
-          {this.state.totalPages > 1 ? (
+          <div className="inne-buttons">
             <button
-              className={"buttonWhite"}
-              style={{ margin: "15px 0" }}
-              onClick={this.loadMore}
+              onClick={this.onClick1}
+              className={this.state.buttonPressed1 ? "buttonWhite" : "button"}
             >
-              Więcej postów
+              Aktualnosci
             </button>
-          ) : (
-            <div />
-          )}
+            <button
+              onClick={this.onClick2}
+              className={this.state.buttonPressed2 ? "buttonWhite" : "button"}
+            >
+              Intencje
+            </button>
+
+            {this.state.render === "" ? (
+              <OgloszeniaAktualnosci />
+            ) : (
+              this._renderSubComp()
+            )}
+          </div>
         </center>
       </div>
     );

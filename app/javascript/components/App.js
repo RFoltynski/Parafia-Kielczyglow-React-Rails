@@ -31,14 +31,6 @@ class App extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  scrollTo() {
-    scroller.scrollTo("scroll-to-element", {
-      duration: 1000,
-      delay: 0,
-      smooth: "easeInQuad",
-    });
-  }
-
   render() {
     return (
       <div className="boxes-container">
