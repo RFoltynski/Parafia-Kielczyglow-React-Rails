@@ -8,6 +8,7 @@ import Kontakt from "./../components/Kontakt";
 import Parafia from "./../components/Parafia";
 import Inne from "./../components/Inne";
 import PageNotFound from "./../components/PageNotFound";
+import Cmentarz from "../components/Cmentarz";
 
 export default class Router extends React.Component {
   render() {
@@ -16,7 +17,7 @@ export default class Router extends React.Component {
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/Ogloszenia" component={Ogloszenia} />
-          <Route path="/intencje" />
+          <Route path="/cmentarz" component={Cmentarz} />
           <Route path="/kaplani" component={Kaplani} />
           <Route path="/parafia" component={Parafia} />
           <Route path="/kontakt" component={Kontakt} />

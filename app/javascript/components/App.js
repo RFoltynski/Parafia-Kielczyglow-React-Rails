@@ -50,32 +50,14 @@ class App extends React.Component {
             </div>
             <div className="row-item">
               <div className="box-overlay">
-                <a
-                  className="box-overlay-link"
-                  href={
-                    this.state.isLoading
-                      ? this.state.intentions.kielczyglow.map((item) => {
-                          return item.file;
-                        })
-                      : ""
-                  }
-                  target="_blank"
-                >
-                  <h2 className="box-overlay-h2">Intencje</h2>
-                  <img src={intencje} />
-                </a>
-                <a
-                  href={
-                    this.state.isLoading
-                      ? this.state.intentions.kielczyglow.map((item) => {
-                          return item.file;
-                        })
-                      : ""
-                  }
-                  target="_blank"
-                >
+                <Link className="box-overlay-link" to="/cmentarz">
+                  <h2 className="box-overlay-h2">Cmentarz</h2>
+                  <img src={parafia} />
+                </Link>
+
+                <Link to="/cmentarz">
                   <p className="box-overlay-p" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="row-item">

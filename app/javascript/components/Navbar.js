@@ -49,7 +49,7 @@ class Navbar extends Component {
   render() {
     let location = [
       "pl/Ogloszenia",
-      "pl/intencje",
+      "pl/cmentarz",
       "pl/parafia",
       "pl/kaplani",
       "pl/kontakt",
@@ -91,17 +91,14 @@ class Navbar extends Component {
               Ogłoszenia
             </a>
             <a
-              className={"navbar-link"}
-              href={
-                this.state.isLoading
-                  ? this.state.intentions.kielczyglow.map((item) => {
-                      return item.file;
-                    })
-                  : ""
+              className={
+                this.state.currentLocation.includes(location[0])
+                  ? "navbar-link-active"
+                  : "navbar-link"
               }
-              target="_blank"
+              href="/cmentarz"
             >
-              Intencje
+              Cmentarz
             </a>
             <a
               className={

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "pages#index"
   get 'kaplani', to: 'pages#index'
   get 'Ogloszenia', to: 'pages#index'
-  get 'intencje', to: 'pages#index'
+  get 'cmentarz', to: 'pages#index'
   get 'parafia', to: 'pages#index'
   get 'kontakt', to: 'pages#index'
   get 'inne', to: 'pages#index'
