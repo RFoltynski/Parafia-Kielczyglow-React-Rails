@@ -16,12 +16,59 @@ class OgloszeniaIntencje extends Component {
             <center>
               <div className="newsView-box">
                 {" "}
-                <h2>Intencje mszy swietych na tydzien:</h2>
+                <h2>Intencje mszy świętych</h2>
                 <div class="col-md-10">
                   <div className="newsView-box-img col-md-12 text-center">
                     <a href={this.state.intention} target="_blank">
-                      Download Intencje
+                      Pobierz intencje z tygodnia:
                     </a>
+                    <br />
+                    <div className="button-inside-box-container">
+                      <button className="button-inside-box">Skpiuj link</button>
+                      <button className="button-inside-box">
+                        Otworz w nowej karcie
+                      </button>
+                      <button className="button-inside-box">Pobierz</button>
+                    </div>
+                  </div>
+
+                  <div className="newsView-box-img col-md-12 text-center">
+                    <a href={this.state.intention} target="_blank">
+                      Pobierz intencje z tygodnia:{" "}
+                    </a>
+                    <br />
+                    <div className="button-inside-box-container">
+                      <button className="button-inside-box">Skpiuj link</button>
+                      <button className="button-inside-box">
+                        Otworz w nowej karcie
+                      </button>
+                      <button className="button-inside-box">Pobierz</button>
+                    </div>
+                  </div>
+
+                  <div className="newsView-box-img col-md-12 text-center">
+                    <a href={this.state.intention} target="_blank">
+                      Pobierz intencje z tygodnia:{" "}
+                    </a>
+                    <br />
+                    <button className="button-inside-box">Skpiuj link</button>
+                    <button className="button-inside-box">
+                      Otworz w nowej karcie
+                    </button>
+                    <button className="button-inside-box">Pobierz</button>
+                  </div>
+                  <div className="newsView-box-img col-md-12 text-center">
+                    <a href={this.state.intention} target="_blank">
+                      Pobierz intencje z tygodnia:{" "}
+                    </a>
+                    <br />
+                    <div className="newsView-box-img col-md-12 text-center">
+                      <button className="button-inside-box">Skpiuj link</button>
+                      <button className="button-inside-box">
+                        Otworz w nowej karcie
+                      </button>
+                      <button className="button-inside-box">Pobierz</button>
+                    </div>
                   </div>
                 </div>
               </div>
