@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import axios from "axios";
 import Ogloszenia from "./img/kafelki/Ogloszenia.JPG";
-import intencje from "./img/kafelki/intencje.JPG";
+import cmentarz from "./img/kafelki/cmentarz.JPG";
 import parafia from "./img/kafelki/parafia.JPG";
 import kaplani from "./img/kafelki/kaplani.JPG";
 import kontakt from "./img/kafelki/kontakt.JPG";
@@ -52,7 +52,7 @@ class App extends React.Component {
               <div className="box-overlay">
                 <Link className="box-overlay-link" to="/cmentarz">
                   <h2 className="box-overlay-h2">Cmentarz</h2>
-                  <img src={parafia} />
+                  <img src={cmentarz} />
                 </Link>
 
                 <Link to="/cmentarz">
