@@ -5,7 +5,7 @@ import HistoriaParafi from "./parafia/HistoriaParafi.jsx";
 import OPatronie from "./parafia/OPatronie.jsx";
 import ParafiaObecnie from "./parafia/ParafiaObecnie";
 import Miejsca from "./parafia/Miejsca.jsx";
-import Cmentarz from "./parafia/Cmentarz.jsx";
+import WspolnotyParafialne from "./parafia/WspolnotyParafialne.jsx";
 
 class Parafia extends React.Component {
   constructor() {
@@ -16,7 +16,7 @@ class Parafia extends React.Component {
       buttonPressed1: false,
       buttonPressed2: false,
       buttonPressed3: false,
-      buttonPressed4: false
+      buttonPressed4: false,
     };
   }
 
@@ -26,7 +26,7 @@ class Parafia extends React.Component {
 
   handleClick = (compName, e) => {
     this.setState({
-      render: compName
+      render: compName,
     });
   };
 
@@ -40,12 +40,12 @@ class Parafia extends React.Component {
         return <HistoriaParafi />;
       case "kosciolFiliarny":
         return <Miejsca />;
-      case "cmentarz":
-        return <Cmentarz />;
+      case "wspolnotyParafialne":
+        return <WspolnotyParafialne />;
     }
   }
 
-  onClick = event => {
+  onClick = (event) => {
     this.handleClick("parafiaObecnie");
     (this.buttonPress = () => {
       this.setState({
@@ -53,11 +53,11 @@ class Parafia extends React.Component {
         buttonPressed1: false,
         buttonPressed2: false,
         buttonPressed3: false,
-        buttonPressed4: false
+        buttonPressed4: false,
       });
     })();
   };
-  onClick1 = event => {
+  onClick1 = (event) => {
     this.handleClick("oPatronie");
     (this.buttonPress1 = () => {
       this.setState({
@@ -65,11 +65,11 @@ class Parafia extends React.Component {
         buttonPressed1: true,
         buttonPressed2: false,
         buttonPressed3: false,
-        buttonPressed4: false
+        buttonPressed4: false,
       });
     })();
   };
-  onClick2 = event => {
+  onClick2 = (event) => {
     this.handleClick("historiaParafi");
     (this.buttonPress2 = () => {
       this.setState({
@@ -77,11 +77,11 @@ class Parafia extends React.Component {
         buttonPressed1: false,
         buttonPressed2: true,
         buttonPressed3: false,
-        buttonPressed4: false
+        buttonPressed4: false,
       });
     })();
   };
-  onClick3 = event => {
+  onClick3 = (event) => {
     this.handleClick("kosciolFiliarny");
     (this.buttonPress3 = () => {
       this.setState({
@@ -89,19 +89,19 @@ class Parafia extends React.Component {
         buttonPressed1: false,
         buttonPressed2: false,
         buttonPressed3: true,
-        buttonPressed4: false
+        buttonPressed4: false,
       });
     })();
   };
-  onClick4 = event => {
-    this.handleClick("cmentarz");
+  onClick4 = (event) => {
+    this.handleClick("wspolnotyParafialne");
     (this.buttonPress4 = () => {
       this.setState({
         buttonPressed: false,
         buttonPressed1: false,
         buttonPressed2: false,
         buttonPressed3: false,
-        buttonPressed4: true
+        buttonPressed4: true,
       });
     })();
   };
@@ -142,7 +142,7 @@ class Parafia extends React.Component {
                 onClick={this.onClick4}
                 className={this.state.buttonPressed4 ? "buttonWhite" : "button"}
               >
-                Cmentarz
+                Wspólnoty Parafialne
               </button>
               {this.state.render === "" ? (
                 <ParafiaObecnie />
