@@ -15,7 +15,7 @@ class Kontakt extends React.Component {
       emailError: "",
       messageError: "",
       messageSand: "",
-      recpatureRespons: false
+      recpatureRespons: false,
     };
   }
 
@@ -23,10 +23,10 @@ class Kontakt extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  verifyRecapture = response => {
+  verifyRecapture = (response) => {
     if (response) {
       this.setState({
-        recpatureRespons: true
+        recpatureRespons: true,
       });
     }
   };
@@ -38,34 +38,34 @@ class Kontakt extends React.Component {
   validation = () => {
     if (!this.state.name) {
       this.setState({
-        nameError: "To pole nie może być puste"
+        nameError: "To pole nie może być puste",
       });
     } else {
       this.setState({
-        nameError: ""
+        nameError: "",
       });
     }
     if (!this.state.email) {
       this.setState({
-        emailError: "To pole nie może być puste"
+        emailError: "To pole nie może być puste",
       });
     } else {
       this.setState({
-        emailError: ""
+        emailError: "",
       });
     }
     if (!this.state.message) {
       this.setState({
-        messageError: "To pole nie może być puste"
+        messageError: "To pole nie może być puste",
       });
     }
     if (!this.state.recpatureRespons) {
       this.setState({
-        recaptureError: "Potwierdź, że nie jesteś robotem"
+        recaptureError: "Potwierdź, że nie jesteś robotem",
       });
     } else {
       this.setState({
-        recaptureError: ""
+        recaptureError: "",
       });
     }
 
@@ -76,7 +76,7 @@ class Kontakt extends React.Component {
     return true;
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     let isValid = this.validation();
 
     if (!isValid) {
@@ -85,7 +85,7 @@ class Kontakt extends React.Component {
       const message = {
         name: this.state.name,
         email: this.state.email,
-        message: this.state.message
+        message: this.state.message,
       };
 
       event.preventDefault();
@@ -93,10 +93,10 @@ class Kontakt extends React.Component {
         .post("/contacts", message, {
           headers: {
             "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]')
-              .content
-          }
+              .content,
+          },
         })
-        .then(response => {
+        .then((response) => {
           console.log(response);
           console.log(response.data);
         });
@@ -109,14 +109,14 @@ class Kontakt extends React.Component {
         emailError: "",
         messageError: "",
         messageSand: "Twoja wiadomość została wysłana.",
-        recaptureError: ""
+        recaptureError: "",
       });
     }
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -130,24 +130,34 @@ class Kontakt extends React.Component {
 
             <div className="kontakt-row">
               <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
-                {props => (
+                {(props) => (
                   <div style={props}>
                     <div className="buttons-box">
                       <h2>Dane Kontaktowe</h2>
                       <div className="offset-md-1 col-md-10 contact-form ">
                         <h4>Adres plebanii:</h4>
-                        <p> 98-358 Kiełczygłów, ul. Ks. Józefa Jansona 14</p>
-                        <h4>Nr telefonu do plebanii:</h4>
-                        <p> 43 842-50-97</p>
-                        <h4>Adres Email:</h4>
-                        <p> Parafia-Kielczyglow@gmail.com </p>
+                        <p>
+                          {" "}
+                          Parafia św Antoniego Padewskiego w Kiełczygłowie ul ks
+                          Józefa Jansona 14 98-358 Kiełczygłów
+                        </p>
+                        <p>Tel: 43 84 25 097</p>
+                        <p>8:30-10:00 w dni powszednie</p>
+                        <p>
+                          W sprawach pilnych takich jak pogrzeb czy wizyta u
+                          chorego, uprzejmie prosimy o kontakt telefoniczny.
+                        </p>{" "}
+                        <p>ks Proboszcz Bogdan Ignasiak 506 255 456</p>
+                        <p>ks Remigiusz Lech 695 244 370</p>
+                        <p>grabarz: Sylwester Janus 502 542 630</p>
+                        <p>email: kancelaria@parafiakielczyglow.pl</p>
                       </div>
                     </div>
                     <div className="buttons-box">
                       <h2>Formularz kontaktowy</h2>
                       <form
                         className="offset-md-1 col-md-10 contact-form"
-                        onSubmit={e => this.handleSubmit(e)}
+                        onSubmit={(e) => this.handleSubmit(e)}
                       >
                         <center>
                           <p>Wyślij e-mail bezpośrednio ze strony.</p>
