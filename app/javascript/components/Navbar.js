@@ -51,7 +51,7 @@ class Navbar extends Component {
       "pl/Ogloszenia",
       "pl/cmentarz",
       "pl/parafia",
-      "pl/kaplani",
+      "pl/Duchowienstwo",
       "pl/kontakt",
       "pl/inne",
     ];
@@ -117,7 +117,7 @@ class Navbar extends Component {
                   ? "navbar-link-active"
                   : "navbar-link"
               }
-              href="/kaplani"
+              href="/Duchowienstwo"
             >
               Kapłani
             </a>
