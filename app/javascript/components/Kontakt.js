@@ -136,13 +136,12 @@ class Kontakt extends React.Component {
                       <h2>Dane Kontaktowe</h2>
                       <div className="offset-md-1 col-md-10 contact-form ">
                         <h4>Adres plebanii:</h4>
-                        <p>
-                          {" "}
-                          Parafia św Antoniego Padewskiego w Kiełczygłowie ul ks
-                          Józefa Jansona 14 98-358 Kiełczygłów
-                        </p>
+                        <p>Parafia św Antoniego Padewskiego w Kiełczygłowie</p>
+                        <p>ul ks Józefa Jansona 14</p>
+                        <p>98-358 Kiełczygłów</p>
+                        <h4>Dane kontaktowe:</h4>
                         <p>Tel: 43 84 25 097</p>
-                        <p>8:30-10:00 w dni powszednie</p>
+                        <p>8:30-10:00 (w dni powszednie)</p>
                         <p>
                           W sprawach pilnych takich jak pogrzeb czy wizyta u
                           chorego, uprzejmie prosimy o kontakt telefoniczny.
