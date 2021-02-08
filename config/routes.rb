@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :intentions, only: [:index, :show, :edit, :update]
   resources :contacts, only: [:create]
   root "pages#index"
-  get 'kaplani', to: 'pages#index'
+  get 'Duchowienstwo', to: 'pages#index'
   get 'Ogloszenia', to: 'pages#index'
   get 'cmentarz', to: 'pages#index'
   get 'parafia', to: 'pages#index'

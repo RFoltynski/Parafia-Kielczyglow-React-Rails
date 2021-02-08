@@ -6,7 +6,7 @@ function Wikary() {
   const props = useSpring({
     to: { opacity: 1, width: "100%" },
     from: { opacity: 0 },
-    config: { duration: 500 }
+    config: { duration: 500 },
   });
 
   return (

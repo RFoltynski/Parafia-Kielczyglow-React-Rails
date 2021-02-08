@@ -5,7 +5,7 @@ import axios from "axios";
 import Ogloszenia from "./img/kafelki/Ogloszenia.JPG";
 import cmentarz from "./img/kafelki/cmentarz.JPG";
 import parafia from "./img/kafelki/parafia.JPG";
-import kaplani from "./img/kafelki/kaplani.JPG";
+import Duchowienstwo from "./img/kafelki/Duchowienstwo.JPG";
 import kontakt from "./img/kafelki/kontakt.JPG";
 import inne from "./img/kafelki/inne.JPG";
 
@@ -76,11 +76,11 @@ class App extends React.Component {
           <div className="boxes-row">
             <div className="row-item">
               <div className="box-overlay">
-                <Link className="box-overlay-link" to="/kaplani">
-                  <h2 className="box-overlay-h2">Kapłani</h2>
-                  <img src={kaplani} />
+                <Link className="box-overlay-link" to="/Duchowienstwo">
+                  <h2 className="box-overlay-h2">Duchowieństwo</h2>
+                  <img src={Duchowienstwo} />
                 </Link>
-                <Link to="/kaplani">
+                <Link to="/Duchowienstwo">
                   <p className="box-overlay-p" />
                 </Link>
               </div>

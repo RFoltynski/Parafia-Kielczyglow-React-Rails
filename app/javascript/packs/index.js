@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from "./../components/App";
 import Ogloszenia from "./../components/Ogloszenia";
-import Kaplani from "./../components/Kaplani";
+import Duchowienstwo from "./../components/Duchowienstwo";
 import Kontakt from "./../components/Kontakt";
 import Parafia from "./../components/Parafia";
 import Inne from "./../components/Inne";
@@ -18,7 +18,7 @@ export default class Router extends React.Component {
           <Route exact path="/" component={App} />
           <Route path="/Ogloszenia" component={Ogloszenia} />
           <Route path="/cmentarz" component={Cmentarz} />
-          <Route path="/kaplani" component={Kaplani} />
+          <Route path="/Duchowienstwo" component={Duchowienstwo} />
           <Route path="/parafia" component={Parafia} />
           <Route path="/kontakt" component={Kontakt} />
           <Route path="/inne" component={Inne} />

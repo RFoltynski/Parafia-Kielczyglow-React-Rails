@@ -1,17 +1,17 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Proboszcz from "./kaplani/proboszcz.jsx";
-import Proboszczowie from "./kaplani/proboszczowie";
-import Wikary from "./kaplani/wikary.jsx";
+import Proboszcz from "./Duchowienstwo/proboszcz.jsx";
+import Proboszczowie from "./Duchowienstwo/proboszczowie";
+import Wikary from "./Duchowienstwo/wikary.jsx";
 
-class Kaplani extends React.Component {
+class Duchowienstwo extends React.Component {
   constructor() {
     super();
     this.state = {
       render: "",
       buttonPressed: true,
       buttonPressed1: false,
-      buttonPressed2: false
+      buttonPressed2: false,
     };
   }
 
@@ -21,7 +21,7 @@ class Kaplani extends React.Component {
 
   handleClick = (compName, e) => {
     this.setState({
-      render: compName
+      render: compName,
     });
   };
 
@@ -36,44 +36,44 @@ class Kaplani extends React.Component {
     }
   }
 
-  onClick = event => {
+  onClick = (event) => {
     this.handleClick("proboszcz");
     (this.buttonPress = () => {
       this.setState({
         buttonPressed: true,
         buttonPressed1: false,
-        buttonPressed2: false
+        buttonPressed2: false,
       });
     })();
   };
-  onClick1 = event => {
+  onClick1 = (event) => {
     this.handleClick("wikary");
     (this.buttonPress1 = () => {
       this.setState({
         buttonPressed: false,
         buttonPressed1: true,
-        buttonPressed2: false
+        buttonPressed2: false,
       });
     })();
   };
-  onClick2 = event => {
+  onClick2 = (event) => {
     this.handleClick("proboszczowie");
     (this.buttonPress2 = () => {
       this.setState({
         buttonPressed: false,
         buttonPressed1: false,
-        buttonPressed2: true
+        buttonPressed2: true,
       });
     })();
   };
 
   render() {
     return (
-      <div className="kaplani">
+      <div className="Duchowienstwo">
         <div className="overlay">
           <Navbar />
           <center>
-            <h1 className="h1-header"> Kapłani </h1>
+            <h1 className="h1-header"> Duchowieństwo </h1>
             <div className="inne-buttons">
               <button
                 onClick={this.onClick}
@@ -91,7 +91,7 @@ class Kaplani extends React.Component {
                 onClick={this.onClick2}
                 className={this.state.buttonPressed2 ? "buttonWhite" : "button"}
               >
-                POPRZEDNI PROBOSZCZOWIE
+                Poprzedni Proboszczowie
               </button>
 
               {this.state.render === "" ? <Proboszcz /> : this._renderSubComp()}
@@ -103,4 +103,4 @@ class Kaplani extends React.Component {
   }
 }
 
-export default Kaplani;
+export default Duchowienstwo;

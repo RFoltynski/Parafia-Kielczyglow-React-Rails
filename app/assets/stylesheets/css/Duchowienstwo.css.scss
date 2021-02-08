@@ -1,27 +1,27 @@
 @import "../variables";
 
-.kaplani {
-  background: url(asset-path("kaplani_background.JPG")) center top / cover
-    no-repeat fixed;
+.Duchowienstwo {
+  background: url(asset-path("Duchowienstwo_background.JPG")) center top / cover
+    fixed;
   width: 100%;
   min-height: 100vh;
   height: 100%;
 }
 
-.kaplani-row {
+.Duchowienstwo-row {
   height: 100%;
   margin: 0;
 }
 
-.kaplani-img {
+.Duchowienstwo-img {
   min-height: 300px;
 }
 
-.kaplani-box-text {
+.Duchowienstwo-box-text {
   min-height: 300px;
 }
 
-.kaplani-text {
+.Duchowienstwo-text {
   color: $main-color;
 }
 
@@ -54,15 +54,15 @@
 }
 
 .ob-proboszczowie-text {
+  text-align: left;
   width: 80%;
 }
 @media screen and (max-width: 605px) {
   .ob-proboszczowie-overlay {
     display: flex;
     flex-direction: column;
-    
   }
-  .kaplani {
+  .Duchowienstwo {
     background: none;
     background-color: black;
   }
