@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Proboszcz from "./Duchowienstwo/proboszcz.jsx";
 import Proboszczowie from "./Duchowienstwo/proboszczowie";
 import Wikary from "./Duchowienstwo/wikary.jsx";
+import Powolania from "./Duchowienstwo/proboszcz.jsx";
 
 class Duchowienstwo extends React.Component {
   constructor() {
@@ -12,6 +13,7 @@ class Duchowienstwo extends React.Component {
       buttonPressed: true,
       buttonPressed1: false,
       buttonPressed2: false,
+      buttonPressed3: false,
     };
   }
 
@@ -33,6 +35,8 @@ class Duchowienstwo extends React.Component {
         return <Wikary />;
       case "proboszczowie":
         return <Proboszczowie />;
+      case "powolania":
+        return <Powolania />;
     }
   }
 
@@ -43,6 +47,7 @@ class Duchowienstwo extends React.Component {
         buttonPressed: true,
         buttonPressed1: false,
         buttonPressed2: false,
+        buttonPressed3: false,
       });
     })();
   };
@@ -53,6 +58,7 @@ class Duchowienstwo extends React.Component {
         buttonPressed: false,
         buttonPressed1: true,
         buttonPressed2: false,
+        buttonPressed3: false,
       });
     })();
   };
@@ -63,6 +69,18 @@ class Duchowienstwo extends React.Component {
         buttonPressed: false,
         buttonPressed1: false,
         buttonPressed2: true,
+        buttonPressed3: false,
+      });
+    })();
+  };
+  onClick3 = (event) => {
+    this.handleClick("powolania");
+    (this.buttonPress3 = () => {
+      this.setState({
+        buttonPressed: false,
+        buttonPressed1: false,
+        buttonPressed2: false,
+        buttonPressed3: true,
       });
     })();
   };
@@ -92,6 +110,12 @@ class Duchowienstwo extends React.Component {
                 className={this.state.buttonPressed2 ? "buttonWhite" : "button"}
               >
                 Poprzedni Proboszczowie
+              </button>
+              <button
+                onClick={this.onClick3}
+                className={this.state.buttonPressed3 ? "buttonWhite" : "button"}
+              >
+                Powolania w Parafii
               </button>
 
               {this.state.render === "" ? <Proboszcz /> : this._renderSubComp()}
