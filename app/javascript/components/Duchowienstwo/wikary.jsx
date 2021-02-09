@@ -1,6 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import proboszcz from "./../img/ksieza/wikariusz.jpg";
+// import proboszcz from "./../img/ksieza/wikariusz.jpg";
 
 function Wikary() {
   const props = useSpring({
@@ -14,31 +14,28 @@ function Wikary() {
       <animated.div style={props}>
         <div className="buttons-box">
           <h2>Obecny Wikariusz</h2>
-          <h3 className="text-center h3-header">Ks. Łukasz Mozler</h3>
+          <h3 className="text-center h3-header">Ks. Remigiusz Michał Lech</h3>
           <div className="ob-proboszczowie-overlay">
-            <img src={proboszcz} className="ob-proboszczowie-img " />
+            <img
+              className="ob-proboszczowie-img "
+              alt="ks Remigiusz Michal Lech"
+            />
             <p className="ob-proboszczowie-text">
               {" "}
-              <span className={"bold-orange-word"}>Urodzony:</span> <br /> 26
-              października 1984 roku w Rudzie Śląskiej Goduli w rodzinie
-              górniczej. <br />
-              <span className={"bold-orange-word"}>Edukacja:</span> <br />
-              Po ukończeniu szkoły podstawowej w 1999 rok wstąpił do Niższego
-              Seminarium Duchownego Archidiecezji Częstochowskiej, które
-              ukończył egzaminem maturalnym w 2002 roku. <br />
-              Po ukończeniu tej szkoły, rozpocząl studia
-              teologiczno-filozoficzne w Wyższym Seminarium Duchownym
-              Archidiecezji Częstochowskiej, które ukończył w 2010 roku
-              pomyślnie zdanym egzaminem magisterskim z zakresu Historii
-              Kościoła.
-              <br /> <span className={"bold-orange-word"}>Święcenia:</span>{" "}
+              <span className={"bold-orange-word"}>Urodzony:</span> <br />{" "}
+              Urodził się w Myszkowie 15 maja 1993r.
+              <br /> <span className={"bold-orange-word"}>Edukacja:</span>{" "}
               <br />
-              Wyświęcony na kapłana przez Arcybiskupa Metroplitę Stanisława
-              Nowaka 22 maja 2010 roku w Archikatedrze w Częstochowie. <br />{" "}
+              Szkołę podstawową i gimnazjum ukończył w Myszkowie, a Liceum
+              Ogólnokształcące w Koziegłowach. <br />W 2012r. wstąpił do
+              Wyższego Seminarium Duchownego w Częstochowie.
+              <br /> <span className={"bold-orange-word"}>Święcenia:</span>{" "}
+              <br /> Świecenia kapłańskie otrzymał 30 maja 2020r. z rąk J.E. ks.
+              Arcybiskupa Wacława Depo. Dekretem biskupa z 1 lipca 2020r.
+              rozpoczął posługę w Parafii Św. Antoniego w Kiełczygłowie.
+              <br />
               <span className={"bold-orange-word"}>Duszpasterstwo:</span> <br />
-              Pracował jako prefekt w Niższym Seminarium Duchownym : 2010-2012.{" "}
-              <br /> Wikariusz w rodzinnej parafii bp. Stefana Bareły w Kodrębie
-              2012-2016. <br /> Wikariusz w Kiełczygłowie: 2016 do teraz.{" "}
+              <br /> Wikariusz w Kiełczygłowie: 2016 do teraz.{" "}
             </p>
           </div>
         </div>
