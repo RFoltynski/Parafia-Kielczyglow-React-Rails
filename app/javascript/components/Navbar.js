@@ -92,7 +92,7 @@ class Navbar extends Component {
             </a>
             <a
               className={
-                this.state.currentLocation.includes(location[0])
+                this.state.currentLocation.includes(location[1])
                   ? "navbar-link-active"
                   : "navbar-link"
               }
