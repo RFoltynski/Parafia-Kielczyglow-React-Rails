@@ -140,15 +140,15 @@ class Kontakt extends React.Component {
                         <p>ul ks Józefa Jansona 14</p>
                         <p>98-358 Kiełczygłów</p>
                         <h4>Dane kontaktowe:</h4>
-                        <p>Tel: 43 84 25 097</p>
+                        <p>Tel: 000000000000</p>
                         <p>8:30-10:00 (w dni powszednie)</p>
                         <p>
                           W sprawach pilnych takich jak pogrzeb czy wizyta u
                           chorego, uprzejmie prosimy o kontakt telefoniczny.
                         </p>{" "}
-                        <p>ks Proboszcz Bogdan Ignasiak 506 255 456</p>
-                        <p>ks Remigiusz Lech 695 244 370</p>
-                        <p>grabarz: Sylwester Janus 502 542 630</p>
+                        <p>ks Proboszcz Bogdan Ignasiak 000 000 000</p>
+                        <p>ks Remigiusz Lech 000 000 000</p>
+                        <p>grabarz: Sylwester Janus 000 000 000</p>
                         <p>email: kancelaria@parafiakielczyglow.pl</p>
                       </div>
                     </div>
