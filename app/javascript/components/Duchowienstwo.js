@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Proboszcz from "./Duchowienstwo/proboszcz.jsx";
 import Proboszczowie from "./Duchowienstwo/proboszczowie";
 import Wikary from "./Duchowienstwo/wikary.jsx";
-import Powolania from "./Duchowienstwo/proboszcz.jsx";
+import Powolania from "./Duchowienstwo/powolania.jsx";
 
 class Duchowienstwo extends React.Component {
   constructor() {
