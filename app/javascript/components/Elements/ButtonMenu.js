@@ -1,73 +1,47 @@
 import React from "react";
 
 class Parafia extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       render: "",
-      numberOfButtons: this.props.numberOfButtons,
-      buttonPressed1: true,
-      buttonPressed2: false,
     };
   }
   componentWillMount() {
     window.scrollTo(0, 0);
   }
 
-  handleClick = (compName, e) => {
-    this.setState({
-      render: compName,
-    });
-  };
-
   _renderSubComp() {
     switch (this.state.render) {
       case "ksiazki":
-        return <Ksiazki />;
+        return this.props.ksiazki[0][1];
       case "miejscawsieci":
-        return <MiejscaWSieci />;
+        return this.props.ksiazki[1][1];
     }
   }
 
-  onClick1 = (event) => {
-    this.handleClick("ksiazki");
-    (this.buttonPress1 = () => {
-      this.setState({
-        buttonPressed1: true,
-        buttonPressed2: false,
-        buttonPressed3: false,
-      });
-    })();
-  };
-  onClick2 = (event) => {
-    this.handleClick("miejscawsieci");
-    (this.buttonPress2 = () => {
-      this.setState({
-        buttonPressed1: false,
-        buttonPressed2: true,
-        buttonPressed3: false,
-      });
-    })();
+  onClick = (event) => {
+    let compName = event.target.name || "ksiazki";
+
+    this.setState({
+      render: compName,
+    });
   };
 
   render() {
     return (
       <div className="inne">
         <div className="inne-buttons">
-          <button
-            onClick={this.onClick1}
-            className={this.state.buttonPressed1 ? "buttonWhite" : "button"}
-          >
-            Książki
-          </button>
-          <button
-            onClick={this.onClick2}
-            className={this.state.buttonPressed2 ? "buttonWhite" : "button"}
-          >
-            Stony internetowe
-          </button>
-
-          {this.state.render === "" ? <Ksiazki /> : this._renderSubComp()}
+          {this.props.ksiazki.map((element) => {
+            return (
+              <button name={element[0]} onClick={this.onClick}>
+                {element[0]}
+              </button>
+            );
+          })}
+          {this.state.render === ""
+            ? this.props.ksiazki[0]
+            : this._renderSubComp()}
         </div>
       </div>
     );
