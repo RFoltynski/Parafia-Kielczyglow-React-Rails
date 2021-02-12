@@ -14,7 +14,10 @@ class Parafia extends React.Component {
     };
   }
 
-  ksiazki = [["ksiazki", <Ksiazki />], ["miejscawsieci", <MiejscaWSieci />]];
+  componentsList = [
+    ["ksiazki", <Ksiazki />],
+    ["miejscawsieci", <MiejscaWSieci />],
+  ];
 
   render() {
     return (
@@ -23,7 +26,10 @@ class Parafia extends React.Component {
           <Navbar />
           <center>
             <h1 className="h1-header"> Inne </h1>
-            <ButtonMenu ksiazki={this.ksiazki} />
+            <ButtonMenu
+              firstToDisplay={this.componentsList[0][0]}
+              componentsList={this.componentsList}
+            />
           </center>
         </div>
       </div>
