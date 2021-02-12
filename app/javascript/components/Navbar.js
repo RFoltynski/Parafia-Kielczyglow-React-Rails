@@ -3,7 +3,7 @@ import Button from "./img/menu";
 import axios from "axios";
 
 class Navbar extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       currentLocation: window.location.href,

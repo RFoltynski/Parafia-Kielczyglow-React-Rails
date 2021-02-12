@@ -1,0 +1,20 @@
+@import "../variables";
+
+@media (max-width: 764px) {
+  .submenu {
+    background: none;
+    background-color: black;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+}
+
+@media (min-width: 765px) {
+  .submenu {
+    background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+}
