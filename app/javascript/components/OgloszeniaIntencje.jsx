@@ -4,7 +4,22 @@ import axios from "axios";
 class OgloszeniaIntencje extends Component {
   constructor(props) {
     super(props);
-    this.state = { intention: this.props.intentionlink };
+    this.state = {
+      intention: [],
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
+      .then((res) => {
+        this.setState({
+          intentions: res.data.data,
+          isLoading: true,
+        });
+      });
+
+    window.scrollTo(0, 0);
   }
 
   render() {

@@ -3,6 +3,7 @@
 
 .newsView-box-text-show {
   @include flexCenter(column);
+  color: black;
 }
 
 .newsView-box {
