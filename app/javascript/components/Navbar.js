@@ -119,7 +119,7 @@ class Navbar extends Component {
               }
               href="/Duchowienstwo"
             >
-              Kapłani
+              Duchowieństwo
             </a>
             <a
               className={

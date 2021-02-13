@@ -4,6 +4,7 @@ import Proboszcz from "./Duchowienstwo/proboszcz.jsx";
 import Proboszczowie from "./Duchowienstwo/proboszczowie";
 import Wikary from "./Duchowienstwo/wikary.jsx";
 import Powolania from "./Duchowienstwo/powolania.jsx";
+import ButtonMenu from "./Elements/ButtonMenu.js";
 
 const Duchowienstwo = () => {
   let componentsList = [
