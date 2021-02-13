@@ -4,21 +4,21 @@ class Parafia extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      render: this.props.componentsList[0][0],
+      render: "",
     };
   }
 
-  _renderSubComp() {
-    switch (this.state.render) {
-      case "ksiazki":
-        return this.props.componentsList[0][1];
-      case "miejscawsieci":
-        return this.props.componentsList[1][1];
-    }
-  }
+  _renderSubComp = () => {
+    let comp = this.props.componentsList.filter((element) => {
+      if (this.state.render == element[0]) {
+        return element[1];
+      }
+    });
+    return comp;
+  };
 
   onClick = (event) => {
-    let compName = event.target.name || this.props.componentsList[0][1];
+    let compName = event.target.name;
     this.setState({
       render: compName,
     });
@@ -41,7 +41,7 @@ class Parafia extends React.Component {
           );
         })}
         {this.state.render == ""
-          ? this.props.firstToDisplay
+          ? this.props.componentsList[0][1]
           : this._renderSubComp()}
       </div>
     );
