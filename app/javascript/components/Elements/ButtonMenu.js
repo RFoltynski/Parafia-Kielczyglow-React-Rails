@@ -4,7 +4,7 @@ class Parafia extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      render: "",
+      render: this.props.componentsList[0][0],
     };
   }
 
@@ -27,9 +27,10 @@ class Parafia extends React.Component {
   render() {
     return (
       <div className="submenu">
-        {this.props.componentsList.map((element) => {
+        {this.props.componentsList.map((element, key) => {
           return (
             <button
+              key={key}
               name={element[0]}
               onClick={this.onClick}
               className={
@@ -40,9 +41,7 @@ class Parafia extends React.Component {
             </button>
           );
         })}
-        {this.state.render == ""
-          ? this.props.componentsList[0][1]
-          : this._renderSubComp()}
+        {this._renderSubComp()}
       </div>
     );
   }
