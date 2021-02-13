@@ -6,7 +6,7 @@ import OPatronie from "./parafia/OPatronie.jsx";
 import ParafiaObecnie from "./parafia/ParafiaObecnie";
 import Miejsca from "./parafia/Miejsca.jsx";
 import WspolnotyParafialne from "./parafia/WspolnotyParafialne.jsx";
-import ButtonMenu from "./Elements/ButtonMenu.js";
+import Submenu from "./Elements/Submenu.js";
 
 const Parafia = () => {
   let componentsList = [
@@ -23,7 +23,7 @@ const Parafia = () => {
         <Navbar />
         <center>
           <h1 className="h1-header"> Inne </h1>
-          <ButtonMenu componentsList={componentsList} />
+          <Submenu componentsList={componentsList} />
         </center>
       </div>
     </div>

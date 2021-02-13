@@ -1,6 +1,6 @@
 import React from "react";
 
-class Parafia extends React.Component {
+class Submenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,12 +9,11 @@ class Parafia extends React.Component {
   }
 
   _renderSubComp = () => {
-    let comp = this.props.componentsList.filter((element) => {
+    return this.props.componentsList.map((element) => {
       if (this.state.render == element[0]) {
         return element[1];
       }
     });
-    return comp;
   };
 
   onClick = (event) => {
@@ -46,4 +45,4 @@ class Parafia extends React.Component {
     );
   }
 }
-export default Parafia;
+export default Submenu;

@@ -4,7 +4,7 @@ import Proboszcz from "./Duchowienstwo/proboszcz.jsx";
 import Proboszczowie from "./Duchowienstwo/proboszczowie";
 import Wikary from "./Duchowienstwo/wikary.jsx";
 import Powolania from "./Duchowienstwo/powolania.jsx";
-import ButtonMenu from "./Elements/ButtonMenu.js";
+import Submenu from "./Elements/Submenu.js";
 
 const Duchowienstwo = () => {
   let componentsList = [
@@ -20,7 +20,7 @@ const Duchowienstwo = () => {
         <Navbar />
         <center>
           <h1 className="h1-header"> Duchowieństwo </h1>
-          <ButtonMenu componentsList={componentsList} />
+          <Submenu componentsList={componentsList} />
         </center>
       </div>
     </div>

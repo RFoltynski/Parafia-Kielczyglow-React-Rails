@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
-import ButtonMenu from "./Elements/ButtonMenu";
+import Submenu from "./Elements/Submenu";
 import CmentarzInfo from "./cmentarz/CmentarzInfo";
 import Kaplica from "./cmentarz/Kaplica";
 import Pogrzeby from "./cmentarz/Pogrzeby";
@@ -26,7 +26,7 @@ class Cmentarz extends Component {
         <center>
           <div className="cmentarz-buttons">
             <h1 className="h1-header"> Cmentarz </h1>
-            <ButtonMenu componentsList={this.componentsList} />
+            <Submenu componentsList={this.componentsList} />
           </div>
         </center>
       </div>
