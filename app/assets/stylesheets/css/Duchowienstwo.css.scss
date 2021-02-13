@@ -40,6 +40,9 @@
   border: 5px solid #220d0b;
   border-radius: 3px;
 }
+.proboszczowie-img-title {
+  color: black;
+}
 .ob-proboszczowie-overlay {
   display: flex;
   margin: 15px;
@@ -56,6 +59,7 @@
 .ob-proboszczowie-text {
   text-align: left;
   width: 80%;
+  color: black;
 }
 @media screen and (max-width: 605px) {
   .ob-proboszczowie-overlay {
