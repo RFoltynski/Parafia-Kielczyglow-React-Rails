@@ -10,11 +10,11 @@ import ButtonMenu from "./Elements/ButtonMenu.js";
 
 const Parafia = () => {
   let componentsList = [
-    ["OPatronie", <OPatronie />],
-    ["HistoriaParafi", <HistoriaParafi />],
+    ["O Patronie", <OPatronie />],
+    ["Historia Parafi", <HistoriaParafi />],
     ["Miejsca", <Miejsca />],
-    ["WspolnotyParafialne", <WspolnotyParafialne />],
-    ["ParafiaObecnie", <ParafiaObecnie />],
+    ["Wspólnoty Parafialne", <WspolnotyParafialne />],
+    ["Parafia Obecnie", <ParafiaObecnie />],
   ];
 
   return (

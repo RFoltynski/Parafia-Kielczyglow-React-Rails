@@ -6,8 +6,8 @@ import MiejscaWSieci from "./inne/MiejscaWSieci.jsx";
 
 const Inne = () => {
   let componentsList = [
-    ["ksiazki", <Ksiazki />],
-    ["miejscawsieci", <MiejscaWSieci />],
+    ["Ksiazki", <Ksiazki />],
+    ["Miejscawsieci", <MiejscaWSieci />],
   ];
 
   return (
