@@ -14,9 +14,9 @@ class Cmentarz extends Component {
   }
 
   componentsList = [
-    ["cmentarzInfo", <CmentarzInfo />],
-    ["kaplica", <Kaplica />],
-    ["pogrzeby", <Pogrzeby />],
+    ["Cmentarz", <CmentarzInfo />],
+    ["Kaplica", <Kaplica />],
+    ["Pogrzeby", <Pogrzeby />],
   ];
 
   render() {
