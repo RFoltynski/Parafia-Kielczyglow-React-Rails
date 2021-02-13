@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { animateScroll as scroll, scroller } from "react-scroll";
-import axios from "axios";
 import Ogloszenia from "./img/kafelki/Ogloszenia.JPG";
 import cmentarz from "./img/kafelki/cmentarz.JPG";
 import parafia from "./img/kafelki/parafia.JPG";
@@ -12,22 +10,10 @@ import inne from "./img/kafelki/inne.JPG";
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      intencions: [],
-      error: null,
-    };
+    this.state = {};
   }
 
   componentDidMount() {
-    axios
-      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
-      .then((res) => {
-        this.setState({
-          intentions: res.data.data,
-          isLoading: true,
-        });
-      });
-
     window.scrollTo(0, 0);
   }
 
