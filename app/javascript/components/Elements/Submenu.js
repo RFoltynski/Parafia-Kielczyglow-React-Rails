@@ -9,12 +9,11 @@ class Submenu extends React.Component {
   }
 
   _renderSubComp = () => {
-    let comp = this.props.componentsList.filter((element) => {
+    return this.props.componentsList.map((element) => {
       if (this.state.render == element[0]) {
         return element[1];
       }
     });
-    return comp;
   };
 
   onClick = (event) => {
