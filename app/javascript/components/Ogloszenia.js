@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import OgloszeniaIntencje from "./OgloszeniaIntencje";
 import OgloszeniaAktualnosci from "./OgloszeniaAktualnosci";
-import ButtonMenu from "./Elements/ButtonMenu";
+import Submenu from "./Elements/Submenu";
 
 const Ogloszenia = () => {
   let componentsList = [
@@ -15,7 +15,7 @@ const Ogloszenia = () => {
       <Navbar />
       <center>
         <h1 className="h1-header"> Ogłoszenia </h1>
-        <ButtonMenu componentsList={componentsList} />
+        <Submenu componentsList={componentsList} />
       </center>
     </div>
   );

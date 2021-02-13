@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import ButtonMenu from "./Elements/ButtonMenu";
+import Submenu from "./Elements/Submenu";
 import Ksiazki from "./inne/Ksiazki.jsx";
 import MiejscaWSieci from "./inne/MiejscaWSieci.jsx";
 
@@ -15,7 +15,7 @@ const Inne = () => {
       <Navbar />
       <center>
         <h1 className="h1-header"> Inne </h1>
-        <ButtonMenu componentsList={componentsList} />
+        <Submenu componentsList={componentsList} />
       </center>
     </div>
   );

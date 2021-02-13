@@ -1,6 +1,6 @@
 import React from "react";
 
-class Parafia extends React.Component {
+class Submenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,4 +46,4 @@ class Parafia extends React.Component {
     );
   }
 }
-export default Parafia;
+export default Submenu;
