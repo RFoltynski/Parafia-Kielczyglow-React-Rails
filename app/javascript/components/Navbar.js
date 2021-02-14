@@ -7,6 +7,8 @@ class Navbar extends Component {
     super();
     this.state = {
       currentLocation: window.location.href,
+      prevScrollpos: window.pageYOffset,
+      visible: true,
       dropMenu: false,
       intencions: [],
       isLoading: false,
@@ -22,7 +24,7 @@ class Navbar extends Component {
           isLoading: true,
         });
       });
-
+    window.addEventListener("scroll", this.handleScroll);
     window.scrollTo(0, 0);
   }
 
@@ -38,11 +40,24 @@ class Navbar extends Component {
     this.setState({ dropMenu: false });
   };
 
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible,
+    });
+  };
+
   componentWillMount() {
     document.body.addEventListener("click", this.hide);
   }
 
   componentWillUnmount() {
+    window.addEventListener("scroll", this.handleScroll);
     document.body.removeEventListener("click", this.hide);
   }
 
@@ -57,7 +72,7 @@ class Navbar extends Component {
     ];
     return (
       <div>
-        <div className="navbar-row">
+        <div className={this.state.visible ? "navbar-row" : "navbar--hidden"}>
           <div className="navbar-logo">
             {" "}
             <a className="navbar-logo-link" href="/">
