@@ -1,18 +1,5 @@
 @import "../variables";
 
-.Duchowienstwo {
-  background: url(asset-path("Duchowienstwo_background.JPG")) center top / cover
-    fixed;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-}
-
-.Duchowienstwo-row {
-  height: 100%;
-  margin: 0;
-}
-
 .Duchowienstwo-img {
   min-height: 300px;
 }
@@ -65,9 +52,5 @@
   .ob-proboszczowie-overlay {
     display: flex;
     flex-direction: column;
-  }
-  .Duchowienstwo {
-    background: none;
-    background-color: black;
   }
 }

@@ -18,14 +18,12 @@ const Parafia = () => {
   ];
 
   return (
-    <div className="parafia">
-      <div className="overlay">
-        <Navbar />
-        <center>
-          <h1 className="h1-header"> Inne </h1>
-          <Submenu componentsList={componentsList} />
-        </center>
-      </div>
+    <div className="subcategory subcategory_parafia__background">
+      <Navbar />
+      <center>
+        <h1 className="subcategory__header"> Parafia </h1>
+        <Submenu componentsList={componentsList} />
+      </center>
     </div>
   );
 };

@@ -11,10 +11,10 @@ const Inne = () => {
   ];
 
   return (
-    <div className="inne">
+    <div className="subcategory subcategory_inne__background">
       <Navbar />
       <center>
-        <h1 className="h1-header"> Inne </h1>
+        <h1 className="subcategory__header"> Inne </h1>
         <Submenu componentsList={componentsList} />
       </center>
     </div>
