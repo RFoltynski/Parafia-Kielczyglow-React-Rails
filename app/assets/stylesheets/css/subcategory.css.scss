@@ -15,13 +15,19 @@
 }
 @media (min-width: 765px) {
   .subcategory_cmentarz__background {
-    background: url(asset-path("cmentarz_background.JPG")) center / cover fixed;
+    background: url(asset-path("cmentarz_background.jpg")) center / cover fixed;
     min-height: 100vh;
     height: 100%;
     color: $main-color;
   }
   .subcategory_inne__background {
-    background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
+    background: url(asset-path("inne_beckground.jpg")) center / cover fixed;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+  .subcategory_parafia__background {
+    background: url(asset-path("parafia_background.jpg")) center / cover fixed;
     min-height: 100vh;
     height: 100%;
     color: $main-color;
