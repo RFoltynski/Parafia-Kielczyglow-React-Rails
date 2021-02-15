@@ -8,7 +8,6 @@
     height: 100%;
     color: $main-color;
   }
-
   .subcategory__header {
     padding-top: 50px;
   }
@@ -28,6 +27,13 @@
   }
   .subcategory_parafia__background {
     background: url(asset-path("parafia_background.jpg")) center / cover fixed;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+  .subcategory_duchowienstwo__background {
+    background: url(asset-path("duchowienstwo_background.jpg")) center / cover
+      fixed;
     min-height: 100vh;
     height: 100%;
     color: $main-color;

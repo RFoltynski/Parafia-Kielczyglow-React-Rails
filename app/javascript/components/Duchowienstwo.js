@@ -15,14 +15,12 @@ const Duchowienstwo = () => {
   ];
 
   return (
-    <div className="Duchowienstwo">
-      <div className="overlay">
-        <Navbar />
-        <center>
-          <h1 className="h1-header"> Duchowieństwo </h1>
-          <Submenu componentsList={componentsList} />
-        </center>
-      </div>
+    <div className="subcategory subcategory_duchowienstwo__background">
+      <Navbar />
+      <center>
+        <h1 className="subcategory__header"> Duchowieństwo </h1>
+        <Submenu componentsList={componentsList} />
+      </center>
     </div>
   );
 };
