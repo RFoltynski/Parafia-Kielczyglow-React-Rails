@@ -17,35 +17,36 @@
     background: url(asset-path("cmentarz_background.jpg")) center / cover fixed;
     min-height: 100vh;
     height: 100%;
-    color: $main-color;
   }
   .subcategory_inne__background {
     background: url(asset-path("inne_beckground.jpg")) center / cover fixed;
     min-height: 100vh;
     height: 100%;
-    color: $main-color;
   }
   .subcategory_parafia__background {
     background: url(asset-path("parafia_background.jpg")) center / cover fixed;
     min-height: 100vh;
     height: 100%;
-    color: $main-color;
   }
   .subcategory_duchowienstwo__background {
     background: url(asset-path("duchowienstwo_background.jpg")) center / cover
       fixed;
     min-height: 100vh;
     height: 100%;
-    color: $main-color;
   }
   .subcategory_ogloszenia__background {
     background: url(asset-path("ogloszenia_background.jpg")) center / cover
       fixed;
     min-height: 100vh;
     height: 100%;
-    color: $main-color;
+  }
+  .subcategory_kontakt__background {
+    background: url(asset-path("kontakt_background.jpg")) center / cover fixed;
+    min-height: 100vh;
+    height: 100%;
   }
   .subcategory__header {
+    color: $main-color;
     padding-top: 50px;
   }
 }
