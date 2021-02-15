@@ -21,13 +21,11 @@ class Cmentarz extends Component {
 
   render() {
     return (
-      <div className="cmentarz">
+      <div className="subcategory subcategory_cmentarz__background">
         <Navbar />
         <center>
-          <div className="cmentarz-buttons">
-            <h1 className="h1-header"> Cmentarz </h1>
-            <Submenu componentsList={this.componentsList} />
-          </div>
+          <h1 className="subcategory__header"> Cmentarz </h1>
+          <Submenu componentsList={this.componentsList} />
         </center>
       </div>
     );

@@ -1,26 +1,6 @@
 @import "../variables";
 
-@media (max-width: 764px) {
-  .inne-row {
-    flex-direction: column;
-  }
-  .inne {
-    background: none;
-    background-color: black;
-    min-height: 100vh;
-    height: 100%;
-    color: $main-color;
-  }
-}
-
 @media (min-width: 765px) {
-  .inne {
-    background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
-    min-height: 100vh;
-    height: 100%;
-    color: $main-color;
-  }
-
   .inne-h2 {
     margin-top: 15px;
     text-align: center;

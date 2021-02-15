@@ -1,0 +1,32 @@
+@import "../variables";
+
+@media (max-width: 764px) {
+  .subcategory {
+    background: none;
+    background-color: black;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+
+  .subcategory__header {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 765px) {
+  .subcategory_cmentarz__background {
+    background: url(asset-path("cmentarz_background.JPG")) center / cover fixed;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+  .subcategory_inne__background {
+    background: url(asset-path("inne_beckground.JPG")) center / cover fixed;
+    min-height: 100vh;
+    height: 100%;
+    color: $main-color;
+  }
+  .subcategory__header {
+    padding-top: 50px;
+  }
+}
