@@ -11,10 +11,10 @@ const Ogloszenia = () => {
   ];
 
   return (
-    <div className="Ogloszenia-comp">
+    <div className="subcategory subcategory_ogloszenia__background">
       <Navbar />
       <center>
-        <h1 className="h1-header"> Ogłoszenia </h1>
+        <h1 className="subcategory__header"> Ogłoszenia </h1>
         <Submenu componentsList={componentsList} />
       </center>
     </div>
