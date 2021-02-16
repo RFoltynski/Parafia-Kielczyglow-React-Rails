@@ -25,13 +25,13 @@ class HistoriaParafi extends React.Component {
   state = {
     showPost: false,
     galleryOpened: false,
-    numberOfPhoto: 0
+    numberOfPhoto: 0,
   };
 
-  toggleGallery = numberOfPhoto => {
+  toggleGallery = (numberOfPhoto) => {
     this.setState({
       galleryOpened: !this.state.galleryOpened,
-      numberOfPhoto: numberOfPhoto
+      numberOfPhoto: numberOfPhoto,
     });
   };
 
@@ -55,7 +55,7 @@ class HistoriaParafi extends React.Component {
     { photo: konsekracja2 },
     { photo: swieto },
     { photo: pamiatka },
-    { photo: gazeta }
+    { photo: gazeta },
   ];
 
   render() {
