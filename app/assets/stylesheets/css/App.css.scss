@@ -1,6 +1,13 @@
 @import "../variables";
 
 @media (max-width: 600px) {
+  .logo {
+    font-family: "Allura", cursive;
+    font-size: 52px;
+    color: white;
+    text-align: center;
+  }
+
   .boxes-container {
     display: flex;
     flex-direction: column;
@@ -11,16 +18,10 @@
     background-color: black;
     justify-content: space-around;
   }
+
   .boxes-rows {
     display: flex;
     flex-direction: row;
-  }
-
-  .logo {
-    font-family: "Allura", cursive;
-    font-size: 52px;
-    color: white;
-    text-align: center;
   }
 
   .boxes-row {
