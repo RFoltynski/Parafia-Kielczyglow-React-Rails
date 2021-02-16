@@ -15,9 +15,9 @@ function Ksiazki() {
     config: { duration: 500 },
   });
   return (
-    <div className="subcategory__view">
+    <div className="subcategory__container">
       <animated.div style={props}>
-        <div className="buttons-box">
+        <div className="subcategory__view">
           <h2 name="scroll-to-historia">Książki, które warto przeczytać</h2>
           <br />
 

@@ -5,15 +5,15 @@ function MiejscaWSieci() {
   const props = useSpring({
     to: { opacity: 1, width: "100%" },
     from: { opacity: 0 },
-    config: { duration: 500 }
+    config: { duration: 500 },
   });
   return (
-    <div className="inne-row">
+    <div className="subcategory__container">
       <animated.div style={props}>
-        <div className="buttons-box">
+        <div className="subcategory__view">
           <h2 name="scroll-to-historia">Mijsca w sieci</h2>
           <br />
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <div className="buttons-box-text col-md-12 text-center">
               {" "}
               <h3 className="h3-header">
@@ -28,7 +28,7 @@ function MiejscaWSieci() {
               Wiele ciekawych artykułów, na różne tematy.
             </div>
           </div>
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <div className="buttons-box-text col-md-12 text-center">
               <h3 className="h3-header">
                 <a href={"https://stacja7.pl/"} target="_blank">
@@ -38,7 +38,7 @@ function MiejscaWSieci() {
               Katolickie miejsce w sieci warte odwiedzenia.
             </div>
           </div>
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <div className="buttons-box-text col-md-12 text-center">
               <h3 className="h3-header">
                 <a href={"https://dominikanie.pl/"} target="_blank">
@@ -48,7 +48,7 @@ function MiejscaWSieci() {
               Słowo Boże w przystępnej formie.
             </div>
           </div>
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <div className="buttons-box-text col-md-12 text-center">
               <h3 className="h3-header">
                 <a href={"https://www.niedziela.pl/"} target="_blank">
