@@ -12,16 +12,16 @@ function Ksiazki() {
   const props = useSpring({
     to: { opacity: 1, width: "100%" },
     from: { opacity: 0 },
-    config: { duration: 500 }
+    config: { duration: 500 },
   });
   return (
-    <div className="inne-row">
+    <div className="subcategory__container">
       <animated.div style={props}>
-        <div className="buttons-box">
+        <div className="subcategory__view">
           <h2 name="scroll-to-historia">Książki, które warto przeczytać</h2>
           <br />
 
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <img className="buttons-img col-md-3" src={pismoswiete} />
             <div className="buttons-box-text col-md-7 text-center">
               <h3 className="h3-header">Pismo Święte</h3>
@@ -44,7 +44,7 @@ function Ksiazki() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <img className="buttons-img col-md-3" src={o} />
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header "> O naśladowaniu Chrystusa </h3>
@@ -71,7 +71,7 @@ function Ksiazki() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <img
               className="buttons-img buttons-img-miejsca col-md-3"
               src={dzikie}
@@ -108,7 +108,7 @@ function Ksiazki() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <img className="buttons-img col-md-3" src={urzekajaca} />
             <div className="buttons-box-text col-md-7 text-center">
               <h3 className="h3-header ">
@@ -138,7 +138,7 @@ function Ksiazki() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <img className="buttons-img col-md-3" src={listy} />
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header">Listy starego diabła do młodego</h3>
@@ -165,7 +165,7 @@ function Ksiazki() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <img className="buttons-img col-md-3" src={dzieci} />
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header">Dorosłe dzieci alkoholików</h3>
@@ -191,7 +191,7 @@ function Ksiazki() {
             </div>
           </div>
           <br />
-          <div className="parafia-row">
+          <div className="subcategory__view__row">
             <img className="buttons-img col-md-3" src={oskar} />
             <div className="buttons-box-text col-md-7  text-center">
               <h3 className="h3-header">Oskar i Pani Róża</h3>
