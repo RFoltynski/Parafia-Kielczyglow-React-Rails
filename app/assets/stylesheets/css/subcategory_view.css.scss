@@ -15,6 +15,7 @@
   }
 
   .subcategory__view {
+    height: 100%;
     max-width: 75%;
     min-width: 75%;
     background-color: $main-color;
@@ -25,6 +26,7 @@
   }
 
   .subcategory__view > h2 {
+    height: 100%;
     color: black;
     text-align: center;
     opacity: 0.9;
@@ -33,7 +35,6 @@
   }
 
   .subcategory__view__row {
-    min-height: 200px;
     height: 100%;
     margin: 0;
     display: flex;
@@ -51,6 +52,7 @@
   }
 
   .subcategory__view {
+    height: 100%;
     max-width: 75%;
     min-width: 75%;
     background-color: $main-color;
@@ -74,7 +76,6 @@
   }
 
   .subcategory__view__row {
-    min-height: 200px;
     height: 100%;
     margin: 0;
     display: flex;
