@@ -60,8 +60,8 @@ class HistoriaParafi extends React.Component {
 
   render() {
     return (
-      <div className="parafia-row">
-        <div className="buttons-box" style={{ color: "black" }}>
+      <div className="subcategory__container">
+        <div className="subcategory__view" style={{ color: "black" }}>
           <h2>Historia Parafii</h2>
           <br />
 

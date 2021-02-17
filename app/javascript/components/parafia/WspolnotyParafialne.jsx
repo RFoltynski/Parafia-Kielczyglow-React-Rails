@@ -1,87 +1,28 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
-
-import pomnik from "./../img/miejsca/pomnik.jpg";
-import kaplica from "./../img/miejsca/kaplica.JPG";
 import cmentarz from "./../img/miejsca/cmentarz.JPG";
 
 function Miejsca() {
-  const props = useSpring({
-    to: { opacity: 1, width: "100%" },
-    from: { opacity: 0 },
-    config: { duration: 500 },
-  });
   return (
-    <div className="inne-row">
-      <animated.div style={props}>
-        <div className="buttons-box">
-          <h2> Wspólnoty Parafialne </h2>
-          <div className="inne-row">
-            <img
-              className="buttons-img buttons-img-miejsca col-md-5"
-              src={cmentarz}
-            />
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header">Żywe róże</h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
-              <br />
-            </div>
+    <div className="subcategory__container">
+      <div className="subcategory__view">
+        <h2> Wspólnoty Parafialne </h2>
+        <div className="subcategory__view__row">
+          <img
+            className="buttons-img buttons-img-miejsca col-md-5"
+            src={cmentarz}
+          />
+          <div className="buttons-box-text col-md-7 text-center">
+            <h3 className="h3-header">Żywe róże</h3>
+            Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
+            Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według podania,
+            jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15. a 20.
+            rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna, którzy
+            mieli swój klasztor na przedmieściu Lizbony.
+            <br />
           </div>
-          <br />
-          <div className="inne-row">
-            <img
-              className="buttons-img buttons-img-miejsca col-md-5"
-              src={cmentarz}
-            />
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header">Chorek</h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
-              <br />
-            </div>
-          </div>
-          <br />
-          <div className="inne-row">
-            <img
-              className="buttons-img buttons-img-miejsca col-md-5"
-              src={cmentarz}
-            />
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header">Służba Liturgiczna </h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
-              <br />
-            </div>
-          </div>
-          <br />
-          <div className="inne-row">
-            <img
-              className="buttons-img buttons-img-miejsca col-md-5"
-              src={cmentarz}
-            />
-            <div className="buttons-box-text col-md-7  text-center">
-              <h3 className="h3-header">Szafarze</h3>
-              Święty Antoni urodził się w roku 1195 w Lizbonie, stolicy
-              Portugalii. Na chrzcie św. otrzymał imię Ferdynand. Według
-              podania, jego rodzicami byli Maria i Marcin Boglioni. Pomiędzy 15.
-              a 20. rokiem życia wstąpił do Kanoników Regularnych Św. Augustyna,
-              którzy mieli swój klasztor na przedmieściu Lizbony.
-              <br />
-            </div>
-          </div>
-          <br />
         </div>
-      </animated.div>
+        <br />
+      </div>
     </div>
   );
 }
