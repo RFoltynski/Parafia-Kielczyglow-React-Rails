@@ -6,6 +6,7 @@
     width: 100%;
     margin: 0;
     display: flex;
+    justify-content: center;
   }
 
   .subcategory__view__h2 {
@@ -32,6 +33,7 @@
   }
 
   .subcategory__view__row {
+    min-height: 200px;
     height: 100%;
     margin: 0;
     display: flex;
@@ -45,6 +47,7 @@
     width: 100%;
     margin: 0;
     display: flex;
+    justify-content: center;
   }
 
   .subcategory__view {
@@ -71,6 +74,7 @@
   }
 
   .subcategory__view__row {
+    min-height: 200px;
     height: 100%;
     margin: 0;
     display: flex;
