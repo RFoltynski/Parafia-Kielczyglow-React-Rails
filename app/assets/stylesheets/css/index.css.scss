@@ -73,17 +73,15 @@ button {
 button:hover {
   background-color: $main-color;
   color: black;
-  border: 2px solid black;
 }
 
 .buttonWhite {
   background-color: $main-color;
   color: black;
-  cursor: default;
-  border: 2px solid black;
   box-sizing: border-box;
 }
 .buttonWhite:hover {
+  cursor: default;
   transform: none;
 }
 .button:focus,
@@ -98,25 +96,7 @@ button:hover {
   letter-spacing: 1px;
 }
 
-.overlay {
-  background-color: #000000; /* fallback for IE 8 and below */
-  background-color: #00000099;
-  min-height: 100vh;
-  height: 100%;
-  padding-bottom: 20px;
-}
-
 /* content w sekcji parafia i inne */
-
-.buttons-box {
-  max-width: 75%;
-  min-width: 75%;
-  background-color: $main-color;
-  opacity: 0.9;
-  text-align: justify;
-  border: 3px solid black;
-  margin-top: 15px;
-}
 
 .buttons-box-text {
   padding-bottom: 5px;
@@ -129,14 +109,7 @@ button:hover {
   height: 300px;
   padding: 15px;
 }
-.buttons-box > h2 {
-  color: black;
 
-  text-align: center;
-  opacity: 0.9;
-  padding-top: 5px 0 5px 0;
-  box-shadow: 0px 0px 10px 1px #000000bf;
-}
 .button-img-box {
   padding: 15px;
 }
@@ -147,9 +120,4 @@ button:hover {
 .buttons-img-miejsca {
   width: 80%;
   height: 250px;
-}
-@media (max-width: 764px) {
-  .buttons-box {
-    max-width: 95%;
-  }
 }
