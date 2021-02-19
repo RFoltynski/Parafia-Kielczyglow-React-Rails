@@ -39,6 +39,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    color: black;
+  }
+  .subcategory__view__row__content {
+    box-sizing: border-box;
+    padding: 15px;
   }
 }
 @media (min-width: 765px) {
@@ -77,5 +82,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: black;
+  }
+  .subcategory__view__row__content {
+    box-sizing: border-box;
+    padding: 15px;
   }
 }
