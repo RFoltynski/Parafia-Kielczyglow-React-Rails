@@ -34,7 +34,7 @@ class Navbar extends Component {
     });
   };
   hide = (e) => {
-    if (e && e.relatedTarget) {
+    if (e || e.relatedTarget) {
       e.relatedTarget.click();
     }
     this.setState({ dropMenu: false });
@@ -84,6 +84,15 @@ class Navbar extends Component {
               className="navbar-menu-button"
               onClick={this.dropMenu}
               onBlur={this.hide}
+              style={
+                this.state.dropMenu
+                  ? {
+                      position: "fixed",
+                      top: "0px",
+                      right: "0px",
+                    }
+                  : {}
+              }
             >
               <img className="navbar-menu-img" src={Button} />
             </button>
