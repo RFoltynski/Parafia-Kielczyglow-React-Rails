@@ -33,16 +33,9 @@ class Navbar extends Component {
       dropMenu: !this.state.dropMenu,
     });
   };
-  hide = (e) => {
-    if (e || e.relatedTarget) {
-      e.relatedTarget.click();
-    }
-    this.setState({ dropMenu: false });
-  };
 
   handleScroll = () => {
     const { prevScrollpos } = this.state;
-
     const currentScrollPos = window.pageYOffset;
     const visible = prevScrollpos > currentScrollPos;
 
@@ -83,7 +76,6 @@ class Navbar extends Component {
             <button
               className="navbar-menu-button"
               onClick={this.dropMenu}
-              onBlur={this.hide}
               style={
                 this.state.dropMenu
                   ? {
