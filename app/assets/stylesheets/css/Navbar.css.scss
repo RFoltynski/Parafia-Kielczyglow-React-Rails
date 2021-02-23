@@ -1,5 +1,53 @@
 @import "../variables";
 
+.fade-appear {
+  width: 100%;
+  min-height: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  transition: top 0.3s;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+.fade-enter {
+  width: 100%;
+  min-height: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  transition: top 0.3s;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+.fade-exit {
+  top: -50px;
+  transition: top 0.3s;
+}
+
+.fade-exit.fade-exit-done {
+  opacity: 0;
+  transition: opacity 300ms linear;
+}
+
 .navbar-row {
   width: 100%;
   min-height: 50px;
