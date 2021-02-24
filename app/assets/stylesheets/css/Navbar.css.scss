@@ -1,5 +1,11 @@
 @import "../variables";
 
+@media screen and (max-width: 485px) {
+  .navbar-logo {
+    font-size: 16px;
+  }
+}
+
 .fade-appear {
   width: 100%;
   min-height: 50px;
@@ -164,11 +170,5 @@
   }
   .navbar-links-drop-show {
     transform: translateX(0px);
-  }
-}
-
-@media screen and (max-width: 485px) {
-  .navbar-logo {
-    font-size: 16px;
   }
 }
