@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { debounce } from "./helpers/debounce.js";
 import Button from "./img/menu";
 
 const Navbar = () => {
@@ -7,10 +8,25 @@ const Navbar = () => {
   let [visible, setVisible] = useState(true);
   let [dropMenu, setDropMenu] = useState(false);
 
-  let handleScroll = () => {
+  let handleScroll = debounce(() => {
+    let currentScrollPos = window.pageYOffset;
     let visible = prevScrollPos > window.pageYOffset;
     setVisible(visible);
-    setPrevScrollPos(window.pageYOffset);
+    setPrevScrollPos(currentScrollPos);
+  }, 100);
+
+  let navbarStyles = {
+    width: "100%",
+    minHeight: "50px",
+    margin: 0,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "black",
+    top: 0,
+    position: "fixed",
+    zIndex: 10,
+    transition: "top 0.3s",
   };
 
   useEffect(
@@ -18,7 +34,7 @@ const Navbar = () => {
       window.addEventListener("scroll", handleScroll);
       return () => window.removeEventListener("scroll", handleScroll);
     },
-    [prevScrollPos, dropMenu]
+    [prevScrollPos, dropMenu, visible]
   );
 
   let dropMenuHnadler = () => {
@@ -35,7 +51,7 @@ const Navbar = () => {
   ];
   return (
     <div>
-      <div className={visible ? "navbar-row" : "navbar--hidden"}>
+      <div style={{ ...navbarStyles, top: visible ? "0" : "-60px" }}>
         <div className="navbar-logo">
           {" "}
           <a className="navbar-logo-link" href="/">
