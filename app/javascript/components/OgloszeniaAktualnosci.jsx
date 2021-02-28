@@ -15,7 +15,7 @@ class OgloszeniaAktualnosci extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     window.scrollTo(0, 0);
     const { per, page } = this.state;
     const url = `api/v1/posts?per_page=${per}&page=${page}`;
