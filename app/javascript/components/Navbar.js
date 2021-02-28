@@ -10,10 +10,13 @@ const Navbar = () => {
 
   let handleScroll = debounce(() => {
     let currentScrollPos = window.pageYOffset;
-    let visible = prevScrollPos > window.pageYOffset;
-    setVisible(visible);
+    setVisible(
+      (prevScrollPos > currentScrollPos &&
+        prevScrollPos - currentScrollPos > 70) ||
+        currentScrollPos < 180
+    );
     setPrevScrollPos(currentScrollPos);
-  }, 100);
+  }, 80);
 
   let navbarStyles = {
     width: "100%",
@@ -51,7 +54,7 @@ const Navbar = () => {
   ];
   return (
     <div>
-      <div style={{ ...navbarStyles, top: visible ? "0" : "-60px" }}>
+      <div style={{ ...navbarStyles, top: visible ? "0" : "-50px" }}>
         <div className="navbar-logo">
           {" "}
           <a className="navbar-logo-link" href="/">
