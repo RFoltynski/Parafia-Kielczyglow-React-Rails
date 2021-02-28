@@ -1,155 +1,150 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import { debounce } from "./helpers/debounce.js";
 import Button from "./img/menu";
 
-class Navbar extends Component {
-  constructor() {
-    super();
-    this.state = {
-      currentLocation: window.location.href,
-      prevScrollpos: window.pageYOffset,
-      visible: true,
-      dropMenu: false,
-    };
-  }
+const Navbar = () => {
+  let [currentLocation, setCurrentLocation] = useState(window.location.href);
+  let [prevScrollPos, setPrevScrollPos] = useState(0);
+  let [visible, setVisible] = useState(true);
+  let [dropMenu, setDropMenu] = useState(false);
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
+  let handleScroll = debounce(() => {
+    let currentScrollPos = window.pageYOffset;
+    let visible = prevScrollPos > window.pageYOffset;
+    setVisible(visible);
+    setPrevScrollPos(currentScrollPos);
+  }, 100);
 
-  dropMenu = () => {
-    this.setState({
-      dropMenu: !this.state.dropMenu,
-    });
+  let navbarStyles = {
+    width: "100%",
+    minHeight: "50px",
+    margin: 0,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "black",
+    top: 0,
+    position: "fixed",
+    zIndex: 10,
+    transition: "top 0.3s",
   };
 
-  handleScroll = () => {
-    const { prevScrollpos } = this.state;
-    const currentScrollPos = window.pageYOffset;
-    const visible = prevScrollpos > currentScrollPos;
+  useEffect(
+    () => {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    },
+    [prevScrollPos, dropMenu, visible]
+  );
 
-    this.setState({
-      prevScrollpos: currentScrollPos,
-      visible,
-    });
+  let dropMenuHnadler = () => {
+    setDropMenu(!dropMenu);
   };
 
-  componentWillMount() {
-    document.body.addEventListener("click", this.hide);
-  }
-
-  componentWillUnmount() {
-    window.addEventListener("scroll", this.handleScroll);
-    document.body.removeEventListener("click", this.hide);
-  }
-
-  render() {
-    let location = [
-      "pl/Ogloszenia",
-      "pl/cmentarz",
-      "pl/parafia",
-      "pl/Duchowienstwo",
-      "pl/kontakt",
-      "pl/inne",
-    ];
-    return (
-      <div>
-        <div className={this.state.visible ? "navbar-row" : "navbar--hidden"}>
-          <div className="navbar-logo">
-            {" "}
-            <a className="navbar-logo-link" href="/">
-              Parafia Kiełczygłów
-            </a>
-          </div>
-          <div className="navbar-menu">
-            <button
-              className="navbar-menu-button"
-              onClick={this.dropMenu}
-              style={
-                this.state.dropMenu
-                  ? {
-                      position: "fixed",
-                      top: "0px",
-                      right: "0px",
-                    }
-                  : {}
-              }
-            >
-              <img className="navbar-menu-img" src={Button} />
-            </button>
-          </div>
-          <div
-            className={
-              this.state.dropMenu
-                ? "navbar-links navbar-links-drop-show"
-                : "navbar-links"
+  let location = [
+    "pl/Ogloszenia",
+    "pl/cmentarz",
+    "pl/parafia",
+    "pl/Duchowienstwo",
+    "pl/kontakt",
+    "pl/inne",
+  ];
+  return (
+    <div>
+      <div style={{ ...navbarStyles, top: visible ? "0" : "-60px" }}>
+        <div className="navbar-logo">
+          {" "}
+          <a className="navbar-logo-link" href="/">
+            Parafia Kiełczygłów
+          </a>
+        </div>
+        <div className="navbar-menu">
+          <button
+            className="navbar-menu-button"
+            onClick={dropMenuHnadler}
+            style={
+              dropMenu
+                ? {
+                    position: "fixed",
+                    top: "0px",
+                    right: "0px",
+                  }
+                : {}
             }
           >
-            <a
-              className={
-                this.state.currentLocation.includes(location[0])
-                  ? "navbar-link-active"
-                  : "navbar-link"
-              }
-              href="/Ogloszenia"
-            >
-              Ogłoszenia
-            </a>
-            <a
-              className={
-                this.state.currentLocation.includes(location[1])
-                  ? "navbar-link-active"
-                  : "navbar-link"
-              }
-              href="/cmentarz"
-            >
-              Cmentarz
-            </a>
-            <a
-              className={
-                this.state.currentLocation.includes(location[2])
-                  ? "navbar-link-active"
-                  : "navbar-link"
-              }
-              href="/parafia"
-            >
-              {" "}
-              Parafia
-            </a>
-            <a
-              className={
-                this.state.currentLocation.includes(location[3])
-                  ? "navbar-link-active"
-                  : "navbar-link"
-              }
-              href="/Duchowienstwo"
-            >
-              Duchowieństwo
-            </a>
-            <a
-              className={
-                this.state.currentLocation.includes(location[4])
-                  ? "navbar-link-active"
-                  : "navbar-link"
-              }
-              href="/kontakt"
-            >
-              Kontakt
-            </a>
-            <a
-              className={
-                this.state.currentLocation.includes(location[5])
-                  ? "navbar-link-active"
-                  : "navbar-link"
-              }
-              href="/inne"
-            >
-              Inne
-            </a>
-          </div>
+            <img className="navbar-menu-img" src={Button} />
+          </button>
+        </div>
+        <div
+          className={
+            dropMenu ? "navbar-links navbar-links-drop-show" : "navbar-links"
+          }
+        >
+          <a
+            className={
+              currentLocation.includes(location[0])
+                ? "navbar-link-active"
+                : "navbar-link"
+            }
+            href="/Ogloszenia"
+          >
+            Ogłoszenia
+          </a>
+          <a
+            className={
+              currentLocation.includes(location[1])
+                ? "navbar-link-active"
+                : "navbar-link"
+            }
+            href="/cmentarz"
+          >
+            Cmentarz
+          </a>
+          <a
+            className={
+              currentLocation.includes(location[2])
+                ? "navbar-link-active"
+                : "navbar-link"
+            }
+            href="/parafia"
+          >
+            {" "}
+            Parafia
+          </a>
+          <a
+            className={
+              currentLocation.includes(location[3])
+                ? "navbar-link-active"
+                : "navbar-link"
+            }
+            href="/Duchowienstwo"
+          >
+            Duchowieństwo
+          </a>
+          <a
+            className={
+              currentLocation.includes(location[4])
+                ? "navbar-link-active"
+                : "navbar-link"
+            }
+            href="/kontakt"
+          >
+            Kontakt
+          </a>
+          <a
+            className={
+              currentLocation.includes(location[5])
+                ? "navbar-link-active"
+                : "navbar-link"
+            }
+            href="/inne"
+          >
+            Inne
+          </a>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Navbar;
