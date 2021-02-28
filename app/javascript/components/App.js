@@ -8,15 +8,6 @@ import kontakt from "./img/kafelki/kontakt.JPG";
 import inne from "./img/kafelki/inne.JPG";
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
-
   render() {
     return (
       <div className="boxes-container">

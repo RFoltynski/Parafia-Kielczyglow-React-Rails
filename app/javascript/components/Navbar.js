@@ -1,31 +1,19 @@
 import React, { Component } from "react";
 import Button from "./img/menu";
-import axios from "axios";
 
 class Navbar extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       currentLocation: window.location.href,
       prevScrollpos: window.pageYOffset,
       visible: true,
       dropMenu: false,
-      intencions: [],
-      isLoading: false,
     };
   }
 
   componentDidMount() {
-    axios
-      .get("api/v1/intentions.json", {}, { "Content-Type": "application/json" })
-      .then((res) => {
-        this.setState({
-          intentions: res.data.data,
-          isLoading: true,
-        });
-      });
     window.addEventListener("scroll", this.handleScroll);
-    window.scrollTo(0, 0);
   }
 
   dropMenu = () => {
