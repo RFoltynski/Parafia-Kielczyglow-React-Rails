@@ -1,241 +1,82 @@
 @import "../variables";
 
-@media (max-width: 600px) {
-  .logo {
-    font-size: 52px;
-    color: white;
-    text-align: center;
-  }
+.main-page-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  flex-wrap: wrap;
+  @include navbar_gradient();
+}
 
-  .boxes-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    height: 100%;
-    flex-wrap: nowrap;
-    background-color: black;
-    justify-content: space-around;
-  }
+.header {
+  width: 100%;
+  height: 20%;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 2em;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  max-height: 100px;
+  @include background_gradient();
+}
 
-  .boxes-rows {
-    display: flex;
-    flex-direction: row;
-  }
+.pills-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
 
-  .boxes-row {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 50%;
-    justify-content: center;
-  }
+.pills-row {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
 
-  .row-item {
-    background-color: black;
-    flex: 1;
-    width: 100%;
-    height: 200px;
-    border: 1px solid black;
-    box-sizing: border-box;
-    padding: 5px;
+.pill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  flex: 1;
+  border-radius: $default_radius;
+  box-shadow: $default-shadow;
+}
+.pill:hover {
+  text-decoration: none;
+  .fas {
+    font-size: 75px;
+    color: rgb(245, 191, 90);
   }
-
-  .box-overlay {
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-  }
-
-  .box-overlay-h2 {
-    position: relative;
-    color: $main-color;
-    display: inline-block;
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.2em;
-    z-index: 100;
-    font-weight: 700;
+  .pill-name {
+    color: rgb(245, 191, 90);
     font-size: 20px;
-  }
-
-  .box-overlay-h2:after,
-  .box-overlay-h2:before {
-    display: block;
-    content: "";
-    border-bottom: solid 3px $main-color;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  .box-overlay-h2:before {
-    position: absolute;
-    bottom: 1.2em;
-    left: 0;
-    width: 100%;
-  }
-
-  .box-overlay:hover .box-overlay-h2:after {
-    transform: scaleX(0.7);
-  }
-
-  .box-overlay .box-overlay-p {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(transparent, 0%, #111);
-    top: 0;
-    margin: 0;
-    opacity: 0;
-    color: $main-color;
-    padding-top: 185px;
-  }
-
-  .box-overlay:hover .box-overlay-p {
-    opacity: 0.8;
-    color: $main-color;
-  }
-
-  .box-overlay-link {
-    position: relative;
-    height: 100%;
-  }
-
-  .box-overlay-link img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .box-overlay-link h2 {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    top: -10px;
-    right: 0;
-    color: $main-color;
-  }
-
-  .image-fix {
-    background: center / cover;
+    padding-top: 15px;
+    font-weight: 600;
   }
 }
-@media (min-width: 601px) {
-  .boxes-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    flex-wrap: wrap;
-    background-color: black;
-  }
 
-  .logo {
-    font-family: "Libre Franklin", sans-serif;
-    font-size: 32px;
-    color: white;
-    margin: 0 auto;
-    text-align: center;
-  }
+.fas {
+  font-size: 75px;
+  color: white;
+}
 
-  .boxes-rows {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .boxes-row {
-    display: flex;
-    flex-direction: row;
-    height: 50%;
-    width: 100%;
-  }
-
-  .row-item {
-    flex: 1;
-    border: 1px solid black;
-  }
-
-  .box-overlay {
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    height: 47vh;
-  }
-
-  .box-overlay-h2 {
-    position: relative;
-    color: $main-color;
-    display: inline-block;
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.2em;
-    width: 60%;
-    z-index: 100;
-    font-weight: 700;
-  }
-
-  .box-overlay-h2:after,
-  .box-overlay-h2:before {
-    display: block;
-    content: "";
-    border-bottom: solid 3px $main-color;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  .box-overlay-h2:before {
-    position: absolute;
-    bottom: 1.2em;
-    left: 0;
-    width: 100%;
-  }
-
-  .box-overlay:hover .box-overlay-h2:after {
-    transform: scaleX(1);
-  }
-
-  .box-overlay .box-overlay-p {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(transparent, 0%, #111);
-    top: 0;
-    margin: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    color: $main-color;
-    padding-top: 185px;
-  }
-
-  .box-overlay:hover .box-overlay-p {
-    opacity: 0.8;
-    color: $main-color;
-  }
-
-  .box-overlay-link {
-    position: relative;
-  }
-
-  .box-overlay-link img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .box-overlay-link h2 {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    top: -25px;
-    right: 0;
-    color: $main-color;
-  }
-
-  .image-fix {
-    background: center / cover;
-  }
+.pill-name {
+  color: white;
+  font-size: 20px;
+  padding-top: 15px;
+}
+.pill-first {
+  margin-bottom: 25px;
 }
