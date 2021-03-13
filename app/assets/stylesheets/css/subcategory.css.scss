@@ -1,52 +1,21 @@
 @import "../variables";
 
-@media (max-width: 764px) {
-  .subcategory {
-    background: none;
-    background-color: black;
-    min-height: 100vh;
-    height: 100%;
-    color: $main-color;
-  }
-  .subcategory__header {
-    padding-top: 50px;
-  }
+.subcategory {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  height: 100%;
+  color: $main-color;
 }
-@media (min-width: 765px) {
-  .subcategory_cmentarz__background {
-    background: url(asset-path("cmentarz_background.jpg")) center / cover fixed;
-    min-height: 100vh;
-    height: 100%;
-  }
-  .subcategory_inne__background {
-    background: url(asset-path("inne_beckground.jpg")) center / cover fixed;
-    min-height: 100vh;
-    height: 100%;
-  }
-  .subcategory_parafia__background {
-    background: url(asset-path("parafia_background.jpg")) center / cover fixed;
-    min-height: 100vh;
-    height: 100%;
-  }
-  .subcategory_duchowienstwo__background {
-    background: url(asset-path("duchowienstwo_background.jpg")) center / cover
-      fixed;
-    min-height: 100vh;
-    height: 100%;
-  }
-  .subcategory_ogloszenia__background {
-    background: url(asset-path("ogloszenia_background.jpg")) center / cover
-      fixed;
-    min-height: 100vh;
-    height: 100%;
-  }
-  .subcategory_kontakt__background {
-    background: url(asset-path("kontakt_background.jpg")) center / cover fixed;
-    min-height: 100vh;
-    height: 100%;
-  }
-  .subcategory__header {
-    color: $main-color;
-    padding-top: 50px;
-  }
+.subcategory__header {
+  padding-top: 50px;
 }
