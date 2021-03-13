@@ -44,6 +44,7 @@
 
   .pill {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px;
@@ -53,6 +54,33 @@
     flex: 1;
     border-radius: $default_radius;
     box-shadow: $default-shadow;
+  }
+  .pill:hover {
+    text-decoration: none;
+    .fas {
+      font-size: 75px;
+      color: rgb(245, 191, 90);
+    }
+    .pill-name {
+      color: rgb(245, 191, 90);
+      font-size: 20px;
+      padding-top: 15px;
+      font-weight: 600;
+    }
+  }
+
+  .fas {
+    font-size: 75px;
+    color: white;
+  }
+
+  .pill-name {
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+  }
+  .pill-first {
+    margin-bottom: 25px;
   }
 }
 @media (min-width: 601px) {
