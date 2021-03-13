@@ -23,7 +23,7 @@
     text-align: justify;
     border: 3px solid black;
     margin-top: 15px;
-    border-radius: 5px;
+    border-radius: $default-radius;
   }
 
   .subcategory__view > h2 {
@@ -31,7 +31,8 @@
     color: black;
     text-align: center;
     padding-top: 5px 0 5px 0;
-    box-shadow: 0px 0px 10px 1px #000000bf;
+    box-shadow: $default-shadow;
+    border-radius: $default-radius;
   }
 
   .subcategory__view__row {
@@ -63,16 +64,14 @@
     background-color: $main-color;
     text-align: justify;
     margin-top: 15px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: $default-shadow;
   }
 
   .subcategory__view > h2 {
     color: black;
     text-align: center;
     padding-top: 5px 0 5px 0;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: $default-shadow;
   }
 
   .subcategory__view__h2 {

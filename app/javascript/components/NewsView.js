@@ -8,13 +8,13 @@ export default class NewsView extends React.Component {
   state = {
     showPost: false,
     galleryOpened: false,
-    numberOfPhoto: 0
+    numberOfPhoto: 0,
   };
 
-  toggleGallery = numberOfPhoto => {
+  toggleGallery = (numberOfPhoto) => {
     this.setState({
       galleryOpened: !this.state.galleryOpened,
-      numberOfPhoto: numberOfPhoto
+      numberOfPhoto: numberOfPhoto,
     });
   };
 
@@ -22,7 +22,7 @@ export default class NewsView extends React.Component {
     let link = `/posts/${this.props.post.id}`;
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
-        {props => (
+        {(props) => (
           <div className="newsView-box" style={props}>
             {" "}
             <h2>
@@ -38,9 +38,9 @@ export default class NewsView extends React.Component {
               enter={{ opacity: 1, maxHeight: 12310 }}
               leave={{ opacity: 0, maxHeight: 0 }}
             >
-              {show =>
+              {(show) =>
                 show &&
-                (props => (
+                ((props) => (
                   <animated.div style={props}>
                     <div className="newsView-box-text-show">
                       {renderHTML(this.props.post.description)}
@@ -84,17 +84,17 @@ export default class NewsView extends React.Component {
               className={"newsView-box-button"}
               onClick={() =>
                 this.setState({
-                  showPost: !this.state.showPost
+                  showPost: !this.state.showPost,
                 })
               }
             >
               {!this.state.showPost ? (
                 <div className={"arrowOverlayDown"}>
-                  <div className={"arrow"} />
+                  <div className={"button_arrow"} />
                 </div>
               ) : (
                 <div className={"arrowOverlayUp"}>
-                  <div className={"arrow"} />
+                  <div className={"button_arrow"} />
                 </div>
               )}
             </button>

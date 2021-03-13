@@ -33,7 +33,9 @@ class Submenu extends React.Component {
               name={element[0]}
               onClick={this.onClick}
               className={
-                this.state.render == element[0] ? "buttonWhite" : "button"
+                this.state.render == element[0]
+                  ? "button_default button_clicked"
+                  : "button_default"
               }
             >
               {element[0]}

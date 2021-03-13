@@ -85,7 +85,7 @@ class OgloszeniaAktualnosci extends Component {
           )}
           {this.state.totalPages > 1 ? (
             <button
-              className={"buttonWhite"}
+              className={"button_default button_clicked"}
               style={{ margin: "15px 0" }}
               onClick={this.loadMore}
             >

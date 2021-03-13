@@ -23,7 +23,7 @@
   color: $main-color;
   padding: 5px;
   margin: 10px 0;
-  border-radius: 5px;
+  border-radius: $default-radius;
   opacity: 0.8;
   animation: fadeIn 1s;
 }

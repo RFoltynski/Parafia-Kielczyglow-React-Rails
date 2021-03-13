@@ -18,7 +18,7 @@
   height: 60px;
   @include flexCenter(row);
   background-color: $main-color;
-  border-radius: 15px;
+  border-radius: $default-radius;
   opacity: 0.9;
   color: black;
   margin: 25px auto;
@@ -30,7 +30,7 @@
 .form-background {
   background-color: $main-color;
   opacity: 0.9;
-  border-radius: 15px;
+  border-radius: $default-radius;
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
@@ -38,7 +38,7 @@
   widows: 100%;
   color: black;
   text-align: center;
-  box-shadow: 0px 0px 10px 1px #000000e6;
+  box-shadow: $default-shadow;
   opacity: 0.9;
 }
 
@@ -46,7 +46,7 @@
   width: 100%;
   margin-top: 15px;
   border: 1px solid #abaaa8;
-  border-radius: 3px;
+  border-radius: $default-radius;
 }
 .title-post:focus {
   outline: none;
