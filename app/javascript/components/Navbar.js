@@ -25,11 +25,17 @@ const Navbar = () => {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "black",
+    backgroundImage: "linear-gradient(to right, #4880EC, #019CAD)",
     top: 0,
     position: "fixed",
     zIndex: 10,
     transition: "top 0.3s",
+  };
+
+  let navbarStylesUpdate = {
+    boxShadow:
+      "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+    top: 50,
   };
 
   useEffect(
