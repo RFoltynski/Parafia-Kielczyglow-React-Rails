@@ -1,8 +1,7 @@
 @import "../variables";
 
 .subcategory {
-  background: rgb(178, 198, 208);
-  background: linear-gradient(to right, #4880ec, #8ac7ce);
+  @include background_gradient();
   min-height: 100vh;
   height: 100%;
   color: $main-color;
