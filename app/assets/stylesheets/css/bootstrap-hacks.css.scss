@@ -1,3 +1,5 @@
+@import "../variables";
+
 strong {
   font-weight: bold !important;
 }
@@ -5,7 +7,7 @@ strong {
 blockquote {
   background: #ededed !important;
   border-left: 8px solid #717479 !important;
-  box-shadow: 0 3px 15px #00000026 !important;
+  box-shadow: $default-shadow !important;
   color: #666 !important;
   font-size: 1.1em !important;
   font-style: italic !important;

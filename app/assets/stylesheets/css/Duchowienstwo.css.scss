@@ -25,7 +25,7 @@
   height: 300px;
   margin: 10px auto;
   border: 5px solid #220d0b;
-  border-radius: 3px;
+  border-radius: $default-radius;
 }
 .proboszczowie-img-title {
   color: black;
@@ -40,7 +40,7 @@
   height: 300px;
   margin: 10px 10px 10px 0;
   border: 5px solid #220d0b;
-  border-radius: 3px;
+  border-radius: $default-radius;
 }
 
 .ob-proboszczowie-text {
