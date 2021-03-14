@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 class App extends React.Component {
   render() {
     return (
       <div className="main-page-container">
         <div className="header">
-          <div class="header-name">PARAFIA KIEŁCZYGŁÓW</div>
+          <div className="navbar-logo-link">Parafia Kiełczygłów</div>
         </div>
         <div className="pills-container">
           <div className="pills-row">

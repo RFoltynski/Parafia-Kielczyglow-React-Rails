@@ -59,6 +59,7 @@ GEM
     autoprefixer-rails (9.6.1)
       execjs
     bcrypt (3.1.13)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -112,6 +113,7 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
+    ed25519 (1.2.4)
     erubi (1.8.0)
     execjs (2.7.0)
     factory_bot (5.0.2)
@@ -296,6 +298,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
   byebug
@@ -308,6 +311,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner (~> 1.5)
   dotenv-rails
+  ed25519 (>= 1.2, < 2.0)
   factory_bot_rails
   faker
   jbuilder (~> 2.5)
@@ -337,4 +341,4 @@ RUBY VERSION
    ruby 2.6.3p62
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
