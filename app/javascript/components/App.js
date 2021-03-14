@@ -44,7 +44,7 @@ class App extends React.Component {
             </Link>
             <Link className="pill" to="/inne">
               <i class="fas fa-people-carry pill-icon" />
-              <span className="pill-name">Wspolnota</span>
+              <span className="pill-name">Wspolnoty</span>
               <span className="pill-description">Informacje o wspolnotach</span>
             </Link>
           </div>

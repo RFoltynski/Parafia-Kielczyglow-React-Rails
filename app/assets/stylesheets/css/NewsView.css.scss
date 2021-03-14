@@ -2,7 +2,7 @@
 
 .newsView-box-text-show {
   @include flexCenter(column);
-  color: black;
+  color: $text-color;
 }
 
 .newsView-box {

@@ -140,25 +140,24 @@
   .pill:hover {
     text-decoration: none;
     .pill-icon {
-      font-size: 55px;
-      color: rgb(245, 191, 90);
+      color: orange;
     }
     .pill-name {
       color: orange;
     }
     .pill-description {
-      color: rgb(245, 191, 90);
+      color: orange;
     }
   }
 
   .pill-icon {
-    font-size: 55px;
-
+    font-size: 85px;
     color: white;
+    transition: font-size, color 0.3s;
   }
   .pill-name {
     color: white;
-    font-size: 18px;
+    font-size: 25px;
     padding-top: 15px;
   }
 
@@ -171,7 +170,7 @@
     width: 100%;
     min-height: 50px;
     color: white;
-    font-size: 12px;
+    font-size: 18px;
     padding-top: 5px;
     font-weight: 600;
   }

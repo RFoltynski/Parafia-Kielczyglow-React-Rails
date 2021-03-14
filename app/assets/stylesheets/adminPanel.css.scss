@@ -19,7 +19,7 @@
   background-color: $main-color;
   border-radius: $default-radius;
   opacity: 0.9;
-  color: black;
+  color: $text-color;
   margin: 25px auto;
 }
 
@@ -35,7 +35,7 @@
 }
 .box-title-h2 {
   widows: 100%;
-  color: black;
+  color: $text-color;
   text-align: center;
   box-shadow: $default-shadow;
   opacity: 0.9;
