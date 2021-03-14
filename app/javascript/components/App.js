@@ -6,10 +6,7 @@ class App extends React.Component {
     return (
       <div className="main-page-container">
         <div className="header">
-          {" "}
-          Katolicka parafia pw.
-          <br />
-          sw. Antoniego w Kiełczygłowie
+          <div class="header-name">PARAFIA KIEŁCZYGŁÓW</div>
         </div>
         <div className="pills-container">
           <div className="pills-row">

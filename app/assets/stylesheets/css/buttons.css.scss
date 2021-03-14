@@ -3,6 +3,9 @@
 // non active button in every subcategory
 .button_default {
   background-color: transparent;
+  border-radius: $default-radius;
+  box-shadow: $default-shadow;
+  border: 2px solid transparent;
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -10,12 +13,9 @@
   font-size: 18px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: $default-radius;
   transition: all 0.2s ease-in-out;
   margin-bottom: 25px;
-  border: 2px solid transparent;
   box-sizing: border-box;
-  box-shadow: $default-shadow;
   margin: $button-space;
 }
 // active button in every subcatecory
