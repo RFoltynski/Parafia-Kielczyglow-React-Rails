@@ -1,82 +1,168 @@
 @import "../variables";
 
-.main-page-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh;
-  max-height: 100%;
-  flex-wrap: wrap;
-  @include navbar_gradient();
-}
-
-.header {
-  width: 100%;
-  height: 20%;
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 2em;
-  color: white;
-  margin: 0 auto;
-  text-align: center;
-  max-height: 100px;
-  @include background_gradient();
-}
-
-.pills-container {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-}
-
-.pills-row {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-
-.pill {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  margin: 5px;
-  width: 80%;
-  height: 80%;
-  flex: 1;
-  border-radius: $default_radius;
-  box-shadow: $default-shadow;
-}
 .pill:hover {
   text-decoration: none;
-  .fas {
-    font-size: 75px;
-    color: rgb(245, 191, 90);
+}
+
+@media screen and (max-width: 605px) {
+  .main-page-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    @include navbar_gradient();
   }
+
+  .header {
+    width: 100%;
+    height: 10%;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 1.2em;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    max-height: 100px;
+    @include background_gradient();
+  }
+
+  .pills-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .pills-row {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .pill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px 0px 5px;
+    margin: 5px;
+    width: 95%;
+    height: 90%;
+    border-radius: $default_radius;
+    box-shadow: $default-shadow;
+  }
+
+  .pill-icon {
+    font-size: 55px;
+    color: white;
+  }
+
   .pill-name {
-    color: rgb(245, 191, 90);
-    font-size: 20px;
+    color: white;
+    font-size: 18px;
     padding-top: 15px;
+  }
+
+  .pill-first {
+    margin-bottom: 25px;
+  }
+
+  .pill-description {
+    text-align: center;
+    width: 100%;
+    min-height: 50px;
+    color: white;
+    font-size: 12px;
+    padding-top: 5px;
     font-weight: 600;
   }
 }
+@media screen and (min-width: 606px) {
+  .main-page-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    flex-wrap: wrap;
+    @include background_gradient();
+  }
 
-.fas {
-  font-size: 75px;
-  color: white;
-}
+  .header {
+    width: 100%;
+    height: 20%;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    max-height: 100px;
+    @include navbar_gradient();
+  }
 
-.pill-name {
-  color: white;
-  font-size: 20px;
-  padding-top: 15px;
-}
-.pill-first {
-  margin-bottom: 25px;
+  .pills-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .pills-row {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  .pill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 5px;
+    width: 95%;
+    height: 95%;
+    flex: 1;
+    border-radius: $default_radius;
+    box-shadow: $default-shadow;
+  }
+  .pill:hover {
+    text-decoration: none;
+    .pill-icon {
+      font-size: 55px;
+      color: rgb(245, 191, 90);
+    }
+    .pill-name {
+      color: orange;
+    }
+    .pill-description {
+      color: rgb(245, 191, 90);
+    }
+  }
+
+  .pill-icon {
+    font-size: 75px;
+    color: white;
+  }
+
+  .pill-name {
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+  }
+
+  .pill-first {
+    margin-bottom: 25px;
+  }
 }
