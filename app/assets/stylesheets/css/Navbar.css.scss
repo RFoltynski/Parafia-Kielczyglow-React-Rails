@@ -66,6 +66,8 @@
     z-index: 100;
     position: relative;
     outline: none;
+    background-color: transparent;
+    border: none;
   }
   .navbar-menu-button:focus {
     outline: none;
@@ -87,7 +89,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: orange;
+    background-color: $accents-color;
     transition: 0.3s transform ease-in-out;
     transform: translateX(-150%);
     z-index: 1;
