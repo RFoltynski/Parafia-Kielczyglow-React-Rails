@@ -12,7 +12,7 @@
     min-height: 100%;
     height: 100vh;
     flex-wrap: wrap;
-    @include navbar_gradient();
+    @include background_gradient();
   }
 
   .header {
@@ -24,7 +24,7 @@
     margin: 0 auto;
     text-align: center;
     max-height: 100px;
-    @include background_gradient();
+    @include navbar_gradient();
   }
 
   .pills-container {
@@ -88,17 +88,17 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    min-height: 100%;
     height: 100vh;
-    max-height: 100%;
     flex-wrap: wrap;
     @include background_gradient();
   }
 
   .header {
     width: 100%;
-    height: 20%;
+    height: 10%;
     font-family: "Libre Franklin", sans-serif;
-    font-size: 2em;
+    font-size: 1.2em;
     color: white;
     margin: 0 auto;
     text-align: center;
@@ -108,7 +108,7 @@
 
   .pills-container {
     width: 100%;
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -129,14 +129,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 5px 0px 5px;
     margin: 5px;
     width: 95%;
     height: 95%;
-    flex: 1;
     border-radius: $default_radius;
     box-shadow: $default-shadow;
   }
+
   .pill:hover {
     text-decoration: none;
     .pill-icon {
@@ -152,17 +152,27 @@
   }
 
   .pill-icon {
-    font-size: 75px;
+    font-size: 55px;
+
     color: white;
   }
-
   .pill-name {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 15px;
   }
 
   .pill-first {
     margin-bottom: 25px;
+  }
+
+  .pill-description {
+    text-align: center;
+    width: 100%;
+    min-height: 50px;
+    color: white;
+    font-size: 12px;
+    padding-top: 5px;
+    font-weight: 600;
   }
 }
