@@ -1,6 +1,6 @@
 $main-color: white;
 $text-color: black;
-$accents-color: orange;
+$accents-color: rgb(46, 97, 117);
 $default-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
   rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 $default-radius: 5px;
@@ -15,10 +15,10 @@ $button-space: 5px;
 
 @mixin background_gradient() {
   background: #4880ec;
-  background: linear-gradient(to right, #4880ec, #8ac7ce);
+  background: linear-gradient(to right, #89cfd8, #219ebc);
 }
 
 @mixin navbar_gradient() {
   background: #4880ec;
-  background: linear-gradient(to right, #4880ec, #019cad);
+  background: linear-gradient(to right, #89cfd8, #219ebc);
 }
