@@ -25,7 +25,7 @@ const Navbar = () => {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundImage: "linear-gradient(to right, #89cfd8, #219ebc)",
+    backgroundColor: "black",
     top: 0,
     position: "fixed",
     zIndex: 10,

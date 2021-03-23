@@ -28,7 +28,7 @@
   height: 80px;
   display: flex;
   @include flexCenter(row);
-  opacity: 0.9;
+  opacity: $default-opacity;
   color: $accents-color;
   margin: 25px auto;
 }

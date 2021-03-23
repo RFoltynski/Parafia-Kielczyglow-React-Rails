@@ -21,7 +21,7 @@ h2 {
 }
 .newsView-box > h2 {
   color: #000000;
-  opacity: 0.9;
+  opacity: $default-opacity;
   padding-top: 5px 0 5px 0;
   box-shadow: $default-shadow;
 }

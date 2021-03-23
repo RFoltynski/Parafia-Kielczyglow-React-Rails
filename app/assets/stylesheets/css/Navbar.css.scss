@@ -8,9 +8,11 @@
   letter-spacing: 3px;
   display: flex;
   align-items: center;
+
 }
 .navbar-logo-link {
   font-size: 22px;
+  color: $main-color;
 }
 .navbar-links {
   height: 50px;

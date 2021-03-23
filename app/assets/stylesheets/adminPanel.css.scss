@@ -18,7 +18,7 @@
   @include flexCenter(row);
   background-color: $main-color;
   border-radius: $default-radius;
-  opacity: 0.9;
+  opacity: $default-opacity;
   color: $text-color;
   margin: 25px auto;
 }
@@ -28,7 +28,7 @@
 }
 .form-background {
   background-color: $main-color;
-  opacity: 0.9;
+  opacity: $default-opacity;
   border-radius: $default-radius;
   padding-bottom: 15px;
   margin-bottom: 15px;
@@ -38,7 +38,7 @@
   color: $text-color;
   text-align: center;
   box-shadow: $default-shadow;
-  opacity: 0.9;
+  opacity: $default-opacity;
 }
 
 .title-post {
