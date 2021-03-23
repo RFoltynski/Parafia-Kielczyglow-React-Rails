@@ -25,14 +25,23 @@
     margin: 0 auto;
     text-align: center;
     max-height: 100px;
-    @include navbar_gradient();
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .header-logo {
-    font-size: 1.2em;
+    font-size: 18px;
+    color: $main-color;
+  }
+
+  .header-logo > div {
+    font-size: 22px;
+    font-family: $header-font;
+  }
+
+  .header-logo > p {
+    font-size: 14px;
   }
 
   .pills-container {
@@ -55,31 +64,51 @@
 
   .pill {
     border: none;
-    color: black;
+    color: $main-color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 5px;
     margin: 5px;
     width: 95%;
     height: 90%;
-    border-radius: $default_radius;
+    height: 100%;
+    box-sizing: border-box;
+    min-width: 95%;
+    max-width: 95%;
+    background-color: $main-color;
+    opacity: $default-opacity;
+    text-align: justify;
+    margin-top: 15px;
+    border-radius: $default-radius;
+    background: rgba( 255, 255, 255, 0.10 );
+    backdrop-filter: blur( 12.0px );
+    -webkit-backdrop-filter: blur( 14.0px );
+  }
+
+  .pill > h3 {
+    width: 100%;
+    height: 35px;
+    color: $main-color;
+    text-align: center;
     box-shadow: $default-shadow;
-    background-color: transparent;
-    border: 2px solid transparent;
+    border-radius: $default-radius;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .pill > div {
+    width: 100%;
+    height: 50px;
+    color: $main-color;
+    text-align: center;
+    border-radius: $default-radius;
   }
 
   .pill-icon {
     font-size: 55px;
-    color: white;
+    color: $main-color;
   }
 
-  .pill-name {
-    color: white;
-    font-size: 18px;
-    padding-top: 15px;
-  }
 
   .pill-first {
     margin-bottom: 25px;
@@ -93,6 +122,7 @@
     font-size: 12px;
     padding-top: 5px;
     font-weight: 600;
+    
   }
 }
 @media screen and (min-width: 606px) {
@@ -110,12 +140,31 @@
     width: 100%;
     height: 10%;
     font-family: "Libre Franklin", sans-serif;
-    font-size: 1.2em;
+    font-size: 1.8em;
+    font-weight: 600;
     color: white;
     margin: 0 auto;
     text-align: center;
     max-height: 100px;
-    @include navbar_gradient();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .header-logo {
+    font-size: 18px;
+    color: $main-color;
+  }
+
+  .header-logo > div {
+    padding-top: 10px;
+    font-size: 28px;
+    font-family: $header-font;
+  }
+
+  .header-logo > p {
+    font-size: 18px;
   }
 
   .pills-container {
@@ -129,7 +178,7 @@
   .pills-row {
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     height: 100%;
@@ -139,38 +188,47 @@
   .pill {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 5px 0px 5px;
     margin: 5px;
     width: 95%;
+    max-width: 550px;
     height: 95%;
+    max-height: 400px;
     border-radius: $default_radius;
     box-shadow: $default-shadow;
+    background-color: $main-color;
+    opacity: 0.9;
+    text-align: justify;
+    margin-top: 15px;
+    background: rgba( 255, 255, 255, 0.10 );
+    backdrop-filter: blur( 16.0px );
+    -webkit-backdrop-filter: blur( 14.0px );
   }
-
-  .pill:hover {
-    text-decoration: none;
-    .pill-icon {
-      color: $accents-color;
-    }
-    .pill-name {
-      color: $accents-color;
-    }
-    .pill-description {
-      color: $accents-color;
-    }
+  
+  .pill > h3 {
+    color:$main-color;
+    padding-top:5px;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    box-shadow: $default-shadow;
+    border-radius: $default-radius;
+    font-family: 'Oswald', sans-serif;
   }
-
+  
+  .pill > div {
+    color:$main-color;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border-radius: $default-radius;
+  }
+  
   .pill-icon {
+    color: $main-color;
     font-size: 85px;
-    color: white;
     transition: font-size, color 0.3s;
-  }
-  .pill-name {
-    color: white;
-    font-size: 25px;
-    padding-top: 15px;
   }
 
   .pill-first {
