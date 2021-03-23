@@ -7,14 +7,14 @@ class App extends React.Component {
     return (
       <div className="main-page-container">
         <div className="header">
-          <div className="navbar-logo-link">Parafia Kiełczygłów</div>
+          <div className="header-logo"><div>Katolicka Parafia pw. św. Antoniego</div>  <p>w Kiełczygłowie</p></div>
         </div>
         <div className="pills-container">
           <div className="pills-row">
             <Link className="pill" to="/Ogloszenia">
-              <h3 className="pill-name">Ogloszenia</h3>
+              <h3 className="pill-name">Ogłoszenia</h3>
               <i class="fas fa-scroll pill-icon" />
-              <div className="pill-description">Aktualnosci, Intencje</div>
+              <div className="pill-description">Aktualności, Intencje</div>
             </Link>
             <Link className="pill" to="/cmentarz">
               <h3 className="pill-name">Cmentarz</h3>
@@ -26,12 +26,12 @@ class App extends React.Component {
             <Link className="pill" to="/parafia">
               <h3 className="pill-name">Parafia</h3>
               <i class="fas fa-map-marked pill-icon" />{" "}
-              <div className="pill-description">Informacje ogolne</div>
+              <div className="pill-description">Informacje ogólne</div>
             </Link>
           </div>
           <div className="pills-row">
             <Link className="pill" to="/Duchowienstwo">
-              <h3 className="pill-name">Kaplani</h3>
+              <h3 className="pill-name">Kapłani</h3>
               <i class="fas fa-chess-king pill-icon" />
               <div className="pill-description">Osoby duchowne</div>
             </Link>
@@ -41,9 +41,9 @@ class App extends React.Component {
               <div className="pill-description">Dane kontaktowe</div>
             </Link>
             <Link className="pill" to="/inne">
-              <h3 className="pill-name">Wspolnoty</h3>
+              <h3 className="pill-name">Wspólnoty</h3>
               <i class="fas fa-people-carry pill-icon" />
-              <div className="pill-description">Informacje o wspolnotach</div>
+              <div className="pill-description">Informacje o wspólnotach</div>
             </Link>
           </div>
         </div>

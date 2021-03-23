@@ -6,6 +6,7 @@ $default-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 $default-radius: 5px;
 $default-opacity: 1;
 $button-space: 5px;
+$header-font: 'Oswald', sans-serif;
 
 @mixin flexCenter($direction) {
   display: flex;
@@ -15,10 +16,11 @@ $button-space: 5px;
 }
 
 @mixin background_gradient() {
-background-image: url(asset-path("header_background3"));
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: bottom; 
+  background-image: url(asset-path("header_background3"));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom; 
+  background-size: cover;                      
 }
 
 @mixin navbar_gradient() {
