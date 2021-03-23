@@ -140,12 +140,30 @@
     width: 100%;
     height: 10%;
     font-family: "Libre Franklin", sans-serif;
-    font-size: 1.2em;
+    font-size: 1.8em;
+    font-weight: 600;
     color: white;
     margin: 0 auto;
     text-align: center;
     max-height: 100px;
-    @include navbar_gradient();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .header-logo {
+    font-size: 18px;
+    color: $main-color;
+  }
+
+  .header-logo > div {
+    font-size: 22px;
+    font-family: $header-font;
+  }
+
+  .header-logo > p {
+    font-size: 14px;
   }
 
   .pills-container {
