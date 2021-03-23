@@ -13,6 +13,7 @@
   .subcategory__view__h2 {
     margin-top: 15px;
     text-align: center;
+    font-family: $header-font;
   }
 
   .subcategory__view {
@@ -34,6 +35,7 @@
     padding-top: 5px 0 5px 0;
     box-shadow: $default-shadow;
     border-radius: $default-radius;
+    font-family: $header-font;
   }
 
   .subcategory__view__row {
@@ -72,11 +74,13 @@
     text-align: center;
     padding-top: 5px 0 5px 0;
     box-shadow: $default-shadow;
+    font-family: $header-font;
   }
-
+  
   .subcategory__view__h2 {
     margin-top: 15px;
     text-align: center;
+    color: $text-color;
   }
 
   .subcategory__view__row {

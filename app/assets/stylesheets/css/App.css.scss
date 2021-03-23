@@ -158,12 +158,13 @@
   }
 
   .header-logo > div {
-    font-size: 22px;
+    padding-top: 10px;
+    font-size: 28px;
     font-family: $header-font;
   }
 
   .header-logo > p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .pills-container {
@@ -200,29 +201,33 @@
     opacity: 0.9;
     text-align: justify;
     margin-top: 15px;
+    background: rgba( 255, 255, 255, 0.10 );
+    backdrop-filter: blur( 16.0px );
+    -webkit-backdrop-filter: blur( 14.0px );
   }
-
+  
   .pill > h3 {
+    color:$main-color;
     padding-top:5px;
     width: 100%;
     height: 45px;
-    color: $text-color;
     text-align: center;
     box-shadow: $default-shadow;
     border-radius: $default-radius;
+    font-family: 'Oswald', sans-serif;
   }
-
+  
   .pill > div {
+    color:$main-color;
     width: 100%;
     height: 50px;
-    color: $text-color;
     text-align: center;
     border-radius: $default-radius;
   }
-
+  
   .pill-icon {
+    color: $main-color;
     font-size: 85px;
-    color: $text-color;
     transition: font-size, color 0.3s;
   }
 
