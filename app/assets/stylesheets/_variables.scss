@@ -20,8 +20,14 @@ $header-font: 'Oswald', sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom; 
-  background-size: cover;                      
+  background-size: cover;
+  height: auto;
+  max-height: 121332px;
+  min-height: 100vh;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
+
 
 @mixin navbar_gradient() {
   background-color: $main-color;
