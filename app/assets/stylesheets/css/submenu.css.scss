@@ -3,7 +3,6 @@
 @media (max-width: 764px) {
   .submenu {
     background: none;
-    min-height: 100vh;
     height: 100%;
     color: $main-color;
   }
@@ -11,7 +10,6 @@
 
 @media (min-width: 765px) {
   .submenu {
-    min-height: 100vh;
     height: 100%;
     color: $main-color;
   }

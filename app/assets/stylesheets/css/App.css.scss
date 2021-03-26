@@ -9,6 +9,19 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-image: url(asset-path("header_background3"));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
   }
 
   .header {
@@ -125,9 +138,20 @@
     flex-direction: row;
     width: 100%;
     min-height: 100%;
-    height: 100vh;
     flex-wrap: wrap;
-    @include background_gradient();
+    background-image: url(asset-path("header_background3"));
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
   }
 
   .header {
