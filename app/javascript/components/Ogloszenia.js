@@ -6,8 +6,8 @@ import Submenu from "./Elements/Submenu";
 
 const Ogloszenia = () => {
   let componentsList = [
-    ["Aktualnosci", <OgloszeniaAktualnosci />],
-    ["Intencje", <OgloszeniaIntencje />],
+    ["Aktualnosci", <OgloszeniaAktualnosci key={1} />],
+    ["Intencje", <OgloszeniaIntencje key={2} />],
   ];
 
   return (

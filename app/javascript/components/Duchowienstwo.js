@@ -8,10 +8,10 @@ import Submenu from "./Elements/Submenu.js";
 
 const Duchowienstwo = () => {
   let componentsList = [
-    ["Proboszcz", <Proboszcz />],
-    ["Wikary", <Wikary />],
-    ["Proboszczowie", <Proboszczowie />],
-    ["Powolania", <Powolania />],
+    ["Proboszcz", <Proboszcz key={1} />],
+    ["Wikary", <Wikary key={2} />],
+    ["Proboszczowie", <Proboszczowie key={3} />],
+    ["Powolania", <Powolania key={4} />],
   ];
 
   return (

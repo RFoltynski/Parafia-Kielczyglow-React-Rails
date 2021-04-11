@@ -36,8 +36,8 @@ class OgloszeniaAktualnosci extends Component {
   };
 
   render() {
-    let newsList = this.props.getPosts.map((post) => {
-      return <NewsView post={post} />;
+    let newsList = this.props.getPosts.map((post, id) => {
+      return <NewsView post={post} key={id} />;
     });
 
     return (
