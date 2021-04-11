@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import NewsView from "./NewsView";
 import { connect } from "react-redux";
+import { fetchPosts } from "../redux/posts/post.action";
 
 class OgloszeniaAktualnosci extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class OgloszeniaAktualnosci extends Component {
     window.scrollTo(0, 0);
     const { per, page } = this.state;
     const url = `api/v1/posts?per_page=${per}&page=${page}`;
-
+    
     axios.get(url, {}, { "Content-Type": "application/json" }).then((res) => {
       this.setState({
         posts: res.data.data,
@@ -58,7 +59,11 @@ class OgloszeniaAktualnosci extends Component {
         pageLoadError: "Nie ma więcej postów.",
       });
     }
-  };
+  }
+
+  handleClick = () => {
+    this.props.fetchPosts()
+  }
 
   render() {
     let newsList = this.state.isLoading
@@ -97,13 +102,20 @@ class OgloszeniaAktualnosci extends Component {
           )}
         </center>
         <div>{this.props.getPosts}</div>
+        <button onClick={this.handleClick}> fetch posts </button>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  getPosts: state.posts.defaultPost
+  getPosts: state.posts.fetchPosts
 })
 
-export default connect(mapStateToProps)(OgloszeniaAktualnosci);
+const mapDispatchToProps = (dispatch) => {
+  return ({fetchPosts:(payload) => {
+    dispatch(fetchPosts(payload))  
+  }})
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OgloszeniaAktualnosci);
