@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import NewsView from "./NewsView";
+import { connect } from "react-redux";
 
 class OgloszeniaAktualnosci extends Component {
   constructor(props) {
@@ -95,9 +96,14 @@ class OgloszeniaAktualnosci extends Component {
             <div />
           )}
         </center>
+        <div>{this.props.getPosts}</div>
       </div>
     );
   }
 }
 
-export default OgloszeniaAktualnosci;
+const mapStateToProps = (state) => ({
+  getPosts: state.posts.defaultPost
+})
+
+export default connect(mapStateToProps)(OgloszeniaAktualnosci);
