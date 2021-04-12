@@ -20,13 +20,16 @@ export default class NewsView extends React.Component {
   render() {
     let link = `/posts/${this.props.post.id}`;
     return (
-      <div className="newsView-box" key={this.props.post.id}>
+      <div className="subcategory__view" key={this.props.post.id}>
         {" "}
         <h2>
           {" "}
-          <a href={link} target={"_blank"} style={{ color: "black" }}>
-            {this.props.post.title}{" "}
-          </a>
+          {this.props.post.title}{" "}
+          <a
+            className={"subcategory__view__h2"}
+            href={link}
+            target={"_blank"}
+          />
         </h2>
         <div className="newsView-box-text-show">
           {this.state.showPost ? renderHTML(this.props.post.description) : ""}
@@ -60,24 +63,26 @@ export default class NewsView extends React.Component {
             <div />
           )}
         </div>
-        <button
-          className={"newsView-box-button"}
-          onClick={() =>
-            this.setState({
-              showPost: !this.state.showPost,
-            })
-          }
-        >
-          {!this.state.showPost ? (
-            <div className={"arrowOverlayDown"}>
-              <div className={"button_arrow"} />
-            </div>
-          ) : (
-            <div className={"arrowOverlayUp"}>
-              <div className={"button_arrow"} />
-            </div>
-          )}
-        </button>
+        <center>
+          <button
+            className={"newsView-box-button"}
+            onClick={() =>
+              this.setState({
+                showPost: !this.state.showPost,
+              })
+            }
+          >
+            {!this.state.showPost ? (
+              <div className={"arrowOverlayDown"}>
+                <div className={"button_arrow"} />
+              </div>
+            ) : (
+              <div className={"arrowOverlayUp"}>
+                <div className={"button_arrow"} />
+              </div>
+            )}
+          </button>
+        </center>
         <div className={"newsView-box-date"}>{this.props.post.post_date}</div>
       </div>
     );
