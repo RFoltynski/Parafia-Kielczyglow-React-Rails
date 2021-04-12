@@ -42,9 +42,7 @@ class OgloszeniaAktualnosci extends Component {
 
     return (
       <div className="Ogloszenia-comp">
-        <div className="news-boxes">
-          <div className="col-md-10">{newsList}</div>
-        </div>
+        <div className="news-boxes">{newsList}</div>
         <center>
           {this.props.getError ? (
             <div
