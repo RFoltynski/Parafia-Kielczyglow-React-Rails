@@ -17,6 +17,13 @@
 @import "bootstrap";
 @import "./variables";
 
+.button-inside-box-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
 .button-inside-box {
   color: $text-color;
   padding: 10px;
