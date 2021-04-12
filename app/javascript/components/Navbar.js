@@ -70,7 +70,7 @@ const Navbar = () => {
         </div>
       ) : (
         <div>
-          <div style={{ ...navbarStyles, top: visible ? "0" : "-50px" }}>
+          <div style={{ ...navbarStyles }}>
             <div className="navbar-logo">
               {" "}
               <a className="navbar-logo-link" href="/">
@@ -160,7 +160,7 @@ const Navbar = () => {
                 }
                 href="/inne"
               >
-                Inne
+                Wspólnoty
               </a>
             </div>
           </div>

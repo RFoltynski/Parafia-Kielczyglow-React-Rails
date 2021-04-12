@@ -3,18 +3,20 @@ import Navbar from "./Navbar";
 import Submenu from "./Elements/Submenu";
 import Ksiazki from "./inne/Ksiazki.jsx";
 import MiejscaWSieci from "./inne/MiejscaWSieci.jsx";
+import WspolnotyParafialne from "./inne/WspolnotyParafialne.jsx";
 
 const Inne = () => {
   let componentsList = [
-    ["Ksiazki", <Ksiazki key={1} />],
-    ["Miejsca w sieci", <MiejscaWSieci key={2} />],
+    ["Wspólnoty Parafialne", <WspolnotyParafialne key={1} />],
+    ["Ksiazki", <Ksiazki key={2} />],
+    ["Miejsca w sieci", <MiejscaWSieci key={3} />],
   ];
 
   return (
-    <div className="subcategory subcategory_inne__background">
+    <div className="subcategory">
       <Navbar />
       <center>
-        <h1 className="subcategory__header"> Inne </h1>
+        <h1 className="subcategory__header"> Wspólnoty Parafialne </h1>
         <Submenu componentsList={componentsList} />
       </center>
     </div>

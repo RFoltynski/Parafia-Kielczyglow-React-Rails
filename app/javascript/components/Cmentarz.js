@@ -12,7 +12,7 @@ const Cmentarz = () => {
   ];
 
   return (
-    <div className="subcategory subcategory_cmentarz__background">
+    <div className="subcategory">
       <Navbar />
       <center>
         <h1 className="subcategory__header"> Cmentarz </h1>

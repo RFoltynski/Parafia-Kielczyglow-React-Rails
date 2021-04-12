@@ -11,7 +11,7 @@ const Ogloszenia = () => {
   ];
 
   return (
-    <div className="subcategory subcategory_ogloszenia__background">
+    <div className="subcategory">
       <Navbar />
       <center>
         <h1 className="subcategory__header"> Ogłoszenia </h1>

@@ -1,20 +1,11 @@
 @import "../variables";
 
 .subcategory {
-  @include background_gradient();
   height: 100%;
   color: $main-color;
-  background-image: url(asset-path("header_background3"));
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover !important;
   max-width: 100%;
   max-height: 100%;
-  min-height: 200vh;
+  min-height: 120vh;
   width: auto;
   height: auto;
 }

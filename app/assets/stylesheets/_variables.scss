@@ -14,11 +14,3 @@ $header-font: "Oswald", sans-serif;
   align-items: center;
   flex-direction: $direction;
 }
-
-@mixin background_gradient() {
-}
-
-@mixin navbar_gradient() {
-  background-color: $main-color;
-  opacity: $default-opacity;
-}
