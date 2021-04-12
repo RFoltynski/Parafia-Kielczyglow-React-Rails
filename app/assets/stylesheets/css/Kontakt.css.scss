@@ -1,17 +1,4 @@
 @import "../variables";
-.kontakt {
-  background: url(asset-path("kontakt_background.JPG")) center top / cover
-    no-repeat fixed;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-}
-
-.kontakt-row {
-  height: 100%;
-  margin: 0;
-}
-
 .contact-form {
   margin: 15px 0;
 }
@@ -26,13 +13,6 @@
   border-radius: $default-radius;
   opacity: $default-opacity;
   animation: fadeIn 1s;
-}
-
-@media screen and (max-width: 605px) {
-  .kontakt {
-    background: none;
-    background-color: black;
-  }
 }
 
 @keyframes fadeIn {

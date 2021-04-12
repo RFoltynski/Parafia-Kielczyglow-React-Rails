@@ -15,7 +15,7 @@ const Duchowienstwo = () => {
   ];
 
   return (
-    <div className="subcategory subcategory_duchowienstwo__background">
+    <div className="subcategory">
       <Navbar />
       <center>
         <h1 className="subcategory__header"> Duchowieństwo </h1>

@@ -11,7 +11,7 @@ const Inne = () => {
   ];
 
   return (
-    <div className="subcategory subcategory_inne__background">
+    <div className="subcategory">
       <Navbar />
       <center>
         <h1 className="subcategory__header"> Inne </h1>

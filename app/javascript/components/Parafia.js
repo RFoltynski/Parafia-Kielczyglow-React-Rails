@@ -18,7 +18,7 @@ const Parafia = () => {
   ];
 
   return (
-    <div className="subcategory subcategory_parafia__background">
+    <div className="subcategory">
       <Navbar />
       <center>
         <h1 className="subcategory__header"> Parafia </h1>

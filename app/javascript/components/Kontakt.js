@@ -11,7 +11,7 @@ const Kontakt = () => {
   ];
 
   return (
-    <div className="subcategory subcategory_kontakt__background">
+    <div className="subcategory">
       <Navbar />
       <center>
         <h1 className="subcategory__header"> Inne </h1>

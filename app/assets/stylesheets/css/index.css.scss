@@ -6,8 +6,20 @@
   padding: 0;
 }
 
+html {
+  background-image: url(asset-path("header_background3"));
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+}
+
 body {
   height: 100%;
+  background-color: transparent !important;
 }
 
 .h1-header {
