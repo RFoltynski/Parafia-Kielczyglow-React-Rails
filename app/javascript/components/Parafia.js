@@ -10,11 +10,11 @@ import Submenu from "./Elements/Submenu.js";
 
 const Parafia = () => {
   let componentsList = [
-    ["O Patronie", <OPatronie />],
-    ["Historia Parafi", <HistoriaParafi />],
-    ["Miejsca", <Miejsca />],
-    ["Wspólnoty Parafialne", <WspolnotyParafialne />],
-    ["Parafia Obecnie", <ParafiaObecnie />],
+    ["O Patronie", <OPatronie key={1} />],
+    ["Historia Parafi", <HistoriaParafi key={2} />],
+    ["Miejsca", <Miejsca key={3} />],
+    ["Wspólnoty Parafialne", <WspolnotyParafialne key={4} />],
+    ["Parafia Obecnie", <ParafiaObecnie key={5} />],
   ];
 
   return (

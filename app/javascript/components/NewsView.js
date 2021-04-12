@@ -23,7 +23,7 @@ export default class NewsView extends React.Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 0.9 }}>
         {(props) => (
-          <div className="newsView-box" style={props}>
+          <div className="newsView-box" key={this.props.post.id} style={props}>
             {" "}
             <h2>
               {" "}
@@ -67,7 +67,7 @@ export default class NewsView extends React.Component {
                       {this.props.post.file ? (
                         <a
                           href={this.props.post.file}
-                          class="newsView-box-a"
+                          className="newsView-box-a"
                           target="blank"
                         >
                           <img className="newsView-box-pdf" src={pdf} />

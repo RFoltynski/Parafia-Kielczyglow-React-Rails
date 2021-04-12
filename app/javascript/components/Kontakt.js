@@ -6,8 +6,8 @@ import Submenu from "./Elements/Submenu";
 
 const Kontakt = () => {
   const componentsList = [
-    ["Dane Kontaktowe", <Information />],
-    ["Formularz", <Contactform />],
+    ["Dane Kontaktowe", <Information key={1} />],
+    ["Formularz", <Contactform key={2} />],
   ];
 
   return (

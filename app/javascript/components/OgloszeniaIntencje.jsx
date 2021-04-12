@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchIntentions } from "../redux/intentions/intentions.action";
 
 const OgloszeniaIntencje = () => {
-  const [intention, setIntentions] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchFunc = async () => {
-      const response = await fetch("api/v1/intentions.json");
-      const respJson = await response.json();
-      setIntentions(respJson.data.kielczyglow[0].file);
-    };
-    fetchFunc();
+    dispatch(fetchIntentions());
   }, []);
+
+  const intentionFile = useSelector((state) => state.intentions.file);
 
   return (
     <div className="Ogloszenia-comp">
@@ -21,9 +20,9 @@ const OgloszeniaIntencje = () => {
             <div className="newsView-box">
               {" "}
               <h2>Intencje mszy świętych</h2>
-              <div class="col-md-10">
+              <div className="col-md-10">
                 <div className="newsView-box-img col-md-12 text-center">
-                  <a href={intention} target="_blank">
+                  <a href={intentionFile} target="_blank">
                     Pobierz intencje z tygodnia:
                   </a>
                   <br />
@@ -37,7 +36,7 @@ const OgloszeniaIntencje = () => {
                 </div>
 
                 <div className="newsView-box-img col-md-12 text-center">
-                  <a href={intention} target="_blank">
+                  <a href={intentionFile} target="_blank">
                     Pobierz intencje z tygodnia:{" "}
                   </a>
                   <br />
@@ -51,7 +50,7 @@ const OgloszeniaIntencje = () => {
                 </div>
 
                 <div className="newsView-box-img col-md-12 text-center">
-                  <a href={intention} target="_blank">
+                  <a href={intentionFile} target="_blank">
                     Pobierz intencje z tygodnia:{" "}
                   </a>
                   <br />
@@ -62,7 +61,7 @@ const OgloszeniaIntencje = () => {
                   <button className="button-inside-box">Pobierz</button>
                 </div>
                 <div className="newsView-box-img col-md-12 text-center">
-                  <a href={intention} target="_blank">
+                  <a href={intentionFile} target="_blank">
                     Pobierz intencje z tygodnia:{" "}
                   </a>
                   <br />

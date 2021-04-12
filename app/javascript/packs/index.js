@@ -10,21 +10,26 @@ import Inne from "./../components/Inne";
 import PageNotFound from "./../components/PageNotFound";
 import Cmentarz from "../components/Cmentarz";
 
+import { Provider } from "react-redux";
+import store from "../redux/store";
+
 export default class Router extends React.Component {
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={App} />
-          <Route path="/Ogloszenia" component={Ogloszenia} />
-          <Route path="/cmentarz" component={Cmentarz} />
-          <Route path="/Duchowienstwo" component={Duchowienstwo} />
-          <Route path="/parafia" component={Parafia} />
-          <Route path="/kontakt" component={Kontakt} />
-          <Route path="/inne" component={Inne} />
-          <Route component={PageNotFound} />
-        </Switch>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={App} />
+            <Route path="/Ogloszenia" component={Ogloszenia} />
+            <Route path="/cmentarz" component={Cmentarz} />
+            <Route path="/Duchowienstwo" component={Duchowienstwo} />
+            <Route path="/parafia" component={Parafia} />
+            <Route path="/kontakt" component={Kontakt} />
+            <Route path="/inne" component={Inne} />
+            <Route component={PageNotFound} />
+          </Switch>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }

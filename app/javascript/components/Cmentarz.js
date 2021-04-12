@@ -6,9 +6,9 @@ import Kaplica from "./cmentarz/Kaplica";
 import Pogrzeby from "./cmentarz/Pogrzeby";
 const Cmentarz = () => {
   const componentsList = [
-    ["Cmentarz", <CmentarzInfo />],
-    ["Kaplica", <Kaplica />],
-    ["Pogrzeby", <Pogrzeby />],
+    ["Cmentarz", <CmentarzInfo key={1} />],
+    ["Kaplica", <Kaplica key={2} />],
+    ["Pogrzeby", <Pogrzeby key={3} />],
   ];
 
   return (

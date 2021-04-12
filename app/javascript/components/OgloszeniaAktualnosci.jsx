@@ -1,70 +1,44 @@
 import React, { Component } from "react";
-import axios from "axios";
 import NewsView from "./NewsView";
+import { connect } from "react-redux";
+import {
+  fetchPosts,
+  updatePostsPage,
+  fetchNewPosts,
+  setError,
+} from "../redux/posts/post.action";
 
 class OgloszeniaAktualnosci extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      posts: [],
-      isLoading: false,
-      per: 2,
-      totalPages: null,
-      page: 1,
-      pageLoadError: null,
-    };
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0);
-    const { per, page } = this.state;
-    const url = `api/v1/posts?per_page=${per}&page=${page}`;
-
-    axios.get(url, {}, { "Content-Type": "application/json" }).then((res) => {
-      this.setState({
-        posts: res.data.data,
-        totalPages: res.data.pages,
-        isLoading: true,
-      });
-    });
+    this.props.fetchPosts(this.props.per, this.props.page);
   }
 
-  handlePageClick = (data) => {
-    const { per, totalPages, page, posts } = this.state;
-    const url = `api/v1/posts?per_page=${per}&page=${page}`;
-
-    axios.get(url, {}, { "Content-Type": "application/json" }).then((res) => {
-      this.setState({
-        posts: [...posts, ...res.data.data],
-        totalPages: res.data.pages,
-        isLoading: true,
-      });
-    });
-  };
-
   loadMore = () => {
-    const { page, totalPages } = this.state;
+    const {
+      page,
+      totalPages,
+      per,
+      updatePostsPage,
+      fetchNewPosts,
+      setError,
+    } = this.props;
 
     if (page < totalPages) {
-      this.setState(
-        (prevState) => ({
-          page: prevState.page + 1,
-        }),
-        this.handlePageClick
-      );
+      updatePostsPage(page + 1);
+      fetchNewPosts(per, page + 1);
     } else {
-      this.setState({
-        pageLoadError: "Nie ma więcej postów.",
-      });
+      setError("nie ma więcej postów");
     }
   };
 
   render() {
-    let newsList = this.state.isLoading
-      ? this.state.posts.map((post) => {
-          return <NewsView post={post} />;
-        })
-      : "loading";
+    let newsList = this.props.getPosts.map((post, id) => {
+      return <NewsView post={post} key={id} />;
+    });
 
     return (
       <div className="Ogloszenia-comp">
@@ -72,18 +46,18 @@ class OgloszeniaAktualnosci extends Component {
           <div className="col-md-10">{newsList}</div>
         </div>
         <center>
-          {this.state.pageLoadError ? (
+          {this.props.getError ? (
             <div
               className={"contact-error"}
               style={{ width: "80%", height: "80px", fontSize: "20px" }}
             >
               {" "}
-              {this.state.pageLoadError}{" "}
+              {this.props.getError}{" "}
             </div>
           ) : (
             <div />
           )}
-          {this.state.totalPages > 1 ? (
+          {this.props.totalPages > 1 ? (
             <button
               className={"button_default button_clicked"}
               style={{ margin: "15px 0" }}
@@ -100,4 +74,36 @@ class OgloszeniaAktualnosci extends Component {
   }
 }
 
-export default OgloszeniaAktualnosci;
+const mapStateToProps = (state) => {
+  const { fetchPosts, per, page, totalPages, pageLoadError } = state.posts;
+
+  return {
+    getPosts: fetchPosts,
+    per: per,
+    page: page,
+    totalPages: totalPages,
+    getError: pageLoadError,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchPosts: (per, page) => {
+      dispatch(fetchPosts(per, page));
+    },
+    updatePostsPage: (payload) => {
+      dispatch(updatePostsPage(payload));
+    },
+    fetchNewPosts: (per, page) => {
+      dispatch(fetchNewPosts(per, page));
+    },
+    setError: (message) => {
+      dispatch(setError(message));
+    },
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(OgloszeniaAktualnosci);
