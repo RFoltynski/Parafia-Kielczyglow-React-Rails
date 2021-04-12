@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchIntentions } from "../redux/intentions/intentions.action";
 
 const OgloszeniaIntencje = () => {
   const [intention, setIntentions] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(fetchIntentions());
     const fetchFunc = async () => {
       const response = await fetch("api/v1/intentions.json");
       const respJson = await response.json();

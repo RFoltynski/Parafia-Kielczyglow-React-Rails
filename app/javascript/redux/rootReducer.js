@@ -1,6 +1,10 @@
 import { combineReducers } from "redux";
 import postReducer from "./posts/post.reducer";
+import { intentionsReducer } from "./intentions/intentions.reducer";
 
-export default combineReducers({
+const rootReducer = combineReducers({
   posts: postReducer,
+  intentions: intentionsReducer,
 });
+
+export default rootReducer;
