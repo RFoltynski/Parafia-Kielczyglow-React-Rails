@@ -6,12 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main-page-container">
-        <div className="header">
-          <div className="header-logo">
-            <div>Katolicka Parafia pw. św. Antoniego</div>{" "}
-            <p>w Kiełczygłowie</p>
-          </div>
-        </div>
+        <Navbar />
         <div className="pills-container">
           <div className="pills-row">
             <Link className="pill" to="/Ogloszenia">
