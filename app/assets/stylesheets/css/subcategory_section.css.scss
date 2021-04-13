@@ -22,6 +22,11 @@
     justify-content: center;
   }
 
+  .section.basic.reverse {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
   .section_text.basic {
     padding: 0 25px;
   }
@@ -38,13 +43,17 @@
     flex-direction: row;
   }
 
+  .section.basic.reverse {
+    flex-direction: row-reverse;
+  }
+
   .section_text.basic {
     padding: 0 25px;
   }
 
-  .sections_image.basic {
-    width: 200px;
-    height: 280px;
+  .section_image.basic {
+    width: 180px;
+    height: 270px;
     margin: 0 auto;
   }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import franciszek from "./../img/parafia/Opatronie/franciszek.jpg";
 import franciszekM from "./../img/parafia/Opatronie/franciszek-mlody.jpg";
 import franciszekP from "./../img/parafia/Opatronie/franciszek-prosto.jpg";
-import { BasicLayout } from "../contentComponents/contentLayouts";
+import { Basic } from "../contentComponents/contentLayouts";
 
 function OPatronie() {
   const section1 = {
@@ -10,13 +10,15 @@ function OPatronie() {
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
     image: franciszek,
+    reverse: true,
   };
+
   return (
     <div className="subcategory__container">
       <div className="subcategory__view">
         <h2>Św. Antoni Padewski</h2>
         <div className="subcategory__view__column">
-          <BasicLayout data={section1} />
+          <Basic data={section1} />
         </div>
       </div>
     </div>
