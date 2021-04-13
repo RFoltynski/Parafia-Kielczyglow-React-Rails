@@ -13,7 +13,7 @@ function Proboszczowie() {
       <div className="subcategory__view">
         <h2> Poprzedni proboszczowie</h2>
 
-        <div className="subcategory__view__row probszczowie">
+        <div className="subcategory__view__column probszczowie">
           <div>
             <img src={Polak} className="proboszczowie-img" />
             <div className="proboszczowie-img-title">

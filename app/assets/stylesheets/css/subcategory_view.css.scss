@@ -29,6 +29,7 @@
   }
 
   .subcategory__view > h2 {
+    padding-top: 2px;
     height: 100%;
     color: $text-color;
     text-align: center;
@@ -38,7 +39,7 @@
     font-family: $header-font;
   }
 
-  .subcategory__view__row {
+  .subcategory__view__column {
     height: 100%;
     margin: 0;
     display: flex;
@@ -46,7 +47,7 @@
     justify-content: space-around;
     color: $text-color;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 5px;
   }
 }
 @media (min-width: 765px) {
@@ -83,10 +84,11 @@
     color: $text-color;
   }
 
-  .subcategory__view__row {
+  .subcategory__view__column {
     height: 100%;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     color: $text-color;

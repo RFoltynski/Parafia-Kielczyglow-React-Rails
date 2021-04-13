@@ -15,7 +15,7 @@ const OgloszeniaIntencje = () => {
     <div className="subcategory__view">
       {" "}
       <h2>Intencje mszy świętych</h2>
-      <div className="subcategory__view__row">
+      <div className="subcategory__view__column">
         <a href={intentionFile} target="_blank">
           Pobierz intencje z tygodnia:
         </a>
