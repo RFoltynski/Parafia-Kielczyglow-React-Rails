@@ -2,43 +2,21 @@ import React from "react";
 import franciszek from "./../img/parafia/Opatronie/franciszek.jpg";
 import franciszekM from "./../img/parafia/Opatronie/franciszek-mlody.jpg";
 import franciszekP from "./../img/parafia/Opatronie/franciszek-prosto.jpg";
+import { BasicLayout } from "../contentComponents/contentLayouts";
 
 function OPatronie() {
+  const section1 = {
+    header: "Życie",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
+    image: franciszek,
+  };
   return (
     <div className="subcategory__container">
       <div className="subcategory__view">
         <h2>Św. Antoni Padewski</h2>
         <div className="subcategory__view__column">
-          <section className={"section"}>
-            <img
-              src={franciszek}
-              alt="sw.franciszek"
-              className="sections_image"
-            />
-            <div className="section_text">
-              <h4 className="section_text_header">Życie</h4>
-              <p className="section_text_content">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Perspiciatis distinctio quibusdam culpa accusamus error
-                repudiandae totam labore, perferendis beatae, possimus neque!
-                Sequi rem porro natus harum eum officiis tempora ut!
-              </p>
-            </div>
-          </section>
-          <section className={"section"}>
-            <img
-              src={franciszekM}
-              alt="sw.franciszek"
-              className="sections_image"
-            />
-          </section>
-          <section className={"section"}>
-            <img
-              src={franciszekP}
-              alt="sw.franciszek"
-              className="sections_image"
-            />
-          </section>
+          <BasicLayout data={section1} />
         </div>
       </div>
     </div>

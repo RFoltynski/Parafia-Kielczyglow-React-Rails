@@ -29,6 +29,7 @@
   }
 
   .subcategory__view > h2 {
+    padding-top: 2px;
     height: 100%;
     color: $text-color;
     text-align: center;
@@ -46,7 +47,7 @@
     justify-content: space-around;
     color: $text-color;
     box-sizing: border-box;
-    padding: 15px;
+    padding: 5px;
   }
 }
 @media (min-width: 765px) {
