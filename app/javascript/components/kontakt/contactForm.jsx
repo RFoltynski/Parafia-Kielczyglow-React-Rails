@@ -122,7 +122,7 @@ class ContactForm extends Component {
       <div className="subcategory__container">
         <div className="subcategory__view">
           <h2>Formularz Kontaktowy</h2>
-          <div className="subcategory__view__row">
+          <div className="subcategory__view__column">
             <form
               className="offset-md-1 col-md-10 contact-form"
               onSubmit={(e) => this.handleSubmit(e)}

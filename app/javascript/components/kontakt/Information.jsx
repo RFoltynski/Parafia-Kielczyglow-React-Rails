@@ -5,8 +5,8 @@ function Information() {
     <div className="subcategory__container">
       <div className="subcategory__view">
         <h2>Dane Kontaktowe</h2>
-        <div className="subcategory__view__row">
-          <div className="subcategory__view__row__content">
+        <div className="subcategory__view__column">
+          <div className="subcategory__view__column__content">
             <h4>Adres plebanii:</h4>
             <p>Parafia św Antoniego Padewskiego w Kiełczygłowie</p>
             <p>ul ks Józefa Jansona 14</p>

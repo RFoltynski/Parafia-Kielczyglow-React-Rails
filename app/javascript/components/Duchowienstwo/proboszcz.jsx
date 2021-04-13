@@ -7,7 +7,7 @@ function Proboszcz() {
     <div className="subcategory__container">
       <div className="subcategory__view">
         <h2>Obecny Proboszcz</h2>
-        <h3 className="subcategory__view__row">Ks. Bogdan Ignasiak</h3>
+        <h3 className="subcategory__view__column">Ks. Bogdan Ignasiak</h3>
         <div className="ob-proboszczowie-overlay">
           <img src={proboszcz} className="ob-proboszczowie-img " />
           <p className="ob-proboszczowie-text">

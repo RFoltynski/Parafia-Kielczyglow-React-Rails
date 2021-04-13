@@ -7,8 +7,12 @@ function OPatronie() {
   return (
     <div className="subcategory__container">
       <div className="subcategory__view">
-        <h2>Św. Antoni z Padwy</h2>
-        <div className="subcategory__view__row" />
+        <h2>Św. Antoni Padewski</h2>
+        <div className="subcategory__view__column">
+          <img src={franciszek} alt="sw.franciszek" class="images-desktop" />
+          <img src={franciszekM} alt="sw.franciszek" class="images-desktop" />
+          <img src={franciszekP} alt="sw.franciszek" class="images-desktop" />
+        </div>
       </div>
     </div>
   );

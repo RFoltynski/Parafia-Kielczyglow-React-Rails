@@ -6,7 +6,7 @@ function Miejsca() {
     <div className="subcategory__container">
       <div className="subcategory__view">
         <h2> Wspólnoty Parafialne </h2>
-        <div className="subcategory__view__row">
+        <div className="subcategory__view__column">
           <img
             className="buttons-img buttons-img-miejsca col-md-5"
             src={cmentarz}

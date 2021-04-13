@@ -6,7 +6,7 @@ function ParafiaObecnie() {
       <div className="subcategory__view">
         <h2>Informacje Ogólne</h2>
         <br />
-        <div className="subcategory__view__row">
+        <div className="subcategory__view__column">
           <div className="buttons-box-text col-md-12">
             <h3 className="h3-header text-center">
               Parafia Świętego Antoniego z Padwy w Kiełczygłowie
@@ -18,7 +18,7 @@ function ParafiaObecnie() {
           </div>
         </div>
         <br />
-        <div className="subcategory__view__row text-center">
+        <div className="subcategory__view__column text-center">
           <div className="buttons-box-text col-md-12">
             <h3 className="h3-header">Msze swięte:</h3>
             <br />
@@ -63,7 +63,7 @@ function ParafiaObecnie() {
           </div>
         </div>
 
-        <div className="subcategory__view__row text-center">
+        <div className="subcategory__view__column text-center">
           <div className="buttons-box-text">
             <h3 className="h3-header">
               Miejscowości należące do parafii Kiełczygłów:
