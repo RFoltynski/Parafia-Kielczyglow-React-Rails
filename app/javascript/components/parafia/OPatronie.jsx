@@ -14,11 +14,18 @@ function OPatronie() {
   };
 
   const section2 = {
-    header: "Życie",
+    header: "Powołanie",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
     images: [franciszek, franciszekM, franciszekP],
     reverse: false,
+  };
+  const section3 = {
+    header: "Duszpasterstwo",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
+    image: franciszek,
+    reverse: true,
   };
 
   return (
@@ -28,6 +35,7 @@ function OPatronie() {
         <div className="subcategory__view__column">
           <Basic data={section1} />
           <ManyImages data={section2} />
+          <Basic data={section3} />
         </div>
       </div>
     </div>
