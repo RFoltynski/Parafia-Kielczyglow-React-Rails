@@ -1,0 +1,21 @@
+.section {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.section_text {
+  padding: 0 10px;
+}
+
+.section_text_header {
+}
+
+.section_text_content {
+  text-align: left;
+}
+
+.sections_image {
+  width: 280px;
+  height: 350px;
+}
