@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import NewsView from "./NewsView";
+import NewsView from "../NewsView";
 import { connect } from "react-redux";
 import {
   fetchPosts,
   updatePostsPage,
   fetchNewPosts,
   setError,
-} from "../redux/posts/post.action";
+} from "../../redux/posts/post.action";
 
 class OgloszeniaAktualnosci extends Component {
   constructor(props) {

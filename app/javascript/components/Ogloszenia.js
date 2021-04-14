@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import OgloszeniaIntencje from "./OgloszeniaIntencje";
-import OgloszeniaAktualnosci from "./OgloszeniaAktualnosci";
+import OgloszeniaIntencje from "./ogloszenia/OgloszeniaIntencje";
+import OgloszeniaAktualnosci from "./ogloszenia/OgloszeniaAktualnosci";
 import Submenu from "./Elements/Submenu";
 
 const Ogloszenia = () => {
