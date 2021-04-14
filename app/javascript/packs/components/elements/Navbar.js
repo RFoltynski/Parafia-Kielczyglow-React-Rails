@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { debounce } from "./../helpers/debounce.js";
 import Button from "./../img/menu";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let [currentLocation, setCurrentLocation] = useState(window.location.href);
@@ -73,9 +74,9 @@ const Navbar = () => {
           <div style={{ ...navbarStyles }}>
             <div className="navbar-logo">
               {" "}
-              <a className="navbar-logo-link" href="/">
+              <Link className="navbar-logo-link" to="/">
                 Parafia Kiełczygłów
-              </a>
+              </Link>
             </div>
             <div className="navbar-menu">
               <button
@@ -101,67 +102,60 @@ const Navbar = () => {
                   : "navbar-links"
               }
             >
-              <a
+              <Link
                 className={
                   currentLocation.includes(location[0])
                     ? "navbar-link-active"
                     : "navbar-link"
                 }
-                href="/Ogloszenia"
+                to="/Ogloszenia"
               >
                 Ogłoszenia
-              </a>
-              <a
-                className={
-                  currentLocation.includes(location[1])
-                    ? "navbar-link-active"
-                    : "navbar-link"
-                }
-                href="/cmentarz"
-              >
-                Cmentarz
-              </a>
-              <a
+              </Link>
+
+              <Link
                 className={
                   currentLocation.includes(location[2])
                     ? "navbar-link-active"
                     : "navbar-link"
                 }
-                href="/parafia"
+                to="/parafia"
               >
                 {" "}
                 Parafia
-              </a>
-              <a
+              </Link>
+
+              <Link
                 className={
                   currentLocation.includes(location[3])
                     ? "navbar-link-active"
                     : "navbar-link"
                 }
-                href="/Duchowienstwo"
+                to="/Duchowienstwo"
               >
                 Duchowieństwo
-              </a>
-              <a
+              </Link>
+
+              <Link
                 className={
                   currentLocation.includes(location[4])
                     ? "navbar-link-active"
                     : "navbar-link"
                 }
-                href="/kontakt"
+                to="/kontakt"
               >
                 Kontakt
-              </a>
-              <a
+              </Link>
+              <Link
                 className={
                   currentLocation.includes(location[5])
                     ? "navbar-link-active"
                     : "navbar-link"
                 }
-                href="/inne"
+                to="/inne"
               >
                 Wspólnoty
-              </a>
+              </Link>
             </div>
           </div>
         </div>
