@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Proboszcz from "./Duchowienstwo/proboszcz.jsx";
-import Proboszczowie from "./Duchowienstwo/proboszczowie";
-import Wikary from "./Duchowienstwo/wikary.jsx";
-import Powolania from "./Duchowienstwo/powolania.jsx";
+import Proboszcz from "./subcomponents/duchowienstwo/proboszcz.jsx";
+import Proboszczowie from "./subcomponents/duchowienstwo/proboszczowie";
+import Wikary from "./subcomponents/duchowienstwo/wikary.jsx";
+import Powolania from "./subcomponents/duchowienstwo/powolania.jsx";
 import Submenu from "./Elements/Submenu.js";
 
 const Duchowienstwo = () => {

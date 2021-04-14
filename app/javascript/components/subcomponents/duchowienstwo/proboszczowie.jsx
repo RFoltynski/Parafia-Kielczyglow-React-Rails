@@ -1,11 +1,11 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
-import Wrobel from "./../img/ksieza/Antoni_Wrobel.JPG";
-import Polak from "./../img/ksieza/Edward_Polak.JPG";
-import Janson from "./../img/ksieza/Józef_Janson.JPG";
-import Kruk from "./../img/ksieza/Wincenty_Kruk.JPG";
-import Turbanski from "./../img/ksieza/Antonii_Turbanski.JPG";
+import Wrobel from "./../../img/ksieza/Antoni_Wrobel.JPG";
+import Polak from "./../../img/ksieza/Edward_Polak.JPG";
+import Janson from "./../../img/ksieza/Józef_Janson.JPG";
+import Kruk from "./../../img/ksieza/Wincenty_Kruk.JPG";
+import Turbanski from "./../../img/ksieza/Antonii_Turbanski.JPG";
 
 function Proboszczowie() {
   return (

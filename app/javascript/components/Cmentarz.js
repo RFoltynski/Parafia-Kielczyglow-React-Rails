@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Submenu from "./Elements/Submenu";
-import CmentarzInfo from "./cmentarz/CmentarzInfo";
-import Kaplica from "./cmentarz/Kaplica";
-import Pogrzeby from "./cmentarz/Pogrzeby";
+import CmentarzInfo from "./subcomponents/cmentarz/CmentarzInfo";
+import Kaplica from "./subcomponents/cmentarz/Kaplica";
+import Pogrzeby from "./subcomponents/cmentarz/Pogrzeby";
 const Cmentarz = () => {
   const componentsList = [
     ["Cmentarz", <CmentarzInfo key={1} />],

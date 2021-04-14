@@ -1,6 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
-import proboszcz from "./../img/ksieza/proboszcz.jpg";
+import proboszcz from "./../../img/ksieza/proboszcz.jpg";
 
 function Proboszcz() {
   return (
