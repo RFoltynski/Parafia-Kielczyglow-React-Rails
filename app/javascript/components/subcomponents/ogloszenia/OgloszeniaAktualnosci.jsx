@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewsView from "../../NewsView";
+import NewsView from "../../elements/NewsView";
 import { connect } from "react-redux";
 import {
   fetchPosts,

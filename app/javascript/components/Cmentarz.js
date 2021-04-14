@@ -4,6 +4,7 @@ import Submenu from "./elements/Submenu";
 import CmentarzInfo from "./subcomponents/cmentarz/CmentarzInfo";
 import Kaplica from "./subcomponents/cmentarz/Kaplica";
 import Pogrzeby from "./subcomponents/cmentarz/Pogrzeby";
+
 const Cmentarz = () => {
   const componentsList = [
     ["Cmentarz", <CmentarzInfo key={1} />],
