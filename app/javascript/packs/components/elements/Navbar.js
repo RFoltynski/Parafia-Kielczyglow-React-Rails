@@ -64,10 +64,7 @@ const Navbar = () => {
     <div>
       {currentLocation[currentLocation.length - 1] === location[6] ? (
         <div style={{ ...navbarStyles, justifyContent: "center" }}>
-          <div className="navbar-logo-link">
-            {" "}
-            Katolicka Parafia pw. św. Antoniego w Kiełczygłowie
-          </div>
+          <div className="navbar-logo-link"> Parafia-Kielczyglow.pl</div>
         </div>
       ) : (
         <div>
@@ -75,7 +72,7 @@ const Navbar = () => {
             <div className="navbar-logo">
               {" "}
               <Link className="navbar-logo-link" to="/">
-                Parafia Kiełczygłów
+                Parafia-Kielczyglow.pl
               </Link>
             </div>
             <div className="navbar-menu">
