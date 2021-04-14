@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
-import pdf from "./../components/img/pdf.png";
+import pdf from "./components/img/pdf.png";
 import { Spring } from "react-spring/renderprops.cjs";
 import axios from "axios";
 import Navbar from "./../components/Navbar";
@@ -11,7 +11,7 @@ export default class ShowPost extends React.Component {
   state = {
     showPost: false,
     galleryOpened: false,
-    numberOfPhoto: 0
+    numberOfPhoto: 0,
   };
 
   componentWillMount() {
@@ -22,18 +22,18 @@ export default class ShowPost extends React.Component {
     console.log(id);
     axios
       .get("/api/v1/posts/" + id, {}, { "Content-Type": "application/json" })
-      .then(res => {
+      .then((res) => {
         this.setState({
           post: res.data.data,
-          isLoading: true
+          isLoading: true,
         });
       });
   }
 
-  toggleGallery = numberOfPhoto => {
+  toggleGallery = (numberOfPhoto) => {
     this.setState({
       galleryOpened: !this.state.galleryOpened,
-      numberOfPhoto: numberOfPhoto
+      numberOfPhoto: numberOfPhoto,
     });
   };
 
@@ -49,7 +49,7 @@ export default class ShowPost extends React.Component {
               from={{ opacity: 0, color: "transparent" }}
               to={{ opacity: 0.9, padding: 0, color: "black" }}
             >
-              {props => (
+              {(props) => (
                 <div
                   className="showPost-box col-md-10 offset-md-1 text-center"
                   style={props}
