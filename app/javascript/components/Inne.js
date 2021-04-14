@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Submenu from "./Elements/Submenu";
-import Ksiazki from "./inne/Ksiazki.jsx";
-import MiejscaWSieci from "./inne/MiejscaWSieci.jsx";
-import WspolnotyParafialne from "./inne/WspolnotyParafialne.jsx";
+import Navbar from "./elements/Navbar";
+import Submenu from "./elements/Submenu";
+import Ksiazki from "./subcomponents/wspolnoty/Ksiazki.jsx";
+import MiejscaWSieci from "./subcomponents/wspolnoty/MiejscaWSieci.jsx";
+import WspolnotyParafialne from "./subcomponents/wspolnoty/WspolnotyParafialne.jsx";
 
 const Inne = () => {
   let componentsList = [

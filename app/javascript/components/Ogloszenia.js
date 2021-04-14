@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
-import OgloszeniaIntencje from "./OgloszeniaIntencje";
-import OgloszeniaAktualnosci from "./OgloszeniaAktualnosci";
-import Submenu from "./Elements/Submenu";
+import Navbar from "./elements/Navbar";
+import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
+import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
+import Submenu from "./elements/Submenu";
 
 const Ogloszenia = () => {
   let componentsList = [

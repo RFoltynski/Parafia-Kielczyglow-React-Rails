@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchIntentions } from "../redux/intentions/intentions.action";
+import { fetchIntentions } from "../../../redux/intentions/intentions.action";
 
 const OgloszeniaIntencje = () => {
   const dispatch = useDispatch();

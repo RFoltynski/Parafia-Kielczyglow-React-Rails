@@ -1,5 +1,5 @@
 import React from "react";
-import kaplica from "./../img/miejsca/kaplica.JPG";
+import kaplica from "./../../img/miejsca/kaplica.JPG";
 
 function Miejsca() {
   return (

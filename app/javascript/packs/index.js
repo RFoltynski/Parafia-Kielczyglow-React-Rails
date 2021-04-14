@@ -7,7 +7,7 @@ import Duchowienstwo from "./../components/Duchowienstwo";
 import Kontakt from "./../components/Kontakt";
 import Parafia from "./../components/Parafia";
 import Inne from "./../components/Inne";
-import PageNotFound from "./../components/PageNotFound";
+import PageNotFound from "../components/elements/PageNotFound";
 import Cmentarz from "../components/Cmentarz";
 
 import { Provider } from "react-redux";

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactBnbGallery from "react-bnb-gallery";
 import renderHTML from "react-render-html";
-import pdf from "./img/pdf.png";
+import pdf from "./../img/pdf.png";
 
 export default class NewsView extends React.Component {
   state = {

@@ -1,11 +1,11 @@
 import React from "react";
-import dzieci from "./../img/ksiazki/dzieci.jpg";
-import dzikie from "./../img/ksiazki/dzikieserce.jpg";
-import listy from "./../img/ksiazki/listy.jpg";
-import pismoswiete from "./../img/ksiazki/pismoswiete.jpg";
-import urzekajaca from "./../img/ksiazki/urzekajaca.jpg";
-import o from "./../img/ksiazki/o.jpg";
-import oskar from "./../img/ksiazki/oskar.jpg";
+import dzieci from "./../../img/ksiazki/dzieci.jpg";
+import dzikie from "./../../img/ksiazki/dzikieserce.jpg";
+import listy from "./../../img/ksiazki/listy.jpg";
+import pismoswiete from "./../../img/ksiazki/pismoswiete.jpg";
+import urzekajaca from "./../../img/ksiazki/urzekajaca.jpg";
+import o from "./../../img/ksiazki/o.jpg";
+import oskar from "./../../img/ksiazki/oskar.jpg";
 
 function Ksiazki() {
   return (
