@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-import HistoriaParafi from "./parafia/HistoriaParafi.jsx";
-import OPatronie from "./parafia/OPatronie.jsx";
-import ParafiaObecnie from "./parafia/ParafiaObecnie";
-import Miejsca from "./parafia/Miejsca.jsx";
+import HistoriaParafi from "./subcomponents/parafia/HistoriaParafi.jsx";
+import OPatronie from "./subcomponents/parafia/OPatronie.jsx";
+import ParafiaObecnie from "./subcomponents/parafia/ParafiaObecnie";
+import Miejsca from "./subcomponents/parafia/Miejsca.jsx";
 import WspolnotyParafialne from "./inne/WspolnotyParafialne.jsx";
 import Submenu from "./Elements/Submenu.js";
 
