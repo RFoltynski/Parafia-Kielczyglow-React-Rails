@@ -5,7 +5,7 @@ import renderHTML from "react-render-html";
 import pdf from "./components/img/pdf.png";
 import { Spring } from "react-spring/renderprops.cjs";
 import axios from "axios";
-import Navbar from "./../components/Navbar";
+import Navbar from "./components/elements/Navbar";
 
 export default class ShowPost extends React.Component {
   state = {

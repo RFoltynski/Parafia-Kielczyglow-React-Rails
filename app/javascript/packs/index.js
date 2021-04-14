@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import App from "./components/MainPage";
+import App from "./components/App";
 import PageNotFound from "./components/elements/PageNotFound";
 import {
   cmentarz,
