@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { debounce } from "./helpers/debounce.js";
-import Button from "./img/menu";
+import { debounce } from "./../helpers/debounce.js";
+import Button from "./../img/menu";
 
 const Navbar = () => {
   let [currentLocation, setCurrentLocation] = useState(window.location.href);

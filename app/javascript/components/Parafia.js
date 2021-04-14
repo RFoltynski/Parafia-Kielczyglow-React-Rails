@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./elements/Navbar";
 
 import HistoriaParafi from "./subcomponents/parafia/HistoriaParafi.jsx";
 import OPatronie from "./subcomponents/parafia/OPatronie.jsx";
 import ParafiaObecnie from "./subcomponents/parafia/ParafiaObecnie";
 import Miejsca from "./subcomponents/parafia/Miejsca.jsx";
-import Submenu from "./Elements/Submenu.js";
+import Submenu from "./elements/Submenu.js";
 
 const Parafia = () => {
   let componentsList = [

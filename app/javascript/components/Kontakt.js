@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./elements/Navbar";
 import Contactform from "./subcomponents/kontakt/contactForm";
 import Information from "./subcomponents/kontakt/Information";
-import Submenu from "./Elements/Submenu";
+import Submenu from "./elements/Submenu";
 
 const Kontakt = () => {
   const componentsList = [

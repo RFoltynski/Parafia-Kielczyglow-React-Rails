@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./elements/Navbar";
 import Proboszcz from "./subcomponents/duchowienstwo/proboszcz.jsx";
 import Proboszczowie from "./subcomponents/duchowienstwo/proboszczowie";
 import Wikary from "./subcomponents/duchowienstwo/wikary.jsx";
 import Powolania from "./subcomponents/duchowienstwo/powolania.jsx";
-import Submenu from "./Elements/Submenu.js";
+import Submenu from "./elements/Submenu.js";
 
 const Duchowienstwo = () => {
   let componentsList = [
