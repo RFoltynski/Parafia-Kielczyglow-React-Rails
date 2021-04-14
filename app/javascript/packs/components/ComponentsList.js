@@ -1,6 +1,6 @@
 import React from "react";
 
-import Main from "./Main";
+import Main from "./MainComponent";
 
 import CmentarzInfo from "./subcomponents/cmentarz/CmentarzInfo";
 import Kaplica from "./subcomponents/cmentarz/Kaplica";
