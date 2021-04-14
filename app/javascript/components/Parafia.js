@@ -5,7 +5,6 @@ import HistoriaParafi from "./subcomponents/parafia/HistoriaParafi.jsx";
 import OPatronie from "./subcomponents/parafia/OPatronie.jsx";
 import ParafiaObecnie from "./subcomponents/parafia/ParafiaObecnie";
 import Miejsca from "./subcomponents/parafia/Miejsca.jsx";
-import WspolnotyParafialne from "./inne/WspolnotyParafialne.jsx";
 import Submenu from "./Elements/Submenu.js";
 
 const Parafia = () => {

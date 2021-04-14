@@ -1,5 +1,5 @@
 import React from "react";
-import cmentarz from "./../img/miejsca/cmentarz.JPG";
+import cmentarz from "./../../img/miejsca/cmentarz.JPG";
 
 function Miejsca() {
   return (
