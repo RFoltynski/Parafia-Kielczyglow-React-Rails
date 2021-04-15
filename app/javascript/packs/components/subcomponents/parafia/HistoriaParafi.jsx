@@ -1,5 +1,6 @@
+import { Basic, ManyImages } from "./../../elements/contentLayouts";
+
 import React from "react";
-import ReactBnbGallery from "react-bnb-gallery";
 import caly from "./../../img/budowa/caly.JPG";
 import caly2 from "./../../img/budowa/caly2.JPG";
 import dach from "./../../img/budowa/dach.JPG";
@@ -21,164 +22,56 @@ import wsrodku2 from "./../../img/budowa/wsrodku2.JPG";
 import wsrodku3 from "./../../img/budowa/wsrodku3.JPG";
 import wsrodku4 from "./../../img/budowa/wsrodku4.JPG";
 
-class HistoriaParafi extends React.Component {
-  state = {
-    showPost: false,
-    galleryOpened: false,
-    numberOfPhoto: 0,
+const HistoriaParafi = () => {
+  const section1 = {
+    header: "Powstanie Parafii",
+    description:
+      "Parafię erygował bp włocławski Stanisław Zdzitkowiecki 21.08.1924",
+    images: [stary, ulotka],
+    reverse: true,
   };
 
-  toggleGallery = (numberOfPhoto) => {
-    this.setState({
-      galleryOpened: !this.state.galleryOpened,
-      numberOfPhoto: numberOfPhoto,
-    });
+  const section2 = {
+    header: "Budowa kościoła",
+    description:
+      "Obecny kosciół został wybudowany staraniem ks. Józefa Jansona w latach 1948-1957.",
+    images: [fundamenty, caly, caly2, dach, dach2, dach3, dach4],
+    reverse: false,
+  };
+  const section3 = {
+    header: "Prace wewnątrz",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
+    images: [wsrodku, wsrodku2, wsrodku3, wsrodku4, organy, stolarka],
+    reverse: false,
+  };
+  const section4 = {
+    header: "Konsekracja Kościoła",
+    description: "Kościół konsekrował bp Zdzisław Goliński 13.06.1957 roku.",
+    images: [konsekracja, konsekracja2, swieto],
+    reverse: true,
+  };
+  const section5 = {
+    header: "Artykuł z zatrzymania Ks. Józefa Jansona",
+    description: "",
+    images: [pamiatka, gazeta],
+    reverse: true,
   };
 
-  photos = [
-    { photo: stary },
-    { photo: ulotka },
-    { photo: fundamenty },
-    { photo: caly },
-    { photo: caly2 },
-    { photo: dach },
-    { photo: dach2 },
-    { photo: dach3 },
-    { photo: dach4 },
-    { photo: wsrodku },
-    { photo: wsrodku2 },
-    { photo: wsrodku3 },
-    { photo: wsrodku4 },
-    { photo: organy },
-    { photo: stolarka },
-    { photo: konsekracja },
-    { photo: konsekracja2 },
-    { photo: swieto },
-    { photo: pamiatka },
-    { photo: gazeta },
-  ];
+  return (
+    <div className="subcategory__container">
+      <div className="subcategory__view">
+        <h2>Historia Parafii</h2>
 
-  render() {
-    return (
-      <div className="subcategory__container">
-        <div className="subcategory__view">
-          <h2>Historia Parafii</h2>
-          <br />
-
-          <div className="text-center offset-md-1 col-md-10">
-            <h3 className="h3-header">Powstanie Parafii</h3>
-            <p>
-              {" "}
-              Parafię erygował bp włocławski Stanisław Zdzitkowiecki 21.08.1924
-              r.
-            </p>
-            <ReactBnbGallery
-              show={this.state.galleryOpened}
-              photos={this.photos}
-              onClose={this.toggleGallery}
-              activePhotoIndex={this.state.numberOfPhoto}
-            />
-            {(this.photos || []).map((downloadURL, i) => {
-              if (i < 2) {
-                return (
-                  <img
-                    className="newsView-img"
-                    onClick={() => this.toggleGallery(i)}
-                    src={downloadURL.photo}
-                    key={i}
-                  />
-                );
-              }
-            })}
-          </div>
-          <div className="text-center offset-md-1 col-md-10">
-            <h3 className="h3-header">Budowa Kościoła</h3>
-            Obecny kosciół został wybudowany staraniem ks. Józefa Jansona w
-            latach 1948-1957.
-            <div className="row">
-              <div className="col-md-12">
-                {(this.photos || []).map((downloadURL, i) => {
-                  if (i > 2 && i <= 8) {
-                    return (
-                      <img
-                        className="newsView-img"
-                        onClick={() => this.toggleGallery(i)}
-                        src={downloadURL.photo}
-                        key={i}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </div>
-            Prace wewnątrz
-            <div className="row">
-              <div className="col-md-12">
-                {(this.photos || []).map((downloadURL, i) => {
-                  if (i > 8 && i <= 14) {
-                    return (
-                      <img
-                        className="newsView-img"
-                        onClick={() => this.toggleGallery(i)}
-                        src={downloadURL.photo}
-                        key={i}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </div>
-          </div>
-          <div className="text-center offset-md-1 col-md-10">
-            <h3 className="h3-header">Konsekracja Kościoła</h3>
-            Kościół konsekrował bp Zdzisław Goliński 13.06.1957 roku.
-            <div className="row">
-              <div className="col-md-12">
-                {(this.photos || []).map((downloadURL, i) => {
-                  if (i > 14 && i <= 18) {
-                    return (
-                      <img
-                        className="newsView-img"
-                        onClick={() => this.toggleGallery(i)}
-                        src={downloadURL.photo}
-                        key={i}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </div>
-          </div>
-          <div className="text-center offset-md-1 col-md-10">
-            <h3 className="h3-header">
-              Artykuł z zatrzymania Ks. Józefa Jansona
-            </h3>
-
-            <div className="row">
-              <div className="col-md-12">
-                {(this.photos || []).map((downloadURL, i) => {
-                  if (i > 18 && i <= 20) {
-                    return (
-                      <img
-                        className="newsView-img"
-                        onClick={() => this.toggleGallery(i)}
-                        src={downloadURL.photo}
-                        key={i}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </div>
-            <blockquote>
-              Ksiądz Józef Janson skazany za szerzenie wrogiej propagandy
-              przeciwko Państwu
-            </blockquote>
-          </div>
-        </div>
+        <br />
+        <Basic data={section1} key={1} />
+        <ManyImages data={section2} key={2} />
+        <ManyImages data={section3} key={3} />
+        <Basic data={section4} key={4} />
+        <Basic data={section5} key={5} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default HistoriaParafi;
