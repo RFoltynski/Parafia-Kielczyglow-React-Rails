@@ -1,18 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import App from "./components/App";
-import PageNotFound from "./components/elements/PageNotFound";
 import {
   cmentarz,
   duchowienstwo,
   inne,
-  ogloszenia,
   kontakt,
+  ogloszenia,
   parafia,
 } from "./components/ComponentsList";
 
+import App from "./components/App";
+import PageNotFound from "./components/elements/PageNotFound";
 import { Provider } from "react-redux";
+import React from "react";
+import ReactDOM from "react-dom";
 import store from "./redux/store";
 
 export default class Router extends React.Component {
