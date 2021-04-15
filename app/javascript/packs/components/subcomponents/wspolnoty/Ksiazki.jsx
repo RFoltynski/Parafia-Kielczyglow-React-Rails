@@ -2,16 +2,16 @@ import React from "react";
 import dzieci from "./../../img/ksiazki/dzieci.jpg";
 import dzikie from "./../../img/ksiazki/dzikieserce.jpg";
 import listy from "./../../img/ksiazki/listy.jpg";
-import pismoswiete from "./../../img/ksiazki/pismoswiete.jpg";
-import urzekajaca from "./../../img/ksiazki/urzekajaca.jpg";
 import o from "./../../img/ksiazki/o.jpg";
 import oskar from "./../../img/ksiazki/oskar.jpg";
+import pismoswiete from "./../../img/ksiazki/pismoswiete.jpg";
+import urzekajaca from "./../../img/ksiazki/urzekajaca.jpg";
 
 function Ksiazki() {
   return (
     <div className="subcategory__container">
       <div className="subcategory__view">
-        <h2 name="scroll-to-historia">Książki, które warto przeczytać</h2>
+        <h2>Książki, które warto przeczytać</h2>
         <br />
 
         <div className="subcategory__view__column">

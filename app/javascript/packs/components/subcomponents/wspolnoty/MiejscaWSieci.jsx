@@ -4,7 +4,7 @@ function MiejscaWSieci() {
   return (
     <div className="subcategory__container">
       <div className="subcategory__view">
-        <h2 name="scroll-to-historia">Mijsca w sieci</h2>
+        <h2>Mijsca w sieci</h2>
         <br />
         <div className="subcategory__view__column">
           <div className="buttons-box-text col-md-12 text-center">
