@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { debounce } from "./../helpers/debounce.js";
+import React, { useEffect, useState } from "react";
+
 import Button from "./../img/menu";
 import { Link } from "react-router-dom";
+import { debounce } from "./../helpers/debounce.js";
 
 const Navbar = () => {
   let [currentLocation, setCurrentLocation] = useState(window.location.href);
@@ -108,6 +109,17 @@ const Navbar = () => {
                 to="/Ogloszenia"
               >
                 Ogłoszenia
+              </Link>
+
+              <Link
+                className={
+                  currentLocation.includes(location[1])
+                    ? "navbar-link-active"
+                    : "navbar-link"
+                }
+                to="/cmentarz"
+              >
+                Cmentarz
               </Link>
 
               <Link
