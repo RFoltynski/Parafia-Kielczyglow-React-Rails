@@ -1,5 +1,3 @@
-import { animated, useSpring } from "react-spring";
-
 import React from "react";
 import proboszcz from "./../../img/ksieza/proboszcz.jpg";
 
