@@ -37,8 +37,7 @@ export default class Router extends React.Component {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(
-    <Router />,
-    document.body.appendChild(document.createElement("div"))
-  );
+  const div = document.createElement("div");
+  div.classList.add("react-app");
+  ReactDOM.render(<Router />, document.body.appendChild(div));
 });
