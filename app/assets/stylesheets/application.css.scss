@@ -16,6 +16,8 @@
 @import "trix";
 @import "bootstrap";
 @import "./variables";
+@import url("photoswipe/dist/photoswipe.css");
+@import url("photoswipe/dist/default-skin/default-skin.css");
 
 * {
   margin: 0;
@@ -38,6 +40,10 @@ html {
 body {
   height: 100%;
   background-color: transparent !important;
+}
+
+.react-app {
+  height: 100%;
 }
 
 h1,

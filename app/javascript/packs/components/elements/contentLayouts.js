@@ -1,18 +1,23 @@
+import "photoswipe/dist/photoswipe.css";
+import "photoswipe/dist/default-skin/default-skin.css";
+
+import { Gallery, Item } from "react-photoswipe-gallery";
 import React, { useEffect, useState } from "react";
 
 export const Basic = (props) => {
-  const { header, description, image, reverse } = props.data;
+  const { header, description, images, reverse } = props.data;
   const [name, changeName] = useState("");
   useEffect(() => {
     if (reverse) changeName(name + " reverse");
   }, []);
   return (
     <section className={"section basic" + name}>
-      <img src={image} alt="sw.franciszek" className="section_image basic" />
-      <div className="section_text basic">
-        <h4 className="section_text_header basic">{header}</h4>
-        <p className="section_text_content basic">{description}</p>
-      </div>
+      <LayoutImages images={images} class={"basic"} />
+      <LayoutContent
+        header={header}
+        description={description}
+        class={"basic"}
+      />
     </section>
   );
 };
@@ -20,28 +25,53 @@ export const Basic = (props) => {
 export const ManyImages = (props) => {
   const { header, description, images, reverse } = props.data;
   const [name, changeName] = useState("");
+
   useEffect(() => {
     if (reverse) changeName(name + " reverse");
   }, []);
 
   return (
     <section className={"section manyimages" + name}>
-      <div className="section_text manyimages">
-        <h4 className="section_text_header manyimages">{header}</h4>
-        <p className="section_text_content manyimages">{description}</p>
-      </div>
-      <div className={"section_images"}>
-        {images.map((image, key) => {
+      <LayoutContent
+        header={header}
+        description={description}
+        class={"manyimages"}
+      />
+      <LayoutImages images={images} class={"manyimages"} />
+    </section>
+  );
+};
+
+const LayoutImages = (props) => {
+  return (
+    <div className={"section_images"}>
+      <Gallery>
+        {props.images.map((image, key) => {
           return (
-            <img
-              src={image}
-              key={key}
-              alt={"sw.franciszek" + key}
-              className={"section_image manyimages"}
-            />
+            <Item original={image} thumbnail={image} width="1024" height="768">
+              {({ ref, open }) => (
+                <img
+                  ref={ref}
+                  onClick={open}
+                  src={image}
+                  className={"section_image " + props.class}
+                />
+              )}
+            </Item>
           );
         })}
-      </div>
-    </section>
+      </Gallery>
+    </div>
+  );
+};
+
+const LayoutContent = (props) => {
+  return (
+    <div className={"section_text" + props.class}>
+      <h4 className={"section_text_header " + props.class}>{props.header}</h4>
+      <p className={"section_text_content " + props.class}>
+        {props.description}
+      </p>
+    </div>
   );
 };
