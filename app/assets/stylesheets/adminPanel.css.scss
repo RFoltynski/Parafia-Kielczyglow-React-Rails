@@ -26,6 +26,26 @@
 .admin-panel-button:hover {
   text-decoration: none;
 }
+
+.admin-panel-button-header {
+  font-size: 32px;
+  width: 300px;
+  height: 80px;
+  display: flex;
+  @include flexCenter(row);
+  opacity: $default-opacity;
+  color: $accents-color;
+  margin: 25px auto;
+}
+
+.admin-panel-button-header:hover {
+  text-decoration: none;
+  color: $accents-color;
+}
+.admin-panel-button-header:focus {
+  outline: none;
+}
+
 .form-background {
   background-color: $main-color;
   opacity: $default-opacity;
@@ -52,4 +72,25 @@
 }
 .intentions-edit-button {
   margin-bottom: 15px;
+}
+
+.navbar-admin-menu {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 660px) {
+  .navbar-admin-menu {
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-logo-text {
+    font-size: 12px;
+  }
 }
