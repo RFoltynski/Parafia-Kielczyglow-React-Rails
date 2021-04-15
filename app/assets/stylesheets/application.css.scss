@@ -17,6 +17,27 @@
 @import "bootstrap";
 @import "./variables";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-image: url(asset-path("header_background3"));
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+}
+
+body {
+  height: 100%;
+  background-color: transparent !important;
+}
+
 h1,
 h2,
 h3,
@@ -28,33 +49,37 @@ h6 {
   text-align: center;
 }
 
-.button-inside-box-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
+input {
+  background-color: $main-color;
+  border: none;
 }
 
-.button-inside-box {
-  color: $text-color;
-  padding: 10px;
+strong {
+  font-weight: bold !important;
 }
 
-.admin-panel-button-header {
-  font-size: 32px;
-  width: 300px;
-  height: 80px;
-  display: flex;
-  @include flexCenter(row);
-  opacity: $default-opacity;
-  color: $accents-color;
-  margin: 25px auto;
+blockquote {
+  background: #ededed !important;
+  border-left: 8px solid #717479 !important;
+  box-shadow: $default-shadow !important;
+  color: #666 !important;
+  font-size: 1.1em !important;
+  font-style: italic !important;
+  font-weight: 300 !important;
+  line-height: 1.6 !important;
+  margin: 20px auto !important;
+  padding: 1.2em 30px 1.2em 75px !important;
+  position: relative !important;
+  vertical-align: super !important;
+  max-width: 90% !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
 }
-
-.admin-panel-button-header:hover {
-  text-decoration: none;
-  color: $accents-color;
-}
-.admin-panel-button-header:focus {
-  outline: none;
+blockquote::before {
+  color: #717479;
+  content: "\201C";
+  font-size: 6em;
+  left: 0;
+  position: absolute;
+  top: -35px;
 }

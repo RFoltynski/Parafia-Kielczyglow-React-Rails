@@ -5,7 +5,7 @@ function Wikary() {
     <div className="subcategory__container">
       <div className="subcategory__view">
         <h2>Obecny Wikariusz</h2>
-        <h3 className="text-center h3-header">Ks. Remigiusz Michał Lech</h3>
+        <h3 className="h3-header">Ks. Remigiusz Michał Lech</h3>
         <div className="ob-proboszczowie-overlay">
           <img
             className="ob-proboszczowie-img "
