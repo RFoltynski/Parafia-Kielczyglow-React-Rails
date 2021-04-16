@@ -1,6 +1,3 @@
-import "photoswipe/dist/photoswipe.css";
-import "photoswipe/dist/default-skin/default-skin.css";
-
 import { Gallery, Item } from "react-photoswipe-gallery";
 import React, { useEffect, useState } from "react";
 
