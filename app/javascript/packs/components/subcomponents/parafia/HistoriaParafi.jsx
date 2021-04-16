@@ -38,6 +38,7 @@ const HistoriaParafi = () => {
     images: [fundamenty, caly, caly2, dach, dach2, dach3, dach4],
     reverse: false,
   };
+
   const section3 = {
     header: "Prace wewnątrz",
     description:
@@ -45,6 +46,7 @@ const HistoriaParafi = () => {
     images: [wsrodku, wsrodku2, wsrodku3, wsrodku4, organy, stolarka],
     reverse: false,
   };
+
   const section4 = {
     header: "Konsekracja Kościoła",
     description: "Kościół konsekrował bp Zdzisław Goliński 13.06.1957 roku.",
