@@ -1,9 +1,8 @@
-import { Basic, ManyImages } from "./contentLayouts";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
+import { ManyImages } from "./contentLayouts";
 import pdf from "./../img/pdf.png";
 import renderHTML from "react-render-html";
-import { useSelector } from "react-redux";
 
 const NewsView = (props) => {
   let link = `/posts/${props.post.id}`;
@@ -15,8 +14,6 @@ const NewsView = (props) => {
     images: props.post.images || [],
     reverse: true,
   };
-
-  console.log(section2.images);
 
   const handleClick = () => {
     changeShow(!show);
@@ -30,17 +27,21 @@ const NewsView = (props) => {
         {props.post.title}{" "}
         <a className={"subcategory__view__h2"} href={link} target={"_blank"} />
       </h2>
-      <div className="newsView-box-text-show">
-        {show ? renderHTML(props.post.description) : ""}
-        <ManyImages data={section2} key={1} />
-        {props.post.file ? (
-          <a href={props.post.file} className="newsView-box-a" target="blank">
-            <img className="newsView-box-pdf" src={pdf} />
-          </a>
-        ) : (
-          <div />
-        )}
-      </div>
+      {show ? (
+        <div className="newsView-box-text-show">
+          {renderHTML(props.post.description)}
+          <ManyImages data={section2} key={props.post.id} />
+          {props.post.file ? (
+            <a href={props.post.file} className="newsView-box-a" target="blank">
+              <img className="newsView-box-pdf" src={pdf} />
+            </a>
+          ) : (
+            <div />
+          )}
+        </div>
+      ) : (
+        ""
+      )}
       <center>
         <button className={"newsView-box-button"} onClick={handleClick}>
           {show ? (
