@@ -44,7 +44,7 @@ export const ManyImages = (props) => {
 
 const LayoutImages = (props) => {
   return (
-    <div className={"section_images"}>
+    <div className={"section_images " + props.class}>
       <Gallery>
         {props.images.map((image, key) => {
           return (
@@ -67,7 +67,7 @@ const LayoutImages = (props) => {
 
 const LayoutContent = (props) => {
   return (
-    <div className={"section_text" + props.class}>
+    <div className={"section_text " + props.class}>
       <h4 className={"section_text_header " + props.class}>{props.header}</h4>
       <p className={"section_text_content " + props.class}>
         {props.description}
