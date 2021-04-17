@@ -13,7 +13,6 @@ const section3 = {
 };
 
 class CmentarzInfo extends Component {
-  state = {};
   render() {
     return (
       <div className="subcategory__container">

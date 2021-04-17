@@ -2,7 +2,7 @@ import React from "react";
 
 import Main from "./MainComponent";
 
-import CmentarzInfo from "./subcomponents/cmentarz/CmentarzInfo";
+import CmentarzInfo from "./subcomponents/cmentarzSubcomponents";
 import Kaplica from "./subcomponents/cmentarz/Kaplica";
 import Pogrzeby from "./subcomponents/cmentarz/Pogrzeby";
 
