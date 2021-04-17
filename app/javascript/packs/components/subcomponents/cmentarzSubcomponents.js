@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import MainSubcomponent from "./mainSubcomponent";
 import { Basic, ManyImages } from "./../elements/contentLayouts";
-import {} from "./mainSubcomponent";
 import caly from "./../img/budowa/caly.JPG";
 import caly2 from "./../img/budowa/caly2.JPG";
 
@@ -23,15 +22,19 @@ const section4 = {
 
 export const CmentarzInfo = (props) => {
   const subcomponentsContent = [<ManyImages data={section4} />];
-  return <MainSubcomponent layouts={subcomponentsContent} />;
+  return (
+    <MainSubcomponent layouts={subcomponentsContent} header={"Cmentarz"} />
+  );
 };
 
 export const Kaplica = (props) => {
   const subcomponentsContent = [<ManyImages data={section3} />];
-  return <MainSubcomponent layouts={subcomponentsContent} />;
+  return <MainSubcomponent layouts={subcomponentsContent} header={"Kaplica"} />;
 };
 
 export const Pogrzeby = (props) => {
   const subcomponentsContent = [<ManyImages data={section4} />];
-  return <MainSubcomponent layouts={subcomponentsContent} />;
+  return (
+    <MainSubcomponent layouts={subcomponentsContent} header={"Pogrzeby"} />
+  );
 };
