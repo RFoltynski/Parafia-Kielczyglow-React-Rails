@@ -18,7 +18,7 @@ import MiejscaWSieci from "./subcomponents/wspolnoty/MiejscaWSieci.jsx";
 import WspolnotyParafialne from "./subcomponents/wspolnoty/WspolnotyParafialne.jsx";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
-import Information from "./subcomponents/kontakt/Information";
+import { Informacje } from "./subcomponents/kontakt/Informacje";
 
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
@@ -48,7 +48,7 @@ const inneSubcomponents = [
 ];
 
 const kontaktSubcomponents = [
-  ["Dane Kontaktowe", <Information key={1} />],
+  ["Dane Kontaktowe", <Informacje key={1} />],
   ["Formularz", <Contactform key={2} />],
 ];
 
