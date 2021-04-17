@@ -24,9 +24,9 @@ import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 
 import HistoriaParafi from "./subcomponents/parafia/HistoriaParafi.jsx";
-import OPatronie from "./subcomponents/parafia/OPatronie.jsx";
-import ParafiaObecnie from "./subcomponents/parafia/ParafiaObecnie";
-import Miejsca from "./subcomponents/parafia/Miejsca.jsx";
+import { OPatronie } from "./subcomponents/parafia/OPatronie.jsx";
+import { ParafiaObecnie } from "./subcomponents/parafia/ParafiaObecnie";
+import { Miejsca } from "./subcomponents/parafia/Miejsca.jsx";
 
 const cmentarzSubcomponents = [
   ["Cmentarz", <CmentarzInfo key={1} />],

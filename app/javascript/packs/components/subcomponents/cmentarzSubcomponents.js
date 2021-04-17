@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import MainSubcomponent from "./mainSubcomponent";
 import { Basic, ManyImages } from "./../elements/contentLayouts";
 import caly from "./../img/budowa/caly.JPG";
@@ -21,7 +21,10 @@ const section4 = {
 };
 
 export const CmentarzInfo = (props) => {
-  const subcomponentsContent = [<ManyImages data={section4} />];
+  const subcomponentsContent = [
+    <ManyImages data={section4} />,
+    <ManyImages data={section4} />,
+  ];
   return (
     <MainSubcomponent layouts={subcomponentsContent} header={"Cmentarz"} />
   );
