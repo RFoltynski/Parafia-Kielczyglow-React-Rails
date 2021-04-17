@@ -8,10 +8,10 @@ import {
   Pogrzeby,
 } from "./subcomponents/cmentarzSubcomponents";
 
-import Proboszcz from "./subcomponents/duchowienstwo/proboszcz.jsx";
-import Proboszczowie from "./subcomponents/duchowienstwo/proboszczowie";
-import Wikary from "./subcomponents/duchowienstwo/wikary.jsx";
-import Powolania from "./subcomponents/duchowienstwo/powolania.jsx";
+import { Proboszcz } from "./subcomponents/duchowienstwo/proboszcz.jsx";
+import { Proboszczowie } from "./subcomponents/duchowienstwo/proboszczowie";
+import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
+import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
 
 import Ksiazki from "./subcomponents/wspolnoty/Ksiazki.jsx";
 import MiejscaWSieci from "./subcomponents/wspolnoty/MiejscaWSieci.jsx";
