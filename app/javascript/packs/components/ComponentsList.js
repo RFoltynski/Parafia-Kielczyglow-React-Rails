@@ -2,9 +2,11 @@ import React from "react";
 
 import Main from "./MainComponent";
 
-import CmentarzInfo from "./subcomponents/cmentarzSubcomponents";
-import Kaplica from "./subcomponents/cmentarz/Kaplica";
-import Pogrzeby from "./subcomponents/cmentarz/Pogrzeby";
+import {
+  CmentarzInfo,
+  Kaplica,
+  Pogrzeby,
+} from "./subcomponents/cmentarzSubcomponents";
 
 import Proboszcz from "./subcomponents/duchowienstwo/proboszcz.jsx";
 import Proboszczowie from "./subcomponents/duchowienstwo/proboszczowie";

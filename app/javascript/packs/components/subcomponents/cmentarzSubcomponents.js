@@ -10,12 +10,28 @@ const section3 = {
   description:
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
   images: [caly, caly2],
-  reverse: true,
+  reverse: false,
 };
 
-const CmentarzInfo = (props) => {
+const section4 = {
+  header: "Duszpasterstwo",
+  description:
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
+  images: [caly],
+  reverse: false,
+};
+
+export const CmentarzInfo = (props) => {
+  const subcomponentsContent = [<ManyImages data={section4} />];
+  return <MainSubcomponent layouts={subcomponentsContent} />;
+};
+
+export const Kaplica = (props) => {
   const subcomponentsContent = [<ManyImages data={section3} />];
   return <MainSubcomponent layouts={subcomponentsContent} />;
 };
 
-export default CmentarzInfo;
+export const Pogrzeby = (props) => {
+  const subcomponentsContent = [<ManyImages data={section4} />];
+  return <MainSubcomponent layouts={subcomponentsContent} />;
+};
