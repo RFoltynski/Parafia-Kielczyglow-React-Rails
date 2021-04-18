@@ -5,6 +5,7 @@ import proboszczReducer from "./duchowienstwo/proboszcz.reducer";
 import wikariuszReducer from "./duchowienstwo/wikariusz.reducer";
 import proboszczowieReducer from "./duchowienstwo/proboszczowie.reducer";
 import powolaniaReducer from "./duchowienstwo/powolania.reducer";
+import infoReducer from "./informacjeKontaktowe/informacjeKontaktowe.reducer";
 
 const rootReducer = combineReducers({
   posts: postReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   wikariusz: wikariuszReducer,
   proboszczowie: proboszczowieReducer,
   powolania: powolaniaReducer,
+  informacjeKontaktowe: infoReducer,
 });
 
 export default rootReducer;
