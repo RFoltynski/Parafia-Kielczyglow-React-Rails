@@ -1,11 +1,11 @@
 import { Basic, ManyImages } from "./../../elements/contentLayouts";
-
+import MainSubcomponent from "./../mainSubcomponent";
 import React from "react";
 import franciszek from "./../../img/parafia/Opatronie/franciszek.jpg";
 import franciszekM from "./../../img/parafia/Opatronie/franciszek-mlody.jpg";
 import franciszekP from "./../../img/parafia/Opatronie/franciszek-prosto.jpg";
 
-function OPatronie() {
+export const OPatronie = () => {
   const section1 = {
     header: "Życie",
     description:
@@ -28,19 +28,12 @@ function OPatronie() {
     images: [franciszek, franciszek],
     reverse: true,
   };
-
+  const subcomponentsContent = [
+    <Basic data={section1} />,
+    <ManyImages data={section2} />,
+    <Basic data={section3} />,
+  ];
   return (
-    <div className="subcategory__container">
-      <div className="subcategory__view">
-        <h2>Św. Antoni Padewski</h2>
-        <div className="subcategory__view__column">
-          <Basic data={section1} />
-          <ManyImages data={section2} />
-          <Basic data={section3} />
-        </div>
-      </div>
-    </div>
+    <MainSubcomponent layouts={subcomponentsContent} header={"O patronie"} />
   );
-}
-
-export default OPatronie;
+};
