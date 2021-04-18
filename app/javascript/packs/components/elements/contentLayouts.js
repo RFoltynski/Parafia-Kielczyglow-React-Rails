@@ -39,13 +39,13 @@ export const ManyImages = (props) => {
   );
 };
 
-const LayoutImages = (props) => {
+export const LayoutImages = (props) => {
   return (
     <div className={"section_images " + props.class}>
       <Gallery>
         {props.images.map((image, key) => {
           return (
-            <Item original={image} thumbnail={image} width="1024" height="768">
+            <Item original={image} thumbnail={image} width="1366" height="868">
               {({ ref, open }) => (
                 <img
                   ref={ref}
@@ -62,7 +62,7 @@ const LayoutImages = (props) => {
   );
 };
 
-const LayoutContent = (props) => {
+export const LayoutContent = (props) => {
   return (
     <div className={"section_text " + props.class}>
       <h4 className={"section_text_header " + props.class}>{props.header}</h4>
