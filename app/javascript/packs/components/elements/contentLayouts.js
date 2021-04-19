@@ -119,3 +119,27 @@ export const Bio = (props) => {
     </section>
   );
 };
+
+export const LayoutContentWithSubcontent = (props) => {
+  const { header, description, subcontent, reverse } = props.data;
+  return (
+    <section className={"section " + "bio"}>
+      <div>
+        <LayoutContent
+          header={header}
+          description={description}
+          class={"bio"}
+        />
+        {subcontent.map((subcontent) => {
+          return (
+            <LayoutSubContent
+              header={subcontent.header}
+              description={subcontent.description}
+              class={"subcontent"}
+            />
+          );
+        })}
+      </div>
+    </section>
+  );
+};
