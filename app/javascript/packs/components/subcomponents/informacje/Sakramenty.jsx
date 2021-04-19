@@ -13,6 +13,7 @@ export const Sakramenty = (props) => {
     <LayoutContentWithSubcontent data={data.bierzmowanie} />,
     <LayoutContentMany data={data.komunia} />,
     <LayoutContentMany data={data.namaszczenieChorych} />,
+    <LayoutContentMany data={data.pogrzeb} />,
   ];
   return (
     <MainSubcomponent layouts={subcomponentsContent} header={"Sakramenty"} />

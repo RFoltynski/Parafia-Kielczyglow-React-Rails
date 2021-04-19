@@ -47,6 +47,15 @@ const INITIAL_STATE = {
     finParagraph:
       "Na tak przygotowanym stoliku kładzie kapłan Najświętszy Sakrament oraz oleje.",
   },
+  pogrzeb: {
+    header: "Pogrzeb katolicki",
+    description:
+      "Aby ustalić datę pogrzebu należy zabrać ze sobą do kancelarii:",
+    paragraphs: [
+      "Kartę zgonu (jeśli zmarły będzie chowany na cmentarzu parafialnym),",
+      "Jeśli osoba zmarła mieszkała poza parafią w której ma się odbyć pogrzeb, należy poinformować właściwego proboszcza miejsca o pochówku, oraz poprosić o pisemna zgodę i opinie o zmarłym.",
+    ],
+  },
 };
 
 const sakramentyReducer = (state = INITIAL_STATE, action) => {
