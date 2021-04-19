@@ -14,6 +14,7 @@ export const Sakramenty = (props) => {
     <LayoutContentMany data={data.komunia} />,
     <LayoutContentMany data={data.namaszczenieChorych} />,
     <LayoutContentMany data={data.pogrzeb} />,
+    <LayoutContentMany data={data.slub} />,
   ];
   return (
     <MainSubcomponent layouts={subcomponentsContent} header={"Sakramenty"} />

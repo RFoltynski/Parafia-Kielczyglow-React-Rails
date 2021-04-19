@@ -56,6 +56,21 @@ const INITIAL_STATE = {
       "Jeśli osoba zmarła mieszkała poza parafią w której ma się odbyć pogrzeb, należy poinformować właściwego proboszcza miejsca o pochówku, oraz poprosić o pisemna zgodę i opinie o zmarłym.",
     ],
   },
+  slub: {
+    header: "Sakrament małżeństwa",
+    description:
+      "Sugerujemy wczesniejsza rezzerwacje terminu ślubu. Następnie Narzeczeni zgłaszają się do kancelarii przynajmniej 3 miesiące przed planowanym ślubem na spotkanie należy przynieść: ",
+    paragraphs: [
+      "Dowód osobisty",
+      "Metrykę chrztu nie starszą niż 6 miesięcy (jeżeli chrzest miał miejsce poza naszą parafią),",
+      "Metrykę bierzmowania (jeżeli nie ma o nim adnotacji na metryce chrztu),",
+      "Świadectwo ukończenia nauki religii.",
+      "W przypadku osób owdowiałych - wyciąg z księgi zmarłych, wydany przez parafię, w której odbył się pogrzeb współmałżonka,",
+      "W późniejszym terminie:",
+      "Świadectwo ukończenia kursu przedmałżeńskiego (Jeśli już został ukończony, można przynieść świadectwo na pierwsze spotkanie). PRE-Kany odbywają się w Archidiecezjalnym Ośrodku Duszpasterstwa Rodzin NAZARET w Pajęcznie Plac Dworcowy 2. Zapisy odbywają się pod nr telefonu 502 455 984 (pn.-pt. w godz. 16:00 - 20:00). Dokładniejsze informacje znajdują się na stronie: www.nazaret.pro",
+      "Dokumenty z USC, do zawarcia małżeństwa konkordatowego (są ważne 6 miesiące).",
+    ],
+  },
 };
 
 const sakramentyReducer = (state = INITIAL_STATE, action) => {
