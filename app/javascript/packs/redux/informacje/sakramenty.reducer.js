@@ -3,7 +3,7 @@ const INITIAL_STATE = {
     header: "Chrzest:",
     description:
       "Aby usprawnić formalności związane z chrztem należy przedłożyć:",
-    paragraph: [
+    paragraphs: [
       "- Akt urodzenia dziecka z USC",
       "- dane rodziców chrzestnych i zaświadczenia, że mogą być dopuszczeni do godności ojca czy matki chrzestnej (nie mogą być chrzestnymi osoby poniżej 16 roku życia bez bierzmowania i osoby żyjące w związkach niesakramentalnych, konkubinatach lub związkach cywilnych  i osoby niepraktykujące)",
     ],
@@ -24,6 +24,28 @@ const INITIAL_STATE = {
           "świadkami bierzmowania mogą być: rodzice chrzestni, starsze rodzeństwo lub ktoś bliski o ile jest wierzącym i praktykującym katolikiem. Świadkami nie mogą być rodzice bierzmowanego.",
       },
     ],
+  },
+  komunia: {
+    header: "Pierwsza Komunia Św.",
+    description:
+      "Pierwsza Komunia  Święta odbywa się w naszej parafii w Uroczystość Zesłania Ducha Świętego. Od lat rodzice tych dzieci są zgodni co do jednolitych strojów komunijnych. Przygotowanie do Pierwszej Komunii św. rozpoczyna się w klasie trzeciej podczas dwóch godzin katechez tygodniowo. Oprócz tego odbywają się już wiosną spotkania praktycznie przygotowujące dzieci do przeżycia liturgii Mszy św. Są także spotkania okresowe z rodzicami:",
+    paragraphs: [
+      "1 przed przyjęciem różańca",
+      "2 przed przyjęciem medalika podczas uroczystości Niepokalanego Poczęcia NMP 8 grudnia",
+      "3 przed przyjęciem świecy i książeczki podczas święta Ofiarowania Pańskiego 2 lutego",
+    ],
+  },
+  namaszczenieChorych: {
+    header: "Namaszczenie chorych",
+    description:
+      "Sakrament Namaszczenia Chorych można przyjąć w każdej chorobie, jeżeli chory czuje się zagrożony. Jeżeli chory zostaje zabrany do szpitala i istnieje obawa o jego życie, to powinno się poprosić kapelana szpitala  o spowiedź chorego, namaszczenie i Komunię Świeta. Wezwanie kapłana wcale nie oznacza, że chory ma zaraz umrzeć. Ten sakrament można przyjąć kilkakrotnie w zyciu. Przed przyjściem kapłana należy przygotować stolik przykryty białym obrusem, na którym stawia się:",
+    paragraphs: [
+      "zapalone świece,",
+      "krzyż,",
+      "(ewentualnie) wodę święconą i trochę waty Jeśli nie ma wody święconej, można użyć wody zwykłej i poprosić kapłana o poświęcenie jej.",
+    ],
+    finParagraph:
+      "Na tak przygotowanym stoliku kładzie kapłan Najświętszy Sakrament oraz oleje.",
   },
 };
 
