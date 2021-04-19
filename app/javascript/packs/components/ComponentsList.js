@@ -11,7 +11,7 @@ import { Proboszczowie } from "./subcomponents/duchowienstwo/proboszczowie";
 import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
 import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
 
-import Ksiazki from "./subcomponents/informacje/Nabozenstwa.jsx";
+import { Nabozenstwa } from "./subcomponents/informacje/Nabozenstwa.jsx";
 import Sakramenty from "./subcomponents/informacje/Sakramenty";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
@@ -39,7 +39,7 @@ const subComponents = {
     ["Powolania", <Powolania key={4} />],
   ],
   informacje: [
-    ["Nabożeństwa", <Ksiazki key={2} />],
+    ["Nabożeństwa", <Nabozenstwa key={2} />],
     ["Sakramenty", <Sakramenty key={3} />],
   ],
   kontakt: [

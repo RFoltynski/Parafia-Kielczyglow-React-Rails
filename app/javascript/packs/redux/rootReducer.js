@@ -10,6 +10,7 @@ import historiaReducer from "./parafia/historiaParafi.reducer";
 import oPatronieReducer from "./parafia/oPatronie.reducer";
 import miejscaReducer from "./parafia/miejsca.reducer";
 import obecnieReducer from "./parafia/obecnie.reducer";
+import nabozenstwaReducer from "./informacje/nabozenstwa.reducer";
 
 const rootReducer = combineReducers({
   posts: postReducer,
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   oPatronie: oPatronieReducer,
   miejsca: miejscaReducer,
   obecnie: obecnieReducer,
+  nabozenstwa: nabozenstwaReducer,
 });
 
 export default rootReducer;
