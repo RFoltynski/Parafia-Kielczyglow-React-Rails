@@ -132,7 +132,7 @@ const Navbar = () => {
               }
               to="/inne"
             >
-              Wspólnoty
+              Informacje
             </Link>
           </div>
         </div>

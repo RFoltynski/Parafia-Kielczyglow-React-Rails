@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import {
   cmentarz,
   duchowienstwo,
-  inne,
+  informacje,
   kontakt,
   ogloszenia,
   parafia,
@@ -27,7 +27,7 @@ export default class Router extends React.Component {
             <Route path="/Duchowienstwo" component={duchowienstwo} />
             <Route path="/parafia" component={parafia} />
             <Route path="/kontakt" component={kontakt} />
-            <Route path="/inne" component={inne} />
+            <Route path="/inne" component={informacje} />
             <Route component={PageNotFound} />
           </Switch>
         </BrowserRouter>

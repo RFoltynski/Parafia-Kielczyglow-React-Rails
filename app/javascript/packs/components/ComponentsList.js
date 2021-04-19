@@ -11,20 +11,20 @@ import { Proboszczowie } from "./subcomponents/duchowienstwo/proboszczowie";
 import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
 import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
 
-import Ksiazki from "./subcomponents/wspolnoty/Ksiazki.jsx";
-import MiejscaWSieci from "./subcomponents/wspolnoty/MiejscaWSieci.jsx";
-import WspolnotyParafialne from "./subcomponents/wspolnoty/WspolnotyParafialne.jsx";
+import { Nabozenstwa } from "./subcomponents/informacje/Nabozenstwa.jsx";
+import Sakramenty from "./subcomponents/informacje/Sakramenty";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
-import { Informacje } from "./subcomponents/kontakt/Informacje";
+import { Informacje } from "./subcomponents/kontakt/DaneKontaktowe";
 
-import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
-
+import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
 import HistoriaParafi from "./subcomponents/parafia/HistoriaParafi.jsx";
+
 import { OPatronie } from "./subcomponents/parafia/OPatronie.jsx";
 import { ParafiaObecnie } from "./subcomponents/parafia/ParafiaObecnie";
 import { Miejsca } from "./subcomponents/parafia/Miejsca.jsx";
+import WspolnotyParafialne from "./subcomponents/parafia/WspolnotyParafialne.jsx";
 
 const subComponents = {
   cmentarz: [
@@ -38,10 +38,9 @@ const subComponents = {
     ["Proboszczowie", <Proboszczowie key={3} />],
     ["Powolania", <Powolania key={4} />],
   ],
-  inne: [
-    ["Wspólnoty Parafialne", <WspolnotyParafialne key={1} />],
-    ["Ksiazki", <Ksiazki key={2} />],
-    ["Miejsca w sieci", <MiejscaWSieci key={3} />],
+  informacje: [
+    ["Nabożeństwa", <Nabozenstwa key={2} />],
+    ["Sakramenty", <Sakramenty key={3} />],
   ],
   kontakt: [
     ["Dane Kontaktowe", <Informacje key={1} />],
@@ -56,6 +55,7 @@ const subComponents = {
     ["O Patronie", <OPatronie key={2} />],
     ["Miejsca", <Miejsca key={3} />],
     ["Parafia Obecnie", <ParafiaObecnie key={4} />],
+    ["Wspólnoty Parafialne", <WspolnotyParafialne key={5} />],
   ],
 };
 
@@ -69,7 +69,8 @@ export const cmentarz = () =>
 export const duchowienstwo = () =>
   createMainComponent(subComponents.duchowienstwo, "Duchowieństwo");
 
-export const inne = () => createMainComponent(subComponents.inne, "Wspólnoty");
+export const informacje = () =>
+  createMainComponent(subComponents.informacje, "Informacje");
 
 export const kontakt = () =>
   createMainComponent(subComponents.kontakt, "Kontakt");
