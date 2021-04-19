@@ -7,6 +7,7 @@ import proboszczowieReducer from "./duchowienstwo/proboszczowie.reducer";
 import powolaniaReducer from "./duchowienstwo/powolania.reducer";
 import infoReducer from "./informacjeKontaktowe/informacjeKontaktowe.reducer";
 import historiaReducer from "./parafia/historiaParafi.reducer";
+import oPatronieReducer from "./parafia/oPatronie.reducer";
 
 const rootReducer = combineReducers({
   posts: postReducer,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   powolania: powolaniaReducer,
   informacjeKontaktowe: infoReducer,
   historia: historiaReducer,
+  oPatronie: oPatronieReducer,
 });
 
 export default rootReducer;
