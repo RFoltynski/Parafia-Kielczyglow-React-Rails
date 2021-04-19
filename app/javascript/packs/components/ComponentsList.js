@@ -12,7 +12,7 @@ import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
 import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
 
 import Ksiazki from "./subcomponents/informacje/Nabozenstwa.jsx";
-import MiejscaWSieci from "./subcomponents/informacje/MiejscaWSieci.jsx";
+import Sakramenty from "./subcomponents/informacje/Sakramenty";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
 import { Informacje } from "./subcomponents/kontakt/DaneKontaktowe";
@@ -40,7 +40,7 @@ const subComponents = {
   ],
   informacje: [
     ["Nabożeństwa", <Ksiazki key={2} />],
-    ["Miejsca w sieci", <MiejscaWSieci key={3} />],
+    ["Sakramenty", <Sakramenty key={3} />],
   ],
   kontakt: [
     ["Dane Kontaktowe", <Informacje key={1} />],
