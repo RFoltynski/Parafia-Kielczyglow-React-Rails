@@ -17,8 +17,16 @@ export const ParafiaObecnie = () => {
       description={data.section1.description}
       class={"bio"}
     />,
-    <LayoutContentWithSubcontent data={data.section2} />,
-    <LayoutContentWithSubcontent data={data.section3} />,
+    <LayoutContent
+      header={data.section2.header}
+      description={data.section2.description}
+      class={"bio"}
+    />,
+    <LayoutContent
+      header={data.section3.header}
+      description={data.section3.description}
+      class={"bio"}
+    />,
   ];
   return (
     <MainSubcomponent
