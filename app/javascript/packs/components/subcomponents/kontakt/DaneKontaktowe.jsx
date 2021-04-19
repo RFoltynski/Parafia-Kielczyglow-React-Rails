@@ -17,7 +17,7 @@ export const Informacje = (props) => {
   return (
     <MainSubcomponent
       layouts={subcomponentsContent}
-      header={"Informacje Kontaktowe"}
+      header={"Dane Kontaktowe"}
     />
   );
 };

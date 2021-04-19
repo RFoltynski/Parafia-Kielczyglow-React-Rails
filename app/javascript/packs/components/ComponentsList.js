@@ -15,7 +15,7 @@ import Ksiazki from "./subcomponents/informacje/Nabozenstwa.jsx";
 import MiejscaWSieci from "./subcomponents/informacje/MiejscaWSieci.jsx";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
-import { Informacje } from "./subcomponents/kontakt/Informacje";
+import { Informacje } from "./subcomponents/kontakt/DaneKontaktowe";
 
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";

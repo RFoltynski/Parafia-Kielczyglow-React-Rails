@@ -5,7 +5,7 @@ import proboszczReducer from "./duchowienstwo/proboszcz.reducer";
 import wikariuszReducer from "./duchowienstwo/wikariusz.reducer";
 import proboszczowieReducer from "./duchowienstwo/proboszczowie.reducer";
 import powolaniaReducer from "./duchowienstwo/powolania.reducer";
-import infoReducer from "./informacjeKontaktowe/informacjeKontaktowe.reducer";
+import infoReducer from "./daneKontaktowe/daneKontaktowe.reducer";
 import historiaReducer from "./parafia/historiaParafi.reducer";
 import oPatronieReducer from "./parafia/oPatronie.reducer";
 import miejscaReducer from "./parafia/miejsca.reducer";
