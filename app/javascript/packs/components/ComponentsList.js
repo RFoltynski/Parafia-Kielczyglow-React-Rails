@@ -11,7 +11,7 @@ import { Proboszczowie } from "./subcomponents/duchowienstwo/proboszczowie";
 import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
 import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
 
-import Ksiazki from "./subcomponents/informacje/Ksiazki.jsx";
+import Ksiazki from "./subcomponents/informacje/Nabozenstwa.jsx";
 import MiejscaWSieci from "./subcomponents/informacje/MiejscaWSieci.jsx";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
@@ -38,8 +38,8 @@ const subComponents = {
     ["Proboszczowie", <Proboszczowie key={3} />],
     ["Powolania", <Powolania key={4} />],
   ],
-  inne: [
-    ["Ksiazki", <Ksiazki key={2} />],
+  informacje: [
+    ["Nabożeństwa", <Ksiazki key={2} />],
     ["Miejsca w sieci", <MiejscaWSieci key={3} />],
   ],
   kontakt: [
@@ -69,7 +69,8 @@ export const cmentarz = () =>
 export const duchowienstwo = () =>
   createMainComponent(subComponents.duchowienstwo, "Duchowieństwo");
 
-export const inne = () => createMainComponent(subComponents.inne, "Informacje");
+export const informacje = () =>
+  createMainComponent(subComponents.informacje, "Informacje");
 
 export const kontakt = () =>
   createMainComponent(subComponents.kontakt, "Kontakt");
