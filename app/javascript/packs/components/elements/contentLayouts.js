@@ -101,42 +101,6 @@ export const LayoutSubContent = (props) => {
   );
 };
 
-export const Bio = (props) => {
-  const { header, description, subcontent, image, reverse } = props.data;
-  return (
-    <section className={"section " + "bio"}>
-      <Gallery>
-        <Item original={image} thumbnail={image} width="1366" height="868">
-          {({ ref, open }) => (
-            <img
-              ref={ref}
-              onClick={open}
-              src={image}
-              className={"section_image bio"}
-            />
-          )}
-        </Item>
-      </Gallery>
-      <div>
-        <LayoutContent
-          header={header}
-          description={description}
-          class={"bio"}
-        />
-        {subcontent.map((subcontent) => {
-          return (
-            <LayoutSubContent
-              header={subcontent.header}
-              description={subcontent.description}
-              class={"subcontent bio"}
-            />
-          );
-        })}
-      </div>
-    </section>
-  );
-};
-
 export const LayoutContentWithSubcontent = (props) => {
   const { header, description, subcontent, reverse } = props.data;
   return (

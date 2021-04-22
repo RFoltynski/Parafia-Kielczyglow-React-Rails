@@ -1,20 +1,22 @@
-import React from "react";
-import MainSubcomponent from "../mainSubcomponent";
-import { useSelector } from "react-redux";
 import {
-  LayoutContentWithSubcontent,
   LayoutContentMany,
+  LayoutContentWithSubcontent,
 } from "./../../elements/contentLayouts";
+
+import { LayoutSubContent } from "./../../elements/content/textContent";
+import MainSubcomponent from "../mainSubcomponent";
+import React from "react";
+import { useSelector } from "react-redux";
 
 export const Sakramenty = (props) => {
   const data = useSelector((state) => state.sakramenty);
   const subcomponentsContent = [
-    <LayoutContentMany data={data.chrzest} />,
+    <LayoutSubContent data={data.chrzest} />,
     <LayoutContentWithSubcontent data={data.bierzmowanie} />,
-    <LayoutContentMany data={data.komunia} />,
-    <LayoutContentMany data={data.namaszczenieChorych} />,
-    <LayoutContentMany data={data.pogrzeb} />,
-    <LayoutContentMany data={data.slub} />,
+    <LayoutSubContent data={data.komunia} />,
+    <LayoutSubContent data={data.namaszczenieChorych} />,
+    <LayoutSubContent data={data.pogrzeb} />,
+    <LayoutSubContent data={data.slub} />,
   ];
   return (
     <MainSubcomponent layouts={subcomponentsContent} header={"Sakramenty"} />
