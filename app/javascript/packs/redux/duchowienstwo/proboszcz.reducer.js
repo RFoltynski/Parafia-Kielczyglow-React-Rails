@@ -3,7 +3,7 @@ const INITIAL_STATE = {
   image: photo,
   header: "Ks. Bogdan Ignasiak",
   description: "Probosz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-  subcontent: [
+  subcontents: [
     {
       header: "Urodzony:",
       description:

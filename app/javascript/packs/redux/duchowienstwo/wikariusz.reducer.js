@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   header: "Ks. Remigiusz Michał Lech",
   description:
     "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-  subcontent: [
+  subcontents: [
     {
       header: "Urodzony:",
       description: "15 maja 1993r w Myszkowie.",

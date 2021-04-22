@@ -4,7 +4,7 @@ import { Header, Subcontent } from "./textContent";
 import React from "react";
 
 export const Bio = (props) => {
-  const { header, description, subcontent, image, reverse } = props.data;
+  const { header, description, subcontents, image, reverse } = props.data;
   return (
     <section className={"section " + "bio"}>
       <Gallery>
@@ -21,9 +21,7 @@ export const Bio = (props) => {
       </Gallery>
       <div>
         <Header header={header} description={description} class={"bio"} />
-        {subcontent.map((subcontent) => {
-          return <Subcontent data={subcontent} />;
-        })}
+        <Subcontent data={subcontents} />
       </div>
     </section>
   );

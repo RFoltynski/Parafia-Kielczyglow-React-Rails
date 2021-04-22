@@ -9,7 +9,7 @@ const INITIAL_STATE = [
     header: "Ks. Edward Polak (1959-1990)",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-    subcontent: [
+    subcontents: [
       {
         header: "Urodzony:",
         description: "15 maja 1993r w Myszkowie.",
@@ -22,7 +22,7 @@ const INITIAL_STATE = [
     header: "Ks. Antoni Turbański (1949-1953)",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-    subcontent: [
+    subcontents: [
       {
         header: "Urodzony:",
         description: "15 maja 1993r w Myszkowie.",
@@ -35,7 +35,7 @@ const INITIAL_STATE = [
     header: "Ks.Józef Janson (1945-1949) (1953-1959)",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-    subcontent: [
+    subcontents: [
       {
         header: "Urodzony:",
         description: "15 maja 1993r w Myszkowie.",
@@ -48,7 +48,7 @@ const INITIAL_STATE = [
     header: "Ks. Wincenty Kruk (1940-1941)",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-    subcontent: [
+    subcontents: [
       {
         header: "Urodzony:",
         description: "15 maja 1993r w Myszkowie.",
@@ -61,7 +61,7 @@ const INITIAL_STATE = [
     header: "Ks. Stanisław Dąbrowski (1938-1939)",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-    subcontent: [
+    subcontents: [
       {
         header: "Urodzony:",
         description: "15 maja 1993r w Myszkowie.",
@@ -74,7 +74,7 @@ const INITIAL_STATE = [
     header: "Ks. Antonii Wróbel (1925-1938)",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-    subcontent: [
+    subcontents: [
       {
         header: "Urodzony:",
         description: "15 maja 1993r w Myszkowie.",

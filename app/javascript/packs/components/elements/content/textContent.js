@@ -12,22 +12,34 @@ export const Header = (props) => {
 };
 
 export const Subcontent = (props) => {
-  const { header, description, paragraphs, elementClass } = props.data;
   return (
-    <div className={"section_text " + props.class}>
-      <h5 className={"section_text_header " + props.class}>{header}</h5>
-      <p className={"section_text_content " + props.class}>{description}</p>
-      {paragraphs !== undefined ? (
-        paragraphs.map((item, key) => {
-          return (
-            <p className={"section_text_content " + elementClass} key={key}>
-              {item}
+    <div>
+      {props.data.map((element, key) => {
+        return (
+          <div className={"section_text " + props.class} key={key}>
+            <h5 className={"section_text_header " + props.class}>
+              {element.header}
+            </h5>
+            <p className={"section_text_content " + props.class}>
+              {element.description}
             </p>
-          );
-        })
-      ) : (
-        <div />
-      )}
+            {element.paragraphs !== undefined ? (
+              paragraphs.map((item, key) => {
+                return (
+                  <p
+                    className={"section_text_content " + elementClass}
+                    key={key}
+                  >
+                    {item}
+                  </p>
+                );
+              })
+            ) : (
+              <div />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 };
