@@ -1,5 +1,5 @@
-import React from "react";
 import MainSubcomponent from "../mainSubcomponent";
+import React from "react";
 
 export const WspolnotyParafialne = (props) => {
   const subcomponentsContent = [];

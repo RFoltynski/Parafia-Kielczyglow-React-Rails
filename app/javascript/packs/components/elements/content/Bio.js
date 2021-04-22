@@ -1,14 +1,12 @@
-import { Gallery, Item } from "react-photoswipe-gallery";
-
 import { Photo } from "./photoContent";
 import React from "react";
 import { Subcontent } from "./textContent";
 
 export const Bio = (props) => {
-  const { header, description, subcontents, image, reverse } = props.data;
+  const { header, description, subcontents, images, reverse } = props.data;
   return (
     <section className={"section " + "bio"}>
-      <Photo image={image} />
+      <Photo images={images[0]} />
       <div>
         <Subcontent
           header={header}

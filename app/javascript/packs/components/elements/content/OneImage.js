@@ -1,4 +1,4 @@
-import { LayoutContent, LayoutImages } from "./photoContent";
+import { Photo, PhotoDescription } from "./photoContent";
 import React, { useEffect, useState } from "react";
 
 export const Basic = (props) => {
@@ -9,8 +9,8 @@ export const Basic = (props) => {
   }, []);
   return (
     <section className={"section basic" + name}>
-      <LayoutImages images={images} class={"basic"} />
-      <LayoutContent
+      <Photo images={images[0]} class={"basic"} />
+      <PhotoDescription
         header={header}
         description={description}
         class={"basic"}

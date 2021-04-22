@@ -1,6 +1,6 @@
 import photo from "./../../components/img/ksieza/proboszcz";
 const INITIAL_STATE = {
-  image: photo,
+  images: [photo],
   header: "Ks. Remigiusz Michał Lech",
   description:
     "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",

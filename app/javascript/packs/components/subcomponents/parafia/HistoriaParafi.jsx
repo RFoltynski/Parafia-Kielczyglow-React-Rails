@@ -1,7 +1,8 @@
-import { Basic, ManyImages } from "./../../elements/contentLayouts";
-import { useSelector } from "react-redux";
-import React from "react";
+import { Basic } from "./../../elements/content/OneImage";
 import MainSubcomponent from "./../mainSubcomponent";
+import { ManyImages } from "./../../elements/contentLayouts";
+import React from "react";
+import { useSelector } from "react-redux";
 
 const HistoriaParafi = () => {
   const data = useSelector((state) => state.historia);

@@ -1,10 +1,4 @@
-import {
-  Basic,
-  ManyImages,
-  LayoutContent,
-  LayoutSubContent,
-  LayoutContentWithSubcontent,
-} from "./../../elements/contentLayouts";
+import { LayoutContent } from "./../../elements/contentLayouts";
 import MainSubcomponent from "./../mainSubcomponent";
 import React from "react";
 import { useSelector } from "react-redux";
