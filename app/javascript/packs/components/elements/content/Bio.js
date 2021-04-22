@@ -6,7 +6,7 @@ export const Bio = (props) => {
   const { header, description, subcontents, images, reverse } = props.data;
   return (
     <section className={"section " + "bio"}>
-      <Photo images={images[0]} />
+      <Photo images={images} />
       <div>
         <Subcontent
           header={header}

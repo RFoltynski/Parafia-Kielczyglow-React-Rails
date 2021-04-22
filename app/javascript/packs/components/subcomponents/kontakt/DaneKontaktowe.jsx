@@ -1,19 +1,18 @@
-import React from "react";
 import MainSubcomponent from "../mainSubcomponent";
+import React from "react";
+import { Subcontent } from "./../../elements/content/textContent";
 import { useSelector } from "react-redux";
-import { LayoutContent } from "../../elements/contentLayouts";
 export const Informacje = (props) => {
   const data = useSelector((state) => state.informacjeKontaktowe);
-  const subcomponentsContent = data.map((item, i) => {
-    return (
-      <LayoutContent
-        header={item.header}
-        description={item.description}
-        class={""}
-        key={i}
-      />
-    );
-  });
+  const subcomponentsContent = [
+    <Subcontent
+      header={data.header}
+      description={data.description}
+      subcontents={data.dane.subcontents}
+      key={1}
+    />,
+  ];
+
   return (
     <MainSubcomponent
       layouts={subcomponentsContent}

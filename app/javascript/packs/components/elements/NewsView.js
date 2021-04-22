@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { ManyImages } from "./contentLayouts";
+import { ManyImages } from "./../elements/content/photoContent";
 import pdf from "./../img/pdf.png";
 import renderHTML from "react-render-html";
 

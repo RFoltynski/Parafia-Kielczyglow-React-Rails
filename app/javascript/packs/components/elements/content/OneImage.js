@@ -9,7 +9,7 @@ export const Basic = (props) => {
   }, []);
   return (
     <section className={"section basic" + name}>
-      <Photo images={images[0]} class={"basic"} />
+      <Photo images={images} class={"basic"} />
       <PhotoDescription
         header={header}
         description={description}
