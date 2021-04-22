@@ -1,8 +1,8 @@
 const INITIAL_STATE = {
-  section2: {
+  msze: {
     header: "Msze swięte:",
     description: "Godziny nabożeństw",
-    subcontent: [
+    subcontents: [
       {
         header: "Kielczygłów:",
         description:
@@ -16,11 +16,11 @@ const INITIAL_STATE = {
     ],
     reverse: false,
   },
-  section3: {
+  odpust: {
     header: "Odpust:",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",
-    subcontent: [
+    subcontents: [
       {
         header: "Kiełczygłów:",
         description:

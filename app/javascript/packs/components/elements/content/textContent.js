@@ -1,20 +1,15 @@
 import React from "react";
 
-export const Header = (props) => {
-  return (
-    <div className={"section_text " + props.class}>
-      <h4 className={"section_text_header " + props.class}>{props.header}</h4>
-      <p className={"section_text_content " + props.class}>
-        {props.description}
-      </p>
-    </div>
-  );
-};
-
 export const Subcontent = (props) => {
+  console.log(props);
+  const { header, description, subcontents } = props;
   return (
     <div>
-      {props.data.map((element, key) => {
+      <div className={"section_text " + props.class}>
+        <h4 className={"section_text_header " + props.class}>{header}</h4>
+        <p className={"section_text_content " + props.class}>{description}</p>
+      </div>
+      {subcontents.map((element, key) => {
         return (
           <div className={"section_text " + props.class} key={key}>
             <h5 className={"section_text_header " + props.class}>
@@ -23,13 +18,11 @@ export const Subcontent = (props) => {
             <p className={"section_text_content " + props.class}>
               {element.description}
             </p>
+
             {element.paragraphs !== undefined ? (
-              paragraphs.map((item, key) => {
+              element.paragraphs.map((item, key) => {
                 return (
-                  <p
-                    className={"section_text_content " + elementClass}
-                    key={key}
-                  >
+                  <p className={"section_text_content "} key={key}>
                     {item}
                   </p>
                 );

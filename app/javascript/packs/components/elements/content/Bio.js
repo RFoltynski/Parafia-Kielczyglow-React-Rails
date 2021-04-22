@@ -20,8 +20,11 @@ export const Bio = (props) => {
         </Item>
       </Gallery>
       <div>
-        <Header header={header} description={description} class={"bio"} />
-        <Subcontent data={subcontents} />
+        <Subcontent
+          header={header}
+          description={description}
+          subcontents={subcontents}
+        />
       </div>
     </section>
   );
