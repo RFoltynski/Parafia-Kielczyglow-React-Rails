@@ -1,6 +1,7 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
-import { LayoutContent, LayoutSubContent } from "./textContent";
-import React, { useEffect, useState } from "react";
+import { Header, Subcontent } from "./textContent";
+
+import React from "react";
 
 export const Bio = (props) => {
   const { header, description, subcontent, image, reverse } = props.data;
@@ -19,13 +20,9 @@ export const Bio = (props) => {
         </Item>
       </Gallery>
       <div>
-        <LayoutContent
-          header={header}
-          description={description}
-          class={"bio"}
-        />
+        <Header header={header} description={description} class={"bio"} />
         {subcontent.map((subcontent) => {
-          return <LayoutSubContent data={subcontent} />;
+          return <Subcontent data={subcontent} />;
         })}
       </div>
     </section>

@@ -1,6 +1,17 @@
 import React from "react";
 
-export const LayoutSubContent = (props) => {
+export const Header = (props) => {
+  return (
+    <div className={"section_text " + props.class}>
+      <h4 className={"section_text_header " + props.class}>{props.header}</h4>
+      <p className={"section_text_content " + props.class}>
+        {props.description}
+      </p>
+    </div>
+  );
+};
+
+export const Subcontent = (props) => {
   const { header, description, paragraphs, elementClass } = props.data;
   return (
     <div className={"section_text " + props.class}>
@@ -17,17 +28,6 @@ export const LayoutSubContent = (props) => {
       ) : (
         <div />
       )}
-    </div>
-  );
-};
-
-export const LayoutContent = (props) => {
-  return (
-    <div className={"section_text " + props.class}>
-      <h4 className={"section_text_header " + props.class}>{props.header}</h4>
-      <p className={"section_text_content " + props.class}>
-        {props.description}
-      </p>
     </div>
   );
 };
