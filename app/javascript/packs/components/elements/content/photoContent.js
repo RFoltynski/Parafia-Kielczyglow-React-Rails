@@ -59,3 +59,22 @@ export const LayoutContent = (props) => {
     </div>
   );
 };
+
+export const Photo = ({ image }) => {
+  return (
+    <div className={"section_image"}>
+      <Gallery>
+        <Item original={image} thumbnail={image} width="1366" height="868">
+          {({ ref, open }) => (
+            <img
+              ref={ref}
+              onClick={open}
+              src={image}
+              className={"section_image bio"}
+            />
+          )}
+        </Item>
+      </Gallery>
+    </div>
+  );
+};

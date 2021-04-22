@@ -1,6 +1,4 @@
-import {} from "./photoContent";
-
-import { Gallery, Item } from "react-photoswipe-gallery";
+import { LayoutContent, LayoutImages } from "./photoContent";
 import React, { useEffect, useState } from "react";
 
 export const Basic = (props) => {
