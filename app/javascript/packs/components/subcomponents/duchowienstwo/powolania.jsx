@@ -1,4 +1,4 @@
-import { Bio } from "./../../elements/contentLayouts";
+import { Bio } from "./../../elements/content/Bio";
 import MainSubcomponent from "./../mainSubcomponent";
 import React from "react";
 import { useSelector } from "react-redux";

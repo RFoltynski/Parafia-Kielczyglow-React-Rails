@@ -1,4 +1,5 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
+import { LayoutContent, LayoutSubContent } from "./textContent";
 import React, { useEffect, useState } from "react";
 
 export const Bio = (props) => {
@@ -24,13 +25,7 @@ export const Bio = (props) => {
           class={"bio"}
         />
         {subcontent.map((subcontent) => {
-          return (
-            <LayoutSubContent
-              header={subcontent.header}
-              description={subcontent.description}
-              class={"subcontent bio"}
-            />
-          );
+          return <LayoutSubContent data={subcontent} />;
         })}
       </div>
     </section>
