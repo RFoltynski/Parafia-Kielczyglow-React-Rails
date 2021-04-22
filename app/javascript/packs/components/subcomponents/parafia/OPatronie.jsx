@@ -1,5 +1,6 @@
-import { Basic, ManyImages } from "./../../elements/contentLayouts";
+import { Basic } from "./../../elements/content/OneImage";
 import MainSubcomponent from "./../mainSubcomponent";
+import { ManyImages } from "./../../elements/content/photoContent";
 import React from "react";
 import { useSelector } from "react-redux";
 

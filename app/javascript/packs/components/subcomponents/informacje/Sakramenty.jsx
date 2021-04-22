@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 export const Sakramenty = (props) => {
   const data = useSelector((state) => state.sakramenty);
-  console.log(data);
   const subcomponentsContent = [
     <Subcontent
       header={data.chrzest.header}

@@ -1,18 +1,18 @@
 const INITIAL_STATE = {
-  section1: {
+  obecnie: {
     header: "Parafia rzymskokatolicka w Kiełczygłowie.",
     description: "Należy do Dekanatu Pajęczno archidiecezji częstochowskiej.",
-    reverse: false,
-  },
-  section2: {
-    header: "Mieszkańcy:",
-    description: "2500",
-    reverse: false,
-  },
-  section3: {
-    header: "Miejscowości należące do parafii Kiełczygłów::",
-    description:
-      "Dryganek Duży, Dryganek Mały, Glina Duża, Glina Mała, Kule, Gumnisko,  Dąbrowa, Pierzyny Duże, Pierzyny Małe, Kiełczygłów - Okupniki, Kiełczygłów, Huta, Lipie, Kiełczygłówek, Osina Mała, Osina Duża, Beresie Małe, Obrów, Kiełczygłów Kolonia (nr 1 - 19)",
+    subcontents: [
+      {
+        header: "Mieszkańcy:",
+        description: "2500",
+      },
+      {
+        header: "Miejscowości należące do parafii Kiełczygłów::",
+        description:
+          "Dryganek Duży, Dryganek Mały, Glina Duża, Glina Mała, Kule, Gumnisko,  Dąbrowa, Pierzyny Duże, Pierzyny Małe, Kiełczygłów - Okupniki, Kiełczygłów, Huta, Lipie, Kiełczygłówek, Osina Mała, Osina Duża, Beresie Małe, Obrów, Kiełczygłów Kolonia (nr 1 - 19)",
+      },
+    ],
     reverse: false,
   },
 };

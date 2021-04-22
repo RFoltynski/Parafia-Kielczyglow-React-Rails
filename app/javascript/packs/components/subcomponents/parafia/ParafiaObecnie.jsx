@@ -1,31 +1,15 @@
-import {
-  Basic,
-  ManyImages,
-  LayoutContent,
-  LayoutSubContent,
-  LayoutContentWithSubcontent,
-} from "./../../elements/contentLayouts";
 import MainSubcomponent from "./../mainSubcomponent";
 import React from "react";
+import { Subcontent } from "./../../elements/content/textContent";
 import { useSelector } from "react-redux";
 
 export const ParafiaObecnie = () => {
   const data = useSelector((state) => state.obecnie);
   const subcomponentsContent = [
-    <LayoutContent
-      header={data.section1.header}
-      description={data.section1.description}
-      class={"bio"}
-    />,
-    <LayoutContent
-      header={data.section2.header}
-      description={data.section2.description}
-      class={"bio"}
-    />,
-    <LayoutContent
-      header={data.section3.header}
-      description={data.section3.description}
-      class={"bio"}
+    <Subcontent
+      header={data.obecnie.header}
+      description={data.obecnie.description}
+      subcontents={data.obecnie.subcontents}
     />,
   ];
   return (
