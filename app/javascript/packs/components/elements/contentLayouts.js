@@ -72,38 +72,3 @@ export const LayoutContent = (props) => {
     </div>
   );
 };
-
-export const LayoutSubContent = (props) => {
-  return (
-    <div className={"section_text " + props.class}>
-      <h5 className={"section_text_header " + props.class}>{props.header}</h5>
-      <p className={"section_text_content " + props.class}>
-        {props.description}
-      </p>
-    </div>
-  );
-};
-
-export const LayoutContentWithSubcontent = (props) => {
-  const { header, description, subcontent, reverse } = props.data;
-  return (
-    <section className={"section " + "bio"}>
-      <div>
-        <LayoutContent
-          header={header}
-          description={description}
-          class={"bio"}
-        />
-        {subcontent.map((subcontent) => {
-          return (
-            <LayoutSubContent
-              header={subcontent.header}
-              description={subcontent.description}
-              class={"subcontent"}
-            />
-          );
-        })}
-      </div>
-    </section>
-  );
-};

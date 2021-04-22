@@ -1,7 +1,6 @@
 import React from "react";
 
 export const Subcontent = (props) => {
-  console.log(props);
   const { header, description, subcontents } = props;
   return (
     <div>

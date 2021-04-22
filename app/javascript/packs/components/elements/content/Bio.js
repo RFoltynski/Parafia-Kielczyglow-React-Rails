@@ -1,7 +1,7 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
-import { Header, Subcontent } from "./textContent";
 
 import React from "react";
+import { Subcontent } from "./textContent";
 
 export const Bio = (props) => {
   const { header, description, subcontents, image, reverse } = props.data;

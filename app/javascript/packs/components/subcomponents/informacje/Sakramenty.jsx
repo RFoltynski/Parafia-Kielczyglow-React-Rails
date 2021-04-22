@@ -1,4 +1,3 @@
-import { LayoutContentWithSubcontent } from "./../../elements/contentLayouts";
 import MainSubcomponent from "../mainSubcomponent";
 import React from "react";
 import { Subcontent } from "./../../elements/content/textContent";
