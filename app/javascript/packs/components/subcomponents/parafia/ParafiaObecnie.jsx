@@ -7,19 +7,9 @@ export const ParafiaObecnie = () => {
   const data = useSelector((state) => state.obecnie);
   const subcomponentsContent = [
     <Subcontent
-      header={data.section1.header}
-      description={data.section1.description}
-      class={"bio"}
-    />,
-    <Subcontent
-      header={data.section2.header}
-      description={data.section2.description}
-      class={"bio"}
-    />,
-    <Subcontent
-      header={data.section3.header}
-      description={data.section3.description}
-      class={"bio"}
+      header={data.obecnie.header}
+      description={data.obecnie.description}
+      subcontents={data.obecnie.subcontents}
     />,
   ];
   return (
