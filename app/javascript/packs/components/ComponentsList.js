@@ -1,4 +1,9 @@
 import {
+  Cmentarz,
+  Kaplica,
+  Pogrzeby,
+} from "./subcomponents/cmentarzSubcomponents";
+import {
   HistoriaParafi,
   Miejsca,
   OPatronie,
@@ -12,15 +17,12 @@ import {
   Wikary,
 } from "./subcomponents/duchowienstwoSubcomponents";
 
-import { Cmentarz } from "./subcomponents/cmentarz/Cmentarz";
 import Contactform from "./subcomponents/kontakt/contactForm";
 import { Informacje } from "./subcomponents/kontakt/DaneKontaktowe";
-import { Kaplica } from "./subcomponents/cmentarz/Kaplica";
 import Main from "./MainComponent";
 import { Nabozenstwa } from "./subcomponents/informacje/Nabozenstwa.jsx";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
-import { Pogrzeby } from "./subcomponents/cmentarz/Pogrzeby";
 import React from "react";
 import Sakramenty from "./subcomponents/informacje/Sakramenty";
 
