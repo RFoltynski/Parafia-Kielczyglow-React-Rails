@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   msze: {
+    component: "Subcomponent",
     header: "Msze swięte:",
     description: "Godziny nabożeństw",
     subcontents: [
@@ -17,6 +18,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   odpust: {
+    component: "Subcomponent",
     header: "Odpust:",
     description:
       "Obecnie wikariusz parafi pw. św. Antoniego Padewskiego w Kiełczygłowie",

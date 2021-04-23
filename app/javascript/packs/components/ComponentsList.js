@@ -11,6 +11,10 @@ import {
   WspolnotyParafialne,
 } from "./subcomponents/parafiaSubcomponents";
 import {
+  Nabozenstwa,
+  Sakramenty,
+} from "./subcomponents/informacjeSubcomponents";
+import {
   Powolania,
   Proboszcz,
   Proboszczowie,
@@ -20,11 +24,9 @@ import {
 import Contactform from "./subcomponents/kontakt/contactForm";
 import { Informacje } from "./subcomponents/kontakt/DaneKontaktowe";
 import Main from "./MainComponent";
-import { Nabozenstwa } from "./subcomponents/informacje/Nabozenstwa.jsx";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
 import React from "react";
-import Sakramenty from "./subcomponents/informacje/Sakramenty";
 
 const subComponents = {
   cmentarz: [
