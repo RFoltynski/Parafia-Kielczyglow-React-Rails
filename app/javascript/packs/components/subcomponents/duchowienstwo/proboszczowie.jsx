@@ -5,8 +5,10 @@ import { useSelector } from "react-redux";
 
 export const Proboszczowie = () => {
   const data = useSelector((state) => state.proboszczowie);
-  const subcomponentsContent = data.map((item, i) => {
-    return <Bio data={item} key={i} />;
+  const keys = Object.keys(data);
+
+  const subcomponentsContent = keys.map((item, key) => {
+    return <Bio data={data[item]} key={key} />;
   });
   return (
     <MainSubcomponent
