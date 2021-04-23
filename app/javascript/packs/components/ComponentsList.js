@@ -22,7 +22,7 @@ import {
 } from "./subcomponents/duchowienstwoSubcomponents";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
-import { Informacje } from "./subcomponents/kontakt/DaneKontaktowe";
+import { DaneKontaktowe } from "./subcomponents/kontakt/DaneKontaktowe";
 import Main from "./MainComponent";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
@@ -45,7 +45,7 @@ const subComponents = {
     ["Sakramenty", <Sakramenty key={3} />],
   ],
   kontakt: [
-    ["Dane Kontaktowe", <Informacje key={1} />],
+    ["Dane Kontaktowe", <DaneKontaktowe key={1} />],
     ["Formularz", <Contactform key={2} />],
   ],
   ogloszenia: [

@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
-  dane: {
+  daneKontaktowe: {
+    component: "Subcomponent",
     header: "Dane Kontaktowe:",
     description: "Godziny nabożeństw",
     subcontents: [
@@ -40,11 +41,11 @@ const INITIAL_STATE = {
   },
 };
 
-const infoReducer = (state = INITIAL_STATE, action) => {
+const danKontaktoweReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default infoReducer;
+export default danKontaktoweReducer;

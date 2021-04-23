@@ -1,7 +1,7 @@
 import cmentarzReducer from "./cmentarz/cmentarz.reducer";
 import { combineReducers } from "redux";
+import danKontaktoweReducer from "./kontakt/daneKontaktowe.reducer";
 import historiaReducer from "./parafia/historiaParafi.reducer";
-import infoReducer from "./daneKontaktowe/daneKontaktowe.reducer";
 import { intentionsReducer } from "./intentions/intentions.reducer";
 import kaplicaReducer from "./cmentarz/kaplica.reducer";
 import miejscaReducer from "./parafia/miejsca.reducer";
@@ -24,7 +24,7 @@ const rootReducer = combineReducers({
   wikariusz: wikariuszReducer,
   proboszczowie: proboszczowieReducer,
   powolania: powolaniaReducer,
-  informacjeKontaktowe: infoReducer,
+  daneKontaktowe: danKontaktoweReducer,
   historia: historiaReducer,
   oPatronie: oPatronieReducer,
   miejsca: miejscaReducer,
