@@ -5,6 +5,12 @@ import {
   ParafiaObecnie,
   WspolnotyParafialne,
 } from "./subcomponents/parafiaSubcomponents";
+import {
+  Powolania,
+  Proboszcz,
+  Proboszczowie,
+  Wikary,
+} from "./subcomponents/duchowienstwoSubcomponents";
 
 import { Cmentarz } from "./subcomponents/cmentarz/Cmentarz";
 import Contactform from "./subcomponents/kontakt/contactForm";
@@ -15,12 +21,8 @@ import { Nabozenstwa } from "./subcomponents/informacje/Nabozenstwa.jsx";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
 import { Pogrzeby } from "./subcomponents/cmentarz/Pogrzeby";
-import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
-import { Proboszcz } from "./subcomponents/duchowienstwo/proboszcz.jsx";
-import { Proboszczowie } from "./subcomponents/duchowienstwo/proboszczowie";
 import React from "react";
 import Sakramenty from "./subcomponents/informacje/Sakramenty";
-import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
 
 const subComponents = {
   cmentarz: [
