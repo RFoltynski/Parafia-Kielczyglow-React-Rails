@@ -21,7 +21,7 @@ import wsrodku4 from "./../../components/img/budowa/wsrodku4.JPG";
 
 const INITIAL_STATE = {
   section1: {
-    component: "Bio",
+    component: "Basic",
     header: "Powstanie Parafii",
     description:
       "Parafię erygował bp włocławski Stanisław Zdzitkowiecki 21.08.1924",
@@ -45,14 +45,14 @@ const INITIAL_STATE = {
     reverse: false,
   },
   section4: {
-    component: "Bio",
+    component: "Basic",
     header: "Konsekracja Kościoła",
     description: "Kościół konsekrował bp Zdzisław Goliński 13.06.1957 roku.",
     images: [konsekracja, konsekracja2, swieto],
     reverse: true,
   },
   section5: {
-    component: "Bio",
+    component: "Basic",
     header: "Artykuł z zatrzymania Ks. Józefa Jansona",
     description: "",
     images: [pamiatka, gazeta],

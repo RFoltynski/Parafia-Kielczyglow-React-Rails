@@ -12,7 +12,7 @@ const MainSubcomponent = (props) => {
   const subcomponentsContent = keys.map((item, key) => {
     if (data[item].component === "ManyImages") {
       return <ManyImages data={data[item]} key={key} />;
-    } else if (data[item].component === "Bio") {
+    } else if (data[item].component === "Basic") {
       return <Basic data={data[item]} key={key} />;
     } else if (data[item].component === "Subcomponent") {
       console.log(data[item]);
