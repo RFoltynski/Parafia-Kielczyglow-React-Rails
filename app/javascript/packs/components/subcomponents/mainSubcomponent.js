@@ -15,7 +15,15 @@ const MainSubcomponent = (props) => {
     } else if (data[item].component === "Bio") {
       return <Basic data={data[item]} key={key} />;
     } else if (data[item].component === "Subcomponent") {
-      return <Subcontent data={data[item]} key={key} />;
+      console.log(data[item]);
+      return (
+        <Subcontent
+          header={data[item].header}
+          description={data[item].description}
+          subcontents={data[item].subcontents}
+          key={key}
+        />
+      );
     }
   });
 
