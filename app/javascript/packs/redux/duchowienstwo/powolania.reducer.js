@@ -5,6 +5,7 @@ import Turbanski from "./../../components/img/ksieza/Antonii_Turbanski.JPG";
 import Wrobel from "./../../components/img/ksieza/Antoni_Wrobel.JPG";
 const INITIAL_STATE = {
   polak: {
+    compoonent: "Bio",
     images: [Polak],
     header: "Ks. Edward Polak (1959-1990)",
     description:
@@ -18,6 +19,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   turbanski: {
+    compoonent: "Bio",
     images: [Turbanski],
     header: "Ks. Antoni Turbański (1949-1953)",
     description:
@@ -31,6 +33,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   janson: {
+    compoonent: "Bio",
     images: [Janson],
     header: "Ks.Józef Janson (1945-1949) (1953-1959)",
     description:
@@ -44,6 +47,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   kruk: {
+    compoonent: "Bio",
     images: [Kruk],
     header: "Ks. Wincenty Kruk (1940-1941)",
     description:
@@ -57,6 +61,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   dabrowski: {
+    compoonent: "Bio",
     images: [Wrobel],
     header: "Ks. Stanisław Dąbrowski (1938-1939)",
     description:
@@ -70,6 +75,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   wrobel: {
+    compoonent: "Bio",
     images: [Wrobel],
     header: "Ks. Antonii Wróbel (1925-1938)",
     description:
