@@ -18,7 +18,6 @@ const MainSubcomponent = (props) => {
     } else if (data[item].component === "Bio") {
       return <Bio data={data[item]} key={key} />;
     } else if (data[item].component === "Subcomponent") {
-      console.log(data[item]);
       return (
         <Subcontent
           header={data[item].header}
@@ -34,11 +33,7 @@ const MainSubcomponent = (props) => {
     <div className="subcategory__container">
       <div className="subcategory__view">
         <h2>{props.header}</h2>
-        <div className="subcategory__view__column">
-          {subcomponentsContent.map((item) => {
-            return item;
-          })}
-        </div>
+        <div className="subcategory__view__column">{subcomponentsContent}</div>
       </div>
     </div>
   );
