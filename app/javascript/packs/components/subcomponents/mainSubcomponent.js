@@ -1,4 +1,5 @@
 import { Basic } from "./../elements/content/OneImage";
+import { Bio } from "./../elements/content/Bio";
 import { ManyImages } from "./../elements/content/photoContent";
 import React from "react";
 import { Subcontent } from "../elements/content/textContent";
@@ -14,6 +15,8 @@ const MainSubcomponent = (props) => {
       return <ManyImages data={data[item]} key={key} />;
     } else if (data[item].component === "Basic") {
       return <Basic data={data[item]} key={key} />;
+    } else if (data[item].component === "Bio") {
+      return <Bio data={data[item]} key={key} />;
     } else if (data[item].component === "Subcomponent") {
       console.log(data[item]);
       return (
