@@ -4,6 +4,7 @@ import franciszekP from "./../../components/img/parafia/Opatronie/franciszek-pro
 
 const INITIAL_STATE = {
   section1: {
+    component: "Basic",
     header: "Życie",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
@@ -11,6 +12,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   section2: {
+    component: "ManyImages",
     header: "Powołanie",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
@@ -18,6 +20,7 @@ const INITIAL_STATE = {
     reverse: false,
   },
   section3: {
+    component: "Basic",
     header: "Duszpasterstwo",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",

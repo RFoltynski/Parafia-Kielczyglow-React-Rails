@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   obecnie: {
+    component: "Subcomponent",
     header: "Parafia rzymskokatolicka w Kiełczygłowie.",
     description: "Należy do Dekanatu Pajęczno archidiecezji częstochowskiej.",
     subcontents: [

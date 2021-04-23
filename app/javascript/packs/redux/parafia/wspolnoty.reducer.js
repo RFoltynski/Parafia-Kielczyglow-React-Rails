@@ -11,11 +11,11 @@ const INITIAL_STATE = {
   },
 };
 
-const miejscaReducer = (state = INITIAL_STATE, action) => {
+const wspolnotyReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default miejscaReducer;
+export default wspolnotyReducer;
