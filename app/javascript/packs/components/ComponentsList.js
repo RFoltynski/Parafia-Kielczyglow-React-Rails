@@ -1,30 +1,26 @@
-import React from "react";
-
-import Main from "./MainComponent";
+import {
+  HistoriaParafi,
+  Miejsca,
+  OPatronie,
+  ParafiaObecnie,
+  WspolnotyParafialne,
+} from "./subcomponents/parafiaSubcomponents";
 
 import { Cmentarz } from "./subcomponents/cmentarz/Cmentarz";
-import { Kaplica } from "./subcomponents/cmentarz/Kaplica";
-import { Pogrzeby } from "./subcomponents/cmentarz/Pogrzeby";
-
-import { Proboszcz } from "./subcomponents/duchowienstwo/proboszcz.jsx";
-import { Proboszczowie } from "./subcomponents/duchowienstwo/proboszczowie";
-import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
-import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
-
-import { Nabozenstwa } from "./subcomponents/informacje/Nabozenstwa.jsx";
-import Sakramenty from "./subcomponents/informacje/Sakramenty";
-
 import Contactform from "./subcomponents/kontakt/contactForm";
 import { Informacje } from "./subcomponents/kontakt/DaneKontaktowe";
-
+import { Kaplica } from "./subcomponents/cmentarz/Kaplica";
+import Main from "./MainComponent";
+import { Nabozenstwa } from "./subcomponents/informacje/Nabozenstwa.jsx";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
-import HistoriaParafi from "./subcomponents/parafia/HistoriaParafi.jsx";
-
-import { OPatronie } from "./subcomponents/parafia/OPatronie.jsx";
-import { ParafiaObecnie } from "./subcomponents/parafia/ParafiaObecnie";
-import { Miejsca } from "./subcomponents/parafia/Miejsca.jsx";
-import WspolnotyParafialne from "./subcomponents/parafia/WspolnotyParafialne.jsx";
+import { Pogrzeby } from "./subcomponents/cmentarz/Pogrzeby";
+import { Powolania } from "./subcomponents/duchowienstwo/powolania.jsx";
+import { Proboszcz } from "./subcomponents/duchowienstwo/proboszcz.jsx";
+import { Proboszczowie } from "./subcomponents/duchowienstwo/proboszczowie";
+import React from "react";
+import Sakramenty from "./subcomponents/informacje/Sakramenty";
+import { Wikary } from "./subcomponents/duchowienstwo/wikary.jsx";
 
 const subComponents = {
   cmentarz: [
