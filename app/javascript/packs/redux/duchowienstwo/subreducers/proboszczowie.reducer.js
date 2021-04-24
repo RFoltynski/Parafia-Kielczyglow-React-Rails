@@ -1,8 +1,8 @@
-import Janson from "./../../components/img/ksieza/Józef_Janson.JPG";
-import Kruk from "./../../components/img/ksieza/Wincenty_Kruk.JPG";
-import Polak from "./../../components/img/ksieza/Edward_Polak.JPG";
-import Turbanski from "./../../components/img/ksieza/Antonii_Turbanski.JPG";
-import Wrobel from "./../../components/img/ksieza/Antoni_Wrobel.JPG";
+import Janson from "./../../../components/img/ksieza/Józef_Janson.JPG";
+import Kruk from "./../../../components/img/ksieza/Wincenty_Kruk.JPG";
+import Polak from "./../../../components/img/ksieza/Edward_Polak.JPG";
+import Turbanski from "./../../../components/img/ksieza/Antonii_Turbanski.JPG";
+import Wrobel from "./../../../components/img/ksieza/Antoni_Wrobel.JPG";
 const INITIAL_STATE = {
   polak: {
     component: "Bio",
