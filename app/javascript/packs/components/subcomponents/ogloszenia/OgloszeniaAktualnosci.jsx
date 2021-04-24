@@ -4,7 +4,7 @@ import {
   fetchPosts,
   setError,
   updatePostsPage,
-} from "../../../redux/posts/post.action";
+} from "../../../redux/ogloszenia/subreducers/posts/post.action";
 
 import NewsView from "../../elements/NewsView";
 import { connect } from "react-redux";
@@ -74,7 +74,13 @@ class OgloszeniaAktualnosci extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { fetchPosts, per, page, totalPages, pageLoadError } = state.posts;
+  const {
+    fetchPosts,
+    per,
+    page,
+    totalPages,
+    pageLoadError,
+  } = state.ogloszenia.posts;
 
   return {
     getPosts: fetchPosts,
