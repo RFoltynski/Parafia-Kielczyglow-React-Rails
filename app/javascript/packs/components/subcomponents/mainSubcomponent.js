@@ -6,7 +6,7 @@ import { Subcontent } from "../elements/content/textContent";
 import { useSelector } from "react-redux";
 
 const MainSubcomponent = (props) => {
-  const data = useSelector((state) => state[props.reducerProperty]);
+  const data = useSelector((state) => state[props.main][props.reducerProperty]);
   const keys = Object.keys(data);
   console.log(data);
 

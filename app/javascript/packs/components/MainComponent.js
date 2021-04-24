@@ -1,5 +1,5 @@
-import React from "react";
 import Navbar from "./elements/Navbar";
+import React from "react";
 import Submenu from "./elements/Submenu";
 
 const Main = (props) => {
@@ -8,7 +8,7 @@ const Main = (props) => {
       <Navbar />
       <center>
         <h1 className="subcategory__header"> {props.header} </h1>
-        <Submenu componentsList={props.componentsList} />
+        <Submenu componentsList={props.componentsList} key={1} />
       </center>
     </div>
   );

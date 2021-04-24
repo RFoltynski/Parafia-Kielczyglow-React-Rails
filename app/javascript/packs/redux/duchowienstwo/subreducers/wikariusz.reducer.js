@@ -1,4 +1,4 @@
-import photo from "./../../components/img/ksieza/proboszcz";
+import photo from "./../../../components/img/ksieza/proboszcz";
 const INITIAL_STATE = {
   wikariusz: {
     component: "Bio",

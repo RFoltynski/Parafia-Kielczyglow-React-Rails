@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchIntentions } from "../../../redux/intentions/intentions.action";
+
+import { fetchIntentions } from "../../../redux/ogloszenia/subreducers/intentions/intentions.action";
 
 const OgloszeniaIntencje = () => {
   const dispatch = useDispatch();
@@ -9,7 +10,9 @@ const OgloszeniaIntencje = () => {
     dispatch(fetchIntentions());
   }, []);
 
-  const intentionFile = useSelector((state) => state.intentions.file);
+  const intentionFile = useSelector(
+    (state) => state.ogloszenia.intentions.file
+  );
 
   return (
     <div className="subcategory__view">
