@@ -1,14 +1,12 @@
-import cmentarzReducer from "./cmentarz/cmentarz.reducer";
+import cmentarzSubreducer from "./cmentarz/cmentarz.category.reducer";
 import { combineReducers } from "redux";
 import danKontaktoweReducer from "./kontakt/daneKontaktowe.reducer";
 import historiaReducer from "./parafia/historiaParafi.reducer";
 import { intentionsReducer } from "./intentions/intentions.reducer";
-import kaplicaReducer from "./cmentarz/kaplica.reducer";
 import miejscaReducer from "./parafia/miejsca.reducer";
 import nabozenstwaReducer from "./informacje/nabozenstwa.reducer";
 import oPatronieReducer from "./parafia/oPatronie.reducer";
 import obecnieReducer from "./parafia/obecnie.reducer";
-import pogrzebyReducer from "./cmentarz/pogrzeby.reducer";
 import postReducer from "./posts/post.reducer";
 import powolaniaReducer from "./duchowienstwo/powolania.reducer";
 import proboszczReducer from "./duchowienstwo/proboszcz.reducer";
@@ -32,9 +30,7 @@ const rootReducer = combineReducers({
   nabozenstwa: nabozenstwaReducer,
   sakramenty: sakramentyReducer,
   wspolnoty: wspolnotyReducer,
-  kaplica: kaplicaReducer,
-  cmentarz: cmentarzReducer,
-  pogrzeby: pogrzebyReducer,
+  cmentarz: cmentarzSubreducer,
 });
 
 export default rootReducer;
