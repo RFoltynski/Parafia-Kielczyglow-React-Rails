@@ -1,4 +1,4 @@
-import franciszek from "./../../components/img/parafia/Opatronie/franciszek.jpg";
+import franciszek from "./../../../components/img/parafia/Opatronie/franciszek.jpg";
 
 const INITIAL_STATE = {
   section1: {
@@ -11,11 +11,11 @@ const INITIAL_STATE = {
   },
 };
 
-const wspolnotyReducer = (state = INITIAL_STATE, action) => {
+const miejscaReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default wspolnotyReducer;
+export default miejscaReducer;

@@ -9,6 +9,7 @@ export const Cmentarz = (props) => {
       main={MAIN}
       reducerProperty={"cmentarz"}
       header={"Cmentarz"}
+      key={1}
     />
   );
 };
@@ -19,6 +20,7 @@ export const Kaplica = (props) => {
       main={MAIN}
       reducerProperty={"kaplica"}
       header={"Kaplica"}
+      key={2}
     />
   );
 };
@@ -29,6 +31,7 @@ export const Pogrzeby = (props) => {
       main={MAIN}
       reducerProperty={"pogrzeby"}
       header={"Pogrzeby"}
+      key={3}
     />
   );
 };

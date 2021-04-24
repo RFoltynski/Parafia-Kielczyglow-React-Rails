@@ -8,6 +8,7 @@ export const Powolania = () => {
       main={MAIN}
       reducerProperty={"powolania"}
       header={"Powołania"}
+      key={1}
     />
   );
 };
@@ -18,6 +19,7 @@ export const Proboszcz = () => {
       main={MAIN}
       reducerProperty={"proboszcz"}
       header={"Obecny Proboszcz"}
+      key={2}
     />
   );
 };
@@ -28,6 +30,7 @@ export const Proboszczowie = () => {
       main={MAIN}
       reducerProperty={"proboszczowie"}
       header={"Byli Proboszczowie"}
+      key={3}
     />
   );
 };
@@ -38,6 +41,7 @@ export const Wikary = () => {
       main={MAIN}
       reducerProperty={"wikariusz"}
       header={"Obecny Wikariusz"}
+      key={4}
     />
   );
 };

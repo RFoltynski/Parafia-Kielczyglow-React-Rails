@@ -1,6 +1,6 @@
-import franciszek from "./../../components/img/parafia/Opatronie/franciszek.jpg";
-import franciszekM from "./../../components/img/parafia/Opatronie/franciszek-mlody.jpg";
-import franciszekP from "./../../components/img/parafia/Opatronie/franciszek-prosto.jpg";
+import franciszek from "./../../../components/img/parafia/Opatronie/franciszek.jpg";
+import franciszekM from "./../../../components/img/parafia/Opatronie/franciszek-mlody.jpg";
+import franciszekP from "./../../../components/img/parafia/Opatronie/franciszek-prosto.jpg";
 
 const INITIAL_STATE = {
   section1: {
