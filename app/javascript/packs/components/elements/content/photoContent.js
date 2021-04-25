@@ -10,13 +10,9 @@ export const ManyImages = (props) => {
   }, []);
 
   return (
-    <section className={"section manyimages" + name}>
-      <PhotoDescription
-        header={header}
-        description={description}
-        class={"manyimages"}
-      />
-      <Photo images={images} class={"manyimages"} />
+    <section className={"section " + name}>
+      <PhotoDescription header={header} description={description} />
+      <Photo images={images} class={"bio"} />
     </section>
   );
 };
@@ -44,7 +40,7 @@ export const Photo = (props) => {
                 ref={ref}
                 onClick={open}
                 src={image}
-                className={"section_image" + name}
+                className={"section_image " + name}
               />
             )}
           </Item>,
