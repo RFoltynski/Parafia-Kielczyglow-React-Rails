@@ -14,12 +14,6 @@ import {
   Nabozenstwa,
   Sakramenty,
 } from "./subcomponents/informacjeSubcomponents";
-import {
-  Powolania,
-  Proboszcz,
-  Proboszczowie,
-  Wikary,
-} from "./subcomponents/duchowienstwoSubcomponents";
 
 import Contactform from "./subcomponents/kontakt/contactForm";
 import { DaneKontaktowe } from "./subcomponents/kontakt/DaneKontaktowe";
@@ -33,12 +27,6 @@ const subComponents = {
     ["Cmentarz", <Cmentarz />],
     ["Kaplica", <Kaplica />],
     ["Pogrzeby", <Pogrzeby />],
-  ],
-  duchowienstwo: [
-    ["Proboszcz", <Proboszcz key={1} />],
-    ["Wikary", <Wikary key={2} />],
-    ["Proboszczowie", <Proboszczowie key={3} />],
-    ["Powolania", <Powolania key={4} />],
   ],
   informacje: [
     ["Nabożeństwa", <Nabozenstwa key={2} />],
