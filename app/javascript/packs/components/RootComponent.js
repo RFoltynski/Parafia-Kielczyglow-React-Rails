@@ -2,7 +2,7 @@ import Navbar from "./elements/Navbar";
 import React from "react";
 import Submenu from "./elements/Submenu";
 
-const Main = (props) => {
+const RootComponent = (props) => {
   return (
     <div className="subcategory">
       <Navbar />
@@ -14,4 +14,4 @@ const Main = (props) => {
   );
 };
 
-export default Main;
+export default RootComponent;

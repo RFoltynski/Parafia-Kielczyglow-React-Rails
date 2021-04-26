@@ -14,3 +14,25 @@ $header-font: "Oswald", sans-serif;
   align-items: center;
   flex-direction: $direction;
 }
+
+.contact-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $accents-color;
+  color: $main-color;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: $default-radius;
+  opacity: $default-opacity;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: $default-opacity;
+  }
+}

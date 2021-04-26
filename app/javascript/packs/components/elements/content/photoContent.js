@@ -2,21 +2,12 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import React, { useEffect, useState } from "react";
 
 export const ManyImages = (props) => {
-  const { header, description, images, reverse } = props.data;
-  const [name, changeName] = useState("");
-
-  useEffect(() => {
-    if (reverse) changeName(name + " reverse");
-  }, []);
+  const { header, description, images } = props.data;
 
   return (
-    <section className={"section manyimages" + name}>
-      <PhotoDescription
-        header={header}
-        description={description}
-        class={"manyimages"}
-      />
-      <Photo images={images} class={"manyimages"} />
+    <section className={"section " + name}>
+      <PhotoDescription header={header} description={description} />
+      <Photo images={images} name={"manyImages"} />
     </section>
   );
 };
@@ -44,7 +35,7 @@ export const Photo = (props) => {
                 ref={ref}
                 onClick={open}
                 src={image}
-                className={"section_image" + name}
+                className={"section_image " + name}
               />
             )}
           </Item>,
