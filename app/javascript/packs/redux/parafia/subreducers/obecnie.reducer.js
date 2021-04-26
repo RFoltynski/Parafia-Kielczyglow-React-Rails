@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+  mainHeader: "Parafia Obecnie",
   obecnie: {
     component: "Subcomponent",
     header: "Parafia rzymskokatolicka w Kiełczygłowie.",

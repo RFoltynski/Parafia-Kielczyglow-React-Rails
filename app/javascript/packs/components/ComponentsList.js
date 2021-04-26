@@ -4,13 +4,6 @@ import {
   Pogrzeby,
 } from "./subcomponents/cmentarzSubcomponents";
 import {
-  HistoriaParafi,
-  Miejsca,
-  OPatronie,
-  ParafiaObecnie,
-  WspolnotyParafialne,
-} from "./subcomponents/parafiaSubcomponents";
-import {
   Nabozenstwa,
   Sakramenty,
 } from "./subcomponents/informacjeSubcomponents";
@@ -40,13 +33,6 @@ const subComponents = {
     ["Aktualnosci", <OgloszeniaAktualnosci key={1} />],
     ["Intencje", <OgloszeniaIntencje key={2} />],
   ],
-  parafia: [
-    ["Historia Parafi", <HistoriaParafi key={1} />],
-    ["O Patronie", <OPatronie key={2} />],
-    ["Miejsca", <Miejsca key={3} />],
-    ["Parafia Obecnie", <ParafiaObecnie key={4} />],
-    ["Wspólnoty Parafialne", <WspolnotyParafialne key={5} />],
-  ],
 };
 
 const createRootComponent = (subcomponentsList, header) => {
@@ -68,5 +54,4 @@ export const kontakt = () =>
 export const ogloszenia = () =>
   createRootComponent(subComponents.ogloszenia, "Ogłoszenia");
 
-export const parafia = () =>
-  createRootComponent(subComponents.parafia, "Parafia");
+export const parafia = () => createRootComponent("parafia", "Parafia");
