@@ -23,10 +23,10 @@ import {
 
 import Contactform from "./subcomponents/kontakt/contactForm";
 import { DaneKontaktowe } from "./subcomponents/kontakt/DaneKontaktowe";
-import Main from "./MainComponent";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
 import OgloszeniaIntencje from "./subcomponents/ogloszenia/OgloszeniaIntencje";
 import React from "react";
+import RootComponent from "./RootComponent";
 
 const subComponents = {
   cmentarz: [
@@ -61,24 +61,24 @@ const subComponents = {
   ],
 };
 
-const createMainComponent = (subcomponentsList, header) => {
-  return <Main componentsList={subcomponentsList} header={header} />;
+const createRootComponent = (subcomponentsList, header) => {
+  return <RootComponent componentsList={subcomponentsList} header={header} />;
 };
 
 export const cmentarz = () =>
-  createMainComponent(subComponents.cmentarz, "Cmentarz");
+  createRootComponent(subComponents.cmentarz, "Cmentarz");
 
 export const duchowienstwo = () =>
-  createMainComponent(subComponents.duchowienstwo, "Duchowieństwo");
+  createRootComponent(subComponents.duchowienstwo, "Duchowieństwo");
 
 export const informacje = () =>
-  createMainComponent(subComponents.informacje, "Informacje");
+  createRootComponent(subComponents.informacje, "Informacje");
 
 export const kontakt = () =>
-  createMainComponent(subComponents.kontakt, "Kontakt");
+  createRootComponent(subComponents.kontakt, "Kontakt");
 
 export const ogloszenia = () =>
-  createMainComponent(subComponents.ogloszenia, "Ogłoszenia");
+  createRootComponent(subComponents.ogloszenia, "Ogłoszenia");
 
 export const parafia = () =>
-  createMainComponent(subComponents.parafia, "Parafia");
+  createRootComponent(subComponents.parafia, "Parafia");
