@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+  mainHeader: "Nabożeństwa",
   msze: {
     component: "Subcomponent",
     header: "Msze swięte:",

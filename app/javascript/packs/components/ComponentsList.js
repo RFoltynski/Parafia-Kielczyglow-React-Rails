@@ -1,8 +1,3 @@
-import {
-  Nabozenstwa,
-  Sakramenty,
-} from "./subcomponents/informacjeSubcomponents";
-
 import Contactform from "./subcomponents/kontakt/contactForm";
 import { DaneKontaktowe } from "./subcomponents/kontakt/DaneKontaktowe";
 import OgloszeniaAktualnosci from "./subcomponents/ogloszenia/OgloszeniaAktualnosci";
@@ -11,10 +6,6 @@ import React from "react";
 import RootComponent from "./RootComponent";
 
 const subComponents = {
-  informacje: [
-    ["Nabożeństwa", <Nabozenstwa key={2} />],
-    ["Sakramenty", <Sakramenty key={3} />],
-  ],
   kontakt: [
     ["Dane Kontaktowe", <DaneKontaktowe key={1} />],
     ["Formularz", <Contactform key={2} />],
@@ -34,11 +25,9 @@ export const cmentarz = () => createRootComponent("cmentarz", "Cmentarz");
 export const duchowienstwo = () =>
   createRootComponent("duchowienstwo", "Duchowieństwo");
 
-export const informacje = () =>
-  createRootComponent(subComponents.informacje, "Informacje");
+export const informacje = () => createRootComponent("informacje", "Informacje");
 
-export const kontakt = () =>
-  createRootComponent(subComponents.kontakt, "Kontakt");
+export const kontakt = () => createRootComponent("kontakt", "Kontakt");
 
 export const ogloszenia = () =>
   createRootComponent(subComponents.ogloszenia, "Ogłoszenia");

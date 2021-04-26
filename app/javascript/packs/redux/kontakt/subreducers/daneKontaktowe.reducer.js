@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+  mainHeader: "Dane Kontaktowe",
   daneKontaktowe: {
     component: "Subcomponent",
     header: "Dane Kontaktowe:",
