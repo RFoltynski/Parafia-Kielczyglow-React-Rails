@@ -1,5 +1,6 @@
 import { Basic } from "./../elements/content/OneImage";
 import { Bio } from "./../elements/content/Bio";
+import ContactForm from "./../elements/form";
 import { ManyImages } from "./../elements/content/photoContent";
 import React from "react";
 import { Subcontent } from "../elements/content/textContent";
@@ -26,6 +27,10 @@ const MainSubcomponent = (props) => {
           key={key}
         />
       );
+    } else if (data[item].component === "ContactForm") {
+      console.log(data[item]);
+      console.log(ContactForm);
+      return <ContactForm />;
     }
   });
 
