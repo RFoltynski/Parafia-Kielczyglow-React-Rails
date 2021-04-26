@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import MainSubcomponent from "./../subcomponents/mainSubcomponent";
 import { useSelector } from "react-redux";
@@ -19,6 +19,10 @@ const Submenu = (props) => {
       />,
     ];
   });
+
+  useEffect(() => {
+    setSubcomponent(componentsList[0][0]);
+  }, []);
 
   const _renderSubComp = () => {
     return componentsList.map((element) => {
