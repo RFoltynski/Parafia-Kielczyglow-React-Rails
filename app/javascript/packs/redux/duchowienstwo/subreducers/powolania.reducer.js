@@ -4,6 +4,7 @@ import Polak from "./../../../components/img/ksieza/Edward_Polak.JPG";
 import Turbanski from "./../../../components/img/ksieza/Antonii_Turbanski.JPG";
 import Wrobel from "./../../../components/img/ksieza/Antoni_Wrobel.JPG";
 const INITIAL_STATE = {
+  mainHeader: "Powołania",
   polak: {
     component: "Bio",
     images: [Polak],

@@ -1,5 +1,6 @@
 import photo from "./../../../components/img/ksieza/proboszcz";
 const INITIAL_STATE = {
+  mainHeader: "Obecny Proboszcz",
   proboszcz: {
     component: "Bio",
     images: [photo],

@@ -69,7 +69,7 @@ export const cmentarz = () =>
   createRootComponent(subComponents.cmentarz, "Cmentarz");
 
 export const duchowienstwo = () =>
-  createRootComponent(subComponents.duchowienstwo, "Duchowieństwo");
+  createRootComponent("duchowienstwo", "Duchowieństwo");
 
 export const informacje = () =>
   createRootComponent(subComponents.informacje, "Informacje");

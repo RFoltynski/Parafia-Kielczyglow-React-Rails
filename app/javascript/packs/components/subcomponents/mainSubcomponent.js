@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 const MainSubcomponent = (props) => {
   const data = useSelector((state) => state[props.main][props.reducerProperty]);
+
   const keys = Object.keys(data);
 
   const subcomponentsContent = keys.map((item, key) => {
