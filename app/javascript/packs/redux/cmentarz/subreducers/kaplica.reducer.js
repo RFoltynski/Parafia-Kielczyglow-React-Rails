@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+  mainHeader: "Kaplica",
   kaplica: "w budowie",
 };
 

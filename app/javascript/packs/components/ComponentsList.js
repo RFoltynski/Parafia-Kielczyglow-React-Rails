@@ -1,9 +1,4 @@
 import {
-  Cmentarz,
-  Kaplica,
-  Pogrzeby,
-} from "./subcomponents/cmentarzSubcomponents";
-import {
   Nabozenstwa,
   Sakramenty,
 } from "./subcomponents/informacjeSubcomponents";
@@ -16,11 +11,6 @@ import React from "react";
 import RootComponent from "./RootComponent";
 
 const subComponents = {
-  cmentarz: [
-    ["Cmentarz", <Cmentarz />],
-    ["Kaplica", <Kaplica />],
-    ["Pogrzeby", <Pogrzeby />],
-  ],
   informacje: [
     ["Nabożeństwa", <Nabozenstwa key={2} />],
     ["Sakramenty", <Sakramenty key={3} />],
@@ -39,8 +29,7 @@ const createRootComponent = (subcomponentsList, header) => {
   return <RootComponent componentsList={subcomponentsList} header={header} />;
 };
 
-export const cmentarz = () =>
-  createRootComponent(subComponents.cmentarz, "Cmentarz");
+export const cmentarz = () => createRootComponent("cmentarz", "Cmentarz");
 
 export const duchowienstwo = () =>
   createRootComponent("duchowienstwo", "Duchowieństwo");
