@@ -20,9 +20,10 @@ import wsrodku3 from "./../../../components/img/budowa/wsrodku3.JPG";
 import wsrodku4 from "./../../../components/img/budowa/wsrodku4.JPG";
 
 const INITIAL_STATE = {
+  mainHeader: "Historia Parafi",
   section1: {
     component: "Basic",
-    header: "Powstanie Parafii",
+    header: "Powstanie Parafi",
     description:
       "Parafię erygował bp włocławski Stanisław Zdzitkowiecki 21.08.1924",
     images: [stary, ulotka],

@@ -3,6 +3,7 @@ import franciszekM from "./../../../components/img/parafia/Opatronie/franciszek-
 import franciszekP from "./../../../components/img/parafia/Opatronie/franciszek-prosto.jpg";
 
 const INITIAL_STATE = {
+  mainHeader: "O Patronie",
   section1: {
     component: "Basic",
     header: "Życie",

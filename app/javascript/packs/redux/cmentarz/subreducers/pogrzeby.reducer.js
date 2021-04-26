@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+  mainHeader: "Pogrzeby",
   pogrzeby: "w budowie",
 };
 

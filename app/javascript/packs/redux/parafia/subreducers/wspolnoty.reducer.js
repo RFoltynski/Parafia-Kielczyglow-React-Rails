@@ -1,6 +1,7 @@
 import franciszek from "./../../../components/img/parafia/Opatronie/franciszek.jpg";
 
 const INITIAL_STATE = {
+  mainHeader: "Wspólnoty Parafialne",
   section1: {
     component: "Basic",
     header: "Życie",

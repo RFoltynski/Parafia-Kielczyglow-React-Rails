@@ -1,18 +1,32 @@
 import React, { useEffect, useState } from "react";
 
-const Submenu = (props) => {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     render: this.props.componentsList[0][0],
-  //   };
-  // }
+import MainSubcomponent from "./../subcomponents/mainSubcomponent";
+import { useSelector } from "react-redux";
 
-  const [state, setState] = useState(props.componentsList[0][0]);
+const Submenu = (props) => {
+  const [subcomponent, setSubcomponent] = useState(props.componentsList);
+  const data = useSelector((state) => state[props.componentsList]);
+  const keys = Object.keys(data);
+
+  const componentsList = keys.map((item, key) => {
+    return [
+      item,
+      <MainSubcomponent
+        main={props.componentsList}
+        reducerProperty={item}
+        header={data[item].mainHeader}
+        key={key}
+      />,
+    ];
+  });
+
+  useEffect(() => {
+    setSubcomponent(componentsList[0][0]);
+  }, []);
 
   const _renderSubComp = () => {
-    return props.componentsList.map((element) => {
-      if (state == element[0]) {
+    return componentsList.map((element) => {
+      if (subcomponent == element[0]) {
         return element[1];
       }
     });
@@ -20,19 +34,19 @@ const Submenu = (props) => {
 
   const onClick = (event) => {
     let compName = event.target.name;
-    setState(compName);
+    setSubcomponent(compName);
   };
 
   return (
     <div className="submenu">
-      {props.componentsList.map((element, key) => {
+      {componentsList.map((element, key) => {
         return (
           <button
             key={key}
             name={element[0]}
             onClick={onClick}
             className={
-              state == element[0]
+              subcomponent == element[0]
                 ? "button_default button_clicked"
                 : "button_default"
             }
