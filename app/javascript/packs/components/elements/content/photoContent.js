@@ -2,17 +2,12 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import React, { useEffect, useState } from "react";
 
 export const ManyImages = (props) => {
-  const { header, description, images, reverse } = props.data;
-  const [name, changeName] = useState("");
-
-  useEffect(() => {
-    if (reverse) changeName(name + " reverse");
-  }, []);
+  const { header, description, images } = props.data;
 
   return (
     <section className={"section " + name}>
       <PhotoDescription header={header} description={description} />
-      <Photo images={images} class={"bio"} />
+      <Photo images={images} name={"manyImages"} />
     </section>
   );
 };

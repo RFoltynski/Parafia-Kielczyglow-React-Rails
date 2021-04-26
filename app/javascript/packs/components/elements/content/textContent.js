@@ -21,9 +21,9 @@ export const Subcontent = (props) => {
             {element.paragraphs !== undefined ? (
               element.paragraphs.map((item, key) => {
                 return (
-                  <p className={"section_text_content paragraphs"} key={key}>
-                    {item}
-                  </p>
+                  <ul className={"section_text_content paragraphs"} key={key}>
+                    <li>{item}</li>
+                  </ul>
                 );
               })
             ) : (
