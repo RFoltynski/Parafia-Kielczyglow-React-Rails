@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 const Submenu = (props) => {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     render: this.props.componentsList[0][0],
-  //   };
-  // }
-
   const [state, setState] = useState(props.componentsList[0][0]);
 
   const _renderSubComp = () => {
