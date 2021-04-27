@@ -1,12 +1,9 @@
 const INITIAL_STATE = {
   mainHeader: "Aktualności",
   posts: {
-    component: "Subcomponent",
-    header: "Dane Kontaktowe:",
-    description: "Godziny nabożeństw",
-    subcontents: [],
+    component: "NewsComponent",
   },
-  // fetchPosts: ["no posts yet"],
+  fetchPosts: ["no posts yet"],
   // per: 2,
   // totalPages: null,
   // page: 1,

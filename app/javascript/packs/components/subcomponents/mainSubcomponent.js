@@ -3,14 +3,15 @@ import { Bio } from "./../elements/content/Bio";
 import ContactForm from "./../elements/form";
 import Intentions from "../elements/intentions";
 import { ManyImages } from "./../elements/content/photoContent";
+import NewsComponent from "../elements/newsComponent";
 import React from "react";
 import { Subcontent } from "../elements/content/textContent";
 import { useSelector } from "react-redux";
 
 const MainSubcomponent = (props) => {
   const data = useSelector((state) => state[props.main][props.reducerProperty]);
-
   const keys = Object.keys(data);
+  console.log(keys);
 
   const subcomponentsContent = keys.map((item, key) => {
     if (data[item].component === "ManyImages") {
@@ -30,8 +31,10 @@ const MainSubcomponent = (props) => {
       );
     } else if (data[item].component === "ContactForm") {
       return <ContactForm />;
-    } else if (data[item].component === "intentions") {
+    } else if (data[item].component === "Intentions") {
       return <Intentions />;
+    } else if (data[item].component === "NewsComponent") {
+      return <NewsComponent />;
     }
   });
 
