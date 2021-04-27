@@ -20,12 +20,11 @@ const NewsView = (props) => {
   };
 
   return (
-    <div className="subcategory__view" key={props.post.id}>
+    <div key={props.post.id}>
       {" "}
       <h2>
         {" "}
-        {props.post.title}{" "}
-        <a className={"subcategory__view__h2"} href={link} target={"_blank"} />
+        {props.post.title} <a href={link} target={"_blank"} />
       </h2>
       {show ? (
         <div className="newsView-box-text-show">

@@ -42,8 +42,8 @@ class NewsComponent extends Component {
     });
 
     return (
-      <div className="Ogloszenia-comp">
-        <div className="news-boxes">{newsList}</div>
+      <div>
+        <div>{newsList}</div>
         <center>
           {this.props.getError ? (
             <div
