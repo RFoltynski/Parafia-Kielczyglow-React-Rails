@@ -1,6 +1,7 @@
 import { Basic } from "./../elements/content/OneImage";
 import { Bio } from "./../elements/content/Bio";
 import ContactForm from "./../elements/form";
+import Intentions from "../elements/intentions";
 import { ManyImages } from "./../elements/content/photoContent";
 import React from "react";
 import { Subcontent } from "../elements/content/textContent";
@@ -12,7 +13,6 @@ const MainSubcomponent = (props) => {
   const keys = Object.keys(data);
 
   const subcomponentsContent = keys.map((item, key) => {
-    console.log(data[item], "item");
     if (data[item].component === "ManyImages") {
       return <ManyImages data={data[item]} key={key} />;
     } else if (data[item].component === "Basic") {
@@ -29,9 +29,9 @@ const MainSubcomponent = (props) => {
         />
       );
     } else if (data[item].component === "ContactForm") {
-      console.log(data[item]);
-      console.log(ContactForm);
       return <ContactForm />;
+    } else if (data[item].component === "intentions") {
+      return <Intentions />;
     }
   });
 
