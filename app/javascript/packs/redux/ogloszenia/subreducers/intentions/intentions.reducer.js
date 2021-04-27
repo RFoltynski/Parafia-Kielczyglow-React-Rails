@@ -1,5 +1,12 @@
 const INITIAL_STATE = {
   intention: ["no intention yet"],
+  mainHeader: "Intencje",
+  intencje: {
+    component: "Subcomponent",
+    header: "Dane Kontaktowe:",
+    description: "Godziny nabożeństw",
+    subcontents: [],
+  },
 };
 
 export const intentionsReducer = (state = INITIAL_STATE, action) => {
