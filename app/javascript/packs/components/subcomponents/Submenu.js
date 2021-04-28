@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import MainSubcomponent from "./../subcomponents/mainSubcomponent";
+import MainSubcomponent from "./mainSubcomponent";
 import { useSelector } from "react-redux";
 
 const Submenu = (props) => {
