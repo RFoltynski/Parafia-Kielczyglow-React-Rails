@@ -16,7 +16,7 @@ const MainSubcomponent = (props) => {
     let component = data.content[item].component;
     let content = data.content[item];
 
-    let components = {
+    let subComponents = {
       ManyImages: <ManyImages data={content} key={key} />,
       Basic: <Basic data={content} key={key} />,
       Bio: <Bio data={content} key={key} />,
@@ -26,7 +26,7 @@ const MainSubcomponent = (props) => {
       NewsComponent: <NewsComponent />,
     };
 
-    return components[component];
+    return subComponents[component];
   });
 
   return (

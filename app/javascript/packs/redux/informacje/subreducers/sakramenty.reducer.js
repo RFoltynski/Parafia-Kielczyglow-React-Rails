@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   mainHeader: "Sakramenty",
   content: {
     chrzest: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Chrzest:",
       description:
         "Aby usprawnić formalności związane z chrztem należy przedłożyć:",
@@ -16,7 +16,7 @@ const INITIAL_STATE = {
       ],
     },
     bierzmowanie: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Bierzmowanie:",
       description:
         "Przez 3 lata odbywają się nauki przygotowujące w ostatnią niedzielę miesiąca w połączeniu z Mszą popołudniową. A po Mszy św. katecheza.",
@@ -34,7 +34,7 @@ const INITIAL_STATE = {
       ],
     },
     komunia: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Pierwsza Komunia Św.",
       description:
         "Pierwsza Komunia  Święta odbywa się w naszej parafii w Uroczystość Zesłania Ducha Świętego. Od lat rodzice tych dzieci są zgodni co do jednolitych strojów komunijnych. Przygotowanie do Pierwszej Komunii św. rozpoczyna się w klasie trzeciej podczas dwóch godzin katechez tygodniowo. Oprócz tego odbywają się już wiosną spotkania praktycznie przygotowujące dzieci do przeżycia liturgii Mszy św. Są także spotkania okresowe z rodzicami:",
@@ -49,7 +49,7 @@ const INITIAL_STATE = {
       ],
     },
     namaszczenieChorych: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Namaszczenie chorych",
       description:
         "Sakrament Namaszczenia Chorych można przyjąć w każdej chorobie, jeżeli chory czuje się zagrożony. Jeżeli chory zostaje zabrany do szpitala i istnieje obawa o jego życie, to powinno się poprosić kapelana szpitala  o spowiedź chorego, namaszczenie i Komunię Świeta. Wezwanie kapłana wcale nie oznacza, że chory ma zaraz umrzeć. Ten sakrament można przyjąć kilkakrotnie w zyciu. Przed przyjściem kapłana należy przygotować stolik przykryty białym obrusem, na którym stawia się:",
@@ -66,7 +66,7 @@ const INITIAL_STATE = {
       ],
     },
     pogrzeb: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Pogrzeb katolicki",
       description:
         "Aby ustalić datę pogrzebu należy zabrać ze sobą do kancelarii:",
@@ -80,7 +80,7 @@ const INITIAL_STATE = {
       ],
     },
     slub: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Sakrament małżeństwa",
       description:
         "Sugerujemy wczesniejsza rezzerwacje terminu ślubu. Następnie Narzeczeni zgłaszają się do kancelarii przynajmniej 3 miesiące przed planowanym ślubem na spotkanie należy przynieść: ",

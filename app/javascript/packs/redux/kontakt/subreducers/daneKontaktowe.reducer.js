@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   mainHeader: "Dane Kontaktowe",
   content: {
     daneKontaktowe: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Dane Kontaktowe:",
       description: "Godziny nabożeństw",
       subcontents: [
