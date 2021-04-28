@@ -8,11 +8,7 @@ export const Bio = (props) => {
     <section className={"section " + "bio"}>
       <Photo images={images} />
       <div>
-        <Subcontent
-          header={header}
-          description={description}
-          subcontents={subcontents}
-        />
+        <Subcontent data={{ header, description, subcontents }} />
       </div>
     </section>
   );

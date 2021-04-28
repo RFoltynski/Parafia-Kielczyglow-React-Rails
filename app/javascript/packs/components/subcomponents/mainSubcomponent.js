@@ -11,26 +11,17 @@ import { useSelector } from "react-redux";
 const MainSubcomponent = (props) => {
   const data = useSelector((state) => state[props.main][props.reducerProperty]);
   const keys = Object.keys(data.content);
-  console.log(keys);
 
   const subcomponentsContent = keys.map((item, key) => {
-    console.log(data.content[item]);
     if (data.content[item].component === "ManyImages") {
       return <ManyImages data={data.content[item]} key={key} />;
     } else if (data.content[item].component === "Basic") {
       return <Basic data={data.content[item]} key={key} />;
     } else if (data.content[item].component === "Bio") {
       return <Bio data={data.content[item]} key={key} />;
+      console.log(data.content[item]);
     } else if (data.content[item].component === "Subcomponent") {
-      console.log();
-      return (
-        <Subcontent
-          header={data.content[item].header}
-          description={data.content[item].description}
-          subcontents={data.content[item].subcontents}
-          key={key}
-        />
-      );
+      return <Subcontent data={data.content[item]} key={key} />;
     } else if (data.content[item].component === "ContactForm") {
       return <ContactForm />;
     } else if (data.content[item].component === "Intentions") {
