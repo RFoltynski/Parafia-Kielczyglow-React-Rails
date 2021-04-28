@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   mainHeader: "Kaplica",
   content: {
     kaplica: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Kaplica",
       description: "w budowie",
       subcontents: [],

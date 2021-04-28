@@ -13,22 +13,20 @@ const MainSubcomponent = (props) => {
   const keys = Object.keys(data.content);
 
   const subcomponentsContent = keys.map((item, key) => {
-    if (data.content[item].component === "ManyImages") {
-      return <ManyImages data={data.content[item]} key={key} />;
-    } else if (data.content[item].component === "Basic") {
-      return <Basic data={data.content[item]} key={key} />;
-    } else if (data.content[item].component === "Bio") {
-      return <Bio data={data.content[item]} key={key} />;
-      console.log(data.content[item]);
-    } else if (data.content[item].component === "Subcomponent") {
-      return <Subcontent data={data.content[item]} key={key} />;
-    } else if (data.content[item].component === "ContactForm") {
-      return <ContactForm />;
-    } else if (data.content[item].component === "Intentions") {
-      return <Intentions />;
-    } else if (data.content[item].component === "NewsComponent") {
-      return <NewsComponent />;
-    }
+    let component = data.content[item].component;
+    let content = data.content[item];
+
+    let components = {
+      ManyImages: <ManyImages data={content} key={key} />,
+      Basic: <Basic data={content} key={key} />,
+      Bio: <Bio data={content} key={key} />,
+      Subcontent: <Subcontent data={content} key={key} />,
+      ContactForm: <ContactForm />,
+      Intentions: <Intentions />,
+      NewsComponent: <NewsComponent />,
+    };
+
+    return components[component];
   });
 
   return (

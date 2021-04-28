@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   mainHeader: "Pogrzeby",
   content: {
     pogrzeby: {
-      component: "Subcomponent",
+      component: "Subcontent",
       header: "Pogrzeby",
       description: "w budowie",
       subcontents: [],
