@@ -9,34 +9,35 @@ import { Subcontent } from "../elements/content/textContent";
 import { useSelector } from "react-redux";
 
 const MainSubcomponent = (props) => {
-  const data = useSelector((state) => state[props.main][props.reducerProperty]);
-  const keys = Object.keys(data.content);
-
+  const data = useSelector(
+    (state) => state[props.main][props.reducerProperty].content
+  );
+  const keys = Object.keys(data);
   const subcomponentsContent = keys.map((item, key) => {
-    let component = data.content[item].component;
-    let content = data.content[item];
-
-    let subComponents = {
-      ManyImages: <ManyImages data={content} key={key} />,
-      Basic: <Basic data={content} key={key} />,
-      Bio: <Bio data={content} key={key} />,
-      Subcontent: <Subcontent data={content} key={key} />,
-      ContactForm: <ContactForm />,
-      Intentions: <Intentions />,
-      NewsComponent: <NewsComponent />,
-    };
-
-    return subComponents[component];
+    let content = data[item];
+    let component = content.component;
+    return getSubcomponents(content, key, component);
   });
 
   return (
-    <div className="subcategory__container">
-      <div className="subcategory__view">
-        <h2>{props.header}</h2>
-        <div className="subcategory__view__column">{subcomponentsContent}</div>
-      </div>
-    </div>
+    <>
+      <h2>{props.header}</h2>
+      <div className="subcategory__view__column">{subcomponentsContent}</div>
+    </>
   );
+};
+
+const getSubcomponents = (content, key, component) => {
+  let subComponents = {
+    ManyImages: <ManyImages data={content} key={key} />,
+    Basic: <Basic data={content} key={key} />,
+    Bio: <Bio data={content} key={key} />,
+    Subcontent: <Subcontent data={content} key={key} />,
+    ContactForm: <ContactForm />,
+    Intentions: <Intentions />,
+    NewsComponent: <NewsComponent />,
+  };
+  return subComponents[component];
 };
 
 export default MainSubcomponent;

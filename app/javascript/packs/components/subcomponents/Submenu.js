@@ -55,7 +55,9 @@ const Submenu = (props) => {
           </button>
         );
       })}
-      {_renderSubComp()}
+      <div className="subcategory__container">
+        <div className="subcategory__view">{_renderSubComp()}</div>
+      </div>
     </div>
   );
 };
