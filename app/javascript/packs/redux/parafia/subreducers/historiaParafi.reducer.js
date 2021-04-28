@@ -21,43 +21,45 @@ import wsrodku4 from "./../../../components/img/budowa/wsrodku4.JPG";
 
 const INITIAL_STATE = {
   mainHeader: "Historia Parafi",
-  section1: {
-    component: "Basic",
-    header: "Powstanie Parafi",
-    description:
-      "Parafię erygował bp włocławski Stanisław Zdzitkowiecki 21.08.1924",
-    images: [stary, ulotka],
-    reverse: true,
-  },
-  section2: {
-    component: "ManyImages",
-    header: "Budowa kościoła",
-    description:
-      "Obecny kosciół został wybudowany staraniem ks. Józefa Jansona w latach 1948-1957.",
-    images: [fundamenty, caly, caly2, dach, dach2, dach3, dach4],
-    reverse: false,
-  },
-  section3: {
-    component: "ManyImages",
-    header: "Prace wewnątrz",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
-    images: [wsrodku, wsrodku2, wsrodku3, wsrodku4, organy, stolarka],
-    reverse: false,
-  },
-  section4: {
-    component: "Basic",
-    header: "Konsekracja Kościoła",
-    description: "Kościół konsekrował bp Zdzisław Goliński 13.06.1957 roku.",
-    images: [konsekracja, konsekracja2, swieto],
-    reverse: true,
-  },
-  section5: {
-    component: "Basic",
-    header: "Artykuł z zatrzymania Ks. Józefa Jansona",
-    description: "",
-    images: [pamiatka, gazeta],
-    reverse: true,
+  content: {
+    section1: {
+      component: "Basic",
+      header: "Powstanie Parafi",
+      description:
+        "Parafię erygował bp włocławski Stanisław Zdzitkowiecki 21.08.1924",
+      images: [stary, ulotka],
+      reverse: true,
+    },
+    section2: {
+      component: "ManyImages",
+      header: "Budowa kościoła",
+      description:
+        "Obecny kosciół został wybudowany staraniem ks. Józefa Jansona w latach 1948-1957.",
+      images: [fundamenty, caly, caly2, dach, dach2, dach3, dach4],
+      reverse: false,
+    },
+    section3: {
+      component: "ManyImages",
+      header: "Prace wewnątrz",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit saepe a voluptatem blanditiis tempore ipsa dolore, amet porro minus quos ea illum eaque consequuntur molestias iusto corrupti sint facilis nam!",
+      images: [wsrodku, wsrodku2, wsrodku3, wsrodku4, organy, stolarka],
+      reverse: false,
+    },
+    section4: {
+      component: "Basic",
+      header: "Konsekracja Kościoła",
+      description: "Kościół konsekrował bp Zdzisław Goliński 13.06.1957 roku.",
+      images: [konsekracja, konsekracja2, swieto],
+      reverse: true,
+    },
+    section5: {
+      component: "Basic",
+      header: "Artykuł z zatrzymania Ks. Józefa Jansona",
+      description: "",
+      images: [pamiatka, gazeta],
+      reverse: true,
+    },
   },
 };
 
