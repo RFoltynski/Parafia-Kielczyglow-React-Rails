@@ -1,8 +1,10 @@
 const INITIAL_STATE = {
   intention: ["no intention yet"],
   mainHeader: "Intencje",
-  intencje: {
-    component: "Intentions",
+  content: {
+    intencje: {
+      component: "Intentions",
+    },
   },
 };
 

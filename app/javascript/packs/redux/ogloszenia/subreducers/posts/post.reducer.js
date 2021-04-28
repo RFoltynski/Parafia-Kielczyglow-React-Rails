@@ -1,11 +1,15 @@
 const INITIAL_STATE = {
   mainHeader: "Aktualności",
-  component: "NewsComponent",
+  content: {
+    ogloszenia: {
+      component: "NewsComponent",
+    },
+  },
   fetchPosts: ["no posts yet"],
-  // per: 2,
-  // totalPages: null,
-  // page: 1,
-  // pageLoadError: null,
+  per: 2,
+  totalPages: null,
+  page: 1,
+  pageLoadError: null,
 };
 
 const postReducer = (state = INITIAL_STATE, action) => {
