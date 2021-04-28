@@ -1,10 +1,12 @@
 const INITIAL_STATE = {
   mainHeader: "Formularz Kontaktowy",
-  formularz: {
-    component: "ContactForm",
-    header: "Dane Kontaktowe:",
-    description: "Godziny nabożeństw",
-    subcontents: [],
+  content: {
+    formularz: {
+      component: "ContactForm",
+      header: "Dane Kontaktowe:",
+      description: "Godziny nabożeństw",
+      subcontents: [],
+    },
   },
 };
 

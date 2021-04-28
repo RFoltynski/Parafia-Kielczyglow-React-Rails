@@ -31,11 +31,11 @@ const MainSubcomponent = (props) => {
           key={key}
         />
       );
-    } else if (data[item].component === "ContactForm") {
+    } else if (data.content[item].component === "ContactForm") {
       return <ContactForm />;
-    } else if (data[item].component === "Intentions") {
+    } else if (data.content[item].component === "Intentions") {
       return <Intentions />;
-    } else if (data[item].component === "NewsComponent") {
+    } else if (data.content[item].component === "NewsComponent") {
       return <NewsComponent />;
     }
   });
