@@ -22,11 +22,12 @@ const MainSubcomponent = (props) => {
     } else if (data.content[item].component === "Bio") {
       return <Bio data={data.content[item]} key={key} />;
     } else if (data.content[item].component === "Subcomponent") {
+      console.log();
       return (
         <Subcontent
-          header={data[item].header}
-          description={data[item].description}
-          subcontents={data[item].subcontents}
+          header={data.content[item].header}
+          description={data.content[item].description}
+          subcontents={data.content[item].subcontents}
           key={key}
         />
       );

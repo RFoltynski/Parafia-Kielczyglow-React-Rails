@@ -1,6 +1,13 @@
 const INITIAL_STATE = {
   mainHeader: "Kaplica",
-  kaplica: "w budowie",
+  content: {
+    kaplica: {
+      component: "Subcomponent",
+      header: "Kaplica",
+      description: "w budowie",
+      subcontents: [],
+    },
+  },
 };
 
 const kaplicaReducer = (state = INITIAL_STATE, action) => {
