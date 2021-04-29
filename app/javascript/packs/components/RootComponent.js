@@ -1,6 +1,6 @@
-import Navbar from "./elements/Navbar";
+import Navbar from "./subcomponents/Navbar";
 import React from "react";
-import Submenu from "./elements/Submenu";
+import Submenu from "./subcomponents/Submenu";
 
 const RootComponent = (props) => {
   return (

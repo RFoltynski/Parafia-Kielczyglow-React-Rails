@@ -29,9 +29,7 @@ class ContactForm extends Component {
     }
   };
 
-  reecaptureLoaded = () => {
-    console.log("recapture loaded");
-  };
+  reecaptureLoaded = () => {};
 
   validation = () => {
     if (!this.state.name) {
@@ -94,10 +92,7 @@ class ContactForm extends Component {
               .content,
           },
         })
-        .then((response) => {
-          console.log(response);
-          console.log(response.data);
-        });
+        .then((response) => {});
 
       this.setState({
         name: "",

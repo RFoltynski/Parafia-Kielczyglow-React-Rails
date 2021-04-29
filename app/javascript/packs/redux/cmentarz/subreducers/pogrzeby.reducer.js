@@ -1,6 +1,13 @@
 const INITIAL_STATE = {
   mainHeader: "Pogrzeby",
-  pogrzeby: "w budowie",
+  content: {
+    pogrzeby: {
+      component: "Subcontent",
+      header: "Pogrzeby",
+      description: "w budowie",
+      subcontents: [],
+    },
+  },
 };
 
 const pogrzebyReducer = (state = INITIAL_STATE, action) => {

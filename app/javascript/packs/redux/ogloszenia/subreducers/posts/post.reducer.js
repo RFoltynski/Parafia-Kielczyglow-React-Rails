@@ -1,4 +1,10 @@
 const INITIAL_STATE = {
+  mainHeader: "Aktualności",
+  content: {
+    ogloszenia: {
+      component: "NewsComponent",
+    },
+  },
   fetchPosts: ["no posts yet"],
   per: 2,
   totalPages: null,

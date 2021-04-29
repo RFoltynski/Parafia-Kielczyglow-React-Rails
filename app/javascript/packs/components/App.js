@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Navbar from "./elements/Navbar";
+import Navbar from "./subcomponents/Navbar";
 import React from "react";
 
 class App extends React.Component {

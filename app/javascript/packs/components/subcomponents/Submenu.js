@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import MainSubcomponent from "./../subcomponents/mainSubcomponent";
+import MainSubcomponent from "./mainSubcomponent";
 import { useSelector } from "react-redux";
 
 const Submenu = (props) => {
@@ -10,7 +10,7 @@ const Submenu = (props) => {
 
   const componentsList = keys.map((item, key) => {
     return [
-      item,
+      data[item].mainHeader,
       <MainSubcomponent
         main={props.componentsList}
         reducerProperty={item}
@@ -55,7 +55,9 @@ const Submenu = (props) => {
           </button>
         );
       })}
-      {_renderSubComp()}
+      <div className="subcategory__container">
+        <div className="subcategory__view">{_renderSubComp()}</div>
+      </div>
     </div>
   );
 };

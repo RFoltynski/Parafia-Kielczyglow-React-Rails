@@ -4,12 +4,12 @@ import {
   fetchPosts,
   setError,
   updatePostsPage,
-} from "../../../redux/ogloszenia/subreducers/posts/post.action";
+} from "../../redux/ogloszenia/subreducers/posts/post.action";
 
-import NewsView from "../../elements/NewsView";
+import NewsView from "./NewsView";
 import { connect } from "react-redux";
 
-class OgloszeniaAktualnosci extends Component {
+class NewsComponent extends Component {
   constructor(props) {
     super(props);
   }
@@ -42,8 +42,8 @@ class OgloszeniaAktualnosci extends Component {
     });
 
     return (
-      <div className="Ogloszenia-comp">
-        <div className="news-boxes">{newsList}</div>
+      <div>
+        <div>{newsList}</div>
         <center>
           {this.props.getError ? (
             <div
@@ -111,4 +111,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(OgloszeniaAktualnosci);
+)(NewsComponent);

@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Subcontent = (props) => {
-  const { header, description, subcontents } = props;
+  const { header, description, subcontents } = props.data;
   return (
     <div>
       <div className={"section_text"}>

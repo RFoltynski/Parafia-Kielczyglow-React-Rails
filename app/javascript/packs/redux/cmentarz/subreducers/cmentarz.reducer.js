@@ -1,6 +1,13 @@
 const INITIAL_STATE = {
   mainHeader: "Cmentarz",
-  cmentarz: "W budowie",
+  content: {
+    cmentarz: {
+      component: "Subcontent",
+      header: "Cmentarz",
+      description: "w budowie",
+      subcontents: [],
+    },
+  },
 };
 
 const cmentarzReducer = (state = INITIAL_STATE, action) => {
