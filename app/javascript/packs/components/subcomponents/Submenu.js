@@ -10,7 +10,7 @@ const Submenu = (props) => {
 
   const componentsList = keys.map((item, key) => {
     return [
-      item,
+      data[item].mainHeader,
       <MainSubcomponent
         main={props.componentsList}
         reducerProperty={item}
